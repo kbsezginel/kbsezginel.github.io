@@ -10,7 +10,7 @@ locale                   : "en"
 title                    : "KBS"
 title_separator          : "-"
 name                     : "Kutay B. Sezginel"
-description              : "An amazing website."
+description              : "Personal website of Kutay B. Sezginel"
 url                      : "https://kbsezginel.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -83,8 +83,8 @@ author:
   location         : "Pittsburgh, PA"
   email            : "kutaybs@gmail.com"
   uri              :
-  bitbucket        :
-  codepen          :
+  bitbucket        : "kbsezginel"
+  codepen          : "kbsezginel"
   dribbble         :
   flickr           :
   facebook         :
