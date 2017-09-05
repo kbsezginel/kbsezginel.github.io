@@ -26,3 +26,6 @@ This is serious.
 
 ## [HostDesigner](https://github.com/kbsezginel/HostDesigner)
 A Python wrapper for HostDesigner (also serious).
+
+## [Computational Chemistry Tools Tutorials](https://kbsezginel.github.io/chem-tools-tutorials/)
+Tutorials and scripts for several computational chemistry and visualization tools.
