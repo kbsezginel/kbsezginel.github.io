@@ -6,7 +6,7 @@ categories: research
 ---
 My first [paper](http://pubs.rsc.org/en/content/articlehtml/2017/ce/c7ce00290d) in [WilmerLab](http://wilmerlab.com/) was futured on the cover of CrystEngComm journal! The cover image I have submitted to the journal for consideration was selected as the cover art. Here is the image:
 
-<p align="center"> <img src="assets/img/crystengcomm-cover.png"> </p>
+<p align="center"> <img src="crystengcomm-cover.png"> </p>
 
 The cover art is a representation of interpenetrated crystal structures (MOFs).
 The entangled molecular structures are depicted in gray and red.
