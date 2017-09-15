@@ -15,7 +15,7 @@ name                     : "Kutay B. Sezginel"
 description              : "Personal website of Kutay B. Sezginel"
 url                      : "https://kbsezginel.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "kbsezginel/kbsezginel.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
