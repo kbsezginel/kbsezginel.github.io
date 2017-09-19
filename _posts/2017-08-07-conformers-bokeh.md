@@ -4,6 +4,8 @@ title:  "Calculating and analyzing drug adsorption in MOFs interactively"
 date:   2017-08-07
 categories: research
 ---
+{% include toc %}
+
 This is a compact tutorial on calculating and analyzing adsorption of molecules in metal-organic frameworks.
 
 ### Step 1: Get molecule
