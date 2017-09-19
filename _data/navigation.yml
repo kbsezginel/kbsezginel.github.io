@@ -2,7 +2,9 @@
 main:
   - title: "Research"
     url: /research/
-  - title: "Raspberry PI"
-    url: /raspberry-pi/
   - title: "Music"
     url: /music/
+  - title: "Raspberry PI"
+    url: /raspberry-pi/
+  - title: "CV"
+    url: /assets/docs/KutayBSezginel_CV.pdf
