@@ -8,7 +8,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.85"
   overlay_image: /assets/img/aug17/31-isometric-abstract.png
-  cta_label: "See more"
+  cta_label: "Join!"
   cta_url: "https://www.facebook.com/groups/artchallenge/"
 excerpt: "
 August 1- August 31, 2017<br />

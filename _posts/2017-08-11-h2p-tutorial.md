@@ -11,13 +11,13 @@ categories: research
 
 ### Useful commands
 
-**Login**
+#### Login
 
 `ssh kbs37@h2p.crc.pitt.edu`
 
 `ssh kbs37@login0.crc.pitt.edu` : Login to `login0` node
 
-**Cluster info**
+#### Cluster info
 
 `sinfo` : Node availability information
 
@@ -25,7 +25,7 @@ categories: research
 
 `scontrol show partition smp` : Get detailed information about clusters (such as min node etc.)
 
-**Jobs**
+#### Jobs
 
 `squeue` : Print running jobs
 
@@ -37,7 +37,7 @@ categories: research
 
 `crc-interactive.py -s` : Enter compute node
 
-**Modules**
+#### Modules
 
 `module list` : List all loaded modules
 
@@ -47,7 +47,7 @@ categories: research
 
 `module spider <module_name>` : Get info about given module
 
-**How to run jobs**
+#### How to run jobs
 
 `/ihome/crc/how_to_run/` : sbatch files for different modules
 
