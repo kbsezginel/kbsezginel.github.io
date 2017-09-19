@@ -18,24 +18,23 @@ gallery:
     alt: "Linked in"
     title: "Linked in"
 ---
-### Projects
+## Projects
 
-#### [Discovering Hetero-Interpenetrated MOFs](https://github.com/kbsezginel/IPMOF)
+### [Discovering Hetero-Interpenetrated MOFs](https://github.com/kbsezginel/IPMOF)
 
-#### [Loading Drugs in MOFs (BioMOF)](https://kbsezginel.github.io/biomof)
+### [Loading Drugs in MOFs (BioMOF)](https://kbsezginel.github.io/biomof)
 
-#### [Nanocars!](https://kbsezginel.github.io/Nanocar)
+### [Nanocars!](https://kbsezginel.github.io/Nanocar)
 
-#### [Moleidoscope](https://github.com/kbsezginel/Moleidoscope)
+### [Moleidoscope](https://github.com/kbsezginel/Moleidoscope)
 
-#### [Thermal conductivity of MOFs (therMOF)](https://kbsezginel.github.io/tee_mof)
+### [Thermal conductivity of MOFs (therMOF)](https://kbsezginel.github.io/tee_mof)
 
-#### [HostDesigner](https://github.com/kbsezginel/HostDesigner)
+### [HostDesigner](https://github.com/kbsezginel/HostDesigner)
 
-#### [Computational Chemistry Tools Tutorials](https://kbsezginel.github.io/chem-tools-tutorials/)
-Tutorials and scripts for several computational chemistry and visualization tools.
+### [Computational Chemistry Tools Tutorials](https://kbsezginel.github.io/chem-tools-tutorials/)
 
-### Experience
+## Experience
 
 {% include gallery caption="Research and professional experience." %}
 
