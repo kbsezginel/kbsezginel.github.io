@@ -72,9 +72,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google"
   google:
-    tracking_id          :
+    tracking_id          : "UA-106776273-1"
 
 
 # Site Author
@@ -243,8 +243,8 @@ defaults:
     values:
       image: True
       layout: single
-      author_profile: true
+      author_profile: True
       read_time: true
-      comments: true
+      comments: True
       share: true
       related: true
