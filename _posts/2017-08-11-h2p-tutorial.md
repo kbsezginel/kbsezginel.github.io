@@ -4,9 +4,10 @@ title:  "H2P computing resource tutorial notes"
 date:   2017-08-11
 categories: research
 ---
-{% include toc %}
+Useful commands
+---------------
 
-## Useful commands
+{% include toc %}
 
 ### Login
 
