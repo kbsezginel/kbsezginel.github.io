@@ -6,18 +6,15 @@ categories: research
 ---
 {% include toc %}
 
-[H2P](https://crc.pitt.edu/documentation/h2p/)
-==============================================
+## Useful commands
 
-### Useful commands
-
-#### Login
+### Login
 
 `ssh kbs37@h2p.crc.pitt.edu`
 
 `ssh kbs37@login0.crc.pitt.edu` : Login to `login0` node
 
-#### Cluster info
+### Cluster info
 
 `sinfo` : Node availability information
 
@@ -25,7 +22,7 @@ categories: research
 
 `scontrol show partition smp` : Get detailed information about clusters (such as min node etc.)
 
-#### Jobs
+### Jobs
 
 `squeue` : Print running jobs
 
@@ -37,7 +34,7 @@ categories: research
 
 `crc-interactive.py -s` : Enter compute node
 
-#### Modules
+### Modules
 
 `module list` : List all loaded modules
 
@@ -47,10 +44,14 @@ categories: research
 
 `module spider <module_name>` : Get info about given module
 
-#### How to run jobs
+### How to run jobs
 
 `/ihome/crc/how_to_run/` : sbatch files for different modules
 
 Running on scratch make file IO operations much faster. To copy all files in case job files `trap` command can be used. An example is given in `/ihome/crc/how_to_run/cp2k`.
 
 `http://jupyterhub.crc.pitt.edu/hub/login` : jupyter notebooks running on compute nodes
+
+### Links
+
+[H2P](https://crc.pitt.edu/documentation/h2p/)
