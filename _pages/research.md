@@ -4,7 +4,7 @@ title:  "Research"
 permalink: /research/
 date:   2017-08-04
 categories: pages
-gallery:
+experience:
   - url: https://scholar.google.com.tr/citations?user=6ak9FqIAAAAJ
     image_path: /assets/img/gscholar.png
     alt: "Google Scholar"
@@ -17,25 +17,57 @@ gallery:
     image_path: /assets/img/linkedin.svg
     alt: "Linked in"
     title: "Linked in"
+projects:
+  - url: "https://kbsezginel.github.io/thermof"
+    alt: "thermof"
+    title: "TherMOF"
+    excerpt: "Thermal conductivity of MOFs."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - url: "https://github.com/kbsezginel/IPMOF"
+    alt: "ipmof"
+    title: "IPMOF"
+    excerpt: "Discovering Hetero-Interpenetrated MOFs."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - url: "https://kbsezginel.github.io/biomof"
+    alt: "biomof"
+    title: "BioMOF"
+    excerpt: "MOFs for drug delivery applications."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - url: "https://kbsezginel.github.io/nanocar"
+    image_path: /assets/img/aug17/3-Nanocar.jpg
+    alt: "nanocar"
+    title: "Nanocars"
+    excerpt: "Molecule-sized cars on gold tracks."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - url: "https://github.com/kbsezginel/Moleidoscope"
+    alt: "moleidoscope"
+    title: "Moleidoscope"
+    excerpt: "Building supramolecular structures with symmetry."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - url: "https://github.com/kbsezginel/HostDesigner"
+    alt: "hostdesigner"
+    title: "HostDesigner"
+    excerpt: "Structure-based design of molecular hosts."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - url: "https://kbsezginel.github.io/chem-tools-tutorials/"
+    alt: "chem-tools-tutorials"
+    title: "Computational Chemistry Tutorials"
+    excerpt: "Tutorials for data anlysis, molecular construction, running simulations and more..."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 ## Projects
 
-### [Discovering Hetero-Interpenetrated MOFs](https://github.com/kbsezginel/IPMOF)
-
-### [Loading Drugs in MOFs (BioMOF)](https://kbsezginel.github.io/biomof)
-
-### [Nanocars!](https://kbsezginel.github.io/Nanocar)
-
-### [Moleidoscope](https://github.com/kbsezginel/Moleidoscope)
-
-### [Thermal conductivity of MOFs (therMOF)](https://kbsezginel.github.io/tee_mof)
-
-### [HostDesigner](https://github.com/kbsezginel/HostDesigner)
-
-### [Computational Chemistry Tools Tutorials](https://kbsezginel.github.io/chem-tools-tutorials/)
+{% include projects caption="Research projects." %}
 
 ## Experience
 
-{% include gallery caption="Research and professional experience." %}
+{% include experience caption="Research and professional experience." %}
 
 <a href="https://orcid.org/0000-0003-3060-2945" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0003-3060-2945</a>

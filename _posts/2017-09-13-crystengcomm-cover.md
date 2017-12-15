@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "First paper in PhD published on CrystEngComm cover"
+title:  "First paper in PhD futured on the cover of CrystEngComm"
 date:   2017-09-13
 categories: research
 ---
