@@ -246,25 +246,25 @@ defaults:
   # _posts
   -
     scope:
-      path:
+      path: ""
       type: posts
     values:
-      image: True
+      image: true
       layout: single
-      author_profile: True
-      read_time: True
-      comments: True
-      share: True
-      related: True
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   -
     scope:
-      path:
+      path: ""
       type: pages
     values:
-      image: True
+      image: true
       layout: single
-      author_profile: True
-      read_time: True
-      comments: True
-      share: True
-      related: True
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
