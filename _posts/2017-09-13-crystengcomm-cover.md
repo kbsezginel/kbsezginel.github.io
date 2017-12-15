@@ -1,10 +1,10 @@
 ---
 layout: single
-title:  "First paper in PhD futured on the cover of CrystEngComm"
+title:  "First paper in PhD featured on the cover of CrystEngComm"
 date:   2017-09-13
 categories: research
 ---
-My first [paper](http://pubs.rsc.org/en/content/articlehtml/2017/ce/c7ce00290d) in [WilmerLab](http://wilmerlab.com/) was futured on the cover of CrystEngComm journal! The cover image I have submitted to the journal for consideration was selected as the cover art. Here is the image:
+My first [paper](http://pubs.rsc.org/en/content/articlehtml/2017/ce/c7ce00290d) in [WilmerLab](http://wilmerlab.com/) was featured on the cover of CrystEngComm journal! The cover image I have submitted to the journal for consideration was selected as the cover art. Here is the image:
 
 <p align="center"> <img src="/assets/img/crystengcomm-cover.png"> </p>
 
