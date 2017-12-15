@@ -25,6 +25,7 @@ projects:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://github.com/kbsezginel/IPMOF"
+    image_path: /assets/img/IPMOF-rotation.gif
     alt: "ipmof"
     title: "IPMOF"
     excerpt: "Discovering Hetero-Interpenetrated MOFs."
