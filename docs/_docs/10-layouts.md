@@ -7,10 +7,11 @@ single_layout_gallery:
     alt: "single layout with header example"
   - image_path: /assets/images/mm-layout-single-meta.png
     alt: "single layout with comments and related posts"
-last_modified_at: 2017-07-05T15:41:36-04:00
+last_modified_at: 2017-12-06T14:58:04-05:00
+toc: true
+toc_label: "Included Layouts"
+toc_icon: "columns"
 ---
-
-{% include toc icon="columns" title="Included Layouts" %}
 
 The bread and butter of any theme. Below you'll find the layouts included with Minimal Mistakes, what they look like and the type of content they've been built for.
 
@@ -35,6 +36,7 @@ Class names corresponding to each layout are automatically added to the `<body>`
 | ---------------- | --------------------------- |
 | archive          | `.layout--archive`          |
 | archive-taxonomy | `.layout--archive-taxonomy` |
+| search           | `.layout--search`           |
 | single           | `.layout--single`           |
 | splash           | `.layout--splash`           |
 | home             | `.layout--home`             |
@@ -82,6 +84,28 @@ The layout you'll likely use the most --- sidebar and main content combo.
 {% include gallery id="single_layout_gallery" caption="Image header and meta info examples for `single` layout" %}
 
 Assign with `layout: single`, or better yet apply as a [Front Matter default]({{ "/docs/configuration/#front-matter-defaults" | absolute_url }}) in `_config.yml`.
+
+### Table of Contents
+
+Auto-generated table of contents list for your posts and pages can be enabled by adding `toc: true` to the YAML Front Matter.
+
+![table of contents example]({{ "/assets/images/mm-toc-helper-example.jpg" | absolute_url }})
+
+| Parameter   | Required | Description | Default |
+| ---------   | -------- | ----------- | ------- |
+| **toc**     | Optional | Show table of contents. (boolean) | `false` |
+| **toc_label** | Optional | Table of contents title. (string) | `toc_label` in UI Text data file. |
+| **toc_icon**  | Optional | Table of contents icon, displays before the title. (string) | [Font Awesome](https://fortawesome.github.io/Font-Awesome/icons/) <i class="fa fa-file-text"></i> **file-text** icon. Any other FA icon can be used instead. |
+
+**TOC example with custom title and icon**
+
+```yaml
+---
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "gear"
+---
+```
 
 ## Archive Layout
 
@@ -194,7 +218,7 @@ author_profile: true
 {% endfor %}{% endraw %}
 ```
 
-### Home Page
+## Home Page Layout
 
 A derivative archive page layout to be used as a simple home page. It is built to show a paginated list of recent posts based off of the [pagination settings]({{ "/docs/configuration/#paginate" | absolute_url }}) in `_config.yml`.
 
@@ -245,6 +269,25 @@ For full-width landing pages that need a little something extra add `layout: spl
 
 Feature blocks can be assigned and aligned to the `left`, `right`, or `center` with a sprinkling of YAML. For full details on how to use the `feature_row` helper check the [**Content**]({{ "/docs/helpers/" | absolute_url }}) section or review a [sample splash page](https://github.com/{{ site.repository }}/blob/master/docs/_pages/splash-page.md).
 
+## Search Page Layout
+
+A page with a search form. Add `layout: search` to the YAML Front Matter similar to [this example](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/search.md) on the demo site.
+
+![search page layout example]({{ "/assets/images/search-layout-example.png" | absolute_url }})
+
+**Note:** A page using the `layout: search` isn't compatible with the new [site search feature]({{ "/docs/configuration/#site-search" | absolute_url }}) incorporated in the masthead.
+{: .notice--warning}
+
+### Exclusions
+
+If you would like to exclude specific pages/posts from the search index set the search flag to `false` in the YAML Front Matter for the page/post.
+
+```yaml
+search: false
+```
+
+**ProTip:** Add a link to this page in the masthead navigation.
+{: .notice--info}
 
 ---
 
@@ -357,6 +400,19 @@ header:
   cta_url: "https://unsplash.com"
 ```
 
+### OpenGraph & Twitter Card Images
+
+By default the large page header or overlay images are used for sharing previews. If you'd like to set this image to something else use `page.header.og_image` like:
+
+```yaml
+header:
+  image: /assets/images/your-page-image.jpg
+  og_image: /assets/images/your-og-image.jpg
+```
+
+**ProTip:** `og_image` is useful for setting OpenGraph images on pages that don't have a header or overlay image.
+{: .notice--info}
+
 ---
 
 ## Sidebars
@@ -439,7 +495,7 @@ To end up with:
 
 To add a touch of color to the default black (`#000`) icon a few more steps are necessary.
 
-Start by copying [`_utilities.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/_utilities.scss) `<site root>/_sass`. Open it up to the icon section (it's near the bottom) and nest a new class beneath `.social-icons` that matches the one used to declare the Font Awesome icon. In our case `.fa-reddit`.
+Start by copying [`_utilities.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_utilities.scss) `<site root>/_sass`. Open it up to the icon section (it's near the bottom) and nest a new class beneath `.social-icons` that matches the one used to declare the Font Awesome icon. In our case `.fa-reddit`.
 
 Simply add a `color` declaration and the corresponding hex code.
 
@@ -454,7 +510,7 @@ Simply add a `color` declaration and the corresponding hex code.
 
 ![Reddit link in author profile with color]({{ "/assets/images/mm-author-profile-reddit-color.png" | absolute_url }})
 
-**ProTip:** For bonus points you can add it as a Sass `$variable` that you set in [`_variables.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/_variables.scss) like the other ["brand" colors](http://brandcolors.net/). You'll need to add this file to `/_sass/` as well if you're using the Ruby Gem version of the theme.
+**ProTip:** For bonus points you can add it as a Sass `$variable` that you set in [`_variables.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_variables.scss) like the other ["brand" colors](http://brandcolors.net/). You'll need to add this file to `/_sass/` as well if you're using the Ruby Gem version of the theme.
 {: .notice--info}
 
 **Please please please** don't submit [pull requests]({{ "/docs/contributing/" | absolute_url }}) adding in support for "missing" social media links. I'm trying to keep things down to the minimum (hence the theme's name) and have no interest in merging such PRs :expressionless:.

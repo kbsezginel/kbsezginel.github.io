@@ -2,22 +2,21 @@
 title: "Quick-Start Guide"
 permalink: /docs/quick-start-guide/
 excerpt: "How to quickly install and setup Minimal Mistakes for use with GitHub Pages."
-last_modified_at: 2017-09-01T09:27:53-04:00
+last_modified_at: 2017-11-15T09:49:52-05:00
 redirect_from:
   - /theme-setup/
+toc: true
 ---
 
-Minimal Mistakes has been developed as a [Jekyll theme gem](http://jekyllrb.com/docs/themes/) for easier use. It is also 100% compatible with GitHub Pages --- just with a more involved installation process.
-
-{% include toc %}
+Minimal Mistakes has been developed as a [Jekyll theme gem](http://jekyllrb.com/docs/themes/) for easier use. It is also 100% compatible with GitHub Pages --- just with slightly different installation process.
 
 ## Installing the Theme
 
-If you're running Jekyll v3.5+ and self-hosting you can quickly install the theme as a Ruby gem. If you're hosting with GitHub Pages you'll have to use the old "repo fork" method or directly copy all of the theme files[^structure] into your site.
+If you're running Jekyll v3.5+ and self-hosting you can quickly install the theme as a Ruby gem.
 
 [^structure]: See [**Structure** page]({{ "/docs/structure/" | absolute_url }}) for a list of theme files and what they do.
 
-**ProTip:** Be sure to remove `/docs` and `/test` if you forked Minimal Mistakes. These folders contain documentation and test pages for the theme and you probably don't littering up in your repo.
+**ProTip:** Be sure to remove `/docs` and `/test` if you forked Minimal Mistakes. These folders contain documentation and test pages for the theme and you probably don't want them littering up your repo.
 {: .notice--info}
 
 ### Ruby Gem Method
@@ -40,13 +39,32 @@ Then run Bundler to install the theme gem and dependencies:
 bundle install
 ```
 
-### GitHub Pages Compatible Method
+### GitHub Pages Compatible Methods
 
-Fork the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/fork), then rename the repo to **USERNAME.github.io** --- replacing **USERNAME** with your GitHub username.
+If you're hosting with GitHub Pages follow these steps instead.
 
-<figure>
-  <img src="{{ '/assets/images/mm-theme-fork-repo.png' | absolute_url }}" alt="fork Minimal Mistakes">
-</figure>
+**Note:** [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme) is currently in beta on GitHub Pages. In my tests it works as advertised, with the occasional failure due to missing `_includes` and `_layouts` --- your results may vary.
+{: .notice--warning}
+
+Replace `gem "jekyll"` with:
+
+```
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+```
+
+Run `bundle update` and verify that all gems install properly.
+
+Add `remote_theme: "mmistakes/minimal-mistakes"` to your `_config.yml` file.
+
+Then add [`jekyll-remote-theme`](https://github.com/benbalter/jekyll-remote-theme) to the `plugins` (previously gems) array in your `_config.yml` file like so:
+
+```
+plugins:
+  - jekyll-remote-theme
+```
+
+---
 
 **Note:** Your Jekyll site should be viewable immediately at <http://USERNAME.github.io>. If it's not, you can force a rebuild by **Customizing Your Site** (see below for more details).
 {: .notice--warning}
@@ -57,23 +75,13 @@ If you're hosting several Jekyll based sites under the same GitHub username you 
   <img src="{{ '/assets/images/mm-gh-pages.gif' | absolute_url }}" alt="creating a new branch on GitHub">
 </figure>
 
-Replace the contents of `Gemfile` found in the root of your Jekyll site with the following:
+You can also install the theme by copying all of the theme files[^structure] into your project.
 
-```ruby
-source "https://rubygems.org"
+To do so fork the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/fork), then rename the repo to **USERNAME.github.io** --- replacing **USERNAME** with your GitHub username.
 
-gem "github-pages", group: :jekyll_plugins
-
-group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "jekyll-gist"
-  gem "jekyll-feed"
-  gem "jemoji"
-end
-```
-
-Then run `bundle update` and verify that all gems install properly.
+<figure>
+  <img src="{{ '/assets/images/mm-theme-fork-repo.png' | absolute_url }}" alt="fork Minimal Mistakes">
+</figure>
 
 **GitHub Pages Alternatives:** Looking to host your site for free and install/update the theme painlessly? [Netflify][netlify-jekyll], [GitLab Pages][gitlab-jekyll], and [Continuous Integration (CI) services][ci-jekyll] have you covered. In most cases all you need to do is connect your repository to them, create a simple configuration file, and install the theme following the [Ruby Gem Method](#ruby-gem-method) above.
 {: .notice--info}
@@ -130,9 +138,22 @@ Edit `_config.yml`. Then:
 
 If you're migrating a site already using Minimal Mistakes and haven't customized any of the theme files things upgrading will be easier for you.
 
-Start by removing `_includes`, `_layouts`, `_sass`, `assets` folders and all files within.
+Start by removing the following folders and any files within them: 
 
-You won't need these anymore as they're bundled with the theme gem.
+```terminal
+├── _includes
+├── _layouts
+├── _sass
+├── assets
+|  ├── css
+|  ├── fonts
+|  └── js
+```
+
+You won't need these anymore as they're bundled with the theme gem --- unless you intend to [override them](http://jekyllrb.com/docs/themes/#overriding-theme-defaults).
+
+**Note:** When clearing out the `assets` folder be sure to leave any files you've added and need. This includes images, CSS, or JavaScript that aren't already [bundled in the theme](https://github.com/mmistakes/minimal-mistakes/tree/master/assets). 
+{: .notice--warning}
 
 From `v4.5.0` onwards, you don't have to maintain a copy of the default data files viz. `_data/ui-text.yml` and `_data/navigation.yml` either.
 The default files are read-in automatically via the [`jekyll-data`](https://github.com/ashmaroli/jekyll-data) plugin.
