@@ -24,7 +24,7 @@ projects:
     excerpt: "Thermal conductivity of MOFs."
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - url: "https://github.com/kbsezginel/IPMOF"
+  - url: "https://kbsezginel.github.io/ipmof"
     image_path: /assets/img/IPMOF-rotation.gif
     alt: "ipmof"
     title: "IPMOF"
@@ -44,7 +44,7 @@ projects:
     excerpt: "Molecule-sized cars on gold tracks."
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - url: "https://github.com/kbsezginel/Moleidoscope"
+  - url: "https://kbsezginel.github.io/moleidoscope"
     alt: "moleidoscope"
     title: "Moleidoscope"
     excerpt: "Building supramolecular structures with symmetry."
