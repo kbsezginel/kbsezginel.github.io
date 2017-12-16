@@ -11,7 +11,7 @@ projects:
     excerpt: "Thermal conductivity of MOFs."
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - url: "https://kbsezginel.github.io/ipmof"
+  - url: "https://kbsezginel.github.io/IPMOF"
     image_path: /assets/img/IPMOF-rotation.gif
     alt: "ipmof"
     title: "IPMOF"
