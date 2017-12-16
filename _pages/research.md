@@ -4,19 +4,6 @@ title:  "Research"
 permalink: /research/
 date:   2017-08-04
 categories: pages
-gallery:
-  - url: https://scholar.google.com.tr/citations?user=6ak9FqIAAAAJ
-    image_path: /assets/img/gscholar.png
-    alt: "Google Scholar"
-    title: "Google Scholar"
-  - url: https://www.researchgate.net/profile/Kutay_Sezginel?cp=shp
-    image_path: /assets/img/researchgate.png
-    alt: "Research Gate"
-    title: "Research Gate"
-  - url: https://www.linkedin.com/in/kutay-berk-sezginel-60232a74/
-    image_path: /assets/img/linkedin.svg
-    alt: "Linked in"
-    title: "Linked in"
 projects:
   - url: "https://kbsezginel.github.io/thermof"
     alt: "thermof"
@@ -62,6 +49,19 @@ projects:
     excerpt: "Tutorials for data anlysis, molecular construction, running simulations and more..."
     btn_label: "Read More"
     btn_class: "btn--primary"
+experience:
+  - url: https://scholar.google.com.tr/citations?user=6ak9FqIAAAAJ
+    image_path: /assets/img/gscholar.png
+    alt: "Google Scholar"
+    title: "Google Scholar"
+  - url: https://www.researchgate.net/profile/Kutay_Sezginel?cp=shp
+    image_path: /assets/img/researchgate.png
+    alt: "Research Gate"
+    title: "Research Gate"
+  - url: https://www.linkedin.com/in/kutay-berk-sezginel-60232a74/
+    image_path: /assets/img/linkedin.svg
+    alt: "Linked in"
+    title: "Linked in"
 ---
 ## Projects
 
@@ -69,6 +69,10 @@ projects:
 
 ## Experience
 
-{% include gallery caption="Research and professional experience." %}
+{% include feature_row id="experience" caption="Research and professional experience." %}
+
+
+**Orcid ID**
+
 
 <a href="https://orcid.org/0000-0003-3060-2945" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0003-3060-2945</a>
