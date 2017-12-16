@@ -32,6 +32,7 @@ projects:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/moleidoscope"
+    image_path: /assets/img/moleidoscope.gif
     alt: "moleidoscope"
     title: "Moleidoscope"
     excerpt: "Building supramolecular structures with symmetry."
