@@ -6,19 +6,21 @@ date:   2017-08-04
 categories: pages
 projects:
   - url: "https://kbsezginel.github.io/thermof"
+    image_path: /assets/img/research/thermof.png
     alt: "thermof"
     title: "TherMOF"
     excerpt: "Thermal conductivity of MOFs."
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/IPMOF"
-    image_path: /assets/img/IPMOF-rotation.gif
+    image_path: /assets/img/research/IPMOF-rotation.gif
     alt: "ipmof"
     title: "IPMOF"
     excerpt: "Discovering Hetero-Interpenetrated MOFs."
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/biomof"
+    image_path: /assets/img/research/biomof.png
     alt: "biomof"
     title: "BioMOF"
     excerpt: "MOFs for drug delivery applications."
@@ -32,13 +34,14 @@ projects:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/moleidoscope"
-    image_path: /assets/img/moleidoscope.gif
+    image_path: /assets/img/research/moleidoscope.gif
     alt: "moleidoscope"
     title: "Moleidoscope"
     excerpt: "Building supramolecular structures with symmetry."
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://github.com/kbsezginel/HostDesigner"
+    image_path: /assets/img/research/hostdesigner.gif
     alt: "hostdesigner"
     title: "HostDesigner"
     excerpt: "Structure-based design of molecular hosts."
