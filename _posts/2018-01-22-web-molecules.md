@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Web-based interactive visualization of molecules"
-excerpt: "Have you ever tried opening a molecule file you received from a colleague, or a file you find online
-and ended up spending half an hour trying to fix the formatting?"
+excerpt: "Have you ever tried opening a molecule file that you received from a colleague, or a file that you found online
+and ended up spending half an hour trying to make it work?"
 date:   2018-01-22
 categories: research
 sidebar:
@@ -12,8 +12,8 @@ sidebar:
 
 <script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
 
-**Have you ever tried opening a molecule file you received from a colleague, or a file you find online
-and ended up spending half an hour trying to fix the formatting?** Even though chemical files mostly have
+**Have you ever tried opening a molecule file that you received from a colleague, or a file that you found online
+and ended up spending half an hour trying to make it work?** Even though chemical files mostly have
 well-defined formats, implemenation differences between the software that reads and writes these files
 can cause problems. This problem is especially significant in file formats where a cell is defined
 in addition to atomic coordinates (e.g. crystals).
