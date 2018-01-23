@@ -10,7 +10,7 @@ sidebar:
 ---
 {% include toc %}
 
-<script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
 
 **Have you ever tried opening a molecule file you received from a colleague, or a file you find online
 and ended up spending half an hour trying to fix the formatting?** Even though chemical files mostly have
@@ -36,7 +36,7 @@ You only need to upload the molecule file and provide the `URL` for that file.
 Here is the javascript library and the `HTML div` element you would need for this:
 
 ```
-<script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
 
 <div style="height: 300px; width: 500px;"
   class='viewer_3Dmoljs' data-datatype='xyz'
@@ -49,6 +49,7 @@ Here is the javascript library and the `HTML div` element you would need for thi
 
 As an example you can see a [decacylene](https://pubchem.ncbi.nlm.nih.gov/compound/Decacyclene){:target="_blank"}
 molecule visualization (embedded in markdown) using an `xyz` file and `3DMol.js` library.
+
 <div style="height: 300px; width: 500px;"
   class='viewer_3Dmoljs' data-datatype='xyz' data-backgroundcolor='0xffffff'
   data-href='/assets/molecules/DC-single.xyz'
