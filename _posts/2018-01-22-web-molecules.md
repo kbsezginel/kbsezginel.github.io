@@ -52,7 +52,7 @@ molecule visualization (embedded in markdown) using an `xyz` file and `3DMol.js`
 
 <div style="height: 300px; width: 500px;"
   class='viewer_3Dmoljs' data-datatype='xyz' data-backgroundcolor='0xffffff'
-  data-href='/assets/molecules/DC-single.xyz'
+  data-href='/assets/molecules/dc.xyz'
   data-style='stick'>
 </div>
 
