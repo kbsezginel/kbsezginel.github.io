@@ -40,6 +40,7 @@ Publications
     <th><a href="#2017" class="btn btn--primary">2017</a></th>
     <th><a href="#2016" class="btn btn--primary">2016</a></th>
     <th><a href="#2015" class="btn btn--primary">2014</a></th>
+  </tr>
 </table>
 
 ## 2018
