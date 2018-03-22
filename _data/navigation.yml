@@ -1,9 +1,15 @@
 # main links
 main:
+  - title: "Portfolio"
+    url: /portfolio/
   - title: "Research"
     url: /research/
+  - title: "Publications"
+    url: /publications/
   - title: "Music"
     url: /music/
+  - title: "Tutorials"
+    url: /tutorials/
   - title: "Raspberry PI"
     url: /raspberry-pi/
   - title: "CV"

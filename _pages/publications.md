@@ -2,7 +2,7 @@
 layout: splash
 title:  "Publications"
 permalink: /publications/
-date:   2017-12-15
+date:   2018-03-22
 categories: pages
 2018_sezginel_chemmater:
   - image_path: /assets/img/publications/2018_sezginel_chemmater.png
