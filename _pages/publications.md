@@ -42,23 +42,19 @@ Publications
     <th><a href="#2015" class="btn btn--primary">2014</a></th>
 </table>
 
-2018
-----
+## 2018
 
 {% include feature_row id="2018_sezginel_chemmater" type="left" %}
 
-2017
-----
+## 2017
 
 {% include feature_row id="2017_sezginel_crystengcomm" type="left" %}
 
-2016
-----
+## 2016
 
 {% include feature_row id="2016_sezginel_langmuir" type="left" %}
 
-2015
-----
+## 2015
 
 {% include feature_row id="2015_basdogan_indengchemres" type="left" %}
 
