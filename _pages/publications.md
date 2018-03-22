@@ -41,7 +41,6 @@ Publications
     <th><a href="#2016" class="btn btn--primary">2016</a></th>
     <th><a href="#2015" class="btn btn--primary">2014</a></th>
 </table>
---------------------------------------------------------------
 
 2018
 ----
