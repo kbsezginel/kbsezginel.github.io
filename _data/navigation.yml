@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Portfolio"
-    url: /visualization/portfolio/
+    url: /visualization/portfolio
   - title: "Research"
     url: /research/
   - title: "Publications"
