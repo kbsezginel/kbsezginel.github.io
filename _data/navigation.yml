@@ -10,7 +10,5 @@ main:
     url: /music/
   - title: "Tutorials"
     url: /tutorials/
-  - title: "Raspberry PI"
-    url: /raspberry-pi/
   - title: "CV"
     url: /assets/docs/KutayBSezginel_CV.pdf

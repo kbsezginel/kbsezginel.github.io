@@ -18,3 +18,9 @@ molecular simulation software (such as OpenBabel, RASPA, LAMMPS, ...).
 [Visualization](https://kbsezginel.github.io/visualization/)
 ---------------------------------------------------------------------
 Tutorials and examples (jupyter notebooks) for scientific communication.
+
+[Raspberry Pi and home automation](https://kbsezginel.github.io/raspberry-pi/)
+---------------------------------------------------------------------
+- Using Raspberry Pi to control led, button, camera, sensor and more.
+- Running a web server with Raspberry Pi to access control over other devices (phone, laptop).
+- Raspberry Pi and Arduino projects for things like MIDI controllers, home automation control panels...
