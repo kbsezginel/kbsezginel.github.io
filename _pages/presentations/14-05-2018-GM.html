@@ -45,6 +45,35 @@ class: center, middle
 #### May 14, 2018
 
 ---
+# Why Nanocar?
+
+<p align="center"><img src="/assets/img/presentations/kinesin-walker.gif" height=300></p>
+
+---
+# How?
+
+### Method Development
+- Experimental comparison
+
+### Nanocar Design
+-
+---
+class: center, middle
+
+### Surface diffusion
+
+.col3[DC<img src="assets/img/presentation/DC.png"  height=150>]
+.col3[HtBDC<img src="assets/img/presentation/HtBDC.png"  height=150>]
+.col3[Violet .red[Lander]<img src="assets/img/presentation/VL.png"  height=150>]
+
+.col3[C60<img src="assets/img/presentation/C60.png"  height=150>]
+.col3[.red[p-Carborane]<img src="assets/img/presentation/PCARBORANE.png"  height=150>]
+.col3[PVBA<img src="assets/img/presentation/PVBA.png"  height=150>]
+
+.col3[BtPHD<img src="assets/img/presentation/BtPHD.png"  height=150>]
+.col3[DNHD<img src="assets/img/presentation/DNHD.png"  height=150>]
+.col3[TPEE<img src="assets/img/presentation/TPEE.png"  height=150>]
+---
 ## Molecular Diffusion
 
 For example, diffusion in zeolites occur outside the time scales accesible to molecular dynamics simulations,
@@ -78,6 +107,8 @@ An electromagnetic (or any other) wave experiences partial transmittance and par
 
 Enables calculation of self-diffusion coefficients for systems far beyond the time scales accessible to molecular dynamics.
 
+https://pubs.acs.org/doi/full/10.1021/jp0542470
+
 --
 ### FCC (110) Surface
 .col2[x-direction<br><br><img src="/assets/img/presentations/tst-fcc-110-x.png" alt="us-fcc-110-x" height=300>]
@@ -94,14 +125,40 @@ Enables calculation of self-diffusion coefficients for systems far beyond the ti
 <p align="center"><img src="/assets/img/presentations/dctst-rate.png" alt="dctst-rate" height=90></p>
 
 <img src="/assets/img/presentations/dctst-beta.png" alt="dctst-beta" height=80>
+
+http://membrane.urmc.rochester.edu/sites/default/files/wham/doc.pdf
+
 ---
 ## Procedure
 - Initially the smallest repeating lattice is divided into grid points.
 
-<img src="/assets/img/presentations/us-fcc-110-grid.png" alt="us-fcc-110-x" height=250>
+<img src="/assets/img/presentations/us-fcc-110-grid.png" alt="us-fcc-110-x" height=230>
 
 For each grid point a MD simulation is performed.
+First I performed a minimization on each grid point (2eps).
+Then I also tried umbrella sampling with a spring (2eps | NVT | 200K)
 ---
+## Scan 1
+
+---
+### Activation Energy
+- The barriers obtained using WHAM analysis are around 0.15 kcal/mol.
+- The experimental activation energy for HtBDC is 0.57 eV which is approximately 13 kcal/mol.
+- This means we are 2 orders of magnitude lower.
+- Let's bump up the interaction energy.
+---
+## Increase pairwise energy
+
+<img src="/assets/img/presentations/htbdc-high-energy-buckle.gif" alt="htbdc-buckle" height=242>
+<br>
+--
+.col2[<img src="/assets/img/presentations/lizard-sand.gif" alt="lizard-sand" height=250>]
+
+--
+.col2[<img src="/assets/img/presentations/octopus-sand.gif" alt="octopus-sand" height=250>]
+
+---
+
 ## LAMMPS
 
 #### US - Minimization
