@@ -49,9 +49,16 @@ class: center, middle
 
 ---
 ## Molecular Machines
-.col2[<p align="center">Kinesin<br><img src="/assets/img/presentations/kinesin-walker.gif" height=200></p>]
+.col2[<p align="center">Kinesin<br><img src="/assets/img/presentations/kinesin-walker.gif" height=210></p>]
 --
-.col2[<p align="center">Myosin 5<br><img src="/assets/img/presentations/myosin5-animation.gif" height=200></p>]
+.col2[<p align="center">Myosin 5<br><img src="/assets/img/presentations/myosin5-animation.gif" height=210></p>]
+
+???
+Molecular machines are discrete number of molecular components that produce mechanical movements in response to specific stimuli (input).
+The expression is often more generally applied to molecules that simply mimic functions that occur at the macroscopic level.
+The term is also common in nanotechnology where a number of highly complex molecular machines have been proposed that are aimed at the goal of
+constructing a molecular assembler.
+In 1959, physicist Richard Feynman popularized the idea of nanomachines in his talk entitled "There's Plenty of Room at the Bottom".
 --
 <p align="center"><br>RNA Polymerase<br><img src="/assets/img/presentations/rna-polymerase-animation.gif" height=200></p>
 
@@ -67,7 +74,7 @@ alternate steps along actin, to carry its cargo to the right place in the cell.
 ---
 ## Artificial Molecular Machines
 
-<p align="center"><img src="/assets/img/presentations/amms-rb.png" height=300></p>
+<p align="center"><img src="/assets/img/presentations/amms-rb.png" height=310></p>
 
 ---
 ## Road Map
@@ -104,7 +111,7 @@ class: center, middle
 class: center, middle
 
 ## HtBDC
-<img src="/assets/img/presentations/HtBDC.png"  height=300>
+<img src="/assets/img/presentations/HtBDC.png"  height=350>
 
 <b>Activation Energy:</b> 0. 57 eV ~ 13 kcal/mol
 
@@ -148,7 +155,7 @@ Systems characterized by a sequence of rare events can be described using TST.
 
 --
 
-<p align="center"><img src="/assets/img/presentations/tst-diagram.png" height=300></p>
+<p align="center"><img src="/assets/img/presentations/tst-diagram.png" height=290></p>
 
 ???
 Ex: Diffusion in zeolites occur outside the time scales accesible to molecular dynamics simulations,
@@ -166,9 +173,8 @@ which is typically limited to diffusion rates in the order of 10<sup>-12</sup> c
 --
 
 ### Eyring Equation (1935)
-- Statistical mechanics justification.
 
-<p align="center"><img src="/assets/img/presentations/eyring-equation.svg" alt="eyring" height=60></p>
+<p align="center"><img src="/assets/img/presentations/eyring-equation.svg" alt="eyring" height=70></p>
 
 ???
 A historically useful generalization supported by Arrhenius' equation is that, for many common
@@ -179,7 +185,7 @@ Moore's Law of chemical engineering.
 ### Eyring Equation (1935)
 - Statistical mechanics justification.
 
-<p align="center"><img src="/assets/img/presentations/eyring-equation.svg" alt="eyring" height=60></p>
+<p align="center"><img src="/assets/img/presentations/eyring-equation.svg" alt="eyring" height=70></p>
 
 
 ## Transmission coefficient
@@ -218,6 +224,11 @@ https://pubs.acs.org/doi/full/10.1021/jp0542470
 <p style="padding: 0px 8px 0px 0px;">
 <img src="/assets/img/presentations/dctst-beta.png" alt="dctst-beta" height=80>
 </p>
+
+???
+k formula:
+k_{A \rightarrow B} = \kappa {\sqrt{ \dfrac{1}{2 \pi M \beta}}} \dfrac{ e^{- \beta F(q^*)} } { \int e^{- \beta F(q)}dq }
+
 ---
 ## Calculating self-diffusion coefficient
 
@@ -335,31 +346,6 @@ class: center, middle
 # <div class="font-effect-anaglyph">Thank you!<div>
 
 ---
-
-## LAMMPS
-
-#### US - Minimization
-Calculate min energy and distance for each point
-
-#### US - NVT & Spring (eps: 5)
-Attached spring (k:5 kcal/mol) to each point and performed NVT simulations for 5 ns (dt: 1 fs).
-Performed WHAM analysis which resulted in barriers ~0.15 kca/mol.
-The activation energy of the molecule is 0.57 eV which corresponds to ~13 kcal/mol.
-This suggests that surface-molecule interaction energy should be ~100 times larger.
-
-#### US - NVT & Spring (eps: 500)
-This resulted in molecule to explode (bonded atoms becoming too far apart).
-This is presumably because the molecule is initially placed ~5 A above the surface and with the NVT
-simulation the molecule is attracted to the surface with so much speed that the atoms just gain too much velocity.
-This veolcity is however different for each atom therefore they might fly apart from each other losing bonds.
-This can be alleviated by minimizing the system first.
-
-Moreover by changing the epsilon coefficient the equilibrium z-distance might be changed.
-Instead of using the same z position for the spring, for these simulations I decided to use the last z position from the minimization.
-
-#### US - Minimization - NVT & Spring (eps: 500)
-
----
 # Mean Squared Displacement
 
 Mean squared displacement is calculated using the formula below:
@@ -382,10 +368,30 @@ If there are other forces affecting the motion of the particle then different be
 
 ---
 
-## WHAM
+## LAMMPS
 
-k formula:
-k_{A \rightarrow B} = \kappa {\sqrt{ \dfrac{1}{2 \pi M \beta}}} \dfrac{ e^{- \beta F(q^*)} } { \int e^{- \beta F(q)}dq }
+#### US - Minimization
+Calculate min energy and distance for each point
+
+#### US - NVT & Spring (eps: 5)
+Attached spring (k:5 kcal/mol) to each point and performed NVT simulations for 5 ns (dt: 1 fs).
+Performed WHAM analysis which resulted in barriers ~0.15 kca/mol.
+The activation energy of the molecule is 0.57 eV which corresponds to ~13 kcal/mol.
+This suggests that surface-molecule interaction energy should be ~100 times larger.
+
+---
+
+#### US - NVT & Spring (eps: 500)
+This resulted in molecule to explode (bonded atoms becoming too far apart).
+This is presumably because the molecule is initially placed ~5 A above the surface and with the NVT
+simulation the molecule is attracted to the surface with so much speed that the atoms just gain too much velocity.
+This veolcity is however different for each atom therefore they might fly apart from each other losing bonds.
+This can be alleviated by minimizing the system first.
+
+Moreover by changing the epsilon coefficient the equilibrium z-distance might be changed.
+Instead of using the same z position for the spring, for these simulations I decided to use the last z position from the minimization.
+
+#### US - Minimization - NVT & Spring (eps: 500)
 
 ---
 class: center, middle
