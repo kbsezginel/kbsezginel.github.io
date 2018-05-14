@@ -132,10 +132,17 @@ Images show that only a fraction of molecules moved. Each molecule is approximat
 ## Transition State Theory (TST)
 Systems characterized by a sequence of rare events can be described using TST.
 
+--
+
 - TST is primarily used to understand how chemical reactions take place.
+
+--
+
+
 - TST can also be used to calculate diffusion:
   - Diffusion can be approximated by a series of jumps between potential energy minima (lattice sites).
   - The rate constants for jumping between the sites can be converted to diffusivities.
+
 --
 
 <p align="center"><img src="/assets/img/presentations/tst-diagram.png" height=300></p>
@@ -146,36 +153,52 @@ which is typically limited to diffusion rates in the order of 10<sup>-12</sup> c
 
 ---
 ### Arrhenius Equation (1889)
+
+- Temperature dependence of a rate constant (mostly reaction rates)
+- Activation energy
+- Empirical relationship.
+
 <p align="center"><img src="/assets/img/presentations/arrhenius-equation.svg" alt="arrhenius" height=50></p>
 
+--
+
+### Eyring Equation (1935)
+- Statistical mechanics justification.
+
+<p align="center"><img src="/assets/img/presentations/eyring-equation.svg" alt="eyring" height=60></p>
+
+???
 A historically useful generalization supported by Arrhenius' equation is that, for many common
 chemical reactions at room temperature, the reaction rate doubles for every 10 degree Celsius increase in temperature.
 Moore's Law of chemical engineering.
 
-Mainly used to calculate activation energy by measuring temperature dependence of a rate constant.
-Useful in thermally induced processes such as diffusion.
-
+---
 ### Eyring Equation (1935)
+- Statistical mechanics justification.
+
 <p align="center"><img src="/assets/img/presentations/eyring-equation.svg" alt="eyring" height=60></p>
 
----
+
 ## Transmission coefficient
-The transmission coefficient is used in physics and electrical engineering when wave propagation in a medium containing discontinuities is considered.
-An electromagnetic (or any other) wave experiences partial transmittance and partial reflectance when the medium through which it travels suddenly changes.
 
 <p align="center"><img src="/assets/img/presentations/partial-transmittance.gif" alt="partial-transmittance" height=200></p>
+
+???
+The transmission coefficient is used in physics and electrical engineering when wave propagation in a medium containing discontinuities is considered.
+An electromagnetic (or any other) wave experiences partial transmittance and partial reflectance when the medium through which it travels suddenly changes.
 
 ---
 ## dcTST (Dynamically Corrected Transition State Theory)
 
 Enables calculation of self-diffusion coefficients for systems far beyond the time scales accessible to molecular dynamics.
 
-https://pubs.acs.org/doi/full/10.1021/jp0542470
-
 --
 ### FCC (110) Surface
 .col2[x-direction<br><br><img src="/assets/img/presentations/tst-fcc-110-x.png" alt="us-fcc-110-x" height=300>]
 .col2[y-direction<br><br><img src="/assets/img/presentations/tst-fcc-110-y.png" alt="us-fcc-110-y" height=300>]
+
+???
+https://pubs.acs.org/doi/full/10.1021/jp0542470
 
 ---
 ## Calculating hopping rate
@@ -294,6 +317,13 @@ WHAM Manual: http://membrane.urmc.rochester.edu/sites/default/files/wham/doc.pdf
 
 .col2[<img src="/assets/img/presentations/cnvt2-wham-x-f.png" height=250>]
 .col2[<img src="/assets/img/presentations/cnvt2-wham-x-p.png"  height=250>]
+
+---
+## Pairwise Energy
+
+.col2[<img src="/assets/img/presentations/cnvt2-epair-x.png" height=250>]
+
+.col2[<img src="/assets/img/presentations/cnvt2-epair-y.png" height=250>]
 
 
 ---
