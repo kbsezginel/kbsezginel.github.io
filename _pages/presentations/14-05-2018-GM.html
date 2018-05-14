@@ -28,7 +28,7 @@ categories: presentations
       .gray {color: #606060; }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
-      .col1 {width: 90%; text-align: center; float:left}
+      .col1 {width: 100%; text-align: center; float:left}
       .col2 {width: 50%; text-align: center; float:left}
       .col3 {width: 33%; text-align: center; float:left}
 
@@ -45,42 +45,105 @@ class: center, middle
 #### May 14, 2018
 
 ---
-# Why Nanocar?
+## Molecular Machines
+.col2[<p align="center">Kinesin<br><img src="/assets/img/presentations/kinesin-walker.gif" height=200></p>]
+--
+.col2[<p align="center">Myosin 5<br><img src="/assets/img/presentations/myosin5-animation.gif" height=200></p>]
+--
+<p align="center"><br>RNA Polymerase<br><img src="/assets/img/presentations/rna-polymerase-animation.gif" height=200></p>
 
-<p align="center"><img src="/assets/img/presentations/kinesin-walker.gif" height=300></p>
+???
+Kinesins move along microtubule (MT) filaments, and are powered by the hydrolysis of adenosine triphosphate (ATP)
+(thus kinesins are ATPases). The active movement of kinesins supports several cellular functions including mitosis,
+meiosis and transport of cellular cargo, such as in axonal transport.
+
+Myosin 5, is a motor found in non-muscle cells that is involved in moving proteins and vesicles (cargo)
+around in cells along tracks of actin. Myosin 5 is a dimer, so it has two motor domains, and these take
+alternate steps along actin, to carry its cargo to the right place in the cell.
 
 ---
-# How?
+## Artificial Molecular Machines
 
-### Method Development
+<p align="center"><img src="/assets/img/presentations/amms-rb.png" height=300></p>
+
+---
+## Road Map
+
+### Surface diffusion of large molecules
+- Method development
 - Experimental comparison
 
+--
+
 ### Nanocar Design
--
+- Directionality
+- Speed
+- Load capacity
+
 ---
 class: center, middle
 
-### Surface diffusion
+### Surface diffusion of large molecules
 
-.col3[DC<img src="assets/img/presentations/DC.png"  height=150>]
-.col3[HtBDC<img src="assets/img/presentations/HtBDC.png"  height=150>]
-.col3[Violet .red[Lander]<img src="assets/img/presentations/VL.png"  height=150>]
+.col3[DC<img src="/assets/img/presentations/DC.png"  height=150>]
+.col3[HtBDC<img src="/assets/img/presentations/HtBDC.png"  height=150>]
+.col3[Violet .red[Lander]<img src="/assets/img/presentations/VL.png"  height=150>]
 
-.col3[C60<img src="assets/img/presentations/C60.png"  height=150>]
-.col3[.red[p-Carborane]<img src="assets/img/presentations/PCARBORANE.png"  height=150>]
-.col3[PVBA<img src="assets/img/presentations/PVBA.png"  height=150>]
+.col3[C60<img src="/assets/img/presentations/C60.png"  height=150>]
+.col3[.red[p-Carborane]<img src="/assets/img/presentations/PCARBORANE.png"  height=150>]
+.col3[PVBA<img src="/assets/img/presentations/PVBA.png"  height=150>]
 
-.col3[BtPHD<img src="assets/img/presentations/BtPHD.png"  height=150>]
-.col3[DNHD<img src="assets/img/presentations/DNHD.png"  height=150>]
-.col3[TPEE<img src="assets/img/presentations/TPEE.png"  height=150>]
+.col3[BtPHD<img src="/assets/img/presentations/BtPHD.png"  height=150>]
+.col3[DNHD<img src="/assets/img/presentations/DNHD.png"  height=150>]
+.col3[TPEE<img src="/assets/img/presentations/TPEE.png"  height=150>]
+
 ---
-## Molecular Diffusion
+class: center, middle
 
-For example, diffusion in zeolites occur outside the time scales accesible to molecular dynamics simulations,
-which is typically limited to diffusion rates in the order of 10<sup>-12</sup> cm<sup>2</sup>/s.
+## HtBDC
+<img src="/assets/img/presentations/HtBDC.png"  height=300>
+
+<b>Activation Energy:</b> 0. 57 eV ~ 13 kcal/mol
+
+---
+## Molecular Dynamics
+
+.col3[UFF<img src="/assets/img/presentations/traj-ff1.gif"  height=300>]
+--
+.col3[UFF (5 eps)<img src="/assets/img/presentations/traj-ff3-5eps.gif"  height=300>]
+--
+.col3[UFF + Coulomb<img src="/assets/img/presentations/traj-eqeq.gif"  height=300>]
+--
+<p style="padding: 360px 0px 0px 0px;">
+Predict very high diffusion compared to experimental data.
+</p>
+---
+## Experimental
+
+.red[**HtBDC STM images | Δt = 13.9 s | T: 194 K**]<br><img src="/assets/img/presentations/htbdc-stm.png"  height=150><br>
+Arrows indicate the direction in which molecules will have moved in the successive image.
+
+--
+
+.red[**PVBA | Δt = 220 s | T: 361 K**]<br><img src="/assets/img/presentations/pvba-stm.png"  height=150><br>
+Images show that only a fraction of molecules moved. Each molecule is approximately 11 Å in length and 1.25 Å in width.
+---
 
 ## Transition State Theory (TST)
-If the system is characterized by a sequence of rare events than it can be described using TST.
+Systems characterized by a sequence of rare events can be described using TST.
+
+- TST is primarily used to understand how chemical reactions take place.
+- TST can also be used to calculate diffusion:
+  - Diffusion can be approximated by a series of jumps between potential energy minima (lattice sites).
+  - The rate constants for jumping between the sites can be converted to diffusivities.
+--
+
+<p align="center"><img src="/assets/img/presentations/tst-diagram.png" height=300></p>
+
+???
+Ex: Diffusion in zeolites occur outside the time scales accesible to molecular dynamics simulations,
+which is typically limited to diffusion rates in the order of 10<sup>-12</sup> cm<sup>2</sup>/s.
+
 ---
 ### Arrhenius Equation (1889)
 <p align="center"><img src="/assets/img/presentations/arrhenius-equation.svg" alt="arrhenius" height=50></p>
@@ -115,37 +178,92 @@ https://pubs.acs.org/doi/full/10.1021/jp0542470
 .col2[y-direction<br><br><img src="/assets/img/presentations/tst-fcc-110-y.png" alt="us-fcc-110-y" height=300>]
 
 ---
-## Umbrella Sampling
-.col2[<img src="/assets/img/presentations/us-fcc-110-x.png" alt="us-fcc-110-x" height=250>]
-.col2[<img src="/assets/img/presentations/us-fcc-110-y.png" alt="us-fcc-110-y" height=250>]
-
----
-## Weighted Histogram Analysis Method (WHAM)
+## Calculating hopping rate
 
 <p align="center"><img src="/assets/img/presentations/dctst-rate.png" alt="dctst-rate" height=90></p>
 
-<img src="/assets/img/presentations/dctst-beta.png" alt="dctst-beta" height=80>
+- *k<sub>A→B</sub>*: hopping rate from state A → B
+- *K*: transmission coefficient (0 - 1)
+- *M*: mass of the molecule
+- *T*: temperature
+- *F(q)*: free energy at coordinate *q*
+- *: transition state
 
-http://membrane.urmc.rochester.edu/sites/default/files/wham/doc.pdf
+<p style="padding: 0px 8px 0px 0px;">
+<img src="/assets/img/presentations/dctst-beta.png" alt="dctst-beta" height=80>
+</p>
+---
+## Calculating self-diffusion coefficient
+
+<img src="/assets/img/presentations/dctst-diffusion.png" height=80>
+
+- *D<sub>s</sub>*: self-diffusion coefficient
+- *k<sub>A→B</sub>*: hopping rate from state A → B
+- *n*: dimensionality
+- *λ*: hopping length
+
+---
+## Umbrella Sampling
+.col2[*x-direction*<br><br><img src="/assets/img/presentations/us-fcc-110-x.png" alt="us-fcc-110-x" height=280>]
+.col2[*y-direction*<br><br><img src="/assets/img/presentations/us-fcc-110-y.png" alt="us-fcc-110-y" height=280>]
+
+???
+Umbrella sampling is a technique used to improve sampling of a system where ergodicity is hindered by the form of the system's energy landscape.
+Basically, you sample your system on the direction that you are interested to study.
+--
+
+<p style="padding: 350px 0px 0px 0px;">
+The molecule is attached to a point in space using a spring.<br><br>
+For each point an MD simulation is performed.
+</p>
 
 ---
 ## Procedure
 - Initially the smallest repeating lattice is divided into grid points.
 
-<img src="/assets/img/presentations/us-fcc-110-grid.png" alt="us-fcc-110-x" height=230>
+<p align="center"><img src="/assets/img/presentations/us-fcc-110-grid.png" alt="us-fcc-110-x" height=230></p>
 
-For each grid point a MD simulation is performed.
-First I performed a minimization on each grid point (2eps).
-Then I also tried umbrella sampling with a spring (2eps | NVT | 200K)
+- For each grid point a constrained MD simulation is performed.
+- Weighted Histogram Analysis Method (WHAM) is used to calculate free energy profiles.
+- Hopping rate can then be calculated using dcTST equation.
+- The self-diffusion coefficient can be calculate using the hopping rate.
+
+???
+WHAM Manual: http://membrane.urmc.rochester.edu/sites/default/files/wham/doc.pdf
+
 ---
-## Scan 1
+## Minimization
+
+<p align="center"><img src="/assets/img/presentations/min-final-position.png" height=260></p>
+
+--
+
+<p align="center" ><img src="/assets/img/presentations/min-thermo.png" height=165></p>
+
+---
+## Constrained NVT
+
+<p align="center" ><img src="/assets/img/presentations/cnvt1-hist-x.png" height=150></p>
+
+<p align="center" ><img src="/assets/img/presentations/cnvt1-hist-y.png" height=150></p>
+
+--
+
+.col2[*x-direction*<br><img src="/assets/img/presentations/us-fcc-110-grid-x.png" height=150>]
+.col2[*y-direction*<br><img src="/assets/img/presentations/us-fcc-110-grid-y.png" height=150>]
 
 ---
 ### Activation Energy
+
+<p align="center" ><img src="/assets/img/presentations/cnvt1-wham1d-x.png" height=180></p>
+
 - The barriers obtained using WHAM analysis are around 0.15 kcal/mol.
 - The experimental activation energy for HtBDC is 0.57 eV which is approximately 13 kcal/mol.
 - This means we are 2 orders of magnitude lower.
 - Let's bump up the interaction energy.
+
+<p align="center"><img src="/assets/img/presentations/us-fcc-110-grid-y-xdif.png" height=150></p>
+
 ---
 ## Increase pairwise energy
 
@@ -156,6 +274,14 @@ Then I also tried umbrella sampling with a spring (2eps | NVT | 200K)
 
 --
 .col2[<img src="/assets/img/presentations/octopus-sand.gif" alt="octopus-sand" height=250>]
+
+---
+## Rigid simulation
+
+---
+class: center, middle
+
+# <div class="font-effect-anaglyph">Thank you!<div>
 
 ---
 
