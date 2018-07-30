@@ -41,8 +41,8 @@ categories: presentations
 class: center, middle
 
 # MolSSI Research Proposal
-### .red[Computational Design of Artificial Molecular Machines]
-#### Kutay B. Sezginel
+## .red[Computational Design of Artificial Molecular Machines]
+### Kutay B. Sezginel
 #### July 30, 2018
 
 ---
@@ -55,20 +55,26 @@ movements (output) as a result of an appropriate external stimulation (input).*
 
 <div style="width: 50%; text-align: center; float:left; padding: 0px 0px 0px 0px;">
   <p style="text-align:center;"><b>Kinesin</b></p>
-<img src="/assets/img/presentations/molssi/kinesin-walker.gif" height=200>
+<img src="/assets/img/presentations/molssi/kinesin-walker.gif" height=280>
 </div>
 
 --
 
 <div style="width: 50%; text-align: center; float:left; padding: 0px 0px 50px 0px;">
   <p style="text-align:center;"><b>RNA Polymerase</b></p>
-<img src="/assets/img/presentations/molssi/rna-polymerase-animation.gif" height=200>
+<img src="/assets/img/presentations/molssi/rna-polymerase-animation.gif" height=280>
 </div>
 
 ---
-## 1. Artificial Molecular Machines
+## 1. Project
 
-<p align="center"><img src="/assets/img/presentations/molssi/amms-rb.png" height=300></p>
+.red[**Developing a computer-aided design tool to build and study artficial molecular machine systems at different length scales.**]
+
+--
+
+### Artificial Molecular Machines
+
+<p align="center"><img src="/assets/img/presentations/molssi/amms-rb.png" height=320></p>
 
 ---
 
@@ -175,7 +181,10 @@ class: center, middle
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+        ratio: '16:9',
+        countIncrementalSlides: false
+      });
     </script>
   </body>
 </html>
