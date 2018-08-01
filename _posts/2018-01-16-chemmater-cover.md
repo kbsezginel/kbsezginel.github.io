@@ -3,6 +3,8 @@ layout: single
 title:  "My paper was featured on the cover of Chemistry of Materials!"
 date:   2018-01-16
 categories: research
+sidebar:
+  nav: "main"
 ---
 My [paper](https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015) on thermal transport properties
 of interpenetrated Metal-Organic Frameworks was accepted as a cover article in Chemistry of Materials!

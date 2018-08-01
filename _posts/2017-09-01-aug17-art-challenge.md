@@ -10,6 +10,8 @@ feature_row:
     url: "aug17-art"
     btn_label: "See the gallery!"
     btn_class: "btn--primary"
+sidebar:
+  nav: "main"
 ---
 
 {% include feature_row type="center" %}
