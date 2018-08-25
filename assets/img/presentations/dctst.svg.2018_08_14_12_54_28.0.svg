@@ -17,9 +17,66 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="dctst.svg">
+   sodipodi:docname="dctst.svg.2018_08_14_12_54_28.0.svg">
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker10896"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10202"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ffaaaa;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyTriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="EmptyTriangleOutM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10217"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;fill:#ff0000;stroke:#ffaaaa;stroke-width:1pt;stroke-opacity:1;fill-opacity:1"
+         transform="scale(0.4) translate(-4.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10199"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ffaaaa;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9764"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send">
+      <path
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path9766"
+         inkscape:connector-curvature="0" />
+    </marker>
     <marker
        inkscape:stockid="TriangleInS"
        orient="auto"
@@ -59,7 +116,7 @@
        inkscape:stockid="TriangleOutS">
       <path
          transform="scale(0.2)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#ffaaaa;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
          d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
          id="path12124" />
     </marker>
@@ -156,7 +213,6 @@
          style="fill:black;stroke:none" />
     </pattern>
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient10420"
        osb:paint="gradient">
       <stop
@@ -358,7 +414,7 @@
        inkscape:collect="always">
       <path
          id="path8107"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#1a1a1a;stroke-opacity:1;fill:#000000;fill-opacity:1"
          d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
          transform="scale(0.3) rotate(180) translate(-2.3,0)" />
     </marker>
@@ -401,7 +457,7 @@
       <path
          inkscape:connector-curvature="0"
          id="path8107-4-6"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          transform="matrix(-0.3,0,0,-0.3,0.69,0)" />
     </marker>
@@ -612,7 +668,7 @@
       <path
          inkscape:connector-curvature="0"
          id="path8107-4-0-5"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          transform="matrix(-0.3,0,0,-0.3,0.69,0)" />
     </marker>
@@ -730,6 +786,21 @@
        x2="-262.87885"
        y2="553.7536"
        gradientUnits="userSpaceOnUse" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker12122-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutS">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.2,0.2)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path12124-5" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -738,11 +809,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.5222896"
-     inkscape:cx="-9.3426387"
-     inkscape:cy="210.67636"
+     inkscape:zoom="0.7611448"
+     inkscape:cx="636.22715"
+     inkscape:cy="299.40578"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -772,7 +843,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#800000;fill-rule:evenodd;stroke:#2b0000;stroke-width:3.09768176;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send)"
+       style="fill:#000000;fill-rule:evenodd;stroke:#1a1a1a;stroke-width:3.09768176;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send)"
        d="m 548.74494,523.84927 75.72698,0"
        id="path8068"
        inkscape:connector-curvature="0" />
@@ -2871,54 +2942,6 @@
        inkscape:export-xdpi="299.98297"
        inkscape:export-ydpi="299.98297" />
     <path
-       style="opacity:0.98000004;fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 293.2713,992.58435 c -10.65124,-0.41144 -19.33582,-1.40702 -29.86712,-3.42388 -0.94854,-0.18166 -1.08034,-0.0787 -1.08034,0.8441 l 0,0.68254 -4.87727,0 -4.87727,0 0,-2.06906 0,-2.06905 -0.60966,-0.18705 c -0.33531,-0.10288 -2.49972,-0.76564 -4.80978,-1.4728 -2.31006,-0.70717 -4.27913,-1.31607 -4.3757,-1.35313 -0.33299,-0.12778 -0.4226,0.71617 -0.42326,3.98667 l -6.5e-4,3.16442 -4.87727,0 -4.87727,0 0,-5.67901 0,-5.679 -1.65479,-0.81521 c -2.58306,-1.27252 -4.93926,-2.94514 -7.4901,-5.31706 l -1.19029,-1.10681 0,9.29855 0,9.29854 -4.87727,0 -4.87727,0 0,-16.1257 0,-16.12569 -1.52169,-3.06405 c -2.59853,-5.23238 -4.47523,-9.35163 -7.08223,-15.54511 l -1.44094,-3.42326 -0.0345,0.92656 c -0.019,0.50961 -0.0712,12.71041 -0.11613,27.11288 l -0.0816,26.1863 -4.84824,0.0303 -4.84824,0.0303 0,-39.13628 0,-39.13628 -1.86491,-3.7284 c -2.75032,-5.49856 -4.88674,-9.28721 -6.93063,-12.29055 -1.26054,-1.85227 -1.34789,-1.97107 -1.45254,-1.97546 -0.0479,-0.002 -0.0871,21.65667 -0.0871,48.13039 l 0,48.13404 -4.87727,0 -4.87727,0 0,-53.0424 0,-53.04239 -1.12728,-0.63664 c -2.64239,-1.4923 -6.3741,-2.78049 -8.80146,-3.03827 l -0.34837,-0.037 -0.028,29.14751 c -0.0154,16.03113 -0.0284,40.73539 -0.029,54.89835 l -0.001,25.75084 -4.70308,0 -4.70308,0 0,-54.86642 0,-54.86641 -0.37741,0.0697 c -2.47642,0.45769 -5.85285,1.61044 -8.27395,2.82482 l -1.74188,0.8737 -0.07,35.18604 c -0.0385,19.35232 -0.0777,43.19435 -0.0871,52.98228 l -0.0171,17.79624 -4.6869,0 -4.68691,0 -0.0793,-45.25993 c -0.0757,-43.15838 -0.12634,-50.87191 -0.33555,-51.08105 -0.12834,-0.12829 -0.45606,0.29426 -2.03794,2.62767 -1.65097,2.43531 -2.88551,4.37109 -5.79938,9.09351 l -2.19301,3.55416 -0.0773,12.91418 c -0.0425,7.1028 -0.0773,22.19856 -0.0773,33.54615 0,11.34758 -0.0347,23.77597 -0.0771,27.61864 l -0.0771,6.98667 -4.66766,0 -4.66766,0 -0.0857,-33.82157 c -0.0471,-18.60186 -0.10152,-33.83808 -0.12084,-33.85827 -0.0193,-0.0202 -0.57899,0.37661 -1.24373,0.88178 -2.10407,1.599 -3.71846,2.42363 -7.09625,3.62475 l -1.87946,0.66833 -0.0701,18.97221 c -0.0386,10.43472 -0.0778,24.49834 -0.0871,31.25249 l -0.017,12.28028 -4.70308,0 -4.70309,0 0,-30.18974 0,-30.18974 -0.31934,0.0581 c -0.8971,0.16307 -6.88216,1.10714 -8.0417,1.26847 -0.73449,0.1022 -1.47915,0.21417 -1.65479,0.24884 l -0.31934,0.063 0,29.37053 0,29.37054 -4.87727,0 -4.877279,0 0,-28.93212 0,-28.93211 -3.91923,0.0771 c -2.15558,0.0424 -4.4418,0.14142 -5.08049,0.22007 l -1.16126,0.14301 -0.0293,28.71204 -0.0293,28.71204 -1.96428,0 -1.96427,0 0.0502,-12.97703 c 0.0276,-7.13737 0.082,-20.80244 0.12077,-30.36683 l 0.0706,-17.3898 4.95009,-6e-4 c 6.07067,-7.3e-4 9.54902,-0.16222 15.111089,-0.70158 8.54263,-0.82839 16.81968,-2.30662 23.04763,-4.11618 4.87218,-1.41564 6.8383,-2.52475 9.87398,-5.57006 2.7898,-2.79866 4.21686,-4.846 10.48544,-15.04307 3.36467,-5.47329 5.4839,-8.78565 6.77552,-10.59016 2.79122,-3.89956 6.09624,-7.37013 9.37069,-9.84008 4.50832,-3.40065 10.30947,-5.66599 15.81221,-6.17462 2.89885,-0.26795 8.48214,0.0258 11.26338,0.59257 2.10442,0.42886 4.97275,1.56924 7.15227,2.84358 8.37141,4.89468 15.30256,14.12895 22.75073,30.31043 1.45577,3.16273 2.9713,6.7409 6.9055,16.30384 5.11574,12.435 6.6247,15.99125 8.77595,20.68288 2.14123,4.66977 4.65966,9.42558 6.68321,12.62063 2.9068,4.5896 7.09649,9.46404 10.27819,11.95801 3.28047,2.57139 9.40416,5.33868 18.29713,8.26846 9.65187,3.1798 17.72388,5.02501 28.72227,6.56573 6.07877,0.85155 9.72825,1.19891 14.16731,1.34847 3.05499,0.10292 4.90535,0.23593 5.77725,0.41529 l 0.31934,0.0657 0,1.38428 0,1.38428 -0.55159,-0.0227 c -0.30338,-0.0125 -0.9174,-0.0369 -1.36448,-0.0541 z"
-       id="path10438"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:#000000;stroke-width:2.97048259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.94096518, 2.97048259000000003;stroke-dashoffset:0;stroke-opacity:0.98039216"
-       d="m 157.98571,879.26767 -104.656839,0"
-       id="path10526"
-       inkscape:connector-curvature="0" />
-    <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.32766938;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 58.241551,931.69821 c 0,0 26.871349,0.75498 46.738639,-5.91791 19.86729,-6.67288 20.64198,-50.14846 57.05188,-46.26159 36.4099,3.88686 39.13305,83.70337 69.83045,98.07452 30.69741,14.37116 63.5177,13.60029 63.5177,13.60029"
-       id="path18668-2"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="czzzc"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297" />
-    <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker12390)"
-       d="m 313.64575,997.52509 -268.680169,0"
-       id="path18670-1-5-6"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297" />
-    <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker12706)"
-       d="m 52.229071,850.15463 0,155.50217"
-       id="path18670-1-6-6-1"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="22.171827"
-       y="885.65985"
-       id="text8642-31-8-7-8-29-2-2"
-       sodipodi:linespacing="125%"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297"><tspan
-         sodipodi:role="line"
-         id="tspan8644-9-8-5-7-1-3-2"
-         x="22.171827"
-         y="885.65985"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">F<tspan
-   style="font-size:64.99999762%;baseline-shift:super;fill:#000000;fill-opacity:0.98039216"
-   id="tspan10561">*</tspan></tspan></text>
-    <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.32766938;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -364.85136,605.69962 c 0,0 26.87134,0.75498 46.73863,-5.91791 19.86729,-6.67288 20.64198,-50.14846 57.05188,-46.26159 36.4099,3.88686 39.13305,83.70337 69.83045,98.07452 30.69741,14.37115 63.5177,13.60028 63.5177,13.60028"
        id="path18668-3-3"
@@ -3010,60 +3033,696 @@
        sodipodi:nodetypes="ccsszzcc"
        inkscape:export-xdpi="299.98297"
        inkscape:export-ydpi="299.98297" />
+    <g
+       id="g11449"
+       transform="translate(46,6.8750122)"
+       inkscape:export-xdpi="500.0022"
+       inkscape:export-ydpi="500.0022"
+       inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-energy-barrier.png">
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="991.52881"
+         cx="130.98964"
+         id="path9207-2-9-1-2-20-24-3-3"
+         style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="918.58557"
+         cx="130.98964"
+         id="path9207-2-9-1-2-7-6-9-6-6"
+         style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="845.6424"
+         cx="130.98964"
+         id="path9207-2-9-1-2-7-0-1-9-7-7"
+         style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="882.11401"
+         cx="73.408768"
+         id="path9207-2-4-4-1-5"
+         style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="955.05719"
+         cx="73.408768"
+         id="path9207-2-9-4-6-2-3"
+         style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="882.11401"
+         cx="188.57045"
+         id="path9207-2-3-7-5-7-5"
+         style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="36.471565"
+         cy="955.05719"
+         cx="188.57045"
+         id="path9207-2-9-6-8-61-0-6"
+         style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="73.408768"
+         id="path8568-2"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="92.602394"
+         id="path8568-9-9"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="111.79598"
+         id="path8568-9-3-12"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="130.98961"
+         id="path8568-9-6-7"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="150.1832"
+         id="path8568-9-0-0"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="169.37682"
+         id="path8568-9-62-9"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="882.11401"
+         cx="188.57045"
+         id="path8568-9-61-3"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="73.408768"
+         id="path8568-2-9"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="92.602394"
+         id="path8568-9-9-2"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="111.79598"
+         id="path8568-9-3-12-0"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="130.98961"
+         id="path8568-9-6-7-2"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="150.1832"
+         id="path8568-9-0-0-3"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="169.37682"
+         id="path8568-9-62-9-7"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="900.00507"
+         cx="188.57045"
+         id="path8568-9-61-3-5"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="73.408768"
+         id="path8568-2-2"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="92.602394"
+         id="path8568-9-9-28"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="111.79598"
+         id="path8568-9-3-12-9"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="130.98961"
+         id="path8568-9-6-7-7"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="150.1832"
+         id="path8568-9-0-0-36"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="169.37682"
+         id="path8568-9-62-9-1"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="917.89606"
+         cx="188.57045"
+         id="path8568-9-61-3-2"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="73.408768"
+         id="path8568-2-1"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="92.602394"
+         id="path8568-9-9-9"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="111.79598"
+         id="path8568-9-3-12-4"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="130.98961"
+         id="path8568-9-6-7-78"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="150.1832"
+         id="path8568-9-0-0-4"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="169.37682"
+         id="path8568-9-62-9-5"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="935.78717"
+         cx="188.57045"
+         id="path8568-9-61-3-0"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="73.408768"
+         id="path8568-2-6"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="92.602394"
+         id="path8568-9-9-1"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="111.79598"
+         id="path8568-9-3-12-06"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="130.98961"
+         id="path8568-9-6-7-3"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="150.1832"
+         id="path8568-9-0-0-2"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="169.37682"
+         id="path8568-9-62-9-0"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         r="7.3020301"
+         cy="953.67816"
+         cx="188.57045"
+         id="path8568-9-61-3-6"
+         style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:connector-curvature="0"
+         id="path8963"
+         d="m 73.408783,954.15375 0,-72.51544"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:transform-center-y="-1.1372702"
+         d="m 78.492445,885.49878 c -0.508368,0.88052 -9.658987,0.88052 -10.167355,0 -0.508367,-0.88052 4.066942,-8.80518 5.083678,-8.80518 1.016735,0 5.592045,7.92466 5.083677,8.80518 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0.1"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.5707963"
+         sodipodi:arg1="0.52359878"
+         sodipodi:r2="2.9350626"
+         sodipodi:r1="5.8701248"
+         sodipodi:cy="882.56372"
+         sodipodi:cx="73.408768"
+         sodipodi:sides="3"
+         id="path11211"
+         style="opacity:0.98000004;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:connector-curvature="0"
+         id="path8963-4"
+         d="m 72.784884,953.67809 116.409436,0"
+         style="display:inline;fill:#ff0000;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:transform-center-y="1.7369195e-05"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:transform-center-x="-1.137401"
+         transform="matrix(0,1.7181248,-1.7181248,0,1698.5395,18.595613)"
+         d="m 547.20482,880.81681 c -0.29588,0.51249 -5.62182,0.51249 -5.9177,0 -0.29589,-0.51248 2.36708,-5.12488 2.95885,-5.12488 0.59177,0 3.25474,4.6124 2.95885,5.12488 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0.1"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.5707963"
+         sodipodi:arg1="0.52359878"
+         sodipodi:r2="1.7082942"
+         sodipodi:r1="3.4165881"
+         sodipodi:cy="879.10852"
+         sodipodi:cx="544.24597"
+         sodipodi:sides="3"
+         id="path11211-7"
+         style="display:inline;opacity:0.98000004;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="star" />
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3-65"
+         y="959.08154"
+         x="198.85933"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2147.65600586px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="959.08154"
+           x="198.85933"
+           id="tspan8644-9-8-5-7-1-3-2-2-6"
+           sodipodi:role="line">x</tspan></text>
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3-65-9"
+         y="867.02655"
+         x="67.633896"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1282.76599121px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="867.02655"
+           x="67.633896"
+           id="tspan8644-9-8-5-7-1-3-2-2-6-3"
+           sodipodi:role="line">y</tspan></text>
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3-65-7"
+         y="964.30475"
+         x="43.966148"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2147.65600586px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="964.30475"
+           x="43.966148"
+           id="tspan8644-9-8-5-7-1-3-2-2-6-4"
+           sodipodi:role="line">A</tspan></text>
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+         inkscape:export-ydpi="499.89908"
+         inkscape:export-xdpi="499.89908"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3-65-7-5-5"
+         y="892.05304"
+         x="44.371391"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2147.65600586px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="892.05304"
+           x="44.371391"
+           id="tspan8644-9-8-5-7-1-3-2-2-6-4-2-4"
+           sodipodi:role="line">B</tspan></text>
+    </g>
+    <g
+       id="g11426"
+       inkscape:export-xdpi="500.0022"
+       inkscape:export-ydpi="500.0022"
+       inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-energy-barrier.png">
+      <path
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:connector-curvature="0"
+         id="path10438"
+         d="m 582.19168,981.4363 c -10.6513,-0.41144 -19.3359,-1.40702 -29.86716,-3.42388 -0.94854,-0.18166 -1.08034,-0.0787 -1.08034,0.8441 l 0,0.68254 -4.87727,0 -4.87727,0 0,-2.06906 0,-2.06905 -0.60966,-0.18705 c -0.33531,-0.10288 -2.49972,-0.76564 -4.80978,-1.4728 -2.31006,-0.70717 -4.27913,-1.31607 -4.3757,-1.35313 -0.33299,-0.12778 -0.4226,0.71617 -0.42326,3.98667 l -6.5e-4,3.16442 -4.87727,0 -4.87727,0 0,-5.67901 0,-5.679 -1.65479,-0.81521 c -2.58306,-1.27252 -4.93926,-2.94514 -7.4901,-5.31706 l -1.19029,-1.10681 0,9.29855 0,9.29854 -4.87727,0 -4.87727,0 0,-16.1257 0,-16.12569 -1.52169,-3.06405 c -2.59853,-5.23238 -4.47523,-9.35163 -7.08223,-15.54511 l -1.44094,-3.42326 -0.0345,0.92656 c -0.019,0.50961 -0.0712,12.71041 -0.11613,27.11288 l -0.0816,26.1863 -4.84824,0.0303 -4.84824,0.0303 0,-39.13628 0,-39.13628 -1.86491,-3.7284 c -2.75032,-5.49856 -4.88674,-9.28721 -6.93063,-12.29055 -1.26054,-1.85227 -1.34789,-1.97107 -1.45254,-1.97546 -0.0479,-0.002 -0.0871,21.65667 -0.0871,48.13039 l 0,48.13404 -4.87727,0 -4.87727,0 0,-53.0424 0,-53.04239 -1.12728,-0.63664 c -2.64239,-1.4923 -6.3741,-2.78049 -8.80146,-3.03827 l -0.34837,-0.037 -0.028,29.14751 c -0.0154,16.03113 -0.0284,40.73539 -0.029,54.89835 l -10e-4,25.75084 -4.70308,0 -4.70308,0 0,-54.86642 0,-54.86641 -0.37741,0.0697 c -2.47642,0.45769 -5.85285,1.61044 -8.27395,2.82482 l -1.74188,0.8737 -0.07,35.18604 c -0.0385,19.35232 -0.0777,43.19435 -0.0871,52.98228 l -0.0171,17.79624 -4.6869,0 -4.68691,0 -0.0793,-45.25993 c -0.0757,-43.15838 -0.12634,-50.87191 -0.33555,-51.08105 -0.12834,-0.12829 -0.45606,0.29426 -2.03794,2.62767 -1.65097,2.43531 -2.88551,4.37109 -5.79938,9.09351 l -2.19301,3.55416 -0.0773,12.91418 c -0.0425,7.1028 -0.0773,22.19856 -0.0773,33.54615 0,11.34758 -0.0347,23.77597 -0.0771,27.61864 l -0.0771,6.98667 -4.66766,0 -4.66766,0 -0.0857,-33.82157 c -0.0471,-18.60186 -0.10152,-33.83808 -0.12084,-33.85827 -0.0193,-0.0202 -0.57899,0.37661 -1.24373,0.88178 -2.10407,1.599 -3.71846,2.42363 -7.09625,3.62475 l -1.87946,0.66833 -0.0701,18.97221 c -0.0386,10.43472 -0.0778,24.49834 -0.0871,31.25249 l -0.017,12.28028 -4.70308,0 -4.70309,0 0,-30.18974 0,-30.18974 -0.31934,0.0581 c -0.8971,0.16307 -6.88216,1.10714 -8.0417,1.26847 -0.73449,0.1022 -1.47915,0.21417 -1.65479,0.24884 l -0.31934,0.063 0,29.37053 0,29.37054 -4.87727,0 -4.87728,0 0,-28.93212 0,-28.93211 -3.91923,0.0771 c -2.15558,0.0424 -4.4418,0.14142 -5.08049,0.22007 l -1.16126,0.14301 -0.0293,28.71204 -0.0293,28.71204 -1.96428,0 -1.96427,0 0.0502,-12.97703 c 0.0276,-7.13737 0.082,-20.80244 0.12077,-30.36683 l 0.0706,-17.3898 4.95009,-6e-4 c 6.07067,-7.3e-4 9.54902,-0.16222 15.11109,-0.70158 8.54263,-0.82839 16.81968,-2.30662 23.04763,-4.11618 4.87218,-1.41564 6.8383,-2.52475 9.87398,-5.57006 2.7898,-2.79866 4.21686,-4.846 10.48544,-15.04307 3.36467,-5.47329 5.4839,-8.78565 6.77552,-10.59016 2.79122,-3.89956 6.09624,-7.37013 9.37069,-9.84008 4.50832,-3.40065 10.30947,-5.66599 15.81221,-6.17462 2.89885,-0.26795 8.48214,0.0258 11.26338,0.59257 2.10442,0.42886 4.97275,1.56924 7.15227,2.84358 8.37141,4.89468 15.30256,14.12895 22.75073,30.31043 1.45577,3.16273 2.9713,6.7409 6.9055,16.30384 5.11574,12.435 6.6247,15.99125 8.77595,20.68288 2.14123,4.66977 4.65966,9.42558 6.68321,12.62063 2.9068,4.5896 7.09649,9.46404 10.27819,11.95801 3.28047,2.57139 9.40416,5.33868 18.29713,8.26846 9.65187,3.1798 17.72388,5.02501 28.72228,6.56573 6.0788,0.85155 9.7282,1.19891 14.1673,1.34847 3.055,0.10292 4.9053,0.23593 5.7772,0.41529 l 0.3194,0.0657 0,1.38428 0,1.38428 -0.5516,-0.0227 c -0.3034,-0.0125 -0.9174,-0.0369 -1.3645,-0.0541 z"
+         style="opacity:0.98000004;fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:connector-curvature="0"
+         id="path10526"
+         d="m 446.90605,868.11962 -104.65684,0"
+         style="fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:#000000;stroke-width:2.97048259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.94096518, 2.97048259;stroke-dashoffset:0;stroke-opacity:0.98039216" />
+      <path
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:nodetypes="czzzc"
+         inkscape:connector-curvature="0"
+         id="path18668-2"
+         d="m 347.16189,920.55016 c 0,0 26.87135,0.75498 46.73864,-5.91791 19.86729,-6.67288 20.64198,-50.14846 57.05188,-46.26159 36.4099,3.88686 39.13305,83.70337 69.83045,98.07452 30.69741,14.37116 63.51772,13.60029 63.51772,13.60029"
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.32766938;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         inkscape:connector-curvature="0"
+         id="path18670-1-5-6"
+         d="m 602.56608,986.37704 -268.68016,0"
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker12390)" />
+      <path
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         inkscape:connector-curvature="0"
+         id="path18670-1-6-6-1"
+         d="m 341.14941,839.00658 0,155.50217"
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker12706)" />
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2"
+         y="874.51184"
+         x="311.09213"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Italic';fill:#000000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="874.51184"
+           x="311.09213"
+           id="tspan8644-9-8-5-7-1-3-2"
+           sodipodi:role="line">F<tspan
+   id="tspan10561"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Italic';baseline-shift:super;fill:#000000;fill-opacity:0.98039216">*</tspan></tspan></text>
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3"
+         y="879.28314"
+         x="557.36084"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Italic';fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="879.28314"
+           x="557.36084"
+           id="tspan8644-9-8-5-7-1-3-2-2"
+           sodipodi:role="line">F(q)dq</tspan></text>
+      <path
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:connector-curvature="0"
+         id="path10731"
+         d="m 538.3463,895.91524 c -2.05934,-0.27092 -3.39451,-1.60404 -3.39451,-3.38931 0,-1.74161 0.86951,-2.62881 2.68259,-2.73715 1.60859,-0.0961 2.46141,0.56731 2.83377,2.20448 0.24903,1.09491 0.46132,1.48879 0.80237,1.48879 1.12814,0 1.98306,-2.76653 2.44171,-7.90136 0.22531,-2.52249 0.27748,-3.60246 0.47711,-9.87672 0.2063,-6.48411 0.25581,-7.53623 0.47567,-10.10911 0.43006,-5.03247 1.32275,-8.85723 2.6985,-11.56155 0.54847,-1.07816 0.80557,-1.43437 1.64298,-2.27639 1.5575,-1.56605 3.07779,-2.15986 5.27124,-2.05888 1.40237,0.0646 2.28595,0.44556 3.1007,1.33705 0.63163,0.6911 0.81106,1.16362 0.81204,2.13845 0.002,1.17028 -0.47882,2.05556 -1.32213,2.43852 -0.58409,0.26525 -2.09825,0.30108 -2.66775,0.0631 -0.57089,-0.23853 -1.21866,-1.06582 -1.41964,-1.81305 -0.45408,-1.68817 -0.45322,-1.68622 -0.75969,-1.72254 -0.84667,-0.10035 -1.68124,1.53056 -2.12856,4.15955 -0.48688,2.8615 -0.68664,5.85028 -0.93972,14.05979 -0.29216,9.47732 -0.6127,12.89472 -1.57858,16.82965 -0.92685,3.77594 -1.91708,5.64665 -3.89495,7.35815 -1.283,1.11021 -3.20385,1.62231 -5.13315,1.36851 z"
+         style="opacity:0.98000004;fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:none;stroke-width:0.48775214;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path10733"
+         d="m 464.09829,925.01389 c 0,0 4.56331,-34.08661 18.22913,-43.19151 10.73607,-7.15296 36.0829,-9.84053 46.72211,-9.46506"
+         style="fill:none;fill-rule:evenodd;stroke:#d40000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216;marker-end:url(#TriangleOutS)" />
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3-6"
+         y="992.81256"
+         x="610.00775"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="992.81256"
+           x="610.00775"
+           id="tspan8644-9-8-5-7-1-3-2-2-2"
+           sodipodi:role="line">q</tspan></text>
+      <text
+         inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/energy-barrier-diagram.png"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-29-2-2-3-6-9"
+         y="829.58112"
+         x="337.54825"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="829.58112"
+           x="337.54825"
+           id="tspan8644-9-8-5-7-1-3-2-2-2-1"
+           sodipodi:role="line">F</tspan></text>
+      <text
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-2-4-3-4-0"
+         y="1009.2401"
+         x="348.68417"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="1009.2401"
+           x="348.68417"
+           id="tspan8644-9-8-5-7-4-5-6-5-7"
+           sodipodi:role="line">Distance over</tspan><tspan
+           id="tspan8516-0-03-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="1034.24"
+           x="348.68417"
+           sodipodi:role="line">potential energy surface</tspan></text>
+      <text
+         transform="matrix(0,-1,1,0,0,0)"
+         inkscape:export-ydpi="299.98297"
+         inkscape:export-xdpi="299.98297"
+         sodipodi:linespacing="125%"
+         id="text8642-31-8-7-8-2-0-7-6"
+         y="327.24979"
+         x="-978.46265"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           y="327.24979"
+           x="-978.46265"
+           id="tspan8644-9-8-5-7-4-9-8-8"
+           sodipodi:role="line">Energy</tspan></text>
+    </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
-       x="268.44052"
-       y="900.43115"
-       id="text8642-31-8-7-8-29-2-2-3"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="350.55768"
+       y="913.50055"
+       id="text8642-31-8-7-8-8"
        sodipodi:linespacing="125%"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297"><tspan
+       inkscape:export-xdpi="500.0022"
+       inkscape:export-ydpi="500.0022"
+       inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-energy-barrier.png"><tspan
          sodipodi:role="line"
-         id="tspan8644-9-8-5-7-1-3-2-2"
-         x="268.44052"
-         y="900.43115"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;">F(q)dq<tspan
-   style="font-size:64.99999762%;baseline-shift:super;fill:#d40000;fill-opacity:0.98039216;"
-   id="tspan10561-0" /></tspan></text>
-    <path
-       style="opacity:0.98000004;fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:none;stroke-width:0.48775214;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 246.95996,920.35292 c -2.67679,-0.35214 -4.41228,-2.08496 -4.41228,-4.4055 0,-2.26379 1.13022,-3.41699 3.48691,-3.55781 2.09088,-0.12495 3.1994,0.73739 3.6834,2.86544 0.3237,1.42318 0.59963,1.93516 1.04294,1.93516 1.46638,0 2.57763,-3.59601 3.17379,-10.27039 0.29287,-3.2788 0.36068,-4.68256 0.62016,-12.838 0.26816,-8.4282 0.33251,-9.79578 0.61829,-13.14007 0.559,-6.54133 1.71935,-11.51285 3.50757,-15.02799 0.71292,-1.40142 1.0471,-1.86443 2.13559,-2.95891 2.02448,-2.03559 4.00059,-2.80744 6.85169,-2.67619 1.82283,0.084 2.97133,0.57916 4.03037,1.73793 0.82101,0.89831 1.05424,1.51251 1.0555,2.77962 0.002,1.52115 -0.62238,2.67187 -1.71853,3.16964 -0.75922,0.34478 -2.72735,0.39135 -3.46761,0.082 -0.74205,-0.31005 -1.58404,-1.38537 -1.84528,-2.35664 -0.59022,-2.19433 -0.58911,-2.1918 -0.98747,-2.23901 -1.10051,-0.13043 -2.18531,1.98946 -2.76675,5.40669 -0.63286,3.71945 -0.89251,7.60433 -1.22147,18.27526 -0.37976,12.31885 -0.79641,16.76088 -2.05188,21.8756 -1.20474,4.90806 -2.49187,7.33965 -5.06275,9.5643 -1.66767,1.44308 -4.16444,2.10873 -6.67219,1.77882 z"
-       id="path10731"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#d40000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216;marker-end:url(#TriangleOutS)"
-       d="m 177.03596,942.98748 c 0,0 4.56331,-34.08661 18.22913,-43.19151 10.73607,-7.15296 36.0829,-9.84053 46.72211,-9.46506"
-       id="path10733"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csc" />
+         id="tspan8644-9-8-5-7-43"
+         x="350.55768"
+         y="913.50055"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="321.08749"
-       y="1003.9606"
-       id="text8642-31-8-7-8-29-2-2-3-6"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="568.70813"
+       y="970.81482"
+       id="text8642-31-8-7-8-4-1"
        sodipodi:linespacing="125%"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297"><tspan
+       inkscape:export-xdpi="500.0022"
+       inkscape:export-ydpi="500.0022"
+       inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-energy-barrier.png"><tspan
          sodipodi:role="line"
-         id="tspan8644-9-8-5-7-1-3-2-2-2"
-         x="321.08749"
-         y="1003.9606"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">q</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="48.627918"
-       y="840.72913"
-       id="text8642-31-8-7-8-29-2-2-3-6-9"
-       sodipodi:linespacing="125%"
-       inkscape:export-xdpi="299.98297"
-       inkscape:export-ydpi="299.98297"><tspan
-         sodipodi:role="line"
-         id="tspan8644-9-8-5-7-1-3-2-2-2-1"
-         x="48.627918"
-         y="840.72913"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">F</tspan></text>
+         id="tspan8644-9-8-5-7-9-4"
+         x="568.70813"
+         y="970.81482"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">B</tspan></text>
   </g>
 </svg>
