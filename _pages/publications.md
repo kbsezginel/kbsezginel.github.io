@@ -30,6 +30,7 @@ categories: pages
     title: "Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks"
     excerpt: "**1.** [Sezginel, Kutay Berk, Alper Uzun, and Seda Keskin. Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science* 124 **(2015)**: 125-134.](https://www.sciencedirect.com/science/article/pii/S0009250914006022)"
 ---
+<p> </p>
 
 Publications
 ============
