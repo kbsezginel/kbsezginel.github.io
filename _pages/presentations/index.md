@@ -8,6 +8,6 @@ share: false
 related: false
 ---
 
-- [WilmerLab Group Meeting - Nanocar - May 14 2018](presentations/14-05-2018-GM/)
+- [WilmerLab Group Meeting - Nanocar - May 14 2018](presentations/wlab-14-05-2018/)
 - [MolSSI Bootcamp - July 24 2018](presentations/MolSSI-Bootcamp-2018/)
 - [Avogadro Meeting - August 25 2018](presentations/avogadro-meeting-2018/)
