@@ -2,7 +2,7 @@
 layout: single
 title:  "H2P computing resource tutorial notes"
 date:   2017-08-11
-categories: research
+categories: tutorials
 sidebar:
   nav: "main"
 ---
