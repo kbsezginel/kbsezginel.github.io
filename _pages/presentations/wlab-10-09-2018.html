@@ -33,6 +33,46 @@ categories: presentations
       .col2 {width: 50%; text-align: center; float:left}
       .col3 {width: 33%; text-align: center; float:left}
 
+      .tooltip
+      {
+        text-decoration:none;
+        position:relative;
+      }
+
+
+      .tooltip span
+      {
+        display:none;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        color:black;
+        background:white;
+      }
+
+
+      .tooltip span img
+      {
+        float:left;
+        margin:0px 8px 8px 0;
+      }
+
+
+      .tooltip:hover span
+      {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1000;
+        width:auto;
+        border:1px solid black;
+        margin-top:12px;
+        margin-left:32px;
+        overflow:hidden;
+        padding:8px;
+      }
+
     </style>
   </head>
   <body>
@@ -183,6 +223,8 @@ class: center, middle
 
 <p align="center"><img src="/assets/img/presentations/nanocar/dc-md-flexible-trajectory.png" height=320></p>
 
+$$MSD = \langle (x - x_0)^2 \rangle = \frac{1}{N} \sum^N_i [x_n(t) - x_n(0)]^2 $$
+
 ---
 ## Diffusion coefficient calculation
 
@@ -202,18 +244,62 @@ class: center, middle
 
 <p align="center"><img src="/assets/img/presentations/nanocar/md-diffusion-directionality-ratio.svg" height=250></p>
 
+--
+
+.col2[x-direction<br><img src="/assets/img/presentations/tst-fcc-110-x.png" height=150>]
+.col2[y-direction<br><img src="/assets/img/presentations/tst-fcc-110-y.png" height=150>]
+
+
 ---
 ## Effect of sampling
 
 <p align="center"><img src="/assets/img/presentations/nanocar/dc-cu110-effect-of-sampling.png" height=450></p>
 
+<p align="center">Averaged x & y directions | Standard Error = \(\frac{\sigma}{\sqrt{n}}\)</p>
+
 ---
-## Individual run results
+## Individual runs
 
-<p align="center"><img src="/assets/img/presentations/nanocar/dc-cu110-diff-per-run.png" height=160></p>
+<p align="center"><img src="/assets/img/presentations/nanocar/dc-cu110-diff-per-run.png" height=450></p>
 
-**High variability**
+---
+### Molecule trajectories
 
+<a class="tooltip">PCARBORANE | MW: 144.23 g/mol
+   <span><img src="/assets/img/presentations/nanocar/pcarborane-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">PVBA | MW: 225.24 g/mol
+   <span><img src="/assets/img/presentations/nanocar/pvba-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">DNHD | MW: 328.40 g/mol
+   <span><img src="/assets/img/presentations/nanocar/dnhd-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">BtPHD | MW: 340.50 g/mol
+   <span><img src="/assets/img/presentations/nanocar/btphd-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">TPEE | MW: 428.52 g/mol
+   <span><img src="/assets/img/presentations/nanocar/tpee-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">DC | MW: 450.53 g/mol
+   <span><img src="/assets/img/presentations/nanocar/dc-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">C60 | MW: 720.64 g/mol
+   <span><img src="/assets/img/presentations/nanocar/c60-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">HtBDC | MW: 787.17 g/mol
+   <span><img src="/assets/img/presentations/nanocar/htbdc-md-flexible-trajectory.png" height=300></span>
+</a>
+
+<a class="tooltip">VL | MW: 1401.98 g/mol
+   <span><img src="/assets/img/presentations/nanocar/vl-md-flexible-trajectory.png" height=300></span>
+</a>
 ---
 ### Trajectory for each molecule
 
@@ -227,10 +313,23 @@ class: center, middle
 ### [Home](https://kbsezginel.github.io)
 
     </textarea>
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="/assets/js/remark-latest.min.js"></script>
     <script src="/assets/js/3Dmol-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+        ratio: '4:3',
+        countIncrementalSlides: false
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
     </script>
   </body>
 </html>
