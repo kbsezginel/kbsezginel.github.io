@@ -24,6 +24,7 @@ categories: presentations
 
       body { font-family: 'Maven Pro'; }
       h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+      h4 { font-family: 'Yanone Kaffeesatz'; font-size: 25px; font-weight: normal; }
       .red { color: #8e1313; }
       .gray {color: #606060; }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
@@ -86,6 +87,27 @@ movements (output) as a result of an appropriate external stimulation (input).*
 <p align="center"><img src="/assets/img/presentations/avogadro/nanocar-light.gif" height=250></p>
 
 ---
+## Nanocar objectives
+
+### .red[1 | Nanocar structure-property relationships]
+
+- **Properties:** speed (diffusivity), directionality, cargo (type / amount)
+- **Structure:** wheels, chassis, surface interactions
+
+--
+
+### .red[2 | Nanocar builder]
+
+**Avogadro 2 Plug-in**
+- Select parts (chassis and wheels) and assemble
+- Parametric building (chassis size / wheel diameter)
+- Surface builder (ASE)
+- Energy minimization
+- Force field assignment
+
+<p align="center"> <img src="https://molssi.org/wp-content/uploads/2017/04/MolSSI-Logo-2.jpg" width="180"></p>
+
+---
 class: center
 
 **Body Parts - Wheels / Chassis**
@@ -108,34 +130,89 @@ class: center, middle
 ---
 ## Diffusion
 
-### Transition State Theory
+### 1 | Transition State Theory (Umbrella Sampling)
 
-### Molecular Dynamics
+<p align="center"><img src="/assets/img/presentations/nanocar/umbrella-sampling-energy-barrier.png" height=200></p>
+
+### 2 | Molecular Dynamics
+
+---
+class: center, middle
+
+### Surface diffusion of large molecules
+
+.col3[DC<img src="/assets/img/presentations/DC.png"  height=150>]
+.col3[HtBDC<img src="/assets/img/presentations/HtBDC.png"  height=150>]
+.col3[Violet .red[Lander]<img src="/assets/img/presentations/VL.png"  height=150>]
+
+.col3[C60<img src="/assets/img/presentations/C60.png"  height=150>]
+.col3[.red[p-Carborane]<img src="/assets/img/presentations/PCARBORANE.png"  height=150>]
+.col3[PVBA<img src="/assets/img/presentations/PVBA.png"  height=150>]
+
+.col3[BtPHD<img src="/assets/img/presentations/BtPHD.png"  height=150>]
+.col3[DNHD<img src="/assets/img/presentations/DNHD.png"  height=150>]
+.col3[TPEE<img src="/assets/img/presentations/TPEE.png"  height=150>]
+
 
 ---
 ## MD Simulation Setup
 
+<p align="center"><img src="/assets/img/presentations/nanocar/dc-cu110-setup.png" height=200></p>
+
+- **NVT | Temperature:** 200 K
+--
+
+- **Length:** 10 ns (2 ns equilibration + 8 ns production) | Δt: 1 fs
+--
+
+- **Sampling:** 10 runs (different velocity distribution)
+--
+
+- **Force field:** UFF
+--
+
+  - **Surface**
+      - Rigid and vdW interactions are multiplied by 5 (25 ε<sub>Cu</sub>)
+--
+  - **Molecule**
+      - Flexible
+      - Rigid
+
+---
+## Diffusion coefficient calculation
+
+<p align="center"><img src="/assets/img/presentations/nanocar/dc-md-flexible-trajectory.png" height=320></p>
+
+---
+## Diffusion coefficient calculation
+
+.col2[<p align="center">DC Flexible Runs<img src="/assets/img/presentations/nanocar/dc_flexible_msd_fft_molecule_plots.png" height=390></p>]
+
+--
+
+.col2[<p align="center">DC Flexible Average<img src="/assets/img/presentations/nanocar/dc_flexible_msd_fft_all_plot.png" height=390></p>]
+
+---
+## Diffusion coefficient directionality
+
+<p align="center"><img src="/assets/img/presentations/nanocar/md-diffusion-direction-vs-mw.png" height=380></p>
+
+---
+## Diffusion coefficient directionality
+
+<p align="center"><img src="/assets/img/presentations/nanocar/md-diffusion-directionality-ratio.svg" height=250></p>
+
 ---
 ## Effect of sampling
-
-#### DC | 200 K | 1 - 20 runs
 
 <p align="center"><img src="/assets/img/presentations/nanocar/dc-cu110-effect-of-sampling.png" height=450></p>
 
 ---
-## Nanocar builder | Avogadro Plug-in
+## Individual run results
 
-<p align="center"> <img src="https://molssi.org/wp-content/uploads/2017/04/MolSSI-Logo-2.jpg" width="250"> </p>
+<p align="center"><img src="/assets/img/presentations/nanocar/dc-cu110-diff-per-run.png" height=160></p>
 
---
-
-### Build molecular vehicles in Avogadro 2
-- Select parts (chassis and wheels) and assemble
-- Parametric building (chassis size / wheel diameter)
-- Surface builder (ASE)
-- Energy minimization
-- Force field assignment
-
+**High variability**
 
 ---
 class: center, middle
