@@ -21,3 +21,8 @@ Tutorials and examples (jupyter notebooks) for scientific communication.
 - Using Raspberry Pi to control led, button, camera, sensor and more.
 - Running a web server with Raspberry Pi to access control over other devices (phone, laptop).
 - Raspberry Pi and Arduino projects for things like MIDI controllers, home automation control panels...
+
+[Synthesizers and music instruments](https://kbsezginel.github.io/polycule/)
+
+- Polycule audio sampler
+- Customizable Pocket Operator (PO-24) Cheat Sheet
