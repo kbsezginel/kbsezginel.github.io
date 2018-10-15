@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Nanocar builder plug-in for Avogadro 2"
-excerpt: "How can you build a Nanocar?"
+excerpt: "Do you want to build a nanocar but you don’t know how? Just follow these easy steps…"
 date:   2018-10-11
 categories: news
 author_profile: true
@@ -19,6 +19,8 @@ Currently the main functionalities are:
 - Connecting wheel molecule
 - Building a metal surface to place the Nanocar
 
-This plug-in is a part of molecular CAD tool I want to develop to build and design artificial molecular machines.
+This plug-in is a part of molecular CAD tool I want to develop to build and design artificial molecular machines. Any feedback is appreciated!
+
+You can create an issue on GitHub or just send an e-mail.
 
 ---------------
