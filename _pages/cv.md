@@ -10,9 +10,9 @@ categories: pages
 - [Education](#education)
 - [Research Experience](#research-experience)
 - [Publications](#publications)
-- [Presentations](#publications)
-- [Leadership Experience](#publications)
-- [Honors and Awards](#publications)
+- [Presentations](#presentations)
+- [Leadership Experience](#leadership-experience)
+- [Honors and Awards](#honors-and-awards)
 - [Skills](#skills)
 - [Personal](#personal)
 - [References](#references)
@@ -38,6 +38,7 @@ Energy and Environmental Engineering Track
 Eindhoven University of Technology, School of Engineering Eindhoven, The Netherlands
 
 ## Research Experience
+
 ### Graduate Research Assistant | Sep 2015 – Present
 Hypothetical Materials Lab (WilmerLab), University of Pittsburgh Pittsburgh, PA<br>
 - Working on several projects to develop new computational methods for the discovery of novel materials,
@@ -118,6 +119,7 @@ CHEM 103 (General Chemistry) Koc University, Istanbul, Turkey<br>
 proctored the midterms and finals.
 
 ## Honors and Awards
+
 - MolSSI Phase I Software Fellowship (2018)
 - Best Graduate Paper Award (Summer `17), Chemical Engineering Department, University of Pittsburgh
 - Attended Foresight Institute 2017 Workshop: Artificial Intelligence for Molecular Machines
