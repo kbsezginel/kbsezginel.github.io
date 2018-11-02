@@ -12,6 +12,7 @@ categories: pages
 - [Publications](#publications)
 - [Presentations](#presentations)
 - [Leadership Experience](#leadership-experience)
+- [Professional Experience](#professional-experience)
 - [Honors and Awards](#honors-and-awards)
 - [Skills](#skills)
 - [Personal](#personal)
@@ -117,6 +118,25 @@ group members by providing them supportive articles for their project and giving
 CHEM 103 (General Chemistry) Koc University, Istanbul, Turkey<br>
 - Attended weekly lab sessions of freshman students, graded quizzes, lab reports and midterm questions,
 proctored the midterms and finals.
+
+## Professional Experience
+
+### Clinical Research Intern | Aug 2013 - Sep 2013
+AbbVie Pharmaceutical Research & Development Istanbul, Turkey<br>
+- Examined the procedures of various phase clinical trials, organized and translated official documents.
+- Studied the mechanism of action for several drugs in trial and presented the simplified mechanisms to clinical
+research department personnel.
+
+### Quality Control and Production Intern | Aug 2011 - Sep 2011
+EVYAP Sabun, Yağ, Gliserin Sanayi ve Ticaret A.Ş. Istanbul, Turkey<br>
+- Learned various quality control methods and observed the production of various hygienic and cosmetic
+products.
+- Investigated the quality problems and suggested new solutions to overcome these problems by making a
+presentation to the related departments and their coordinators.
+
+### Production Intern | July 2010 - Aug 2010
+Teknova Matbaacılık Kimya Sanayi A.Ş. Istanbul, Turkey<br>
+- Observed the production process and inspected the quality of printing chemicals.
 
 ## Honors and Awards
 
