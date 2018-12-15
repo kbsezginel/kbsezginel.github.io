@@ -85,6 +85,13 @@ uptake in metal–organic frameworks. Chemical Engineering Science, 124, 125-134
 
 ## Presentations (Oral)
 
+Sezginel, K. B., Babaei H. and Wilmer, C.E., "Computational Screening of Thermal Conductivity of MOFs.", MOF 2018 Young Investigator Symposium, Rotorua, NZ, Dec. 8, 2018.
+
+Sezginel, K. B., Asinger P. A., Babaei H. and Wilmer, C.E., "Thermal transport in interpenetrated metal-organic
+frameworks.",  AIChE Annual Meeting, Pittsburgh, PA, Oct. 31, 2018.
+
+Sezginel, K. B. and Wilmer, C.E., "Surface Diffusion of Large Molecules: A Computational Study.",  AIChE Annual Meeting, Pittsburgh, PA, Oct. 28, 2018.
+
 Sezginel, K.B., Feng T., Wilmer, C.E., “Theoretical Prediction of Interpenetrating Metal-Organic Frameworks”, AIChE Annual Meeting, San Francisco, CA, Nov. 15, 2016.
 
 Sezginel, K.B., Feng T., Wilmer, C.E., “Theoretical Prediction of Interpenetrating Metal-Organic Frameworks”, Simulators Meeting, Carnegie Mellon University, Pittsburgh, PA, May 25, 2016.
@@ -141,7 +148,7 @@ Teknova Matbaacılık Kimya Sanayi A.Ş. Istanbul, Turkey<br>
 ## Honors and Awards
 
 - MolSSI Phase I Software Fellowship (2018)
-- Best Graduate Paper Award (Summer `17), Chemical Engineering Department, University of Pittsburgh
+- Best Graduate Paper Award (Summer '17), Chemical Engineering Department, University of Pittsburgh
 - Attended Foresight Institute 2017 Workshop: Artificial Intelligence for Molecular Machines
 - Innocentive challenge entitled Chemical Sorbents for Fixed Bed Mercury (Hg0) Control ($5000 prize)
 - Full Merit Scholarship – Koc University, MS and BS
