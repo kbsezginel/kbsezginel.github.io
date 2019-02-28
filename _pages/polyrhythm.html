@@ -1,0 +1,25 @@
+---
+layout: none
+title:  "Polyrhythm"
+permalink: /polyrhythm/
+date:   2019-02-26
+categories: pages
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tone/13.7.6/Tone.min.js'></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/polyrhythm.css">
+  </head>
+  <body>
+    <button class="button" onclick="startSong()">Start</button>
+    <button class="button buttonStop" onclick="stopSong()">Stop</button>
+    <div class="""slidecontainer">
+      <input type="range" min="20" max="300" value="120" class="slider" id="bpmRange">
+      <p>BPM: <span id="demo"></span></p>
+    </div>
+
+    <script src="../assets/js/polyrhythm.js"></script>
+  </body>
+</html>
