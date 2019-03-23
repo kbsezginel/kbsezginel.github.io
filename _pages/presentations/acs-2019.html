@@ -1,0 +1,167 @@
+---
+layout: none
+title:  "ACS 2019 | Nanocar Builder"
+permalink: /presentations/acs-2019/
+date:   2019-04-03
+categories: presentations
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACS 2019 | Nanocar Builder</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=3d);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=anaglyph);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=shadow-multiple);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=emboss);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Quicksand:500);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+
+      body { font-family: 'Maven Pro'; }
+      h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+      .red { color: #8e1313; }
+      .gray {color: #606060; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .col1 {width: 90%; text-align: center; float:left}
+      .col2 {width: 50%; text-align: center; float:left}
+      .col2L {width: 50%; float: left}
+      .col3 {width: 33%; text-align: center; float:left}
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# .red[Tools for computational design of artificial molecular machines]
+### Kutay B. Sezginel, Christopher E. Wilmer
+#### Chemical Engineering, University of Pittsburgh
+-----------------------------
+### ACS 2019
+### .gray[Sustainable Software for Computational Molecular Science]
+#### April 4, 2019 | Orlando, FL
+
+---
+## Nanocar Race
+
+<p align="center"><img src="/assets/img/presentations/molssi/nanocar-race-2017.jpg" height=300></p>
+
+
+---
+
+## Molecular Machines
+
+*An assembly of a distinct number of molecular components that are designed to perform machinelike
+movements (output) as a result of an appropriate external stimulation (input).*
+
+--
+
+<div style="width: 42%; text-align: center; float:left; padding: 0px 0px 0px 0px;">
+  <p style="text-align:center;"><b>Kinesin</b></p>
+<img src="/assets/img/presentations/molssi/kinesin-walker.gif" height=300>
+</div>
+
+--
+
+<div style="width: 50%; text-align: center; float:left; padding: 0px 0px 0px 0px;">
+  <p style="text-align:center;"><b>RNA Polymerase</b></p>
+<img src="/assets/img/presentations/molssi/rna-polymerase-animation.gif" height=300>
+</div>
+
+---
+## Artificial Molecular Machines
+
+<p align="center"><img src="/assets/img/presentations/molssi/amms-rb.png" height=320></p>
+
+---
+
+## Computer-aided Design
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 10px;">
+  <img src="/assets/img/presentations/cad.png" height=300>
+</div>
+--
+<div style="width: 50%; text-align: center; float:left; position: relative;">
+  <img src="/assets/img/presentations/cad_molecular.png" height=300>
+</div>
+
+--
+
+<div style="float:left; position: relative; top: 20px;">
+  <h4 style="color: #8e1313;">
+  Developing computer-aided design (CAD) tools to build and study artificial
+  molecular machine systems at different time/length scales.
+  </h4>
+</div>
+
+
+---
+## Nanocars
+
+.col2[<p align="center"><img src="/assets/img/presentations/avogadro/Nanocar2.png" height=200></p>]
+
+.col2[<p align="center"><img src="/assets/img/presentations/avogadro/nanocar-feringa.png" height=200></p>]
+--
+
+<p align="center"><img src="/assets/img/presentations/avogadro/nanocar-light.gif" height=250></p>
+
+---
+class: center
+
+**Body Parts - Wheels / Chassis**
+<p align="center"><img src="/assets/img/presentations/avogadro/nanocar-bodyparts.png" height=230></p>
+
+--
+
+**Nanocar Assembly**
+<p align="center"><img src="/assets/img/presentations/avogadro/nanocar-assembly.png" height=310></p>
+
+---
+class: center, middle
+
+<div style="height: 600px; width: 1000px;"
+  class='viewer_3Dmoljs' data-datatype='xyz' data-backgroundcolor='0xffffff'
+  data-href='/assets/molecules/NC1_Au111.xyz'
+  data-style='stick'>
+</div>
+
+---
+## Nanocar Builder
+
+<div class="github-card" data-github="kbsezginel/nanocar-avogadro" data-width="400" data-height="200" data-theme="default"></div>
+
+--
+
+- Build your own nanocar from chassis and wheel molecules
+- Build metal surfaces
+- Test drive your nanocar (LAMMPS)
+
+---
+
+class: center, middle
+
+# <div class="font-effect-anaglyph">Thank you!<div>
+---------------------------
+.col2[<p align="center"><img src="/assets/img/presentations/molssi/MolSSI-logo.jpg" height=130></p>]
+.col2[<p align="center"><img src="/assets/img/presentations/pitt-swanson.png" height=120></p>]
+
+    </textarea>
+    <script src="/assets/js/remark-latest.min.js"></script>
+    </script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+        countIncrementalSlides: false
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    <script src="/assets/js/3Dmol-min.js"></script>
+  </body>
+</html>
