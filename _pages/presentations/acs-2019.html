@@ -41,7 +41,7 @@ categories: presentations
 class: center, middle
 
 # .red[Tools for computational design of artificial molecular machines]
-### Kutay B. Sezginel, Christopher E. Wilmer
+### Kutay B. Sezginel, Jessica Nash, Christopher E. Wilmer
 #### Chemical Engineering, University of Pittsburgh
 -----------------------------
 ### ACS 2019
@@ -51,8 +51,30 @@ class: center, middle
 ---
 ## Nanocar Race
 
-<p align="center"><img src="/assets/img/presentations/molssi/nanocar-race-2017.jpg" height=300></p>
+<p align="center"><img src="/assets/img/presentations/acs-2019/nanocar-race-teaser.gif" height=450></p>
 
+
+???
+I am sure some of you have heard about the Nanocar Race two years ago.
+6 six teams
+
+---
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 60px; right: 50px;">
+  <img src="/assets/img/presentations/acs-2019/nanocar-racers.png" width=450>
+</div>
+
+--
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 130px; left: 50px;">
+  <img src="/assets/img/presentations/acs-2019/nanocar-stm.gif" width=350>
+</div>
+
+---
+
+<div style="text-align: center; float:left; position: relative; right: 50px;">
+  <img src="/assets/img/presentations/acs-2019/nanocar-race-results.jpg" height=600>
+</div>
 
 ---
 
@@ -65,42 +87,66 @@ movements (output) as a result of an appropriate external stimulation (input).*
 
 <div style="width: 42%; text-align: center; float:left; padding: 0px 0px 0px 0px;">
   <p style="text-align:center;"><b>Kinesin</b></p>
-<img src="/assets/img/presentations/molssi/kinesin-walker.gif" height=300>
+<img src="/assets/img/presentations/molssi/kinesin-walker.gif" height=250>
 </div>
+
+???
+Kinesins are amazing biomolecular machines which walk on microtubules that span across the cell to
+carry precious molecular cargo such as enzymes, proteins...
 
 --
 
 <div style="width: 50%; text-align: center; float:left; padding: 0px 0px 0px 0px;">
   <p style="text-align:center;"><b>RNA Polymerase</b></p>
-<img src="/assets/img/presentations/molssi/rna-polymerase-animation.gif" height=300>
+<img src="/assets/img/presentations/molssi/rna-polymerase-animation.gif" height=250>
 </div>
 
+???
+RNA polymerase is another biomolecular machine which can synthesize RNA molecular from a DNA molecule
+by reading the base pairs. So it's basically like a chef reading a recipe.
+And I would argue this is much more complex and efficient than any catalyst we can design today.
 ---
 ## Artificial Molecular Machines
 
-<p align="center"><img src="/assets/img/presentations/molssi/amms-rb.png" height=320></p>
+<p align="center"><img src="/assets/img/presentations/molssi/amms-rb.png" height=300></p>
 
 ---
 
-## Computer-aided Design
-
-<div style="width: 50%; text-align: center; float:left; position: relative; top: 10px;">
-  <img src="/assets/img/presentations/cad.png" height=300>
+<div style=" position: relative; top: -20px; bottom: 800px;">
+  <h2>Computer-aided design</h2>
 </div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -30px; right: 50px;">
+  <img src="/assets/img/presentations/acs-2019/combustion-engine.gif" height=200>
+  <p><b>Macroscopic Machines</b></p>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 250px; right: 380px;">
+  <img src="/assets/img/presentations/cad.png" height=200>
+</div>
+
 --
-<div style="width: 50%; text-align: center; float:left; position: relative;">
-  <img src="/assets/img/presentations/cad_molecular.png" height=300>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -235px; right: 20px;">
+  <img src="/assets/img/presentations/acs-2019/molecular-motor-rotation.gif" height=200>
+  <p><b>Molecular Machines</b></p>
 </div>
 
---
-
-<div style="float:left; position: relative; top: 20px;">
-  <h4 style="color: #8e1313;">
-  Developing computer-aided design (CAD) tools to build and study artificial
-  molecular machine systems at different time/length scales.
-  </h4>
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -230px; left: 390px;">
+  <img src="/assets/img/presentations/cad_molecular.png" height=210>
 </div>
 
+???
+The industrial revolution and the development of complex macroscopi machinery has revolutinized
+our lives. As these macroscopic machines became more complex people started using computers to design
+them and today computer-aided design is a crucial part of the machine design.
+
+I believe a similar approach could be used to design molecular machines as well.
+Obviously, the scale and the physics would be very different but we already have software
+which can provide proper physics.
+
+Developing computer-aided design (CAD) tools to build and study artificial
+molecular machine systems at different time/length scales.
 
 ---
 ## Nanocars
@@ -126,7 +172,7 @@ class: center
 ---
 class: center, middle
 
-<div style="height: 600px; width: 1000px;"
+<div style="height: 600px; width: 800px;"
   class='viewer_3Dmoljs' data-datatype='xyz' data-backgroundcolor='0xffffff'
   data-href='/assets/molecules/NC1_Au111.xyz'
   data-style='stick'>
@@ -135,20 +181,31 @@ class: center, middle
 ---
 ## Nanocar Builder
 
-<div class="github-card" data-github="kbsezginel/nanocar-avogadro" data-width="400" data-height="200" data-theme="default"></div>
-
---
-
 - Build your own nanocar from chassis and wheel molecules
 - Build metal surfaces
 - Test drive your nanocar (LAMMPS)
 
+#### Coming soon
+- Multibody rigid MD (Open PR)
+  - Simulate rotation of wheels
+
+--
+
+<div class="github-card" data-github="kbsezginel/nanocar-avogadro" data-width="400" data-height="200" data-theme="default"></div>
+
+
 ---
 
-class: center, middle
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -30px;">
+  <h2><div class="font-effect-anaglyph">Thank you!<div></h2>
+</div>
 
-# <div class="font-effect-anaglyph">Thank you!<div>
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -50px;">
+  <img src="/assets/img/presentations/wilmerlab-group.jpg" height=350>
+</div>
+
 ---------------------------
+
 .col2[<p align="center"><img src="/assets/img/presentations/molssi/MolSSI-logo.jpg" height=130></p>]
 .col2[<p align="center"><img src="/assets/img/presentations/pitt-swanson.png" height=120></p>]
 
@@ -157,11 +214,11 @@ class: center, middle
     </script>
     <script>
       var slideshow = remark.create({
-        ratio: '16:9',
+        ratio: '4:3',
         countIncrementalSlides: false
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    <script src="/assets/js/github-card.js"></script>
     <script src="/assets/js/3Dmol-min.js"></script>
   </body>
 </html>
