@@ -27,7 +27,7 @@ In the free mode the animations play sequentially. You can again switch between 
 speed and the right knob again controls the LED ring color.
 
 <p align="center"> <img src="https://kbsezginel.github.io/polycule/assets/img/moduled/moduled-nano-usage.png
-"></p>
+" width="800"></p>
 
 ### See it in action
 <div style="width:100%;height:480px;background-color:black;text-align:center;">
