@@ -2,11 +2,11 @@
 layout: single
 title:  "Music"
 permalink: /music/
-date:   2018-12-18
+date:   2019-01-09
 categories: pages
 bch_donation:
-  - image_path: /assets/img/kbs_music_bch_qr.png
-    alt: "kbs_music_bch_qr"
+  - image_path: /assets/img/kutay550_bch_qr.png
+    alt: "kutay550_bch_qr"
     title: "Donate"
     excerpt: "If you like my music consider donating Bitcoin Cash! I suffer from a never-ending list of instruments I would like to buy. If you would like to buy high quality versions of any of the songs/albums with BCH send me an e-mail."
 ---
