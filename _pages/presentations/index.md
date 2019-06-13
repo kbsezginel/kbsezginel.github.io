@@ -11,6 +11,7 @@ related: false
 ## WilmerLab Group Meeting
 - [WilmerLab Group Meeting - Nanocar - September 10, 2018](presentations/wlab-10-09-2018/)
 - [WilmerLab Group Meeting - Nanocar - May 14, 2018](presentations/wlab-14-05-2018/)
+- [WilmerLab Group Meeting - Transition State Theory - June 17, 2019](presentations/wlab-17-06-2019/)
 
 ## Other Presentations
 - [MolSSI Bootcamp - July 24, 2018](presentations/MolSSI-bootcamp-2018/)

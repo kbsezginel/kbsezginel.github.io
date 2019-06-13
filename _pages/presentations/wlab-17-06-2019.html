@@ -1,0 +1,129 @@
+---
+layout: none
+title:  "WLAB GM"
+permalink: /presentations/wlab-17-06-2019/
+date:   2019-06-17
+categories: presentations
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WLAB GM - TST</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=3d);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=anaglyph);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=shadow-multiple);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=emboss);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Quicksand:500);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+
+      body { font-family: 'Maven Pro'; }
+      h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+      h4 { font-family: 'Yanone Kaffeesatz'; font-size: 25px; font-weight: normal; }
+      .red { color: #8e1313; }
+      .gray {color: #606060; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .col1 {width: 100%; text-align: center; float:left}
+      .col2 {width: 50%; text-align: center; float:left}
+      .col3 {width: 33%; text-align: center; float:left}
+
+      .tooltip
+      {
+        text-decoration:none;
+        position:relative;
+      }
+
+
+      .tooltip span
+      {
+        display:none;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        color:black;
+        background:white;
+      }
+
+
+      .tooltip span img
+      {
+        float:left;
+        margin:0px 8px 8px 0;
+      }
+
+
+      .tooltip:hover span
+      {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1000;
+        width:auto;
+        border:1px solid black;
+        margin-top:12px;
+        margin-left:32px;
+        overflow:hidden;
+        padding:8px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+## The more you know | .red[Transition State Theory]
+### Kutay B. Sezginel
+-----------------------------
+### WilmerLab Group Meeting
+#### June 17, 2019
+
+---
+## Transition State Theory
+
+*Transition state theory (TST) explains the reaction rates of elementary chemical reactions. The theory assumes a special type of chemical equilibrium (quasi-equilibrium) between reactants and activated transition state complexes*
+
+The basic ideas behind transition state theory are as follows:
+1. Rates of reaction can be studied by examining activated complexes near the saddle point of a potential energy surface. The details of how these complexes are formed are not important. The saddle point itself is called the transition state.
+2. The activated complexes are in a special equilibrium (quasi-equilibrium) with the reactant molecules.
+3. The activated complexes can convert into products, and kinetic theory can be used to calculate the rate of this conversion.
+
+$$k = A e^{\frac{-E_a}{RT}}$$
+
+$$MSD = \langle (x - x_0)^2 \rangle = \frac{1}{N} \sum^N_i [x_n(t) - x_n(0)]^2 $$
+
+
+---
+class: center, middle
+
+# <div class="font-effect-anaglyph">Thank you!<div>
+
+    </textarea>
+    <script src="/assets/js/remark-latest.min.js"></script>
+    <script src="/assets/js/3Dmol-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+        countIncrementalSlides: false
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
