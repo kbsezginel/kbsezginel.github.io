@@ -895,6 +895,68 @@
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          transform="matrix(-0.3,0,0,-0.3,0.69,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Send-8-2-4-2"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8107-4-0-90-2"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker12390-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInS"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.2,-0.2)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path12392-9" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker12706-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path12708-3"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.2,-0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutS-5"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path11637-1"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:#d40000;stroke-width:1pt;stroke-opacity:0.98039216"
+         transform="scale(0.2,0.2)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -903,9 +965,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="886.99124"
-     inkscape:cy="946.03065"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="1196.9498"
+     inkscape:cy="489.7868"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1296,6 +1358,36 @@
          x="922.97308"
          y="106.41626"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">ΔG</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="946.0498"
+       y="573.14777"
+       id="text8642-31-8-7-8-7-0-1-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-92-6-0-0"
+         x="946.0498"
+         y="573.14777"
+         style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">‡</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1315.8578"
+       y="248.13991"
+       id="text8642-31-8-7-8-4-0-9-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-9-2-0-9"
+         x="1315.8578"
+         y="248.13991"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">FCC (110)</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -4108,5 +4200,938 @@
          x="568.70813"
          y="970.81482"
          style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">B</tspan></text>
+    <circle
+       style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-20-24-3-3-8"
+       cx="991"
+       cy="437.30542"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-6-9-6-6-0"
+       cx="991"
+       cy="364.36218"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-1-9-7-7-5"
+       cx="991"
+       cy="291.41901"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-4-4-1-5-6"
+       cx="933.41913"
+       cy="327.89062"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-4-6-2-3-6"
+       cx="933.41913"
+       cy="400.8338"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-3-7-5-7-5-4"
+       cx="1048.5808"
+       cy="327.89062"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <path
+       style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 935.15899,327.89062 116.40941,0"
+       id="path8963-4-8-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-6-8-61-0-6-0"
+       cx="1048.5808"
+       cy="400.8338"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-2-0"
+       cx="933.41913"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-9-4"
+       cx="952.61279"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-3-12-6"
+       cx="971.8064"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-6-7-26"
+       cx="991"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-0-0-7"
+       cx="1010.1936"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-62-9-56"
+       cx="1029.3872"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-61-3-9"
+       cx="1048.5808"
+       cy="327.89062"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-2-9-8"
+       cx="933.41913"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-9-2-7"
+       cx="952.61279"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-3-12-0-2"
+       cx="971.8064"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-6-7-2-8"
+       cx="991"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-0-0-3-2"
+       cx="1010.1936"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-62-9-7-9"
+       cx="1029.3872"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-61-3-5-9"
+       cx="1048.5808"
+       cy="345.78168"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-2-2-6"
+       cx="933.41913"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-9-28-0"
+       cx="952.61279"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-3-12-9-2"
+       cx="971.8064"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-6-7-7-7"
+       cx="991"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-0-0-36-6"
+       cx="1010.1936"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-62-9-1-1"
+       cx="1029.3872"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <path
+       style="display:inline;fill:#ff0000;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1048.5808,398.48371 0,-72.51544"
+       id="path8963-0-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-61-3-2-3"
+       cx="1048.5808"
+       cy="363.67267"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-2-1-2"
+       cx="933.41913"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-9-9-1"
+       cx="952.61279"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-3-12-4-5"
+       cx="971.8064"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-6-7-78-9"
+       cx="991"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-0-0-4-9"
+       cx="1010.1936"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-62-9-5-1"
+       cx="1029.3872"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-61-3-0-4"
+       cx="1048.5808"
+       cy="381.56378"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-2-6-9"
+       cx="933.41913"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-9-1-1"
+       cx="952.61279"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-3-12-06-0"
+       cx="971.8064"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-6-7-3-7"
+       cx="991"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-0-0-2-5"
+       cx="1010.1936"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-62-9-0-8"
+       cx="1029.3872"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-9-61-3-6-7"
+       cx="1048.5808"
+       cy="399.45477"
+       r="7.3020301"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png" />
+    <path
+       style="fill:#ff0000;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 933.41917,399.93036 0,-72.51544"
+       id="path8963-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       sodipodi:type="star"
+       style="opacity:0.98000004;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path11211-4"
+       sodipodi:sides="3"
+       sodipodi:cx="933.41916"
+       sodipodi:cy="328.34033"
+       sodipodi:r1="5.8701248"
+       sodipodi:r2="2.9350626"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0.1"
+       inkscape:randomized="0"
+       d="m 938.50287,331.27539 c -0.50837,0.88052 -9.65899,0.88052 -10.16736,0 -0.50837,-0.88051 4.06694,-8.80518 5.08368,-8.80518 1.01673,0 5.59204,7.92467 5.08368,8.80518 z"
+       inkscape:transform-center-y="-1.1372702"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="display:inline;fill:#ff0000;fill-rule:evenodd;stroke:#ffaaaa;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 932.79527,399.4547 116.40943,0"
+       id="path8963-4-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       sodipodi:type="star"
+       style="display:inline;opacity:0.98000004;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path11211-7-0"
+       sodipodi:sides="3"
+       sodipodi:cx="544.24597"
+       sodipodi:cy="879.10852"
+       sodipodi:r1="3.4165881"
+       sodipodi:r2="1.7082942"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0.1"
+       inkscape:randomized="0"
+       d="m 547.20482,880.81681 c -0.29588,0.51249 -5.62182,0.51249 -5.9177,0 -0.29589,-0.51248 2.36708,-5.12488 2.95885,-5.12488 0.59177,0 3.25474,4.6124 2.95885,5.12488 z"
+       transform="matrix(0,1.7181248,-1.7181248,0,2558.5499,-535.62778)"
+       inkscape:transform-center-x="-1.137401"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:transform-center-y="1.7369195e-05" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2147.65600586px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1058.8698"
+       y="404.85815"
+       id="text8642-31-8-7-8-29-2-2-3-65-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-6-2"
+         x="1058.8698"
+         y="404.85815"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1282.76599121px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="927.64429"
+       y="312.80316"
+       id="text8642-31-8-7-8-29-2-2-3-65-9-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-6-3-6"
+         x="927.64429"
+         y="312.80316"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2147.65600586px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffaaaa;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="903.97656"
+       y="410.08136"
+       id="text8642-31-8-7-8-29-2-2-3-65-7-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-6-4-0"
+         x="903.97656"
+         y="410.08136"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2147.65600586px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="904.38177"
+       y="337.82965"
+       id="text8642-31-8-7-8-29-2-2-3-65-7-5-5-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_grid.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-6-4-2-4-2"
+         x="904.38177"
+         y="337.82965"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#ffffff;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">B</tspan></text>
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-20-2-0"
+       cx="1367.3584"
+       cy="693.76221"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-6-6-5"
+       cx="1367.3584"
+       cy="651.30713"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-1-6-5"
+       cx="1367.3584"
+       cy="608.85205"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-6-2-54-4-2"
+       cx="1367.3584"
+       cy="736.21729"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-2-6-9-9"
+       cx="1443.886"
+       cy="693.76221"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-02-5-5-0"
+       cx="1443.886"
+       cy="651.30713"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-3-6-0-2"
+       cx="1443.886"
+       cy="608.85205"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-6-2-5-3-4-8"
+       cx="1443.886"
+       cy="736.21729"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-9-4-8-3"
+       cx="1290.3309"
+       cy="693.76221"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-2-5-7-8"
+       cx="1290.3309"
+       cy="651.30713"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-2-2-1-0"
+       cx="1290.3309"
+       cy="608.85205"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-6-2-9-4-7-4"
+       cx="1290.3309"
+       cy="736.21729"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-4-2-0"
+       cx="1328.8446"
+       cy="630.07959"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-4-7-9"
+       cx="1328.8446"
+       cy="672.53467"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-3-2-1"
+       cx="1328.8446"
+       cy="714.98975"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-3-7-2-9"
+       cx="1405.3722"
+       cy="630.07959"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-6-8-6-6"
+       cx="1405.3722"
+       cy="672.53467"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#aa0000;fill-opacity:1;stroke:#2b0000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-0-6-1-2"
+       cx="1405.3722"
+       cy="714.98975"
+       r="21.227541"
+       inkscape:export-xdpi="299.98297"
+       inkscape:export-ydpi="299.98297" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8568-97-3-6-3"
+       cx="1347.26"
+       cy="269.48761"
+       r="4.25"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <path
+       style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1349.3724,269.49961 59.4418,0"
+       id="path8068-5-6-5-5-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <path
+       sodipodi:type="star"
+       style="display:inline;opacity:0.98000004;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path11211-7-0-5"
+       sodipodi:sides="3"
+       sodipodi:cx="544.24597"
+       sodipodi:cy="879.10852"
+       sodipodi:r1="3.4165881"
+       sodipodi:r2="1.7082942"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0.1"
+       inkscape:randomized="0"
+       d="m 547.20482,880.81681 c -0.29588,0.51249 -5.62182,0.51249 -5.9177,0 -0.29589,-0.51248 2.36708,-5.12488 2.95885,-5.12488 0.59177,0 3.25474,4.6124 2.95885,5.12488 z"
+       transform="matrix(0,1.7181248,-1.7181248,0,2913.2808,-252.72029)"
+       inkscape:transform-center-x="-1.137401"
+       inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+       inkscape:export-xdpi="499.89908"
+       inkscape:export-ydpi="499.89908"
+       inkscape:transform-center-y="1.7369195e-05" />
+    <path
+       style="display:inline;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.43406415;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1344.2953,682.86221 58.4094,0"
+       id="path8963-4-8-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/Nanocar/docs/assets/img/dctst/umbrella-sampling-grid.png"
+       inkscape:export-xdpi="499.89908"
+       inkscape:export-ydpi="499.89908" />
+    <path
+       style="opacity:0.98000004;fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 1086.4278,696.80175 c -10.6513,-0.41144 -19.3359,-1.40702 -29.8671,-3.42388 -0.9486,-0.18166 -1.0804,-0.0787 -1.0804,0.8441 l 0,0.68254 -4.8772,0 -4.8773,0 0,-2.06906 0,-2.06905 -0.6097,-0.18705 c -0.3353,-0.10288 -2.4997,-0.76564 -4.8098,-1.4728 -2.31,-0.70717 -4.2791,-1.31607 -4.3757,-1.35313 -0.3329,-0.12778 -0.4226,0.71617 -0.4232,3.98667 l -7e-4,3.16442 -4.8772,0 -4.8773,0 0,-5.67901 0,-5.679 -1.6548,-0.81521 c -2.5831,-1.27252 -4.9393,-2.94514 -7.4901,-5.31706 l -1.1903,-1.10681 0,9.29855 0,9.29854 -4.8773,0 -4.8772,0 0,-16.1257 0,-16.12569 -1.5217,-3.06405 c -2.5985,-5.23238 -4.47525,-9.35163 -7.08225,-15.54511 l -1.44094,-3.42326 -0.0345,0.92656 c -0.019,0.50961 -0.0712,12.71041 -0.11613,27.11288 l -0.0816,26.1863 -4.84824,0.0303 -4.84824,0.0303 0,-39.13628 0,-39.13628 -1.86491,-3.7284 c -2.75032,-5.49856 -4.88674,-9.28721 -6.93063,-12.29055 -1.26054,-1.85227 -1.34789,-1.97107 -1.45254,-1.97546 -0.0479,-0.002 -0.0871,21.65667 -0.0871,48.13039 l 0,48.13404 -4.87727,0 -4.87727,0 0,-53.0424 0,-53.04239 -1.12728,-0.63664 c -2.64239,-1.4923 -6.3741,-2.78049 -8.80146,-3.03827 l -0.34837,-0.037 -0.028,29.14751 c -0.0154,16.03113 -0.0284,40.73539 -0.029,54.89835 l -0.001,25.75084 -4.70308,0 -4.70308,0 0,-54.86642 0,-54.86641 -0.37741,0.0697 c -2.47642,0.45769 -5.85285,1.61044 -8.27395,2.82482 l -1.74188,0.8737 -0.07,35.18604 c -0.0385,19.35232 -0.0777,43.19435 -0.0871,52.98228 l -0.0171,17.79624 -4.6869,0 -4.68691,0 -0.0793,-45.25993 c -0.0757,-43.15838 -0.12634,-50.87191 -0.33555,-51.08105 -0.12834,-0.12829 -0.45606,0.29426 -2.03794,2.62767 -1.65097,2.43531 -2.88551,4.37109 -5.79938,9.09351 l -2.19301,3.55416 -0.0773,12.91418 c -0.0425,7.1028 -0.0773,22.19856 -0.0773,33.54615 0,11.34758 -0.0347,23.77597 -0.0771,27.61864 l -0.0771,6.98667 -4.66766,0 -4.66766,0 -0.0857,-33.82157 c -0.0471,-18.60186 -0.10152,-33.83808 -0.12084,-33.85827 -0.0193,-0.0202 -0.57899,0.37661 -1.24373,0.88178 -2.10407,1.599 -3.71846,2.42363 -7.09625,3.62475 l -1.87946,0.66833 -0.0701,18.97221 c -0.0386,10.43472 -0.0778,24.49834 -0.0871,31.25249 l -0.017,12.28028 -4.70308,0 -4.70309,0 0,-30.18974 0,-30.18974 -0.31934,0.0581 c -0.8971,0.16307 -6.88216,1.10714 -8.0417,1.26847 -0.73449,0.1022 -1.47915,0.21417 -1.65479,0.24884 l -0.31934,0.063 0,29.37053 0,29.37054 -4.87727,0 -4.87728,0 0,-28.93212 0,-28.93211 -3.91923,0.0771 c -2.15558,0.0424 -4.4418,0.14142 -5.08049,0.22007 l -1.16126,0.14301 -0.0293,28.71204 -0.0293,28.71204 -1.96428,0 -1.96427,0 0.0502,-12.97703 c 0.0276,-7.13737 0.082,-20.80244 0.12077,-30.36683 l 0.0706,-17.3898 4.95009,-6e-4 c 6.07067,-7.3e-4 9.54902,-0.16222 15.11109,-0.70158 8.54263,-0.82839 16.81968,-2.30662 23.04763,-4.11618 4.87218,-1.41564 6.8383,-2.52475 9.87398,-5.57006 2.7898,-2.79866 4.21686,-4.846 10.48544,-15.04307 3.36467,-5.47329 5.4839,-8.78565 6.77552,-10.59016 2.79122,-3.89956 6.09624,-7.37013 9.37069,-9.84008 4.50832,-3.40065 10.30947,-5.66599 15.81221,-6.17462 2.89885,-0.26795 8.48214,0.0258 11.26338,0.59257 2.10442,0.42886 4.97275,1.56924 7.15227,2.84358 8.37141,4.89468 15.30256,14.12895 22.75073,30.31043 1.45577,3.16273 2.9713,6.7409 6.9055,16.30384 5.11574,12.435 6.62474,15.99125 8.77594,20.68288 2.1412,4.66977 4.6597,9.42558 6.6832,12.62063 2.9068,4.5896 7.0965,9.46404 10.2782,11.95801 3.2805,2.57139 9.4042,5.33868 18.2971,8.26846 9.6519,3.1798 17.7239,5.02501 28.7223,6.56573 6.0788,0.85155 9.7282,1.19891 14.1673,1.34847 3.055,0.10292 4.9053,0.23593 5.7772,0.41529 l 0.3194,0.0657 0,1.38428 0,1.38428 -0.5516,-0.0227 c -0.3034,-0.0125 -0.9174,-0.0369 -1.3645,-0.0541 z"
+       id="path10438-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:#000000;stroke-width:2.97048259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.94096518, 2.97048259;stroke-dashoffset:0;stroke-opacity:0.98039216"
+       d="m 951.14219,583.48507 -104.65684,0"
+       id="path10526-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.32766938;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 851.39803,635.91561 c 0,0 26.87135,0.75498 46.73864,-5.91791 19.86729,-6.67288 20.64198,-50.14846 57.05188,-46.26159 36.4099,3.88686 39.13305,83.70337 69.83045,98.07452 30.6974,14.37116 63.5177,13.60029 63.5177,13.60029"
+       id="path18668-2-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czzzc"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker12390-2)"
+       d="m 1106.8022,701.74249 -268.68014,0"
+       id="path18670-1-5-6-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker12706-4)"
+       d="m 845.38555,554.37203 0,155.50217"
+       id="path18670-1-6-6-1-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="811.32825"
+       y="593.87732"
+       id="text8642-31-8-7-8-29-2-2-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-4"
+         x="811.32825"
+         y="593.87732"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Italic';fill:#000000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">G<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Italic';baseline-shift:super;fill:#000000;fill-opacity:0.98039216"
+   id="tspan10561-2">‡</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1061.5969"
+       y="594.64862"
+       id="text8642-31-8-7-8-29-2-2-3-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-64"
+         x="1061.5969"
+         y="594.64862"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Italic';fill:#d40000;fill-opacity:0.98039216;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">G(q)dq</tspan></text>
+    <path
+       style="opacity:0.98000004;fill:#d40000;fill-opacity:0.98039216;fill-rule:evenodd;stroke:none;stroke-width:0.48775214;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 1042.5824,611.28069 c -2.0593,-0.27092 -3.3945,-1.60404 -3.3945,-3.38931 0,-1.74161 0.8695,-2.62881 2.6826,-2.73715 1.6086,-0.0961 2.4614,0.56731 2.8338,2.20448 0.249,1.09491 0.4613,1.48879 0.8024,1.48879 1.1281,0 1.983,-2.76653 2.4417,-7.90136 0.2253,-2.52249 0.2774,-3.60246 0.4771,-9.87672 0.2063,-6.48411 0.2558,-7.53623 0.4757,-10.10911 0.43,-5.03247 1.3227,-8.85723 2.6985,-11.56155 0.5484,-1.07816 0.8055,-1.43437 1.6429,-2.27639 1.5575,-1.56605 3.0778,-2.15986 5.2713,-2.05888 1.4023,0.0646 2.2859,0.44556 3.1007,1.33705 0.6316,0.6911 0.811,1.16362 0.812,2.13845 0,1.17028 -0.4788,2.05556 -1.3221,2.43852 -0.5841,0.26525 -2.0983,0.30108 -2.6678,0.0631 -0.5709,-0.23853 -1.2186,-1.06582 -1.4196,-1.81305 -0.4541,-1.68817 -0.4532,-1.68622 -0.7597,-1.72254 -0.8467,-0.10035 -1.6812,1.53056 -2.1286,4.15955 -0.4868,2.8615 -0.6866,5.85028 -0.9397,14.05979 -0.2921,9.47732 -0.6127,12.89472 -1.5786,16.82965 -0.9268,3.77594 -1.917,5.64665 -3.8949,7.35815 -1.283,1.11021 -3.2039,1.62231 -5.1332,1.36851 z"
+       id="path10731-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#d40000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98039216;marker-end:url(#TriangleOutS-5)"
+       d="m 968.33443,640.37934 c 0,0 4.56331,-34.08661 18.22913,-43.19151 10.73607,-7.15296 36.08294,-9.84053 46.72214,-9.46506"
+       id="path10733-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1114.2439"
+       y="708.17804"
+       id="text8642-31-8-7-8-29-2-2-3-6-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-2-8"
+         x="1114.2439"
+         y="708.17804"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="835.78436"
+       y="544.94659"
+       id="text8642-31-8-7-8-29-2-2-3-6-9-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-1-3-2-2-2-1-2"
+         x="835.78436"
+         y="544.94659"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;fill-opacity:0.96078431;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="852.92029"
+       y="724.60559"
+       id="text8642-31-8-7-8-2-4-3-4-0-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-4-5-6-5-7-8"
+         x="852.92029"
+         y="724.60559"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">Distance over</tspan><tspan
+         sodipodi:role="line"
+         x="852.92029"
+         y="749.60559"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan8516-0-03-8-8">potential energy surface</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="854.79382"
+       y="628.86597"
+       id="text8642-31-8-7-8-8-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-43-8"
+         x="854.79382"
+         y="628.86597"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:1250px;line-height:125%;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1072.9442"
+       y="686.18024"
+       id="text8642-31-8-7-8-4-1-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/diffusion_energy_barrier.png"><tspan
+         sodipodi:role="line"
+         id="tspan8644-9-8-5-7-9-4-3"
+         x="1072.9442"
+         y="686.18024"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25px;font-family:'Avenir Next LT Pro';-inkscape-font-specification:'Avenir Next LT Pro Semi-Bold';fill:#000000;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">B</tspan></text>
+    <circle
+       style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-20-24-3-3-8-3"
+       cx="1375"
+       cy="449.30542"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-6-9-6-6-0-7"
+       cx="1375"
+       cy="376.36218"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#550000;fill-opacity:1;stroke:#2b0000;stroke-width:3.43624949;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-1-2-7-0-1-9-7-7-5-3"
+       cx="1375"
+       cy="303.41901"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-4-4-1-5-6-2"
+       cx="1317.4192"
+       cy="339.89062"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-4-6-2-3-6-6"
+       cx="1317.4192"
+       cy="412.8338"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-3-7-5-7-5-4-5"
+       cx="1432.5808"
+       cy="339.89062"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
+    <circle
+       style="display:inline;opacity:1;fill:#d40000;fill-opacity:1;stroke:#2b0000;stroke-width:4.29531193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path9207-2-9-6-8-61-0-6-0-2"
+       cx="1432.5808"
+       cy="412.8338"
+       r="36.471565"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/kutay/Documents/git/kbsezginel.github.io/assets/img/presentations/wlab-17-06-19/110_surface_empty.png" />
   </g>
 </svg>
