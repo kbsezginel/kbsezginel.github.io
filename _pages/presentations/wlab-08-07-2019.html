@@ -1,0 +1,162 @@
+---
+layout: none
+title:  "WLAB GM"
+permalink: /presentations/wlab-08-07-2019/
+date:   2019-08-06
+categories: presentations
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WLAB GM - BMOF</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=3d);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=anaglyph);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=shadow-multiple);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=emboss);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Quicksand:500);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+
+      body { font-family: 'Maven Pro'; }
+      h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+      h4 { font-family: 'Yanone Kaffeesatz'; font-size: 25px; font-weight: normal; }
+      .red { color: #8e1313; }
+      .gray {color: #606060; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .col1 {width: 100%; text-align: center; float:left}
+      .col2 {width: 50%; text-align: center; float:left}
+      .col3 {width: 33%; text-align: center; float:left}
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+## .red[Thermal Transport in Breathing MOFs]
+### Kutay B. Sezginel
+-----------------------------
+### WilmerLab Group Meeting
+#### July 8, 2019
+
+---
+## Breathing MOF Model
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 10px; right: 20px;">
+  <img src="/assets/img/presentations/wlab-08-07-19/breathing_mof_model.png" width=470>
+</div>
+
+--
+
+<h3>Force field</h3>
+**180° angle potential (harmonic)**
+    - 2 angles / unit cell edge
+
+**90° angle potentials (harmonic)**
+    - 12 angles / corner atom
+    - angles in *xy* plane can be changed to approximate breathing
+
+**Short bonds (harmonic)**
+    - 3 bonds / unit cell edge
+
+---
+## Parametrizing the Model
+
+- Thermal conductivity ~ 1 W/mK
+- Relaxed volume ~ ideal volume
+
+---
+<h3>Correlation length and convergence</h3>
+
+<div style="text-align: center; float:center; position: relative; top: -40px; right: 0px;">
+  <p><b>100 ps</b></p>
+  <img src="/assets/img/presentations/wlab-08-07-19/k_10_10_k_avg.png" width=1000>
+</div>
+
+--
+
+<div style="text-align: center; float:center; position: relative; top: -50px; right: 0px;">
+  <p><b>150 ps</b></p>
+  <img src="/assets/img/presentations/wlab-08-07-19/k_10_10_p150ps_k_avg.png" width=1000>
+</div>
+
+---
+<h3>Correlation length and convergence</h3>
+
+<div style="text-align: center; float:center; position: relative; top: -40px; right: 0px;">
+  <p><b>200 ps</b></p>
+  <img src="/assets/img/presentations/wlab-08-07-19/k_10_10_p200ps_k_avg.png" width=1000>
+</div>
+
+--
+
+<div style="text-align: center; float:center; position: relative; top: -50px; right: 0px;">
+  <p><b>250 ps</b></p>
+  <img src="/assets/img/presentations/wlab-08-07-19/k_10_10_p250ps_k_avg.png" width=1000>
+</div>
+---
+## Parameter Search
+
+- **k<sub>bond</sub> and k<sub>angle</sub> :** 1 - 10 kcal/mol with 1 kcal/mol step size
+- **Correlation length :** 500 ps
+- **Total simulation length :** 6 ns (6e6 timesteps)
+- **CPU time :** 24 CPU hour / run
+
+---
+### Parameter Search
+
+Plot k bond and k angle 2d hostograms
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 30px;">
+  <img src="/assets/img/presentations/wlab-08-07-19/par_search_k.png" width=550>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-08-07-19/par_search_v.png" width=550>
+</div>
+---
+### Parameter Search
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 30px;">
+  <img src="/assets/img/presentations/wlab-08-07-19/3-7.png" width=350>
+  <img src="/assets/img/presentations/wlab-08-07-19/8-6.png" width=350>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 30px;">
+  <img src="/assets/img/presentations/wlab-08-07-19/par_search_m.png" width=550>
+</div>
+
+---
+class: center, middle
+
+# <div class="font-effect-anaglyph">Thank you!<div>
+
+    </textarea>
+    <script src="/assets/js/remark-latest.min.js"></script>
+    <script src="/assets/js/3Dmol-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+        countIncrementalSlides: false
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
