@@ -44,7 +44,7 @@ class: center, middle
 ### Kutay B. Sezginel
 -----------------------------
 ### WilmerLab Group Meeting
-#### July 8, 2019
+#### September 9, 2019
 
 ---
 ## Breathing MOF Model
@@ -55,34 +55,20 @@ class: center, middle
 
 --
 
-<h3>Force field</h3>
-**180° angle potential (harmonic)**
-    - 6 angles / corner atom
-
-**90° angle potentials (harmonic)**
-    - 12 angles / corner atom
-    - angles in xy plane can be changed to model breathing
-
-**Short bonds (harmonic)**
-    - 1 bond for every consecutive atom pair
-
----
-## Parametrizing the model
-
-- Thermal conductivity ~ 1 W/mK
-- Relaxed volume ~ ideal volume
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/bmof_angles.png" width=400>
+</div>
+<br><br>
 
 --
 
-<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 30px;">
-  90 degrees
-  <img src="/assets/img/presentations/wlab-08-07-19/90-degree-anim.gif" width=450>
-</div>
-
-<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 0px;">
-  60 degrees
-  <img src="/assets/img/presentations/wlab-08-07-19/60-degree-anim.gif" width=490>
-</div>
+**180° angle potential (harmonic)**
+    - 6 angles / corner atom
+**Variable angle potentials (harmonic)**
+    - 12 angles / corner atom
+    - angles in xy plane can be changed to model breathing
+**Short bonds (harmonic)**
+    - 1 bond for every consecutive atom pair
 
 ---
 ### Parameter Search | Thermal conductivity and Volume
@@ -95,6 +81,82 @@ class: center, middle
 
 <div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 0px;">
   <img src="/assets/img/presentations/wlab-08-07-19/par_search_v.png" width=550>
+</div>
+
+
+---
+## Parametrizing the model
+
+.col2[Thermal conductivity ~ 1 W/mK<br>Relaxed volume ~ ideal volume]
+
+.col2[k<sub>bond</sub>: 6 kcal/mol | k<sub>angle</sub>: 5 kcal/mol<br>correlation length: 1e5 timesteps, 6 ns simulation]
+
+--
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 30px;">
+  <p><b>90 degrees</b></p>
+  <img src="/assets/img/presentations/wlab-08-07-19/90-degree-anim.gif" width=400>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 0px;">
+  <p><b>60 degrees</b></p>
+  <img src="/assets/img/presentations/wlab-08-07-19/60-degree-anim.gif" width=430>
+</div>
+
+---
+## Adding gas molecules
+
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -20px; right: 20px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/packmol_add_gas.png" width=1100>
+</div>
+
+--
+
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -10px; right: 20px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/packmol_configs.png" width=1100>
+</div>
+
+---
+### Angle vs Thermal Conductivity
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/bmof_angles.png" width=290>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -20px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/bmof_k_directions.png" width=290>
+</div>
+
+--
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/k_vs_angle_without_gas.png" width=500>
+</div>
+
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/k_vs_angle_with_gas.png" width=500>
+</div>
+
+---
+<h3>Angle vs Thermal Conductivity / Box Length<sup>2</sup></h3>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: -20px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/bmof_box_length.png" width=330>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: -20px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/bmof_k_directions.png" width=300>
+</div>
+
+--
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: 30px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/k_over_length_vs_angle_without_gas.png" width=550>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-09-09-19/k_over_length_vs_angle_with_gas.png" width=550>
 </div>
 
 ---
