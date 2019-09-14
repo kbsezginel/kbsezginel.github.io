@@ -4,9 +4,11 @@ title:  "Web-based interactive visualization of molecules"
 excerpt: "Have you ever tried opening a molecule file that you received from a colleague, or a file that you found online
 and ended up spending half an hour trying to make it work?"
 date:   2018-01-22
-categories: tutorials
+categories: research
 sidebar:
   nav: "main"
+header:
+  teaser: /assets/img/posts/molvis-teaser.png
 ---
 {% include toc %}
 

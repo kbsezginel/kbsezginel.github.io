@@ -2,8 +2,10 @@
 layout: single
 title:  "First paper in PhD featured on the cover of CrystEngComm"
 date:   2017-09-13
-categories: news
+categories: research
 author_profile: true
+header:
+  teaser: /assets/img/posts/crystengcomm-cover-teaser.png
 ---
 My first [paper](http://pubs.rsc.org/en/content/articlehtml/2017/ce/c7ce00290d) in [WilmerLab](http://wilmerlab.com/) was featured on the cover of CrystEngComm journal! The cover image I have submitted to the journal for consideration was selected as the cover art. Here is the image:
 

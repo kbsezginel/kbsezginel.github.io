@@ -12,6 +12,8 @@ feature_row:
     btn_class: "btn--primary"
 sidebar:
   nav: "main"
+header:
+  teaser: /assets/img/posts/aug17-17-teaser.png
 ---
 
 {% include feature_row type="center" %}

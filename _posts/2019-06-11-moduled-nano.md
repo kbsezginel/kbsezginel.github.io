@@ -3,8 +3,10 @@ layout: single
 title:  "Moduled Nano: MIDI controllable modular LED synthesizer"
 excerpt: "Play LED animations via MIDI on your modular rack"
 date:   2019-06-11
-categories: news
+categories: music
 author_profile: true
+header:
+  teaser: /assets/img/posts/moduled-nano-teaser.png
 ---
 I always loved the little LED lights on the synthesizers, they dance with your music
 lighten up your setup and just look cool. I have been thinking about building a box

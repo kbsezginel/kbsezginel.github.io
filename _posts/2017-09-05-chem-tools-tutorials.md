@@ -2,8 +2,10 @@
 layout: single
 title:  "Tutorials and scripts for several computational chemistry tools"
 date:   2017-09-05
-categories: tutorials
+categories: research
 author_profile: true
+header:
+  teaser: /assets/img/posts/chem-tools-teaser.png
 ---
 I have created a [GitHub repository (and page)](https://kbsezginel.github.io/chem-tools-tutorials/)
 to host tutorials, tips and scripts for several computational chemistry tools that I use.

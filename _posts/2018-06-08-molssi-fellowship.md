@@ -5,6 +5,8 @@ excerpt: "My research proposal on developing a computer-aided design tool for ar
 date:   2018-06-08
 categories: news
 author_profile: true
+header:
+  teaser: /assets/img/posts/molssi-teaser.png
 ---
 My research proposal on developing a computer-aided design tool for artificial molecular machines was funded by Molecular Science Software Institute (MolSSI). [See the news here](https://molssi.org/2018/06/08/2018-software-fellows/).
 

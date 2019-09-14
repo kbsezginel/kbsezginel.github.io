@@ -3,8 +3,10 @@ layout: single
 title:  "Nanocar builder plug-in for Avogadro 2"
 excerpt: "Do you want to build a nanocar but you don’t know how? Just follow these easy steps…"
 date:   2018-10-11
-categories: news
+categories: research
 author_profile: true
+header:
+  teaser: /assets/img/posts/nanocar-builder-teaser.png
 ---
 <p align="center"><img src="https://raw.githubusercontent.com/kbsezginel/nanocar-avogadro/master/docs/assets/img/nanocar-plugin.png"></p>
 

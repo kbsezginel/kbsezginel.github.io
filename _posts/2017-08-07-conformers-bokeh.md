@@ -2,9 +2,11 @@
 layout: single
 title:  "Calculating and analyzing drug adsorption in MOFs interactively"
 date:   2017-08-07
-categories: tutorials
+categories: research
 sidebar:
   nav: "main"
+header:
+  teaser: /assets/img/posts/conformer-gen-teaser.png
 ---
 {% include toc %}
 
