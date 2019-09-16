@@ -8,7 +8,7 @@ share: false
 related: false
 ---
 
-## [WilmerLab Group Meeting Presentations](presentations/wlab/)
+## [WilmerLab Group Meeting Presentations](presentations/wlab)
 
 ## Other Presentations
 - [MolSSI Bootcamp - July 24, 2018](presentations/MolSSI-bootcamp-2018/)
