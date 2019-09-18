@@ -5,24 +5,26 @@ permalink: /cv/
 date:   2018-10-24
 categories: pages
 ---
+# [Resume (pdf)](/assets/docs/resume/KutayBSezginel_Resume.pdf){:target="_blank"}
+
 # Curriculum Vitae
 
 - [Education](#education)
+- [Professional Experience](#professional-experience)
 - [Research Experience](#research-experience)
 - [Publications](#publications)
 - [Presentations](#presentations)
 - [Leadership Experience](#leadership-experience)
-- [Professional Experience](#professional-experience)
 - [Honors and Awards](#honors-and-awards)
 - [Skills](#skills)
 - [Personal](#personal)
 - [References](#references)
-- [PDF version](/assets/docs/KutayBSezginel_CV.pdf)
 
 ## Education
 
-### PhD student in Chemical & Petroleum Engineering | Sep 2015 - Present
+### PhD student in Chemical & Petroleum Engineering | Sep 2015 - January 2020
 University of Pittsburgh, Swanson School of Engineering Pittsburgh, PA<br>
+**Dissertation Title:** Computational materials design for molecular machinery: From nanoporous crystals to nanoscale racecars<br>
 **Adviser:** Dr. Christopher E. Wilmer
 
 ### M.S. in Chemical & Biological Engineering | Sep 2013 – June 2015
@@ -37,6 +39,27 @@ Energy and Environmental Engineering Track
 
 ### Erasmus Exchange Program | Feb 2012 – Aug 2012
 Eindhoven University of Technology, School of Engineering Eindhoven, The Netherlands
+
+## Professional Experience
+
+### Computational Engineering Fellow | Jan 2019 – May 2019
+NuMat Technologies, Inc.	Skokie, IL<br>
+-	Development of a proprietary Python library for computational materials design. Automation and simplification of various molecular simulations tools and integration with high-performance cloud computing (AWS). Creating a workflow to perform reproducible and trackable experiments. Using the tools developed, research was performed to discover next generation candidate materials.
+-	Design and 3D printing of a custom part to improve speed and decrease material loss during production.
+-	Process controller development (hardware and software) with a web interface.
+
+### Clinical Research Intern | Aug 2013 - Sep 2013
+AbbVie Pharmaceutical Research & Development Istanbul, Turkey<br>
+- Examined the procedures of various phase clinical trials, organized and translated official documents.
+- Studied the mechanism of action for several drugs in trial and presented the simplified mechanisms to clinical
+research department personnel.
+
+### Quality Control and Production Intern | Aug 2011 - Sep 2011
+EVYAP Sabun, Yağ, Gliserin Sanayi ve Ticaret A.Ş. Istanbul, Turkey<br>
+- Learned various quality control methods and observed the production of various hygienic and cosmetic
+products.
+- Investigated the quality problems and suggested new solutions to overcome these problems by making a
+presentation to the related departments and their coordinators.
 
 ## Research Experience
 
@@ -65,23 +88,19 @@ Energy Materials & Devices Research Group, Eindhoven University of Technology Ei
 - Designed, fabricated and analyzed enzyme (glucose oxidase) dispersed carbon nanotube electrodes. Measured
 their glucose oxidation performances using various electrochemical measurements.
 
-
 ## Publications
 
-Sezginel, K. B., Asinger P. A., Babaei H. and Wilmer, C.E. (2018). "Thermal transport in interpenetrated metal-organic
-frameworks." Chemistry of Materials, 30, 2281–2286. (featured on front cover)
+Gulsoy, Z., Sezginel, K. B., Uzun A., Keskin S., and Yildirim R. (2019). Analysis of CH4 uptake over MOFs using data mining tools. *ACS Combinatorial Science*. (featured on the front cover)
 
-Sezginel, K. B., Feng T., Wilmer, C.E. (2017). Discovery of Hypothetical Hetero-Interpenetrated MOFs with Arbitrarily
-Dissimilar Topologies and Unit Cell Shapes. CrystEngComm 19.31: 4497-4504. (featured on front cover)
+Sezginel, K. B., Asinger P., Babaei H., and Wilmer C.E. (2018). Thermal transport in interpenetrated metal–organic  frameworks. *Chemistry of Materials*. (featured on the front cover)
 
-Sezginel, K. B., Keskin, S., & Uzun, A. (2016). Tuning the Gas Separation Performance of CuBTC by Ionic Liquid
-Incorporation. Langmuir, 32(4), 1139-1147.
+Sezginel, K.B., Feng T., Wilmer, C.E. (2017). Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm*. (featured on the front cover)
 
-Basdogan, Y., Sezginel, K. B., & Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2
-separations using computational tools. Industrial & Engineering Chemistry Research, 54(34).
+Sezginel, K. B., Keskin, S., & Uzun, A. (2016). Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir*.
 
-Sezginel, K. B., Uzun, A., & Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane
-uptake in metal–organic frameworks. Chemical Engineering Science, 124, 125-134.
+Basdogan, Y., Sezginel, K. B., & Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2 separations using computational tools. *Industrial & Engineering Chemistry Research*.
+
+Sezginel, K. B., Uzun, A., & Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science*.
 
 ## Presentations (Oral)
 
@@ -126,33 +145,16 @@ CHEM 103 (General Chemistry) Koc University, Istanbul, Turkey<br>
 - Attended weekly lab sessions of freshman students, graded quizzes, lab reports and midterm questions,
 proctored the midterms and finals.
 
-## Professional Experience
-
-### Clinical Research Intern | Aug 2013 - Sep 2013
-AbbVie Pharmaceutical Research & Development Istanbul, Turkey<br>
-- Examined the procedures of various phase clinical trials, organized and translated official documents.
-- Studied the mechanism of action for several drugs in trial and presented the simplified mechanisms to clinical
-research department personnel.
-
-### Quality Control and Production Intern | Aug 2011 - Sep 2011
-EVYAP Sabun, Yağ, Gliserin Sanayi ve Ticaret A.Ş. Istanbul, Turkey<br>
-- Learned various quality control methods and observed the production of various hygienic and cosmetic
-products.
-- Investigated the quality problems and suggested new solutions to overcome these problems by making a
-presentation to the related departments and their coordinators.
-
-### Production Intern | July 2010 - Aug 2010
-Teknova Matbaacılık Kimya Sanayi A.Ş. Istanbul, Turkey<br>
-- Observed the production process and inspected the quality of printing chemicals.
-
 ## Honors and Awards
 
-- MolSSI Phase I Software Fellowship (2018)
+- Molecular Sciences and Software Institute (MolSSI) Fellow (2018 Phase I)
+- Startup Blitz Pitch Competition, First Place, University of Pittsburgh ($1500 prize)
 - Best Graduate Paper Award (Summer '17), Chemical Engineering Department, University of Pittsburgh
 - Attended Foresight Institute 2017 Workshop: Artificial Intelligence for Molecular Machines
 - Innocentive challenge entitled Chemical Sorbents for Fixed Bed Mercury (Hg0) Control ($5000 prize)
-- Full Merit Scholarship – Koc University, MS and BS
+- Full Merit Scholarship – University of Pittsburgh PhD & Koc University, BS and MS
 - Best Chemical and Biological Engineering Senior Project Award (Biodiesel Production from Algae Oil)
+- Carnegie Library of Pittsburgh STACKS featured musician (https://stacks.carnegielibrary.org/artists/kbs)
 
 ## Skills
 
@@ -166,7 +168,8 @@ Materials Studio, Aspen HYSY. Experienced in big data analysis and high-throughp
 ## Personal
 
 - Interested in electronic and jazz music. [Listen here](https://soundcloud.com/kbs_music)
-- 3-D printing, microcontrollers, home automation, woodworking
+-	Scientific visualization portfolio: https://kutaybs.com/visualization/portfolio
+-	3-D printing, microcontrollers, home automation, woodworking, climbing, camping
 - Favorite Writers: Ray Kurzweil, Eric Drexler, Franz Kafka
 
 ## References
