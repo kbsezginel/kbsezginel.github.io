@@ -5,7 +5,13 @@ permalink: /cv/
 date:   2018-10-24
 categories: pages
 ---
-# [Resume (pdf)](/assets/docs/resume/KutayBSezginel_Resume.pdf){:target="_blank"}
+
+<div style="width: 100%; text-align: left; float:left; position: relative; top: 22px; right: 0px;">
+    <a href="/assets/docs/resume/KutayBSezginel_Resume.pdf" target="_blank"><h1>Click here for pdf resume</h1></a>
+</div>
+<br><br>
+
+---
 
 # Curriculum Vitae
 
