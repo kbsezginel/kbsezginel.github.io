@@ -5,29 +5,36 @@ permalink: /research/
 date:   2017-08-04
 categories: pages
 projects:
+  - url: "https://formulanano.com"
+    image_path: /assets/img/research/formulanano-teaser.png
+    alt: "formulanano"
+    title: "Formula Nano"
+    excerpt: "World's first ever computational nanocar race."
+    btn_label: "Read More"
+    btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/thermof"
-    image_path: /assets/img/research/thermof.png
+    image_path: /assets/img/posts/chemmater-cover-teaser.png
     alt: "thermof"
     title: "TherMOF"
     excerpt: "Thermal conductivity of MOFs."
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/IPMOF"
-    image_path: /assets/img/research/IPMOF-rotation.gif
+    image_path: /assets/img/posts/crystengcomm-cover-teaser.png
     alt: "ipmof"
     title: "IPMOF"
-    excerpt: "Discovering Hetero-Interpenetrated MOFs."
+    excerpt: "Discovering Interpenetrated MOFs."
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/biomof"
-    image_path: /assets/img/research/biomof.png
+    image_path: /assets/img/research/biomof-teaser.png
     alt: "biomof"
     title: "BioMOF"
     excerpt: "MOFs for drug delivery applications."
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/nanocar"
-    image_path: /assets/img/aug17/3-Nanocar.jpg
+    image_path: /assets/img/research/nanocar-teaser.png
     alt: "nanocar"
     title: "Nanocars"
     excerpt: "Molecule-sized cars on gold tracks."
@@ -48,6 +55,7 @@ projects:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - url: "https://kbsezginel.github.io/chem-tools-tutorials/"
+    image_path: /assets/img/posts/chem-tools-teaser.png
     alt: "chem-tools-tutorials"
     title: "Computational Chemistry Tutorials"
     excerpt: "Tutorials for data anlysis, molecular construction, running simulations and more..."
