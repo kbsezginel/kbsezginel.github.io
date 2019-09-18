@@ -96,19 +96,21 @@ their glucose oxidation performances using various electrochemical measurements.
 
 ## Publications
 
-Gulsoy, Z., Sezginel, K. B., Uzun A., Keskin S., and Yildirim R. (2019). Analysis of CH4 uptake over MOFs using data mining tools. *ACS Combinatorial Science*. (featured on the front cover)
+6 - [Gulsoy, Z., **Sezginel, K. B.**, Uzun A., Keskin S., and Yildirim R. (2019). Analysis of CH4 uptake over MOFs using data mining tools. *ACS Combinatorial Science*. (featured on the front cover)](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)
 
-Sezginel, K. B., Asinger P., Babaei H., and Wilmer C.E. (2018). Thermal transport in interpenetrated metal–organic  frameworks. *Chemistry of Materials*. (featured on the front cover)
+5 - [**Sezginel, K. B.**, Asinger P., Babaei H., and Wilmer C.E. (2018). Thermal transport in interpenetrated metal–organic  frameworks. *Chemistry of Materials*. (featured on the front cover)](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)
 
-Sezginel, K.B., Feng T., Wilmer, C.E. (2017). Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm*. (featured on the front cover)
+4. [**Sezginel, K.B.**, Feng T., Wilmer, C.E. (2017). Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm*. (featured on the front cover)](http://pubs.rsc.org/en/content/articlelanding/2017/ce/c7ce00290d)
 
-Sezginel, K. B., Keskin, S., & Uzun, A. (2016). Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir*.
+3. [**Sezginel, K. B.**, Keskin, S., & Uzun, A. (2016). Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir*.](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b04123)
 
-Basdogan, Y., Sezginel, K. B., & Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2 separations using computational tools. *Industrial & Engineering Chemistry Research*.
+2. [Basdogan, Y., **Sezginel, K. B.**, & Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2 separations using computational tools. *Industrial & Engineering Chemistry Research*.](https://pubs.acs.org/doi/abs/10.1021/acs.iecr.5b01901)
 
-Sezginel, K. B., Uzun, A., & Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science*.
+1. [**Sezginel, K. B.**, Uzun, A., & Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science*.](https://www.sciencedirect.com/science/article/pii/S0009250914006022)
 
 ## Presentations (Oral)
+
+Sezginel, K. B., Nash J. and Wilmer, C.E., "Tools for computational design of artificial molecular machines.", ACS 2019, Orlando, FL, April 4, 2019. [Click here for slides](https://kutaybs.com/presentations/acs-2019/#1)
 
 Sezginel, K. B., Babaei H. and Wilmer, C.E., "Computational Screening of Thermal Conductivity of MOFs.", MOF 2018 Young Investigator Symposium, Rotorua, NZ, Dec. 8, 2018.
 
@@ -116,6 +118,8 @@ Sezginel, K. B., Asinger P. A., Babaei H. and Wilmer, C.E., "Thermal transport i
 frameworks.",  AIChE Annual Meeting, Pittsburgh, PA, Oct. 31, 2018.
 
 Sezginel, K. B. and Wilmer, C.E., "Surface Diffusion of Large Molecules: A Computational Study.",  AIChE Annual Meeting, Pittsburgh, PA, Oct. 28, 2018.
+
+Sezginel, K. B. and Wilmer, C.E., "Tools for computational design of artificial molecular machines.", Avogadro User Group Meeting, Pittsburgh, PA, August 25, 2018.
 
 Sezginel, K.B., Feng T., Wilmer, C.E., “Theoretical Prediction of Interpenetrating Metal-Organic Frameworks”, AIChE Annual Meeting, San Francisco, CA, Nov. 15, 2016.
 
@@ -166,7 +170,7 @@ proctored the midterms and finals.
 
 - **Language:** English (Advanced) TOEFL iBT (110/120), Dutch (Beginner), Turkish (Native)
 - **Graphics:** [Scientific visualization portfolio](https://kbsezginel.github.io/visualization/portfolio)
-- **Software:** Advanced in Python, Javascript, Matlab and computational chemistry: RASPA, Lammps, Orca,
+- **Software:** Python (Advanced), Javascript (Advanced), Matlab (Advanced) and computational chemistry: RASPA, Lammps, Orca,
 Materials Studio, Aspen HYSY. Experienced in big data analysis and high-throughput screening.
 - **Lab:** FT-IR (Thermo Scientific Nicolet iS10), XRD (Bruker D2 Phaser), High Pressure Volumetric Analyzer
 (Micromeritics HPVA II), Chemisorption Analyzer (Micromeritics Auto Chem II), TGA, Glovebox
