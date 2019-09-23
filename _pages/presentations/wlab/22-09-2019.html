@@ -1,0 +1,204 @@
+---
+layout: none
+title:  "WLAB GM - Nanocar"
+permalink: /presentations/wlab/22-09-2019/
+date:   2019-09-22
+categories: presentations
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=3d);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=anaglyph);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=shadow-multiple);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=emboss);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Quicksand:500);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+
+      body { font-family: 'Maven Pro'; }
+      h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+      h4 { font-family: 'Yanone Kaffeesatz'; font-size: 25px; font-weight: normal; }
+      .red { color: #8e1313; }
+      .gray {color: #606060; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .col1 {width: 100%; text-align: center; float:left}
+      .col2 {width: 50%; text-align: center; float:left}
+      .col3 {width: 33%; text-align: center; float:left}
+
+      .tooltip
+      {
+        text-decoration:none;
+        position:relative;
+      }
+
+
+      .tooltip span
+      {
+        display:none;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        color:black;
+        background:white;
+      }
+
+
+      .tooltip span img
+      {
+        float:left;
+        margin:0px 8px 8px 0;
+      }
+
+
+      .tooltip:hover span
+      {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1000;
+        width:auto;
+        border:1px solid black;
+        margin-top:30px;
+        margin-left:0px;
+        overflow:hidden;
+        padding:8px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+## .red[Diffusion of Large Molecules]
+### Kutay B. Sezginel
+-----------------------------
+### WilmerLab Group Meeting
+#### {{ page.date | date: "%-d %B %Y" }}
+
+---
+<div style="width: 100%; text-align: left; float:left; position: relative; top: -25px; right: 0px;">
+  <h3>Surface Energy Histogram</h3>
+</div>
+
+<div style="width: 80%; text-align: center; float:left; position: relative; top: -50px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-22-09-19/C60_surface.png" width=720>
+</div>
+
+<div style="width: 20%; text-align: center; float:left; position: relative; top: -20px; right: 100px;">
+  <img src="/assets/img/presentations/C60.png" width=400>
+</div>
+
+--
+
+<div style="width: 80%; text-align: center; float:left; position: relative; top: -60px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-22-09-19/HtBDC_surface.png" width=720>
+</div>
+
+<div style="width: 20%; text-align: center; float:left; position: relative; top: -20px; right: 100px;">
+  <img src="/assets/img/presentations/HtBDC.png" width=400>
+</div>
+
+---
+<div style="width: 100%; text-align: left; float:left; position: relative; top: -25px; right: 0px;">
+  <h3>Free energy barrier | y</h3>
+</div>
+
+<div style="width: 20%; text-align: center; float:left; position: relative; top: -50px; right: 30px;">
+  <b>C60</b>
+  <img src="/assets/img/presentations/wlab-22-09-19/C60-y-19-pos.png" width=230>
+</div>
+
+<div style="width: 20%; text-align: center; float:left; position: relative; top: -50px; right: 0px;">
+  <b>HtBDC</b>
+  <img src="/assets/img/presentations/wlab-22-09-19/HtBDC-y-19-pos.png" width=230>
+</div>
+
+--
+
+<div style="width: 60%; text-align: center; float:left; position: relative; top: -30px; right: -30px;">
+  <b>C60</b>
+  <img src="/assets/img/presentations/wlab-22-09-19/C60-y-19-barrier.png" width=630>
+</div>
+
+<div style="width: 60%; text-align: center; float:left; position: relative; top: 0px; right: -30px;">
+  <b>HtBDC</b>
+  <img src="/assets/img/presentations/wlab-22-09-19/HtBDC-y-19-barrier.png" width=630>
+</div>
+
+---
+<div style="width: 100%; text-align: left; float:left; position: relative; top: -25px; right: 0px;">
+  <h3>Free energy barrier | x</h3>
+</div>
+
+<div style="width: 50%; text-align: left; float:left; position: relative; top: -40px; right: 30px;">
+  <a class="tooltip"><b>C60</b>
+     <span><img src="/assets/img/presentations/wlab-22-09-19/C60-x-14-hist.png" height=130></span>
+  </a>
+  <img
+  <img src="/assets/img/presentations/wlab-22-09-19/C60-x-14-pos.png" width=550>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: 0px; right: -10px;">
+  <img src="/assets/img/presentations/wlab-22-09-19/C60-x-14-barrier.png" width=550>
+</div>
+
+--
+
+<div style="width: 50%; text-align: left; float:left; position: relative; top: 0px; right: 550px;">
+  <a class="tooltip"><b>HtBDC</b>
+     <span><img src="/assets/img/presentations/wlab-22-09-19/HtBDC-x-14-hist.png" height=130></span>
+  </a>
+  <img src="/assets/img/presentations/wlab-22-09-19/HtBDC-x-14-pos.png" width=550>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -208px; left: 535px;">
+  <img src="/assets/img/presentations/wlab-22-09-19/HtBDC-x-14-barrier.png" width=550>
+</div>
+
+---
+<div style="width: 100%; text-align: left; float:left; position: relative; top: -25px; right: 0px;">
+  <h3>Activation energy</h3>
+</div>
+
+<div style="width: 100%; text-align: left; float: center; position: relative; top: 0px; right: 0px;">
+  <img src="/assets/img/presentations/wlab-22-09-19/activation_energy.png" width=1050>
+</div>
+
+---
+class: center, middle
+
+# <div class="font-effect-anaglyph">Thank you!<div>
+
+    </textarea>
+    <script src="/assets/js/remark-latest.min.js"></script>
+    <script src="/assets/js/3Dmol-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+        countIncrementalSlides: false
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
