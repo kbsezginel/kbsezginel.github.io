@@ -43,10 +43,9 @@ categories: presentations
 
 class: center, middle
 
-# .red[How to Design a Fast Nanocar]
-### Kutay B. Sezginel<sup>a,b</sup>, Jessica Nash<sup>b</sup>, and Christopher E. Wilmer<sup>a</sup>
-#### .gray[a Chemical Engineering, University of Pittsburgh]
-#### .gray[b The Molecular Sciences Software Institute]
+## .red[How to Design a Fast Nanocar]
+### Kutay B. Sezginel, and Christopher E. Wilmer
+#### Chemical Engineering, University of Pittsburgh
 -----------------------------
 ### AIChE 2019
 ### .gray[Software Engineering in and for the Molecular Sciences]
@@ -123,43 +122,137 @@ class: center, middle
 </div>
 
 ---
-<h2 style="width: 100%; text-align: center; float:left; position: relative; top: -30px;">Nanocar Builder</h2>
 
-<div style="width: 50%; text-align: center; float:left; position: relative; left: -40px; top: -100px;">
-  <h3 style="text-align: left; position: relative; top: 0px;">Wheels</h3>
-  <img src="/assets/img/presentations/acs-2019/nanocar_wheels.png" height=200>
-  <h3 style="text-align: left; position: relative; top: 0px;">Chassis</h3>
-  <img src="/assets/img/presentations/acs-2019/nanocar_chassis.png" height=200>
+<div style="width: 100%; text-align: left; float:left; position: relative; top: -25px; right: 0px;">
+  <h3>Simulation Setup</h3>
+</div>
+
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -30px; right: 0px;">
+  <img src="/assets/img/presentations/aiche-2019/fig2_simulation_setup.png" width=1000>
+</div>
+
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -30px; right: 0px;">
+  <img src="/assets/img/presentations/aiche-2019/fig1_molecules.png" width=1000>
+</div>
+
+---
+<h2 class="title">Mean squared displacement</h2>
+
+---
+<h2 class="title">Transition state theory</h2>
+
+---
+<h2 class="title">Diffusion and molecular structure</h2>
+
+<div style="width: 33%; text-align: center; float:left; position: relative; top: -30px; right: 0px;">
+  <img src="/assets/img/presentations/aiche-2019/d_mw.png" width=330>
 </div>
 
 --
 
-<div style="width: 50%; text-align: center; float: right; position: relative; top: 0px; right: -60px;">
+<div style="width: 33%; text-align: center; float:left; position: relative; top: -30px; right: 0px;">
+  <img src="/assets/img/presentations/aiche-2019/d_vdw.png" width=330>
+</div>
+
+--
+
+<div style="width: 33%; text-align: center; float:left; position: relative; top: -30px; right: 0px;">
+  <img src="/assets/img/presentations/aiche-2019/d_dd.png" width=330>
+</div>
+
+--
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; left: 80px;">
+  <img src="/assets/img/presentations/aiche-2019/dd_diagram.png" height=240>
+</div>
+
+--
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -10px; right: 60px;">
+  <img src="/assets/img/presentations/aiche-2019/htbdc_dd.png" height=240>
+</div>
+
+
+---
+class: center
+
+<div style="width: 100%; text-align: center; position: relative; top: -15px; right: 20px;">
+  <p style="font-weight: bold;">Body Parts - Wheels / Chassis</p>
+  <img src="/assets/img/presentations/avogadro/nanocar-bodyparts.png" height=240>
+</div>
+
+--
+
+<div style="width: 100%; text-align: center; position: relative; top: -40px;">
+  <p style="font-weight: bold;">Nanocar Assembly</p>
+  <img src="/assets/img/presentations/avogadro/nanocar-assembly.png" height=325>
+</div>
+
+---
+class: center, middle
+
+<div style="height: 800px; left: 0px; top: -80px;"
+  class='viewer_3Dmoljs' data-datatype='xyz' data-backgroundcolor='0xffffff'
+  data-href='/assets/molecules/NC1_Au111.xyz'
+  data-style='stick'>
+</div>
+
+---
+
+<div style=" position: relative; top: -20px;">
+  <h2>Nanocar builder</h2>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -40px; right: 30px;">
   <img src="/assets/img/presentations/acs-2019/Avogadro2_Full_Large.png" height=80>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -30px; left: 0px;">
   <img src="/assets/img/presentations/acs-2019/python-logo.png" height=80>
 </div>
 
 --
 
-<div style="width: 50%; float: right; position: relative; top: -10px; right: -120px;">
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -50px; right: 40px;">
+  <p style="font-weight: bold;">Wheels</p>
+  <img src="/assets/img/presentations/acs-2019/nanocar_wheels.png" height=130>
+</div>
+
+<div style="width: 50%; text-align: center; float:left; position: relative; top: -50px; left: 0px;">
+  <p style="font-weight: bold;">Chassis</p>
+  <img src="/assets/img/presentations/acs-2019/nanocar_chassis.png" height=130>
+</div>
+
+--
+
+<div style="width: 50%; float:left; position: relative; top: -40px; right: 30px;">
   <ul>
-    <li>Build nanocars, add custom building blocks</li>
-    <li>Build metal surfaces (ASE)</li>
+    <li>Build metal surfaces</li>
     <li>Test drive your nanocar (LAMMPS)</li>
-    <li>Multibody rigid MD</li>
+  </ul>
+  <p style="font-weight: bold;">Coming soon</p>
+  <ul>
+    <li>Multibody rigid MD (Open PR)</li>
+    <li>Simulate rotation of wheels</li>
   </ul>
 </div>
 
 --
 
-<div style="width: 50%; float:left; position: relative; top: 0px; right: -140px;">
+<div style="width: 50%; float:left; position: relative; top: -20px; right: 0px;">
 <div class="github-card" data-github="kbsezginel/nanocar-avogadro" data-width="400" data-height="200" data-theme="default"></div>
 </div>
 
 ---
 
 <div style="width: 100%; text-align: center; float:left; position: relative; top: -10px; left: -35px;">
-  <iframe width="1120" height="630" src="https://www.youtube.com/embed/7g78mDQe1C0?autoplay=1&rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
+  <iframe width="1120" height="630" src="https://www.youtube.com/embed/7g78mDQe1C0?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+---
+
+<div style="width: 100%; text-align: center; float:left; position: relative; top: -10px; left: -35px;">
+  <img src="/assets/img/presentations/aiche-2019/nanocar-tutorial-summary.gif" height=630 style="border-radius: 1%;">
 </div>
 
 ---
