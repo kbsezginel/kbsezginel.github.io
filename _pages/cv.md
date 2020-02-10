@@ -2,51 +2,37 @@
 layout: splash
 title:  "Curriculum Vitae"
 permalink: /cv/
-date:   2018-10-24
+date:   2020-02-10
 categories: pages
 ---
-
 <div style="width: 100%; text-align: left; float:left; position: relative; top: 22px; right: 0px;">
     <a href="/assets/docs/resume/KutayBSezginel_Resume.pdf" target="_blank"><h1>Click here for pdf resume</h1></a>
 </div>
 <br><br>
 
 ---
-
 # Curriculum Vitae
 
-- [Education](#education)
 - [Professional Experience](#professional-experience)
+- [Education](#education)
 - [Research Experience](#research-experience)
 - [Publications](#publications)
-- [Presentations](#presentations)
-- [Leadership Experience](#leadership-experience)
+- [Conference Presentations](#conference-presentations)
+- [Teaching and Mentoring Experience](#teaching-and-mentoring-experience)
 - [Honors and Awards](#honors-and-awards)
 - [Skills](#skills)
 - [Personal](#personal)
 - [References](#references)
 
-## Education
-
-### PhD student in Chemical & Petroleum Engineering | Sep 2015 - January 2020
-University of Pittsburgh, Swanson School of Engineering Pittsburgh, PA<br>
-**Dissertation Title:** Computational materials design for molecular machinery: From nanoporous crystals to nanoscale racecars<br>
-**Adviser:** Dr. Christopher E. Wilmer
-
-### M.S. in Chemical & Biological Engineering | Sep 2013 – June 2015
-Koc University, Graduate School of Science and Engineering Istanbul, Turkey<br>
-**Dissertation Title:** “Computational and Experimental Investigation of Methane Adsorption in Pure and Ionic
-Liquid Modified Metal-Organic Frameworks”<br>
-**Advisers:** Dr. Seda Keskin & Dr. Alper Uzun
-
-### B.S. in Chemical & Biological Engineering | Sep 2008 – June 2013
-Koc University, School of Engineering Istanbul, Turkey<br>
-Energy and Environmental Engineering Track
-
-### Erasmus Exchange Program | Feb 2012 – Aug 2012
-Eindhoven University of Technology, School of Engineering Eindhoven, The Netherlands
-
 ## Professional Experience
+
+{% include toc title="Directory" %}
+
+### Senior Data Scientist | Jan 2020
+Othot Inc. Pittsburgh, PA<br>
+- Develop data science and machine learning solutions using Python
+- Design, implement and maintain new features in the data science engine for use by the platform
+- Automate data science activities and apply best software practices
 
 ### Computational Engineering Fellow | Jan 2019 – May 2019
 NuMat Technologies, Inc.	Skokie, IL<br>
@@ -67,9 +53,29 @@ products.
 - Investigated the quality problems and suggested new solutions to overcome these problems by making a
 presentation to the related departments and their coordinators.
 
+## Education
+
+### PhD student in Chemical & Petroleum Engineering | Sep 2015 - Jan 2020
+University of Pittsburgh, Swanson School of Engineering Pittsburgh, PA<br>
+**Dissertation Title:** Computational materials design for molecular machinery: From nanoporous crystals to nanoscale racecars<br>
+**Adviser:** Dr. Christopher E. Wilmer
+
+### M.S. in Chemical & Biological Engineering | Sep 2013 – June 2015
+Koc University, Graduate School of Science and Engineering Istanbul, Turkey<br>
+**Dissertation Title:** “Computational and Experimental Investigation of Methane Adsorption in Pure and Ionic
+Liquid Modified Metal-Organic Frameworks”<br>
+**Advisers:** Dr. Seda Keskin & Dr. Alper Uzun
+
+### B.S. in Chemical & Biological Engineering | Sep 2008 – June 2013
+Koc University, School of Engineering Istanbul, Turkey<br>
+Energy and Environmental Engineering Track
+
+### Erasmus Exchange Program | Feb 2012 – Aug 2012
+Eindhoven University of Technology, School of Engineering Eindhoven, The Netherlands
+
 ## Research Experience
 
-### Graduate Research Assistant | Sep 2015 – Present
+### Graduate Research Assistant | Sep 2015 – Jan 2020
 Hypothetical Materials Lab (WilmerLab), University of Pittsburgh Pittsburgh, PA<br>
 - Working on several projects to develop new computational methods for the discovery of novel materials,
 focusing on supramolecular structures and metal-organic frameworks.
@@ -96,19 +102,24 @@ their glucose oxidation performances using various electrochemical measurements.
 
 ## Publications
 
-6 - [Gulsoy, Z., **Sezginel, K. B.**, Uzun A., Keskin S., and Yildirim R. (2019). Analysis of CH4 uptake over MOFs using data mining tools. *ACS Combinatorial Science*. (featured on the front cover)](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)
+7) [Chao, Z., **Sezginel, K. B.**, Xu, K., Crouch, G. M., Gray, A. E., Wilmer, C. E., Bohn, P. W., Go, D. B., and Fullerton-Shirey, S. K. (2019) Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write. *Advanced Functional Materials*.](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201907950)
 
-5 - [**Sezginel, K. B.**, Asinger P., Babaei H., and Wilmer C.E. (2018). Thermal transport in interpenetrated metal–organic  frameworks. *Chemistry of Materials*. (featured on the front cover)](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)
+6) [Gulsoy, Z., **Sezginel, K. B.**, Uzun A., Keskin S., and Yildirim R. (2019). Analysis of CH4 uptake over MOFs using data mining tools. *ACS Combinatorial Science*. (featured on the front cover)](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)
 
-4. [**Sezginel, K.B.**, Feng T., Wilmer, C.E. (2017). Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm*. (featured on the front cover)](http://pubs.rsc.org/en/content/articlelanding/2017/ce/c7ce00290d)
+5) [**Sezginel, K. B.**, Asinger P., Babaei H., and Wilmer C.E. (2018). Thermal transport in interpenetrated metal–organic  frameworks. *Chemistry of Materials*. (featured on the front cover)](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)
 
-3. [**Sezginel, K. B.**, Keskin, S., & Uzun, A. (2016). Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir*.](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b04123)
+4) [**Sezginel, K. B.**, Feng T., Wilmer, C.E. (2017). Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm*. (featured on the front cover)](http://pubs.rsc.org/en/content/articlelanding/2017/ce/c7ce00290d)
 
-2. [Basdogan, Y., **Sezginel, K. B.**, & Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2 separations using computational tools. *Industrial & Engineering Chemistry Research*.](https://pubs.acs.org/doi/abs/10.1021/acs.iecr.5b01901)
+3) [**Sezginel, K. B.**, Keskin, S., and Uzun, A. (2016). Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir*.](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b04123)
 
-1. [**Sezginel, K. B.**, Uzun, A., & Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science*.](https://www.sciencedirect.com/science/article/pii/S0009250914006022)
+2) [Basdogan, Y., **Sezginel, K. B.**, and Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2 separations using computational tools. *Industrial & Engineering Chemistry Research*.](https://pubs.acs.org/doi/abs/10.1021/acs.iecr.5b01901)
 
-## Presentations (Oral)
+1) [**Sezginel, K. B.**, Uzun, A., and Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science*.](https://www.sciencedirect.com/science/article/pii/S0009250914006022)
+
+## Conference Presentations
+*Oral presentations only*<br>
+
+Sezginel, K. B., Nash J. and Wilmer, C.E., "How to Design a Fast Nanocar.", AIChE 2019, Orlando, FL, November 11, 2019. [Click here for slides](https://kutaybs.com/presentations/aiche-2019/#1)
 
 Sezginel, K. B., Nash J. and Wilmer, C.E., "Tools for computational design of artificial molecular machines.", ACS 2019, Orlando, FL, April 4, 2019. [Click here for slides](https://kutaybs.com/presentations/acs-2019/#1)
 
@@ -121,6 +132,10 @@ Sezginel, K. B. and Wilmer, C.E., "Surface Diffusion of Large Molecules: A Compu
 
 Sezginel, K. B. and Wilmer, C.E., "Tools for computational design of artificial molecular machines.", Avogadro User Group Meeting, Pittsburgh, PA, August 25, 2018.
 
+Sezginel, K. B., Asinger P. A., Babaei H. and Wilmer, C.E., "Thermal transport in entangled metal-organic frameworks.", Simulators Meeting, Midwest Thermodynamics and Statistical Mechanics Meeting, Pittsburgh, PA, June 4, 2018.
+
+Sezginel, K. B., Asinger P. A., Babaei H. and Wilmer, C.E., "Thermal transport in entangled metal-organic frameworks.", Simulators Meeting, Carnegie Mellon University, Pittsburgh, PA, May 22, 2018.
+
 Sezginel, K.B., Feng T., Wilmer, C.E., “Theoretical Prediction of Interpenetrating Metal-Organic Frameworks”, AIChE Annual Meeting, San Francisco, CA, Nov. 15, 2016.
 
 Sezginel, K.B., Feng T., Wilmer, C.E., “Theoretical Prediction of Interpenetrating Metal-Organic Frameworks”, Simulators Meeting, Carnegie Mellon University, Pittsburgh, PA, May 25, 2016.
@@ -129,7 +144,7 @@ Sezginel K.B., Uzun A., Keskin S., “Prediction of CH₄ Storage Performance of
 
 Sezginel K.B., Uzun A., Keskin S., “Prediction of CH₄ Storage Properties of Metal-Organic Frameworks”, NanoTR 2014, Yeditepe University Istanbul, Turkey, June 21, 2014.
 
-## Leadership Experience
+## Teaching and Mentoring Experience
 
 ### Graduate Mentor | Spring 2016 – Present
 Hypothetical Materials Lab (WilmerLab) University of Pittsburgh, PA<br>
@@ -157,6 +172,8 @@ proctored the midterms and finals.
 
 ## Honors and Awards
 
+- Braskem America Inc. Award (outstanding PhD student in Chemical Eng. Department, University of Pittsburgh)
+- 2019 IBM BlueHack hackathon, 2nd place
 - Molecular Sciences and Software Institute (MolSSI) Fellow (2018 Phase I)
 - Startup Blitz Pitch Competition, First Place, University of Pittsburgh ($1500 prize)
 - Best Graduate Paper Award (Summer '17), Chemical Engineering Department, University of Pittsburgh
@@ -178,28 +195,6 @@ Materials Studio, Aspen HYSY. Experienced in big data analysis and high-throughp
 ## Personal
 
 - Interested in electronic and jazz music. [Listen here](https://soundcloud.com/kbs_music)
--	Scientific visualization portfolio: https://kutaybs.com/visualization/portfolio
--	3-D printing, microcontrollers, home automation, woodworking, climbing, camping
+-	Scientific visualization portfolio, [see here](https://kutaybs.com/visualization/portfolio)
+-	3-D printing, microcontrollers, home automation, woodworking, bouldering
 - Favorite Writers: Ray Kurzweil, Eric Drexler, Franz Kafka
-
-## References
-
-### Christopher E. Wilmer (PhD Adviser)
-Asst. Professor of Chemical and Petroleum Engineering, University of Pittsburgh<br>
-+1 (412) 624-9639, wilmer@pitt.edu
-
-### John A. Keith (Academic skills)
-Asst. Professor of Chemical and Petroleum Engineering, University of Pittsburgh<br>
-+1 (412) 624-7016, jakeith@pitt.edu
-
-### Christopher Brown (Software skills)
-Asst. Professor, School of Health and Rehabilitation Sciences, University of Pittsburgh<br>
-+1 (412) 383-6546, cbrown1@pitt.edu
-
-### Seda Keskin (MS Adviser)
-Assoc. Professor of Chemical and Biological Engineering, Koc University, Istanbul, Turkey<br>
-+90 (212) 338-1362, skeskin@ku.edu.tr
-
-### Alper Uzun (MS Adviser)
-Asst. Professor of Chemical and Biological Engineering, Koc University, Istanbul, Turkey<br>
-+90 (212) 338-1754, auzun@ku.edu.tr
