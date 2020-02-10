@@ -2,8 +2,13 @@
 layout: splash
 title:  "Publications"
 permalink: /publications/
-date:   2019-09-14
+date:   2020-02-10
 categories: pages
+2019_chao_afm:
+  - image_path: /assets/img/publications/2019_chao_afm.png
+    alt: "2019_chao_afm"
+    title: "Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write"
+    excerpt: "**7.** [Chao, Z., **Sezginel, K. B.**, Xu, K., Crouch, G. M., Gray, A. E., Wilmer, C. E., Bohn, P. W., Go, D. B., and Fullerton-Shirey, S. K. Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write *Advanced Functional Materials*, **(2019)**.](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201907950)"
 2019_gulsoy_acscomb:
   - image_path: /assets/img/publications/2019_gulsoy_acscomb.png
     alt: "2019_gulsoy_acscomb"
@@ -42,15 +47,18 @@ Publications
 
 <table style="width:100%">
   <tr>
-    <th><a href="#2018" class="btn btn--info">2019</a></th>
+    <th><a href="#2019" class="btn btn--info">2019</a></th>
     <th><a href="#2018" class="btn btn--primary">2018</a></th>
     <th><a href="#2017" class="btn btn--primary">2017</a></th>
     <th><a href="#2016" class="btn btn--primary">2016</a></th>
     <th><a href="#2015" class="btn btn--primary">2015</a></th>
+    <th><a href="https://scholar.google.com/citations?user=6ak9FqIAAAAJ&hl=en&oi=ao" class="btn btn--warning">Google Scholar</a></th>
   </tr>
 </table>
 
 ## 2019
+
+{% include feature_row id="2019_chao_afm" type="left" %}
 
 {% include feature_row id="2019_gulsoy_acscomb" type="left" %}
 
