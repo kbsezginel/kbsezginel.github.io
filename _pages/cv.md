@@ -6,27 +6,22 @@ date:   2020-02-10
 categories: pages
 ---
 <div style="width: 100%; text-align: left; float:left; position: relative; top: 22px; right: 0px;">
-    <a href="/assets/docs/resume/KutayBSezginel_Resume.pdf" target="_blank"><h1>Click here for pdf resume</h1></a>
+  <table style="width:100%">
+    <tr>
+      <th><a href="/assets/docs/cv/KutayBSezginel_CV.pdf" class="btn btn--primary">CV (pdf)</a></th>
+      <th><a href="/assets/docs/resume/KutayBSezginel_Resume.pdf" class="btn btn--primary">Resume (pdf)</a></th>
+      <th><a href="https://www.linkedin.com/in/kutay-berk-sezginel-60232a74" class="btn btn--info">Linkedin</a></th>
+      <th><a href="https://scholar.google.com/citations?user=6ak9FqIAAAAJ&hl=en&oi=ao" class="btn btn--warning">Google Scholar</a></th>
+    </tr>
+  </table>
 </div>
-<br><br>
+<br>
 
 ---
-# Curriculum Vitae
-
-- [Professional Experience](#professional-experience)
-- [Education](#education)
-- [Research Experience](#research-experience)
-- [Publications](#publications)
-- [Conference Presentations](#conference-presentations)
-- [Teaching and Mentoring Experience](#teaching-and-mentoring-experience)
-- [Honors and Awards](#honors-and-awards)
-- [Skills](#skills)
-- [Personal](#personal)
-- [References](#references)
 
 ## Professional Experience
 
-{% include toc title="Directory" %}
+{% include toc title="Curriculum Vitae" %}
 
 ### Senior Data Scientist | Jan 2020
 Othot Inc. Pittsburgh, PA<br>
