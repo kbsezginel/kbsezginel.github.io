@@ -95,7 +95,10 @@ og_image                 : # Open Graph/Twitter default site image
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+    - "https://www.linkedin.com/in/kutay-berk-sezginel-60232a74/"
+    - "https://instagram.com/kutay_bs"
+    - "https://twitter.com/kutaybs"
 
 # Analytics
 analytics:
@@ -107,7 +110,7 @@ analytics:
 # Site Author
 author:
   name             : "Kutay B. Sezginel"
-  avatar           : "assets/img/kutaybsezginel.png"
+  avatar           : "assets/img/kutay_avatar.jpg"
   bio              : "Data Scientist <br> PhD in Chemical Engineering"
   location         : "Pittsburgh, PA"
   email            : "kutaybs@gmail.com"
@@ -124,6 +127,12 @@ author:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCVH35IUBJhoT6HDHDjS-WYw"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/kutay_bs"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/kutaybs"
 
 # Site Footer
 footer:
@@ -143,7 +152,12 @@ footer:
     - label: "YouTube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCVH35IUBJhoT6HDHDjS-WYw"
-
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/kutay_bs"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/kutaybs"
 
 # Reading Files
 include:
