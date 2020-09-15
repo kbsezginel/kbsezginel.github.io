@@ -1,0 +1,31 @@
+---
+layout: full
+title:  "?"
+permalink: /ara/
+date:   2020-09-22
+categories: pages
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>?</title>
+</head>
+
+<body onload="document.getElementById('search-input').focus();">
+  <div id="main" role="main">
+    <input type="text" id="search-input" class="searchTerm" placeholder="?...">
+    <ul id="results-container"></ul>
+  </div>
+
+  <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+  <script>
+        var sjs = SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/search.json',
+          fuzzy: true,
+          searchResultTemplate: '<li><a href="{{ site.baseurl }}{url}">{title}</a></li>'
+        })
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+# WORK
+  - title: othot issues (kbsezginel)
+    url: https://github.com/OThot/othot
+    category: work
+    tags:
+      - othot
+      - work
+      - github
+      - issues
+  - title: "othot repo"
+    url: https://github.com/OThot/othot
+    category: work
+    tags:
+      - othot
+      - work
+      - github
+  - title: "othot config repo"
+    url: https://github.com/OThot/othot-platform-configs
+    category: work
+    tags:
+      - othot
+      - work
+      - github
+# PERSONAL
+  - title: "gmail"
+    url: https://mail.google.com/mail/u/0/
+    category: personal
+    tags:
+      - gmail
+      - kbs
+  - title: groceries
+    url: https://keep.google.com/#LIST/1Xre3fLY1AUCUwwwNOEXptPpAQdU7HL9j2jQ6SVXhaVrdQW7UmXde1jVXh8UOaZo2NpwV
+    category: personal
+    tags:
+      - home
+      - grocery list
+      - notes

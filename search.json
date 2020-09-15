@@ -1,0 +1,13 @@
+---
+layout: null
+---
+[
+  {% for link in site.data.links %}
+    {
+      "title"    : "{{ link.title | escape }}",
+      "category" : "{{ link.category }}",
+      "tags"     : "{{ link.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ link.url }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
