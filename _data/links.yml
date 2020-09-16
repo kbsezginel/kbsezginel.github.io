@@ -2,36 +2,71 @@
   - title: othot issues (kbsezginel)
     url: https://github.com/OThot/othot
     category: work
+    color: "#2eb8b8"
     tags:
       - othot
       - work
       - github
       - issues
-  - title: "othot repo"
-    url: https://github.com/OThot/othot
+  - title: othot prs
+    url: https://github.com/OThot/othot/pulls
     category: work
+    color: "#2eb8b8"
     tags:
       - othot
       - work
       - github
-  - title: "othot config repo"
+      - pull requests
+  - title: othot repo
+    url: https://github.com/OThot/othot
+    category: work
+    color: "#2eb8b8"
+    tags:
+      - othot
+      - work
+      - github
+  - title: othot config repo
     url: https://github.com/OThot/othot-platform-configs
     category: work
+    color: "#2eb8b8"
     tags:
       - othot
       - work
       - github
 # PERSONAL
-  - title: "gmail"
+  - title: gmail
     url: https://mail.google.com/mail/u/0/
     category: personal
+    color: "#6699ff"
     tags:
       - gmail
       - kbs
   - title: groceries
     url: https://keep.google.com/#LIST/1Xre3fLY1AUCUwwwNOEXptPpAQdU7HL9j2jQ6SVXhaVrdQW7UmXde1jVXh8UOaZo2NpwV
     category: personal
+    color: "#6699ff"
     tags:
       - home
       - grocery list
       - notes
+  - title: yoga
+    url: https://onepointoneyoga.uscreen.io/search?term=&category_id=37117&author_id=&custom_fields=%7B%7D&y=0
+    category: personal
+    color: "#6699ff"
+    tags:
+      - yoga
+      - workout
+  - title: soundcloud
+    url: https://soundcloud.com/kbs_music
+    category: music
+    color: "#9494b8"
+    tags:
+      - music
+      - soundcloud
+  - title: bandcamp
+    url: https://kbs-music.bandcamp.com/releases
+    category: music
+    color: "#9494b8"
+    tags:
+      - music
+      - bandcamp
