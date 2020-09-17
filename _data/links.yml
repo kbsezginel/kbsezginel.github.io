@@ -70,3 +70,16 @@
     tags:
       - music
       - bandcamp
+# CLASSICS
+  - title: youtube
+    url: https://www.youtube.com/
+    category: video
+    color: "#FF0000"
+    tags:
+      - social media
+  - title: google maps
+    url: https://www.google.com/maps
+    category: tools
+    color: "#F4B400"
+    tags:
+      - navigation
