@@ -19,7 +19,6 @@ categories: pages
 
   <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
   <script>
-        var noResults = false;
         var numItems = 0;
         var listIndex = 0;
         var sjs = SimpleJekyllSearch({
@@ -31,15 +30,18 @@ categories: pages
         })
 
         function selectListItems(e) {
-            // If no results search with duckduckgo else enter the list
-            // Both enter, down, and right arrows work
-            console.log(document.getElementById('results-container').childElementCount);
+            // Both enter and down arrow can be used
             if (e.keyCode == 13 || e.keyCode == 40) {
-              if (document.getElementById('results-container').childElementCount == 0) {
-                window.open("https://duckduckgo.com/?q=" + document.getElementById('search-input').value);
+              var text = document.getElementById('search-input').value
+              var numResults = document.getElementById('results-container').childElementCount
+              // If no results search with duckduckgo
+              if (numResults == 0 && text != "") {
+                window.open("https://duckduckgo.com/?q=" + text)
               } else {
-                list_id = document.getElementById('results-container').children[0].innerText;
-                document.getElementById(list_id).focus();
+              // Else enter the list to navigate
+                listIndex = 0
+                list_id = document.getElementById('results-container').children[listIndex].innerText
+                document.getElementById(list_id).focus()
               }
             }
         }
@@ -47,27 +49,25 @@ categories: pages
         function navigateListItems(e) {
             // Up
             if (e.keyCode == 38) {
-              listIndex -= 1;
+              listIndex -= 1
             }
             // Down
             if (e.keyCode == 40) {
-              listIndex += 1;
+              listIndex += 1
             }
             // Keep looping through the list
             numItems = document.getElementById('results-container').childElementCount;
             if (listIndex >= numItems) {
-              listIndex = 0;
+              listIndex = 0
             }
-            if (listIndex < 0) {
-              listIndex = numItems - 1;
-            }
-            list_id = document.getElementById('results-container').children[listIndex].innerText;
-            document.getElementById(list_id).focus();
-            // Left arrow to exit
-            if (e.keyCode == 37) {
-              console.log("LEFT")
-              document.activeElement.blur();
-              document.getElementById('search-input').focus();
+            if (listIndex < 0 || e.keyCode == 37) {
+              // If going upwards and reach the top or left arrow press exit
+              document.activeElement.blur()
+              document.getElementById('search-input').focus()
+            } else {
+              // Select current list item
+              list_id = document.getElementById('results-container').children[listIndex].innerText
+              document.getElementById(list_id).focus()
             }
         }
   </script>
