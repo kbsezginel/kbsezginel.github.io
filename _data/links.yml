@@ -33,7 +33,28 @@
       - othot
       - work
       - github
+  - title: othot agenda
+    url: https://ds.othot.com/dashboard/agenda
+    category: work
+    color: "#2eb8b8"
+    tags:
+      - othot
+      - agenda
+  - title: othot search
+    url: https://ds.othot.com/doc/search
+    category: work
+    color: "#2eb8b8"
+    tags:
+      - othot
+      - search
 # PERSONAL
+  - title: kbsezginel github
+    url: https://github.com/kbsezginel
+    category: professional
+    color: "#cccccc"
+    tags:
+      - github
+      - coding
   - title: gmail
     url: https://mail.google.com/mail/u/0/
     category: personal
@@ -41,6 +62,20 @@
     tags:
       - gmail
       - kbs
+  - title: calendar
+    url: https://calendar.google.com/calendar/u/0/r
+    category: personal
+    color: "#6699ff"
+    tags:
+      - google
+      - event
+  - title: to do
+    url: https://keep.google.com/#LIST/1n8a9iRqV58sHTTNt3TyYy2wHK9qo5UHhK9UEa_CHbB6ukJ_ti8FQa-BLnw2iJKY
+    category: personal
+    color: "#6699ff"
+    tags:
+      - google keep
+      - notes
   - title: groceries
     url: https://keep.google.com/#LIST/1Xre3fLY1AUCUwwwNOEXptPpAQdU7HL9j2jQ6SVXhaVrdQW7UmXde1jVXh8UOaZo2NpwV
     category: personal
