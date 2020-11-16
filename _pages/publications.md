@@ -4,6 +4,16 @@ title:  "Publications"
 permalink: /publications/
 date:   2020-02-10
 categories: pages
+2020_sezginel_msde:
+  - image_path: /assets/img/publications/2020_sezginel_msde.png
+    alt: "2020_sezginel_msde"
+    title: "Modeling diffusion of nanocars on a Cu (110) surface"
+    excerpt: "**9.** [**Sezginel, K. B.**, and C. E. Wilmer. Modeling diffusion of nanocars on a Cu (110) surface. *Molecular Systems Design & Engineering*, **(2020)**.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)"
+2020_sezginel_jpcc:
+  - image_path: /assets/img/publications/2020_sezginel_jpcc.gif
+    alt: "2020_sezginel_jpcc"
+    title: "Effect of flexibility on thermal transport in breathing porous crystals"
+    excerpt: "**8.** [**Sezginel, K. B.**, Lee S., Babaei, H. and C. E. Wilmer. Effect of flexibility on thermal transport in breathing porous crystals. *Journal of Physical Chemistry C*, 124, 18604–18608, **(2020)**.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)"
 2019_chao_afm:
   - image_path: /assets/img/publications/2019_chao_afm.png
     alt: "2019_chao_afm"
@@ -47,7 +57,8 @@ Publications
 
 <table style="width:100%">
   <tr>
-    <th><a href="#2019" class="btn btn--info">2019</a></th>
+    <th><a href="#2020" class="btn btn--info">2020</a></th>
+    <th><a href="#2019" class="btn btn--primary">2019</a></th>
     <th><a href="#2018" class="btn btn--primary">2018</a></th>
     <th><a href="#2017" class="btn btn--primary">2017</a></th>
     <th><a href="#2016" class="btn btn--primary">2016</a></th>
@@ -55,6 +66,12 @@ Publications
     <th><a href="https://scholar.google.com/citations?user=6ak9FqIAAAAJ&hl=en&oi=ao" class="btn btn--warning">Google Scholar</a></th>
   </tr>
 </table>
+
+## 2020
+
+{% include feature_row id="2020_sezginel_msde" type="left" %}
+
+{% include feature_row id="2020_sezginel_jpcc" type="left" %}
 
 ## 2019
 
