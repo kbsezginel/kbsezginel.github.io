@@ -2,7 +2,7 @@
 layout: splash
 title:  "Curriculum Vitae"
 permalink: /cv/
-date:   2020-02-10
+date:   2021-01-20
 categories: pages
 ---
 <div style="width: 100%; text-align: left; float:left; position: relative; top: 22px; right: 0px;">
@@ -26,7 +26,11 @@ categories: pages
 ### Senior Data Scientist | Jan 2020
 Othot Inc. Pittsburgh, PA<br>
 - Develop data science and machine learning solutions using Python
-- Design, implement and maintain new features in the data science engine for use by the platform
+- Build, validate, and troubleshoot data science models using internal tools and metrics and performed individual research on several modeling problems
+- Communicate data science results and insights to other Othot team members and our customers
+- Review new customer data to identify significant changes or issues in the data or predictions
+- Perform stringent data checks to identify and address inconsistent data issues and leak variables
+- Collaborate in designing and improving the functionalities of internal tools and the Othot platform
 - Automate data science activities and apply best software practices
 
 ### Computational Engineering Fellow | Jan 2019 – May 2019
@@ -97,19 +101,23 @@ their glucose oxidation performances using various electrochemical measurements.
 
 ## Publications
 
-7) [Chao, Z., **Sezginel, K. B.**, Xu, K., Crouch, G. M., Gray, A. E., Wilmer, C. E., Bohn, P. W., Go, D. B., and Fullerton-Shirey, S. K. (2019) Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write. *Advanced Functional Materials*.](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201907950)
+9) [**Sezginel, K. B.**, and Wilmer C. E. Modeling diffusion of nanocars on a Cu (110) surface. *Molecular Systems Design & Engineering*, 5 **(2020)**: 1186-1192.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)
 
-6) [Gulsoy, Z., **Sezginel, K. B.**, Uzun A., Keskin S., and Yildirim R. (2019). Analysis of CH4 uptake over MOFs using data mining tools. *ACS Combinatorial Science*. (featured on the front cover)](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)
+8) [**Sezginel, K. B.**, Lee S., Babaei, H. and Wilmer, C. E. Effect of flexibility on thermal transport in breathing porous crystals. *Journal of Physical Chemistry C*, 124 **(2020)**: 18604–18608.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)
 
-5) [**Sezginel, K. B.**, Asinger P., Babaei H., and Wilmer C.E. (2018). Thermal transport in interpenetrated metal–organic  frameworks. *Chemistry of Materials*. (featured on the front cover)](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)
+7) [Chao, Z., **Sezginel, K. B.**, Xu, K., Crouch, G. M., Gray, A. E., Wilmer, C. E., Bohn, P. W., Go, D. B., and Fullerton-Shirey, S. K. Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write *Advanced Functional Materials*, 20 **(2019)**: 1-8.](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201907950)
 
-4) [**Sezginel, K. B.**, Feng T., Wilmer, C.E. (2017). Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm*. (featured on the front cover)](http://pubs.rsc.org/en/content/articlelanding/2017/ce/c7ce00290d)
+6) [Gülsoy, Z., **Sezginel, K. B.**, Uzun, A., Keskin, S. and Yıldırım, R. Analysis of CH<sub>4</sub> Uptake over Metal–Organic Frameworks Using Data-Mining Tools. *ACS Combinatorial Science*, 21 **(2019)**: 257-268.](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)
 
-3) [**Sezginel, K. B.**, Keskin, S., and Uzun, A. (2016). Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir*.](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b04123)
+5) [**Sezginel, K. B.**, Asinger, P. A., Babaei, H., and Wilmer, C. E. Thermal transport in interpenetrated metal-organic frameworks. *Chemistry of Materials*, 30 **(2018)**: 2281-2286.](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)
 
-2) [Basdogan, Y., **Sezginel, K. B.**, and Keskin, S. (2015). Identifying highly selective metal organic frameworks for CH4/H2 separations using computational tools. *Industrial & Engineering Chemistry Research*.](https://pubs.acs.org/doi/abs/10.1021/acs.iecr.5b01901)
+4) [**Sezginel, K. B.**, Feng, T. and Wilmer, C. E. Discovery of hypothetical hetero-interpenetrated MOFs with arbitrarily dissimilar topologies and unit cell shapes. *CrystEngComm* 19.31 **(2017)**: 4497-4504.](http://pubs.rsc.org/en/content/articlelanding/2017/ce/c7ce00290d)
 
-1) [**Sezginel, K. B.**, Uzun, A., and Keskin, S. (2015). Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science*.](https://www.sciencedirect.com/science/article/pii/S0009250914006022)
+3) [**Sezginel, K. B.**, Keskin, S. and Uzun, A. Tuning the gas separation performance of CuBTC by ionic liquid incorporation. *Langmuir* 32.4 **(2016)**: 1139-1147.](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b04123)
+
+2) [Basdogan, Y., **Sezginel, K. B.** and Keskin, S. Identifying highly selective metal organic frameworks for CH<sub>4</sub>/H<sub>2</sub> separations using computational tools. *Industrial & Engineering Chemistry Research* 54.34 **(2015)**: 8479-8491.](https://pubs.acs.org/doi/abs/10.1021/acs.iecr.5b01901)
+
+1) [**Sezginel, K. B.**, Uzun, A. and Keskin S. Multivariable linear models of structural parameters to predict methane uptake in metal–organic frameworks. *Chemical Engineering Science* 124 **(2015)**: 125-134.](https://www.sciencedirect.com/science/article/pii/S0009250914006022)
 
 ## Conference Presentations
 *Oral presentations only*<br>
@@ -168,7 +176,7 @@ proctored the midterms and finals.
 ## Honors and Awards
 
 - Braskem America Inc. Award (outstanding PhD student in Chemical Eng. Department, University of Pittsburgh)
-- 2019 IBM BlueHack hackathon, 2nd place
+- 2019 IBM BlueHack Hackathon in Pittsburgh, PA (2nd place)
 - Molecular Sciences and Software Institute (MolSSI) Fellow (2018 Phase I)
 - Startup Blitz Pitch Competition, First Place, University of Pittsburgh ($1500 prize)
 - Best Graduate Paper Award (Summer '17), Chemical Engineering Department, University of Pittsburgh
@@ -182,14 +190,12 @@ proctored the midterms and finals.
 
 - **Language:** English (Advanced) TOEFL iBT (110/120), Dutch (Beginner), Turkish (Native)
 - **Graphics:** [Scientific visualization portfolio](https://kbsezginel.github.io/visualization/portfolio)
-- **Software:** Python (Advanced), Javascript (Advanced), Matlab (Advanced) and computational chemistry: RASPA, Lammps, Orca,
-Materials Studio, Aspen HYSY. Experienced in big data analysis and high-throughput screening.
+- **Software:** Python (Advanced), Javascript (Intermediate), Matlab (Advanced) and computational chemistry: RASPA, Lammps, Orca, Materials Studio, Aspen HYSY. Experienced in big data analysis and high-throughput screening.
 - **Lab:** FT-IR (Thermo Scientific Nicolet iS10), XRD (Bruker D2 Phaser), High Pressure Volumetric Analyzer
 (Micromeritics HPVA II), Chemisorption Analyzer (Micromeritics Auto Chem II), TGA, Glovebox
 
 ## Personal
 
 - Interested in electronic and jazz music. [Listen here](https://soundcloud.com/kbs_music)
--	Scientific visualization portfolio, [see here](https://kutaybs.com/visualization/portfolio)
--	3-D printing, microcontrollers, home automation, woodworking, bouldering
+-	3-D printing, microcontrollers, home automation, woodworking, diy, bouldering, yoga
 - Favorite Writers: Ray Kurzweil, Eric Drexler, Franz Kafka

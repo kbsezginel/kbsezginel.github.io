@@ -8,27 +8,27 @@ categories: pages
   - image_path: /assets/img/publications/2020_sezginel_msde.png
     alt: "2020_sezginel_msde"
     title: "Modeling diffusion of nanocars on a Cu (110) surface"
-    excerpt: "**9.** [**Sezginel, K. B.**, and C. E. Wilmer. Modeling diffusion of nanocars on a Cu (110) surface. *Molecular Systems Design & Engineering*, **(2020)**.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)"
+    excerpt: "**9.** [**Sezginel, K. B.**, and Wilmer C. E. Modeling diffusion of nanocars on a Cu (110) surface. *Molecular Systems Design & Engineering*, 5 **(2020)**: 1186-1192.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)"
 2020_sezginel_jpcc:
   - image_path: /assets/img/publications/2020_sezginel_jpcc.gif
     alt: "2020_sezginel_jpcc"
     title: "Effect of flexibility on thermal transport in breathing porous crystals"
-    excerpt: "**8.** [**Sezginel, K. B.**, Lee S., Babaei, H. and C. E. Wilmer. Effect of flexibility on thermal transport in breathing porous crystals. *Journal of Physical Chemistry C*, 124, 18604–18608, **(2020)**.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)"
+    excerpt: "**8.** [**Sezginel, K. B.**, Lee S., Babaei, H. and Wilmer, C. E. Effect of flexibility on thermal transport in breathing porous crystals. *Journal of Physical Chemistry C*, 124 **(2020)**: 18604–18608.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)"
 2019_chao_afm:
   - image_path: /assets/img/publications/2019_chao_afm.png
     alt: "2019_chao_afm"
     title: "Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write"
-    excerpt: "**7.** [Chao, Z., **Sezginel, K. B.**, Xu, K., Crouch, G. M., Gray, A. E., Wilmer, C. E., Bohn, P. W., Go, D. B., and Fullerton-Shirey, S. K. Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write *Advanced Functional Materials*, **(2019)**.](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201907950)"
+    excerpt: "**7.** [Chao, Z., **Sezginel, K. B.**, Xu, K., Crouch, G. M., Gray, A. E., Wilmer, C. E., Bohn, P. W., Go, D. B., and Fullerton-Shirey, S. K. Silver Nanofilament Formation Dynamics in a Polymer‐Ionic Liquid Thin Film by Direct Write *Advanced Functional Materials*, 20 **(2019)**: 1-8.](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201907950)"
 2019_gulsoy_acscomb:
   - image_path: /assets/img/publications/2019_gulsoy_acscomb.png
     alt: "2019_gulsoy_acscomb"
     title: "Analysis of CH<sub>4</sub> Uptake over Metal–Organic Frameworks Using Data-Mining Tools"
-    excerpt: "**6.** [Gülsoy, Z., **Sezginel, K. B.**, Uzun, A., Keskin, S., Yıldırım, R. Analysis of CH<sub>4</sub> Uptake over Metal–Organic Frameworks Using Data-Mining Tools. *ACS Combinatorial Science* **(2019)**.](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)"
+    excerpt: "**6.** [Gülsoy, Z., **Sezginel, K. B.**, Uzun, A., Keskin, S. and Yıldırım, R. Analysis of CH<sub>4</sub> Uptake over Metal–Organic Frameworks Using Data-Mining Tools. *ACS Combinatorial Science*, 21 **(2019)**: 257-268.](https://pubs.acs.org/doi/abs/10.1021/acscombsci.8b00150)"
 2018_sezginel_chemmater:
   - image_path: /assets/img/publications/2018_sezginel_chemmater.png
     alt: "2018_sezginel_chemmater"
     title: "Thermal transport in interpenetrated metal-organic frameworks"
-    excerpt: "**5.** [**Sezginel, K. B.**, Asinger, P. A., Babaei, H., & Wilmer, C. E. Thermal transport in interpenetrated metal-organic frameworks. *Chemistry of Materials* **(2018)**.](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)"
+    excerpt: "**5.** [**Sezginel, K. B.**, Asinger, P. A., Babaei, H., and Wilmer, C. E. Thermal transport in interpenetrated metal-organic frameworks. *Chemistry of Materials*, 30 **(2018)**: 2281-2286.](http://pubs.acs.org/doi/abs/10.1021/acs.chemmater.7b05015)"
 2017_sezginel_crystengcomm:
   - image_path: /assets/img/publications/2017_sezginel_crystengcomm.png
     alt: "2017_sezginel_crystengcomm"
