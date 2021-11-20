@@ -25,19 +25,20 @@ categories: pages
 
 ### Senior Data Scientist | Jan 2020
 Othot Inc. Pittsburgh, PA<br>
-- Develop data science and machine learning solutions using Python
-- Build, validate, and troubleshoot data science models using internal tools and metrics and performed individual research on several modeling problems
-- Communicate data science results and insights to other Othot team members and our customers
-- Review new customer data to identify significant changes or issues in the data or predictions
-- Perform stringent data checks to identify and address inconsistent data issues and leak variables
-- Collaborate in designing and improving the functionalities of internal tools and the Othot platform
-- Automate data science activities and apply best software practices
+- Build, validate, and troubleshoot machine learning models using internal tools and metrics and perform individual research on various modeling problems
+- Add new functionalities, improve performance and code quality of the internal data science Python library
+- Create documentation website to document internal library usage, modeling approaches and research experiments
+- Determine and implement specific release features for the data science engine (including unit and integration tests for validation) on a quarterly basis
+- Ensure compliance with SOC 2 Type 2 certification and implement CI/CD tools to improve process efficiency and code quality
+- Perform stringent data checks to identify and address inconsistent data issues and leak variables (automated)
+- Communicate data science results and insights to other team members and our customers
+- Periodically review customer data and models to identify significant changes and/or issues in the data or predictions
 
 ### Computational Engineering Fellow | Jan 2019 – May 2019
 NuMat Technologies, Inc.	Skokie, IL<br>
 -	Development of a proprietary Python library for computational materials design. Automation and simplification of various molecular simulations tools and integration with high-performance cloud computing (AWS). Creating a workflow to perform reproducible and trackable experiments. Using the tools developed, research was performed to discover next generation candidate materials.
--	Design and 3D printing of a custom part to improve speed and decrease material loss during production.
--	Process controller development (hardware and software) with a web interface.
+-	Design and 3D printing of custom parts to be integrated into the production line to improve speed and decrease material loss during production.
+-	Develop and install hardware and software for process controllers including remote control with a web interface.
 
 ### Clinical Research Intern | Aug 2013 - Sep 2013
 AbbVie Pharmaceutical Research & Development Istanbul, Turkey<br>
