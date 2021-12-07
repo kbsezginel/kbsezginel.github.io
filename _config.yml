@@ -105,9 +105,9 @@ analytics:
 # Site Author
 author:
   name             : "Kutay B. Sezginel"
-  avatar           : "assets/img/kutay_avatar.jpg"
+  avatar           : "assets/img/kbs_avatar.jpg"
   bio              : "Data Scientist <br> PhD in Chemical Engineering"
-  location         : "Pittsburgh, PA"
+  location         : "Washington, DC"
   email            : "kutaybs@gmail.com"
   links:
     - label: "Email"
