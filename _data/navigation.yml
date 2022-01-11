@@ -1,13 +1,17 @@
 # main links
 main:
+  - title: "Projects"
+    url: /projects
+  - title: "Music"
+    url: /music/
+  - title: "Videos"
+    url: https://www.youtube.com/channel/UCVH35IUBJhoT6HDHDjS-WYw
   - title: "Portfolio"
     url: /visualization/portfolio
   - title: "Research"
     url: /research/
   - title: "Publications"
     url: /publications/
-  - title: "Music"
-    url: /music/
   - title: "Tutorials"
     url: /tutorials/
   - title: "CV"
