@@ -2,7 +2,7 @@
 layout: single
 title:  "MIDI Pickguard"
 excerpt: "MIDI controller guitar pickguard"
-date:   2022-01-09
+date:   2021-01-09
 categories: music
 author_profile: true
 header:

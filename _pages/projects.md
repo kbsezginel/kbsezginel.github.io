@@ -5,11 +5,18 @@ permalink: /projects/
 date:   2022-01-10
 categories: pages
 projects:
-  - title: "Electric Kalimba"
-    alt: "electric_kalimba"
-    excerpt: "Electrify your kalimba with a guitar pickup."
-    image_path: /assets/img/projects/electric_kalimba/electric_kalimba_teaser.JPG
-    url: "/music/electric-kalimba/"
+  - title: "Arduino based sample player"
+    alt: "polycule_one_shot"
+    excerpt: "Play samples."
+    image_path: /assets/img/projects/one_shot/one_shot_teaser.jpg
+    url: "/music/one-shot"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - title: "MIDI Pickguard Mini"
+    alt: "midi_pickguard_mini"
+    excerpt: "MIDI controller guitar pickguard add-on."
+    image_path: /assets/img/projects/midi_pickguard_mini/midi_pickguard_mini_teaser.jpg
+    url: "/music/midi-pickguard-mini/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - title: "MIDI Footswitch"
@@ -26,18 +33,18 @@ projects:
     url: "/music/midi-pickguard/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - title: "MIDI Pickguard Mini"
-    alt: "midi_pickguard_mini"
-    excerpt: "MIDI controller guitar pickguard add-on."
-    image_path: /assets/img/projects/midi_pickguard_mini/midi_pickguard_mini_teaser.jpg
-    url: "/music/midi-pickguard-mini/"
+  - title: "Modular LED animator"
+    alt: "moduled_nano"
+    excerpt: "A small module to brighten up your eurorack."
+    image_path: /assets/img/projects/moduled_nano/moduled_nano_teaser.png
+    url: "/music/moduled-nano"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - title: "Arduino based sample player"
-    alt: "polycule_one_shot"
-    excerpt: "Play samples."
-    image_path: /assets/img/projects/one_shot/one_shot_teaser.jpg
-    url: "/music/one-shot"
+  - title: "Electric Kalimba"
+    alt: "electric_kalimba"
+    excerpt: "Electrify your kalimba with a guitar pickup."
+    image_path: /assets/img/projects/electric_kalimba/electric_kalimba_teaser.JPG
+    url: "/music/electric-kalimba/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
