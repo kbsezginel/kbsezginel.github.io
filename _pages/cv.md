@@ -8,7 +8,6 @@ categories: pages
 <div style="width: 100%; text-align: left; float:left; position: relative; top: 22px; right: 0px;">
   <table style="width:100%">
     <tr>
-      <th><a href="/assets/docs/cv/KutayBSezginel_CV.pdf" class="btn btn--primary">CV (pdf)</a></th>
       <th><a href="/assets/docs/resume/KutayBSezginel_Resume.pdf" class="btn btn--primary">Resume (pdf)</a></th>
       <th><a href="https://www.linkedin.com/in/kutay-berk-sezginel-60232a74" class="btn btn--info">Linkedin</a></th>
       <th><a href="https://scholar.google.com/citations?user=6ak9FqIAAAAJ&hl=en&oi=ao" class="btn btn--warning">Google Scholar</a></th>
