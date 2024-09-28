@@ -3,13 +3,10 @@ layout: archive
 title: " "
 author_profile: true
 header:
-  overlay_color: "#ffffff"
-  overlay_filter: "0.25"
-  overlay_image: /assets/img/aug17/kbs-logo-teaser.png
+    overlay_image: /assets/img/moon_banner.png
 ---
 
 <div class="grid__wrapper">
-  {% for post in site.posts %}
-    {% include archive-single.html type="grid" %}
-  {% endfor %}
+    {% for post in site.posts %} {% include archive-single.html type="grid" %}
+    {% endfor %}
 </div>

@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Band"
+title:  "The Band"
 permalink: /band/
 date:   2024-09-27
 categories: pages
@@ -11,7 +11,6 @@ posters:
     image_path: /assets/img/music/bratislava_to_izmir_bossa.png
 ---
 
-## The Band
 This is a middle eastern / balkan music band with rock, psychedelic, funk, jazz, metal influences. I am picturing 3 - 5 people. We currently have two members (strings instruments and vocals). I am looking for a bass player (fretless would be preferred) and a drummer (bonus points if you can play percussion). The name of the band hasn't been decided yet, I do have ideas but I would prefer to pick something together. Ideally, we all contriubute to the band decisions (which songs to play, rehersal frequency, scheduling shows/rehersals etc.) but if you want less involvement that is ok.
 
 ### Inspirational Playlist
