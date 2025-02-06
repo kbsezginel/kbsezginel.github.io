@@ -2,8 +2,18 @@
 layout: splash
 title:  "Publications"
 permalink: /publications/
-date:   2020-02-10
+date:   2024-02-06
 categories: pages
+2023_islamov_npjcm:
+  - image_path: /assets/img/publications/2023_islamov_npjcm.png
+    alt: "2023_islamov_npjcm"
+    title: "In silico identification and synthesis of a multi-drug loaded MOF for treating tuberculosis"
+    excerpt: "**11.** [Islamov, M., Babaei, H., Anderson, R., **Sezginel K. B.**, Long J. R., McGaughey A. J. H., Gomez-Gualdron D. A. and Wilmer C. E. High-throughput screening of hypothetical metal-organic frameworks for thermal conductivity. *npj Computational Materials*, 9, 11 **(2023)**](https://doi.org/10.1038/s41524-022-00961-x)"
+2022_acharya_jcr:
+  - image_path: /assets/img/publications/2022_acharya_jcr.png
+    alt: "2022_acharya_jcr"
+    title: "In silico identification and synthesis of a multi-drug loaded MOF for treating tuberculosis"
+    excerpt: "**10.** [Acharya A. P., **Sezginel, K. B.**, Gideon H. P., Greene A. C., Lawson H. D., Inamdar S., Tang Y., Fraser A. J., Patel K. V., Liu C., Rosi N. L., Chan S. Y., Flynn J. L., Wilmer C. E. and Little S. R. In silico identification and synthesis of a multi-drug loaded MOF for treating tuberculosis. *Journal of Controlled Release*, 352 **(2022)**: 242-255.](https://www.sciencedirect.com/science/article/abs/pii/S0168365922006940)"
 2020_sezginel_msde:
   - image_path: /assets/img/publications/2020_sezginel_msde.png
     alt: "2020_sezginel_msde"
@@ -57,7 +67,9 @@ Publications
 
 <table style="width:100%">
   <tr>
-    <th><a href="#2020" class="btn btn--info">2020</a></th>
+    <th><a href="#2023" class="btn btn--primary">2023</a></th>
+    <th><a href="#2022" class="btn btn--primary">2022</a></th>
+    <th><a href="#2020" class="btn btn--primary">2020</a></th>
     <th><a href="#2019" class="btn btn--primary">2019</a></th>
     <th><a href="#2018" class="btn btn--primary">2018</a></th>
     <th><a href="#2017" class="btn btn--primary">2017</a></th>
@@ -66,6 +78,14 @@ Publications
     <th><a href="https://scholar.google.com/citations?user=6ak9FqIAAAAJ&hl=en&oi=ao" class="btn btn--warning">Google Scholar</a></th>
   </tr>
 </table>
+
+## 2023
+
+{% include feature_row id="2023_islamov_npjcm" type="left" %}
+
+## 2022
+
+{% include feature_row id="2022_acharya_jcr" type="left" %}
 
 ## 2020
 

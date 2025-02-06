@@ -2,7 +2,7 @@
 layout: splash
 title:  "Curriculum Vitae"
 permalink: /cv/
-date:   2021-01-20
+date:   2024-02-06
 categories: pages
 ---
 <div style="width: 100%; text-align: left; float:left; position: relative; top: 22px; right: 0px;">
@@ -22,7 +22,15 @@ categories: pages
 
 {% include toc title="Curriculum Vitae" %}
 
-### Senior Data Scientist | Jan 2020
+### Computational Modeling Engineer | Feb 2023
+Numat Technologies, Inc. Chicago, IL<br>
+- Conduct various research projects focusing on finding new materials for gas storage and separation applications. Worked with experimentalists to improve modeling methodology and discover ways of improving material performance.
+- Perform high-throughput screening studies for material discovery and improvement
+- Develop data analysis and performance validation methodologies for various lab equipment (Adsorption Analyzer, Pressure Decay Testing, XRD Analysis, ...)
+- Develop new simulation methodologies using Machine Learning Force Fields
+ 
+
+### Senior Data Scientist | Jan 2020 - Feb 2023
 Othot Inc. Pittsburgh, PA<br>
 - Build, validate, and troubleshoot machine learning models using internal tools and metrics and perform individual research on various modeling problems
 - Add new functionalities, improve performance and code quality of the internal data science Python library
@@ -101,6 +109,10 @@ their glucose oxidation performances using various electrochemical measurements.
 
 ## Publications
 
+11) [Islamov, M., Babaei, H., Anderson, R., **Sezginel K. B.**, Long J. R., McGaughey A. J. H., Gomez-Gualdron D. A. and Wilmer C. E. High-throughput screening of hypothetical metal-organic frameworks for thermal conductivity. *npj Computational Materials*, 9, 11 **(2023)**](https://doi.org/10.1038/s41524-022-00961-x)"
+
+10) [Acharya A. P., **Sezginel, K. B.**, Gideon H. P., Greene A. C., Lawson H. D., Inamdar S., Tang Y., Fraser A. J., Patel K. V., Liu C., Rosi N. L., Chan S. Y., Flynn J. L., Wilmer C. E. and Little S. R. In silico identification and synthesis of a multi-drug loaded MOF for treating tuberculosis. *Journal of Controlled Release*, 352 **(2022)**: 242-255.](https://www.sciencedirect.com/science/article/abs/pii/S0168365922006940)"
+
 9) [**Sezginel, K. B.**, and Wilmer C. E. Modeling diffusion of nanocars on a Cu (110) surface. *Molecular Systems Design & Engineering*, 5 **(2020)**: 1186-1192.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)
 
 8) [**Sezginel, K. B.**, Lee S., Babaei, H. and Wilmer, C. E. Effect of flexibility on thermal transport in breathing porous crystals. *Journal of Physical Chemistry C*, 124 **(2020)**: 18604–18608.](https://pubs.rsc.org/en/content/articlelanding/2020/me/c9me00171a)
@@ -121,6 +133,8 @@ their glucose oxidation performances using various electrochemical measurements.
 
 ## Conference Presentations
 *Oral presentations only*<br>
+
+[At the Cutting Edge: Research Careers in Startups. MyChoice at UChicagoGrad. February 10, 2025. ](https://www.mychoice.uchicago.edu/about-the-program/exposure/research-careers-in-startups/)
 
 Sezginel, K. B., Nash J. and Wilmer, C.E., "How to Design a Fast Nanocar.", AIChE 2019, Orlando, FL, November 11, 2019. [Click here for slides](https://kutaybs.com/presentations/aiche-2019/#1)
 
