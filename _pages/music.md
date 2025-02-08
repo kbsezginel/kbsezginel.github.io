@@ -47,6 +47,7 @@ gallery:
 
 {% include feature_row_kbs id="music_projects"%}
 
+### [See live music calendar here](/live)
 
 ### Recorded performances
 
