@@ -28,51 +28,26 @@ categories: pages
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
         <!-- Add the evo-calendar.js for.. obviously, functionality! -->
-        <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script> -->
+        <script src="../assets/js/evo_calendar.js"></script>
 
         <script>
         // initialize your calendar, once the page's DOM is ready
-        // $('#calendar').evoCalendar({
-        //     theme: 'Midnight Blue'
-        // })
         $("#calendar").evoCalendar({
-            calendarEvents: [
-            {
-                id: 'op1', // Event's ID (required)
-                name: "Orchester Prezevica", 
-                date: "February/14/2025", // Event date (required)
-                type: "show", // Event type (required)
-                color: "#eb52ab",
-                description: "Madam's Organ - Washington, DC"
-            },
-            {
-                id: 'yg1', // Event's ID (required)
-                name: "Music, Movement, Mind : Dynamic Flow - Soulage Baltimore", 
-                date: "February/23/2025", // Event date (required)
-                type: "show", // Event type (required)
-                description: "Music, Movement, Mind : Dynamic Flow<br>Soulage - Baltimore, MD",
-                type: "event",
-                color: "#52eba4"
-            },
-            {
-                id: 'yg1',
-                name: "Sound Bath", 
-                date: "March/5/2025",
-                description: "ALX - Alexandria, VA",
-                type: "event",
-                color: "#52eba4"
-            },
-            {
-                id: 'yg1',
-                name: "Yeden", 
-                date: "March/8/2025",
-                description: "Bossa - Washington, DC",
-                type: "event",
-                color: "#52abeb"
-            },
-            ],
             theme: 'Midnight Blue'
         });
+
+        $.getJSON('../assets/js/live_events.json', function(data) {
+            for(var i = 0;i < data.length; i++){
+                $("#calendar")[0].evoCalendar.addCalendarEvent([data[i]]);
+            };
+        });
+
+        // $("#calendar").evoCalendar({
+        //         calendarEvents: events[0],
+        //         theme: "Midnight Blue"
+        //  });
+
         </script>
     </body>
 </html>
