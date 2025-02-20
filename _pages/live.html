@@ -2,7 +2,7 @@
 layout: full
 title:  "Live"
 permalink: /live/
-date:   2024-02-07
+date:   2024-02-20
 categories: pages
 ---
 <!DOCTYPE html>
@@ -26,15 +26,17 @@ categories: pages
 
         <!-- Add jQuery library (required) -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-
-        <!-- Add the evo-calendar.js for.. obviously, functionality! -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script> -->
         <script src="../assets/js/evo_calendar.js"></script>
 
         <script>
         // initialize your calendar, once the page's DOM is ready
         $("#calendar").evoCalendar({
-            theme: 'Midnight Blue'
+            theme: 'Midnight Blue',
+            todayHighlight: 'true',
+            sidebarDisplayDefault: false,
+            sidebarToggler:	true,
+            eventDisplayDefault: true,
+            eventListToggler: true
         });
 
         $.getJSON('../assets/js/live_events.json', function(data) {
@@ -42,11 +44,6 @@ categories: pages
                 $("#calendar")[0].evoCalendar.addCalendarEvent([data[i]]);
             };
         });
-
-        // $("#calendar").evoCalendar({
-        //         calendarEvents: events[0],
-        //         theme: "Midnight Blue"
-        //  });
 
         </script>
     </body>
