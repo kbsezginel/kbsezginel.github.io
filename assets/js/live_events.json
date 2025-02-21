@@ -2,6 +2,22 @@
     {
         "id": "op140225",
         "name": "Orchester Prezevica", 
+        "date": "January/5/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "New Deal Cafe - Greenbelt, MD"
+    },
+    {
+        "id": "op140225",
+        "name": "Meshk", 
+        "date": "January/26/2025",
+        "type": "show",
+        "color": "#ebc034",
+        "description": "Syriana Cafe - Ellicot City, MD"
+    },
+    {
+        "id": "op140225",
+        "name": "Orchester Prezevica", 
         "date": "February/14/2025",
         "type": "show",
         "color": "#eb52ab",
@@ -22,15 +38,18 @@
         "type": "event",
         "description": "Music, Movement, Mind : Dynamic Flow<br>Soulage - Baltimore, MD",
         "color": "#52eba4",
-        "url": "https://momence.com/Christen--Schritter/Music%2C-Movement%2C-Mind-Series%3A-Dynamic-Flow/112357019?skipPreview=true"
+        "url": "https://momence.com/Christen--Schritter/Music%2C-Movement%2C-Mind-Series%3A-Dynamic-Flow/112357019?skipPreview=true",
+        "time": "6:00 PM",
+        "address": "https://maps.app.goo.gl/9J6q5C3zSNNqSkXN8"
     },
     {
         "id": "yg050325",
         "name": "Sound Bath", 
         "date": "March/5/2025",
-        "description": "ALX - Alexandria, VA",
+        "description": "ALX Community Atrium - Alexandria, VA",
         "type": "event",
-        "color": "#52eba4"
+        "color": "#52eba4",
+        "url": "https://www.eventbrite.com/e/sound-bath-with-karen-reisdorf-tickets-1237510510249"
     },
     {
         "id": "yn08032025",
