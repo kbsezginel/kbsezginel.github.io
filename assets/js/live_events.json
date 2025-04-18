@@ -58,5 +58,37 @@
         "description": "Bossa - Washington, DC",
         "type": "show",
         "color": "#52abeb"
+    },
+    {
+        "id": "dj08032025",
+        "name": "DJ Dolma", 
+        "date": "March/29/2025",
+        "description": "Green Zone, DC",
+        "type": "show",
+        "color": "#52abeb"
+    },
+    {
+        "id": "solo16042025",
+        "name": "Makamscape", 
+        "date": "April/16/2025",
+        "description": "Rhizome, DC",
+        "type": "show",
+        "color": "#ebc034"
+    },
+    {
+        "id": "op140225",
+        "name": "Orchester Prezevica", 
+        "date": "April/25/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "Madam's Organ - Washington, DC"
+    },
+    {
+        "id": "yn08032025",
+        "name": "Yeden", 
+        "date": "May/24/2025",
+        "description": "Bossa - Washington, DC",
+        "type": "show",
+        "color": "#52abeb"
     }
 ]
