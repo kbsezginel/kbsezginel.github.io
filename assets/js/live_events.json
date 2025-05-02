@@ -1,7 +1,7 @@
 [
     {
         "id": "op140225",
-        "name": "Orchester Prezevica", 
+        "name": "Orchester Prezevica",
         "date": "January/5/2025",
         "type": "show",
         "color": "#eb52ab",
@@ -9,7 +9,7 @@
     },
     {
         "id": "op140225",
-        "name": "Meshk", 
+        "name": "Meshk",
         "date": "January/26/2025",
         "type": "show",
         "color": "#ebc034",
@@ -17,7 +17,7 @@
     },
     {
         "id": "op140225",
-        "name": "Orchester Prezevica", 
+        "name": "Orchester Prezevica",
         "date": "February/14/2025",
         "type": "show",
         "color": "#eb52ab",
@@ -25,7 +25,7 @@
     },
     {
         "id": "jam200225",
-        "name": "Halfacopter", 
+        "name": "Halfacopter",
         "date": "February/20/2025",
         "type": "show",
         "description": "Middle Eastern Music Night<br>Wine Collective - Baltimore, MD<br>6:30 PM",
@@ -33,27 +33,27 @@
     },
     {
         "id": "yg230225",
-        "name": "Yoga Music", 
+        "name": "Yoga Music",
         "date": "February/23/2025",
         "type": "event",
         "description": "Music, Movement, Mind : Dynamic Flow<br>Soulage - Baltimore, MD",
-        "color": "#52eba4",
+        "color": "#a56ffc",
         "url": "https://momence.com/Christen--Schritter/Music%2C-Movement%2C-Mind-Series%3A-Dynamic-Flow/112357019?skipPreview=true",
         "time": "6:00 PM",
         "address": "https://maps.app.goo.gl/9J6q5C3zSNNqSkXN8"
     },
     {
         "id": "yg050325",
-        "name": "Sound Bath", 
+        "name": "Sound Bath",
         "date": "March/5/2025",
         "description": "ALX Community Atrium - Alexandria, VA",
         "type": "event",
-        "color": "#52eba4",
+        "color": "#a56ffc",
         "url": "https://www.eventbrite.com/e/sound-bath-with-karen-reisdorf-tickets-1237510510249"
     },
     {
         "id": "yn08032025",
-        "name": "Yeden", 
+        "name": "Yeden",
         "date": "March/8/2025",
         "description": "Bossa - Washington, DC",
         "type": "show",
@@ -61,15 +61,15 @@
     },
     {
         "id": "dj08032025",
-        "name": "DJ Dolma", 
+        "name": "DJ Dolma",
         "date": "March/29/2025",
         "description": "Green Zone, DC",
         "type": "show",
-        "color": "#52abeb"
+        "color": "#52eba4"
     },
     {
         "id": "solo16042025",
-        "name": "Makamscape", 
+        "name": "Makamscape",
         "date": "April/16/2025",
         "description": "Rhizome, DC",
         "type": "show",
@@ -77,11 +77,19 @@
     },
     {
         "id": "op140225",
-        "name": "Orchester Prezevica", 
-        "date": "April/25/2025",
+        "name": "Orchester Prezevica",
+        "date": "April/26/2025",
         "type": "show",
         "color": "#eb52ab",
         "description": "Madam's Organ - Washington, DC"
+    },
+    {
+        "id": "yg050325",
+        "name": "Sound Bath",
+        "date": "May/14/2025",
+        "description": "ALX Community Atrium - Alexandria, VA",
+        "type": "event",
+        "color": "#a56ffc"
     },
     {
         "id": "yn08032025",
@@ -90,5 +98,21 @@
         "description": "Bossa - Washington, DC",
         "type": "show",
         "color": "#52abeb"
+    },
+    {
+        "id": "yn08032025",
+        "name": "Man, Myth and Magick",
+        "date": "May/31/2025",
+        "description": "Epicure - Alexandria, VA",
+        "type": "show",
+        "color": "#eba434"
+    },
+    {
+        "id": "yn08032025",
+        "name": "Man, Myth and Magick",
+        "date": "June/21/2025",
+        "description": "Bossa - Washington, DC",
+        "type": "show",
+        "color": "#eba434"
     }
 ]
