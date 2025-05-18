@@ -2,7 +2,7 @@
 layout: single
 title:  "Music"
 permalink: /music/
-date:   2025-02-07
+date:   2025-05-18
 categories: pages
 bch_donation:
   - image_path: /assets/img/kutay550_bch_qr.png
@@ -14,10 +14,10 @@ music_projects:
     title: DJ Dolma
     excerpt: "Anatolian Psychedelia"
     image_path: /assets/img/music/dj-dolma-teaser.png
-  - url: /music/yoga/
-    title: Music for Yoga
-    excerpt: Resonance of action, balance and attentiveness
-    image_path: /assets/img/music/yoga-music-teaser.png
+  - url: /music/makamscape/
+    title: Makamscape
+    excerpt: "Microtonal ambient, pychedelic music"
+    image_path: /assets/img/music/makamscape-teaser.png
   - url: /music/yeden/
     title: Yeden
     excerpt: "Electric Folk Music from Anatolia and the Balkans"
@@ -26,13 +26,13 @@ music_projects:
     title: Orchester Praževica
     excerpt: "High energy dance music drawing on the tradition of Eastern European Czardas led by the one and only Tomáš Drgoň"
     image_path: /assets/img/music/orchester-prazevica-teaser.png
-  - url: /music/makamscape/
-    title: Makamscape
-    excerpt: "Ambient, experimental music with sprinkles of Turkish makam"
-    image_path: /assets/img/music/makamscape-teaser.png
+  - url: /music/yoga/
+    title: Music for Yoga
+    excerpt: Music for Movement/Yoga
+    image_path: /assets/img/music/yoga-music-teaser.png
   - url: /music/meshk/
     title: Meshk
-    excerpt: "The best hits from classical Turkish/Ottoman music"
+    excerpt: "Middle eastern classical music"
     image_path: /assets/img/music/meshk-teaser.png
 gallery:
   - url: /music/one-shot/
@@ -47,15 +47,17 @@ gallery:
 
 {% include feature_row_kbs id="music_projects"%}
 
-### [See live music calendar here](/live)
+> **[See live music calendar here](/live)**
 
-### Recorded performances
+---
+
+<!-- ### Recorded performances
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VJkj5Oi5ukI" frameborder="0" allowfullscreen></iframe>
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FRZtCNBmze4" frameborder="0" allowfullscreen></iframe>
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JxAf2yGUQTo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JxAf2yGUQTo" frameborder="0" allowfullscreen></iframe> -->
 
 
 #### Soundcloud

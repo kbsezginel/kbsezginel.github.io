@@ -84,14 +84,6 @@
         "description": "Madam's Organ - Washington, DC"
     },
     {
-        "id": "yg050325",
-        "name": "Sound Bath",
-        "date": "May/14/2025",
-        "description": "ALX Community Atrium - Alexandria, VA",
-        "type": "event",
-        "color": "#a56ffc"
-    },
-    {
         "id": "yn08032025",
         "name": "Yeden", 
         "date": "May/24/2025",
@@ -100,12 +92,28 @@
         "color": "#52abeb"
     },
     {
+        "id": "dj08032025",
+        "name": "DJ Dolma",
+        "date": "May/29/2025",
+        "description": "Green Zone, DC",
+        "type": "show",
+        "color": "#52eba4"
+    },
+    {
         "id": "yn08032025",
         "name": "Man, Myth and Magick",
         "date": "May/31/2025",
         "description": "Epicure - Alexandria, VA",
         "type": "show",
         "color": "#eba434"
+    },
+    {
+        "id": "dj08032025",
+        "name": "DJ Dolma",
+        "date": "June/12/2025",
+        "description": "Green Zone, DC",
+        "type": "show",
+        "color": "#52eba4"
     },
     {
         "id": "yn08032025",

@@ -11,6 +11,8 @@ posters:
     image_path: /assets/img/music/dj_dolma_green_zone_halloween.png
   - alt: dj_dolma_friends_green_zone
     image_path: /assets/img/music/djdolma_nov30_v13.png
+  - alt: dj_dolma_gz_mar29_2025
+    image_path: /assets/img/music/dj_dolma_gz_mar29_2025.png
 ---
 
 {% include gallery id="posters"%}
