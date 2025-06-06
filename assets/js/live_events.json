@@ -116,6 +116,14 @@
         "color": "#eba434"
     },
     {
+        "id": "op140225",
+        "name": "Orchester Prezevica",
+        "date": "June/7/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "Hampden Festival - Baltimore, MD"
+    },
+    {
         "id": "dj08032025",
         "name": "DJ Dolma",
         "date": "June/12/2025",
@@ -130,5 +138,13 @@
         "description": "Bossa - Washington, DC",
         "type": "show",
         "color": "#eba434"
-    }
+    },
+    {
+        "id": "solo16042025",
+        "name": "Makamscape",
+        "date": "June/27/2025",
+        "description": "Le Mondo - Baltimore, MD",
+        "type": "show",
+        "color": "#ebc034"
+    },
 ]
