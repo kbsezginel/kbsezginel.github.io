@@ -147,4 +147,12 @@
         "type": "show",
         "color": "#ebc034"
     },
+    {
+        "id": "op140225",
+        "name": "Orchester Prezevica",
+        "date": "June/29/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "Bossa - Washington, DC"
+    }
 ]
