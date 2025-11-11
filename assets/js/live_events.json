@@ -108,6 +108,14 @@
         "description": "Madam's Organ - Washington, DC"
     },
     {
+        "id": "solo16042025",
+        "name": "Makamscape",
+        "date": "May/31/2025",
+        "description": "Epicure - Alexandria, VA",
+        "type": "show",
+        "color": "#ebc034"
+    },
+    {
         "id": "yn08032025",
         "name": "Man, Myth and Magick",
         "date": "May/31/2025",
@@ -116,7 +124,7 @@
         "color": "#eba434"
     },
     {
-        "id": "op140225",
+        "id": "op070625",
         "name": "Orchester Prezevica",
         "date": "June/7/2025",
         "type": "show",
@@ -124,7 +132,7 @@
         "description": "Hampden Festival - Baltimore, MD"
     },
     {
-        "id": "dj08032025",
+        "id": "dj12062025",
         "name": "DJ Dolma",
         "date": "June/12/2025",
         "description": "Green Zone, DC",
@@ -132,15 +140,15 @@
         "color": "#52eba4"
     },
     {
-        "id": "yn08032025",
-        "name": "Man, Myth and Magick",
-        "date": "June/21/2025",
-        "description": "Bossa - Washington, DC",
+        "id": "solo16062025",
+        "name": "Open Mic",
+        "date": "June/16/2025",
+        "description": "Epicure - Alexandria, VA",
         "type": "show",
-        "color": "#eba434"
+        "color": "#52eba4"
     },
     {
-        "id": "solo16042025",
+        "id": "solo27062025",
         "name": "Makamscape",
         "date": "June/27/2025",
         "description": "Le Mondo - Baltimore, MD",
@@ -148,11 +156,67 @@
         "color": "#ebc034"
     },
     {
-        "id": "op140225",
+        "id": "op290625",
         "name": "Orchester Prezevica",
         "date": "June/29/2025",
         "type": "show",
         "color": "#eb52ab",
         "description": "Bossa - Washington, DC"
+    },
+    {
+        "id": "op120925",
+        "name": "Orchester Prezevica",
+        "date": "September/12/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "Madam's Organ - Washington, DC"
+    },
+    {
+        "id": "op120925-2",
+        "name": "Orchester Prezevica",
+        "date": "September/12/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "DC Brau - Washington, DC"
+    },
+    {
+        "id": "paint240925",
+        "name": "Live Music + Painting Improvisation",
+        "date": "September/24/2025",
+        "type": "show",
+        "color": "#eb52ab",
+        "description": "Bossa - Washington, DC"
+    },
+    {
+        "id": "zel11112025",
+        "name": "Zelzeleh",
+        "date": "November/11/2025",
+        "description": "University of Salisbury - Salisbury, MD",
+        "type": "workshop",
+        "color": "#ebc034"
+    },
+    {
+        "id": "saba04122025",
+        "name": "DC Saba",
+        "date": "December/4/2025",
+        "description": "Epicure - Alexandria, VA",
+        "type": "show",
+        "color": "#eba434"
+    },
+    {
+        "id": "dj04122025",
+        "name": "DJ Dolma",
+        "date": "December/4/2025",
+        "description": "Green Zone, DC",
+        "type": "show",
+        "color": "#52eba4"
+    },
+    {
+        "id": "solo08122025",
+        "name": "Makamscape",
+        "date": "December/08/2025",
+        "description": "Rhizome - Takoma Park, DC",
+        "type": "show",
+        "color": "#ebc034"
     }
 ]
