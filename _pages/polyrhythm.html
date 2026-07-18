@@ -1,25 +1,66 @@
 ---
 layout: none
-title:  "Polyrhythm"
+title: "Polyrhythm"
 permalink: /polyrhythm/
-date:   2019-02-26
+date: 2026-07-17
 categories: pages
 ---
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tone/13.7.6/Tone.min.js'></script>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/css/polyrhythm.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Polyrhythm — kut.ai</title>
+    <meta name="description" content="An orbital polyrhythm machine. Stack rhythms and hear the spheres.">
+    <meta name="theme-color" content="#070A12">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/polyrhythm.css">
   </head>
   <body>
-    <button class="button" onclick="startSong()">Start</button>
-    <button class="button buttonStop" onclick="stopSong()">Stop</button>
-    <div class="""slidecontainer">
-      <input type="range" min="20" max="300" value="120" class="slider" id="bpmRange">
-      <p>BPM: <span id="demo"></span></p>
-    </div>
 
-    <script src="../assets/js/polyrhythm.js"></script>
+    <main class="stage">
+      <header class="brand">
+        <a class="brand__home" href="/">&larr; kut.ai</a>
+        <h1 class="brand__mark">Polyrhythm</h1>
+      </header>
+
+      <canvas id="sky" aria-hidden="true"></canvas>
+
+      <button id="playBtn" class="star" aria-label="Play" aria-pressed="false">
+        <svg class="star__icon star__icon--play" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 5.5v13l11-6.5z"/>
+        </svg>
+        <svg class="star__icon star__icon--pause" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.5 5h3.4v14H7.5zM13.1 5h3.4v14h-3.4z"/>
+        </svg>
+      </button>
+    </main>
+
+    <aside class="rack" aria-label="Controls">
+      <section class="rack__block">
+        <h2 class="rack__label">Tempo</h2>
+        <div class="tempo__readout">
+          <span id="bpmVal" class="tempo__value">90</span>
+          <span class="tempo__unit">bpm</span>
+          <span id="periodVal" class="tempo__period">2.67 s</span>
+        </div>
+        <input id="bpmRange" type="range" min="30" max="220" step="1" value="90"
+               aria-label="Tempo in beats per minute">
+        <dl class="facts">
+          <div class="facts__row"><dt>ratio</dt><dd id="ratioVal">3 : 4</dd></div>
+        </dl>
+      </section>
+
+      <section class="rack__block">
+        <h2 class="rack__label">Orbits</h2>
+        <div id="layers"></div>
+        <button id="addBtn" class="add" type="button">+ Add orbit</button>
+      </section>
+    </aside>
+
+    <script src="/assets/js/polyrhythm.js"></script>
   </body>
 </html>
