@@ -57,15 +57,10 @@ input[type="range"] {
 }
 
 .brand {
-  position: absolute;
-  top: 22px;
-  left: 26px;
-  z-index: 2;
-  pointer-events: none;
+  margin-bottom: 14px;
 }
 
 .brand__home {
-  pointer-events: auto;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -78,11 +73,18 @@ input[type="range"] {
   .brand__home:hover { color: var(--ink); }
 }
 
+.stage__home {
+  position: absolute;
+  top: 22px;
+  left: 26px;
+  z-index: 2;
+}
+
 .brand__mark {
-  margin: 10px 0 2px;
+  margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  font-size: 21px;
+  font-size: 15px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
@@ -497,6 +499,11 @@ input[type="range"]::-moz-range-thumb {
     min-height: 300px;
   }
 
+  .stage__home {
+    top: 16px;
+    left: max(18px, env(safe-area-inset-left));
+  }
+
   .rack {
     width: 100%;
     border-left: none;
@@ -506,12 +513,6 @@ input[type="range"]::-moz-range-thumb {
     padding-bottom: max(18px, env(safe-area-inset-bottom));
   }
 
-  .brand {
-    top: 16px;
-    left: max(18px, env(safe-area-inset-left));
-  }
-
-  .brand__mark { font-size: 17px; }
 }
 
 /* touch ergonomics: bigger targets, no iOS zoom-on-focus */
