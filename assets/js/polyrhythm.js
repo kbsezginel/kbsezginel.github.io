@@ -37,6 +37,7 @@
 
   const state = {
     bpm: 90,
+    view: 'orbit',    // 'orbit' | 'linear'
     started: false,   // has the transport ever run
     playing: false,
     phase0: 0,        // audio-clock time at cycle position 0
@@ -403,6 +404,24 @@
 
   addBtn.addEventListener('click', () => addLayer());
 
+  // --- view toggle: orbital or linear ---
+
+  const viewButtons = {
+    orbit: document.getElementById('viewOrbit'),
+    linear: document.getElementById('viewLinear'),
+  };
+
+  function setView(view) {
+    state.view = view;
+    document.body.classList.toggle('view-linear', view === 'linear');
+    viewButtons.orbit.setAttribute('aria-pressed', String(view === 'orbit'));
+    viewButtons.linear.setAttribute('aria-pressed', String(view === 'linear'));
+    try { localStorage.setItem('polyrhythm-view', view); } catch (e) { /* private mode */ }
+  }
+
+  viewButtons.orbit.addEventListener('click', () => setView('orbit'));
+  viewButtons.linear.addEventListener('click', () => setView('linear'));
+
   bpmRange.addEventListener('input', (e) => {
     const newBpm = +e.target.value;
     if (state.started && audio.ctx) {
@@ -465,28 +484,57 @@
     return n === 1 ? (geo.rMin + geo.rMax) / 2 : geo.rMin + ((geo.rMax - geo.rMin) * i) / (n - 1);
   }
 
-  // clicking an orbit (ring, nodes or satellite) mutes / unmutes it
-  function orbitAt(x, y) {
-    const geo = orbitGeometry();
-    const dist = Math.hypot(x - geo.cx, y - geo.cy);
+  // linear-view geometry: the sun sits at the left, paths stream to the right.
+  // starCx must mirror the CSS that positions the star button in linear view.
+  const mobileMQ = window.matchMedia('(max-width: 880px)');
+
+  function laneGeometry() {
+    const starCx = mobileMQ.matches ? 48 : 64;
+    return {
+      starCx,
+      cy: H / 2,
+      x0: starCx + 54,
+      xEnd: W - (mobileMQ.matches ? 20 : 32),
+    };
+  }
+
+  function laneY(i, n) {
+    if (n === 1) return H / 2;
+    const gap = Math.max(24, Math.min(64, (H - 100) / (n - 1)));
+    return H / 2 - (gap * (n - 1)) / 2 + gap * i;
+  }
+
+  // clicking a layer's orbit or path (ring, nodes or satellite) mutes / unmutes it
+  function layerAt(x, y) {
     const n = state.layers.length;
     let best = null, bestGap = coarsePointer ? 20 : 14; // px tolerance, wider for fingers
-    state.layers.forEach((layer, i) => {
-      const gap = Math.abs(dist - orbitRadius(i, n, geo));
-      if (gap < bestGap) { best = layer; bestGap = gap; }
-    });
+    if (state.view === 'linear') {
+      const geo = laneGeometry();
+      if (x < geo.x0 - 12 || x > geo.xEnd + 12) return null;
+      state.layers.forEach((layer, i) => {
+        const gap = Math.abs(y - laneY(i, n));
+        if (gap < bestGap) { best = layer; bestGap = gap; }
+      });
+    } else {
+      const geo = orbitGeometry();
+      const dist = Math.hypot(x - geo.cx, y - geo.cy);
+      state.layers.forEach((layer, i) => {
+        const gap = Math.abs(dist - orbitRadius(i, n, geo));
+        if (gap < bestGap) { best = layer; bestGap = gap; }
+      });
+    }
     return best;
   }
 
   canvas.addEventListener('click', (e) => {
     const rect = canvas.getBoundingClientRect();
-    const layer = orbitAt(e.clientX - rect.left, e.clientY - rect.top);
+    const layer = layerAt(e.clientX - rect.left, e.clientY - rect.top);
     if (layer) setMuted(layer, !layer.muted);
   });
 
   canvas.addEventListener('mousemove', (e) => {
     const rect = canvas.getBoundingClientRect();
-    canvas.style.cursor = orbitAt(e.clientX - rect.left, e.clientY - rect.top) ? 'pointer' : 'default';
+    canvas.style.cursor = layerAt(e.clientX - rect.left, e.clientY - rect.top) ? 'pointer' : 'default';
   });
 
   function consumeHits(now) {
@@ -506,43 +554,86 @@
     }
   }
 
-  function draw() {
-    requestAnimationFrame(draw);
-    const now = audio.ctx ? audio.ctx.currentTime : 0;
-    consumeHits(now);
+  // --- drawing helpers shared by both views ---
 
-    g2d.setTransform(dpr, 0, 0, dpr, 0, 0);
-    g2d.clearRect(0, 0, W, H);
+  function hitFlash(layer, k, now) {
+    const hit = layer.lastHit[k];
+    if (!layer.muted && hit >= 0 && now >= hit) return Math.exp(-(now - hit) / 0.12);
+    return 0;
+  }
 
-    // starfield
-    g2d.fillStyle = '#e9eef7';
-    for (const s of stars) {
-      g2d.globalAlpha = s.a;
+  // glow = layered translucent discs; shadowBlur is too slow on mobile
+  function drawNode(x, y, layer, k, f, dim) {
+    const base = k === 0 ? 4 : 3;
+    const rad = base + 6 * f;
+    if (f > 0.02) {
+      g2d.fillStyle = rgba(layer.color, 0.16 * f);
       g2d.beginPath();
-      g2d.arc(s.x, s.y, s.r, 0, 7);
+      g2d.arc(x, y, rad * 2.4, 0, 7);
       g2d.fill();
     }
-    g2d.globalAlpha = 1;
+    g2d.fillStyle = rgba(layer.color, (0.45 + 0.55 * f) * dim);
+    g2d.beginPath();
+    g2d.arc(x, y, rad, 0, 7);
+    g2d.fill();
+    if (k === 0) { // downbeat marker
+      g2d.strokeStyle = rgba(layer.color, 0.5 * dim);
+      g2d.lineWidth = 1;
+      g2d.beginPath();
+      g2d.arc(x, y, rad + 3, 0, 7);
+      g2d.stroke();
+    }
+  }
 
-    const geo = orbitGeometry();
-    const cx = geo.cx, cy = geo.cy, rMax = geo.rMax;
-    const n = state.layers.length;
+  function drawSatellite(x, y, layer, dim) {
+    if (!layer.muted) {
+      g2d.fillStyle = rgba(layer.color, 0.14);
+      g2d.beginPath();
+      g2d.arc(x, y, 10, 0, 7);
+      g2d.fill();
+      g2d.fillStyle = rgba(layer.color, 0.3);
+      g2d.beginPath();
+      g2d.arc(x, y, 6.5, 0, 7);
+      g2d.fill();
+    }
+    g2d.fillStyle = rgba(layer.color, dim);
+    g2d.beginPath();
+    g2d.arc(x, y, 4.5, 0, 7);
+    g2d.fill();
+  }
 
-    // halo behind the star button
-    const halo = g2d.createRadialGradient(cx, cy, 20, cx, cy, 120);
+  function drawHalo(x, y) {
+    const halo = g2d.createRadialGradient(x, y, 20, x, y, 120);
     halo.addColorStop(0, 'rgba(244,193,93,0.10)');
     halo.addColorStop(1, 'rgba(244,193,93,0)');
     g2d.fillStyle = halo;
     g2d.beginPath();
-    g2d.arc(cx, cy, 120, 0, 7);
+    g2d.arc(x, y, 120, 0, 7);
     g2d.fill();
+  }
 
-    let phase = 0;
-    if (state.started) {
-      phase = ((now - state.phase0) / cycleLen()) % 1;
-      if (phase < 0) phase += 1;
+  function drawRipples(now, cx, cy, maxR) {
+    ripples = ripples.filter((rp) => now - rp.t0 < 0.9);
+    for (const rp of ripples) {
+      const dt = (now - rp.t0) / 0.9;
+      if (dt < 0) continue;
+      g2d.strokeStyle = 'rgba(233,238,247,' + 0.14 * (1 - dt) + ')';
+      g2d.lineWidth = 1;
+      g2d.beginPath();
+      g2d.arc(cx, cy, 30 + (maxR - 30) * dt, 0, 7);
+      g2d.stroke();
     }
+  }
+
+  // --- orbital view ---
+
+  function renderOrbits(now, phase) {
+    const geo = orbitGeometry();
+    const cx = geo.cx, cy = geo.cy;
+    const n = state.layers.length;
     const satAngle = -Math.PI / 2 + phase * 2 * Math.PI;
+
+    drawHalo(cx, cy);
 
     state.layers.forEach((layer, i) => {
       const r = orbitRadius(i, n, geo);
@@ -566,52 +657,13 @@
       g2d.arc(cx, cy, r, satAngle - 0.18, satAngle);
       g2d.stroke();
 
-      // beat nodes (glow = layered translucent discs; shadowBlur is too slow on mobile)
+      // beat nodes
       for (let k = 0; k < layer.beats; k++) {
         const a = -Math.PI / 2 + (2 * Math.PI * k) / layer.beats;
-        const x = cx + r * Math.cos(a);
-        const y = cy + r * Math.sin(a);
-        const hit = layer.lastHit[k];
-        let f = 0;
-        if (!layer.muted && hit >= 0 && now >= hit) f = Math.exp(-(now - hit) / 0.12);
-        const base = k === 0 ? 4 : 3;
-        const rad = base + 6 * f;
-        if (f > 0.02) {
-          g2d.fillStyle = rgba(layer.color, 0.16 * f);
-          g2d.beginPath();
-          g2d.arc(x, y, rad * 2.4, 0, 7);
-          g2d.fill();
-        }
-        g2d.fillStyle = rgba(layer.color, (0.45 + 0.55 * f) * dim);
-        g2d.beginPath();
-        g2d.arc(x, y, rad, 0, 7);
-        g2d.fill();
-        if (k === 0) { // downbeat marker
-          g2d.strokeStyle = rgba(layer.color, 0.5 * dim);
-          g2d.lineWidth = 1;
-          g2d.beginPath();
-          g2d.arc(x, y, rad + 3, 0, 7);
-          g2d.stroke();
-        }
+        drawNode(cx + r * Math.cos(a), cy + r * Math.sin(a), layer, k, hitFlash(layer, k, now), dim);
       }
 
-      // satellite (same layered-disc glow)
-      const sx = cx + r * Math.cos(satAngle);
-      const sy = cy + r * Math.sin(satAngle);
-      if (!layer.muted) {
-        g2d.fillStyle = rgba(layer.color, 0.14);
-        g2d.beginPath();
-        g2d.arc(sx, sy, 10, 0, 7);
-        g2d.fill();
-        g2d.fillStyle = rgba(layer.color, 0.3);
-        g2d.beginPath();
-        g2d.arc(sx, sy, 6.5, 0, 7);
-        g2d.fill();
-      }
-      g2d.fillStyle = rgba(layer.color, dim);
-      g2d.beginPath();
-      g2d.arc(sx, sy, 4.5, 0, 7);
-      g2d.fill();
+      drawSatellite(cx + r * Math.cos(satAngle), cy + r * Math.sin(satAngle), layer, dim);
 
       // beat count, stacked above the rings like a ruler
       g2d.fillStyle = rgba(layer.color, 0.85 * dim);
@@ -621,17 +673,103 @@
       g2d.fillText(layer.beats, cx, cy - r - 6);
     });
 
-    // coincidence ripples
-    ripples = ripples.filter((rp) => now - rp.t0 < 0.9);
-    for (const rp of ripples) {
-      const dt = (now - rp.t0) / 0.9;
-      if (dt < 0) continue;
-      g2d.strokeStyle = 'rgba(233,238,247,' + 0.14 * (1 - dt) + ')';
+    drawRipples(now, cx, cy, geo.rMax + 30);
+  }
+
+  // --- linear view: paths stream out of the sun at the left ---
+
+  function renderLinear(now, phase) {
+    const geo = laneGeometry();
+    const n = state.layers.length;
+
+    drawHalo(geo.starCx, geo.cy);
+
+    if (n) {
+      // cycle boundary ticks: the right edge is the same instant as the left
+      const yTop = laneY(0, n) - 16;
+      const yBot = laneY(n - 1, n) + 16;
+      g2d.strokeStyle = 'rgba(143,163,191,0.15)';
+      g2d.lineWidth = 1;
+      for (const x of [geo.x0, geo.xEnd]) {
+        g2d.beginPath();
+        g2d.moveTo(x, yTop);
+        g2d.lineTo(x, yBot);
+        g2d.stroke();
+      }
+    }
+
+    const sx = geo.x0 + phase * (geo.xEnd - geo.x0);
+
+    state.layers.forEach((layer, i) => {
+      const y = laneY(i, n);
+      const dim = layer.muted ? 0.3 : 1;
+
+      // path line
+      g2d.strokeStyle = rgba(layer.color, 0.22 * dim);
       g2d.lineWidth = 1;
       g2d.beginPath();
-      g2d.arc(cx, cy, 30 + (rMax + 30 - 30) * dt, 0, 7);
+      g2d.moveTo(geo.x0, y);
+      g2d.lineTo(geo.xEnd, y);
       g2d.stroke();
+
+      // satellite trail (clipped at the cycle start)
+      g2d.strokeStyle = rgba(layer.color, 0.1 * dim);
+      g2d.lineWidth = 1.5;
+      g2d.beginPath();
+      g2d.moveTo(Math.max(geo.x0, sx - 44), y);
+      g2d.lineTo(sx, y);
+      g2d.stroke();
+      g2d.strokeStyle = rgba(layer.color, 0.24 * dim);
+      g2d.beginPath();
+      g2d.moveTo(Math.max(geo.x0, sx - 16), y);
+      g2d.lineTo(sx, y);
+      g2d.stroke();
+
+      // beat nodes
+      for (let k = 0; k < layer.beats; k++) {
+        const x = geo.x0 + ((geo.xEnd - geo.x0) * k) / layer.beats;
+        drawNode(x, y, layer, k, hitFlash(layer, k, now), dim);
+      }
+
+      drawSatellite(sx, y, layer, dim);
+
+      // beat count, a ruler column beside the sun
+      g2d.fillStyle = rgba(layer.color, 0.85 * dim);
+      g2d.font = '10px "IBM Plex Mono", monospace';
+      g2d.textAlign = 'right';
+      g2d.textBaseline = 'middle';
+      g2d.fillText(layer.beats, geo.x0 - 14, y);
+    });
+
+    drawRipples(now, geo.starCx, geo.cy, geo.xEnd - geo.starCx + 30);
+  }
+
+  function draw() {
+    requestAnimationFrame(draw);
+    const now = audio.ctx ? audio.ctx.currentTime : 0;
+    consumeHits(now);
+
+    g2d.setTransform(dpr, 0, 0, dpr, 0, 0);
+    g2d.clearRect(0, 0, W, H);
+
+    // starfield
+    g2d.fillStyle = '#e9eef7';
+    for (const s of stars) {
+      g2d.globalAlpha = s.a;
+      g2d.beginPath();
+      g2d.arc(s.x, s.y, s.r, 0, 7);
+      g2d.fill();
     }
+    g2d.globalAlpha = 1;
+
+    let phase = 0;
+    if (state.started) {
+      phase = ((now - state.phase0) / cycleLen()) % 1;
+      if (phase < 0) phase += 1;
+    }
+
+    if (state.view === 'linear') renderLinear(now, phase);
+    else renderOrbits(now, phase);
   }
 
   // ---------------- init ----------------
@@ -639,5 +777,8 @@
   addLayer({ beats: 3, sound: 'wood', level: 85 });
   addLayer({ beats: 4, sound: 'drum', level: 75 });
   syncRack();
+  let savedView = 'orbit';
+  try { savedView = localStorage.getItem('polyrhythm-view') || 'orbit'; } catch (e) { /* private mode */ }
+  setView(savedView === 'linear' ? 'linear' : 'orbit');
   requestAnimationFrame(draw);
 })();
