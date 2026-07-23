@@ -8,7 +8,7 @@
 
   // ---------------- constants ----------------
 
-  const PALETTE = ['#f4c15d', '#62cdbb', '#e4785a', '#a08bf5', '#e183a8', '#6faee3'];
+  const PALETTE = ['#f4c15d', '#62cdbb', '#e4785a', '#a08bf5', '#e183a8', '#6faee3', '#7ddb7d', '#d78ce6'];
   const SOUNDS = [
     ['click', 'Click'],
     ['wood', 'Woodblock'],
@@ -24,8 +24,8 @@
     ['bell', 'Bell'],
     ['sonar', 'Sonar'],
   ];
-  const NEW_BEATS = [5, 7, 2, 6, 8, 9];
-  const MAX_LAYERS = 6;
+  const NEW_BEATS = [5, 7, 2, 6, 8, 9, 10, 11];
+  const MAX_LAYERS = 8;
   const MAX_BEATS = 16;
   const HORIZON = 0.12;   // s scheduled ahead
   const TICK = 25;        // ms scheduler interval
@@ -484,24 +484,30 @@
     return n === 1 ? (geo.rMin + geo.rMax) / 2 : geo.rMin + ((geo.rMax - geo.rMin) * i) / (n - 1);
   }
 
-  // linear-view geometry: the sun sits at the left, paths stream to the right.
-  // starCx must mirror the CSS that positions the star button in linear view.
+  // linear-view geometry: paths span nearly the full width. The play button
+  // sits at bottom-center (see `.view-linear .star` in CSS), so padBot
+  // reserves a band above it that the paths never enter.
   const mobileMQ = window.matchMedia('(max-width: 880px)');
 
   function laneGeometry() {
-    const starCx = mobileMQ.matches ? 48 : 64;
+    const m = mobileMQ.matches;
+    const padTop = 30;
+    const padBot = m ? 92 : 100; // clears the bottom-center play button
     return {
-      starCx,
-      cy: H / 2,
-      x0: starCx + 54,
-      xEnd: W - (mobileMQ.matches ? 20 : 32),
+      x0: m ? 40 : 44,          // left pad for the beat-count ruler
+      xEnd: W - (m ? 20 : 28),
+      padTop,
+      padBot,
+      midY: (padTop + (H - padBot)) / 2,
     };
   }
 
   function laneY(i, n) {
-    if (n === 1) return H / 2;
-    const gap = Math.max(24, Math.min(64, (H - 100) / (n - 1)));
-    return H / 2 - (gap * (n - 1)) / 2 + gap * i;
+    const geo = laneGeometry();
+    if (n === 1) return geo.midY;
+    const span = (H - geo.padBot) - geo.padTop;
+    const gap = Math.min(64, span / (n - 1));
+    return geo.midY - (gap * (n - 1)) / 2 + gap * i;
   }
 
   // clicking a layer's orbit or path (ring, nodes or satellite) mutes / unmutes it
@@ -676,13 +682,11 @@
     drawRipples(now, cx, cy, geo.rMax + 30);
   }
 
-  // --- linear view: paths stream out of the sun at the left ---
+  // --- linear view: rhythms unroll into stacked flight paths ---
 
   function renderLinear(now, phase) {
     const geo = laneGeometry();
     const n = state.layers.length;
-
-    drawHalo(geo.starCx, geo.cy);
 
     if (n) {
       // cycle boundary ticks: the right edge is the same instant as the left
@@ -733,15 +737,16 @@
 
       drawSatellite(sx, y, layer, dim);
 
-      // beat count, a ruler column beside the sun
+      // beat count, a ruler column at the path origin
       g2d.fillStyle = rgba(layer.color, 0.85 * dim);
       g2d.font = '10px "IBM Plex Mono", monospace';
       g2d.textAlign = 'right';
       g2d.textBaseline = 'middle';
-      g2d.fillText(layer.beats, geo.x0 - 14, y);
+      g2d.fillText(layer.beats, geo.x0 - 12, y);
     });
 
-    drawRipples(now, geo.starCx, geo.cy, geo.xEnd - geo.starCx + 30);
+    // coincidence pulse from the left origin, where downbeats align
+    drawRipples(now, geo.x0, geo.midY, geo.xEnd - geo.x0 + 30);
   }
 
   function draw() {

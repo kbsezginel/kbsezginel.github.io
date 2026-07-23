@@ -143,15 +143,15 @@ input[type="range"] {
   box-shadow:
     0 0 22px rgba(244, 193, 93, 0.35),
     0 0 70px rgba(244, 193, 93, 0.12);
-  transition: box-shadow 0.4s, transform 0.2s, left 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.4s, transform 0.2s, top 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* linear view: the sun moves to the left edge, paths stream out of it.
-   These left values must mirror starCx in the script's laneGeometry(). */
-body.view-linear .star { left: 64px; }
-
-@media (max-width: 880px) {
-  body.view-linear .star { left: 48px; }
+/* linear view: the sun slides straight down to bottom-center, out of the
+   horizontal path corridor. Only `top` changes (left and the centering
+   margin stay), so the move animates as a clean vertical glide. The reserved
+   band (padBot in laneGeometry) keeps paths from running under it. */
+body.view-linear .star {
+  top: calc(100% - 54px);
 }
 
 @media (hover: hover) {
