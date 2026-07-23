@@ -27,6 +27,7 @@
   const NEW_BEATS = [5, 7, 2, 6, 8, 9, 10, 11];
   const MAX_LAYERS = 8;
   const MAX_BEATS = 16;
+  const GRID_MAX_ALPHA = 0.5; // line alpha when grid visibility is at 100%
   const HORIZON = 0.12;   // s scheduled ahead
   const TICK = 25;        // ms scheduler interval
 
@@ -38,6 +39,8 @@
   const state = {
     bpm: 90,
     view: 'orbit',    // 'orbit' | 'linear'
+    grid: false,      // beat-position markers, off by default
+    gridOpacity: 0.5, // visibility level of the grid lines (0..1)
     started: false,   // has the transport ever run
     playing: false,
     phase0: 0,        // audio-clock time at cycle position 0
@@ -264,7 +267,6 @@
 
   const layersEl = document.getElementById('layers');
   const addBtn = document.getElementById('addBtn');
-  const ratioEl = document.getElementById('ratioVal');
   const periodEl = document.getElementById('periodVal');
   const bpmRange = document.getElementById('bpmRange');
   const bpmVal = document.getElementById('bpmVal');
@@ -281,14 +283,18 @@
     };
   }
 
+  const DEFAULT_LEVEL = 70;
+  const SOUND_LEVELS = { click: 49 }; // click reads louder than the rest; start it 30% lower
+
   function addLayer(opts = {}) {
     if (state.layers.length >= MAX_LAYERS) return;
     const def = nextDefault();
+    const sound = opts.sound ?? def.sound;
     const layer = {
       id: layerSeq++,
       beats: opts.beats ?? def.beats,
-      sound: opts.sound ?? def.sound,
-      level: opts.level ?? 70,
+      sound,
+      level: opts.level ?? SOUND_LEVELS[sound] ?? DEFAULT_LEVEL,
       color: opts.color ?? def.color,
       muted: false,
       step: 0,
@@ -384,11 +390,6 @@
   }
 
   function syncRack() {
-    ratioEl.innerHTML = state.layers.length
-      ? state.layers
-          .map((l) => (l.muted ? '<span class="dim">' + l.beats + '</span>' : l.beats))
-          .join(' : ')
-      : '&mdash;';
     periodEl.textContent = cycleLen().toFixed(2) + ' s';
     addBtn.disabled = state.layers.length >= MAX_LAYERS;
     let empty = layersEl.querySelector('.rack__empty');
@@ -421,6 +422,45 @@
 
   viewButtons.orbit.addEventListener('click', () => setView('orbit'));
   viewButtons.linear.addEventListener('click', () => setView('linear'));
+
+  // --- beat-position grid control: tap toggles on/off, drag sets visibility ---
+
+  const gridBtn = document.getElementById('gridToggle');
+
+  function reflectGrid() {
+    gridBtn.setAttribute('aria-pressed', String(state.grid));
+    gridBtn.style.setProperty('--vis', (state.gridOpacity * 100).toFixed(1) + '%');
+  }
+
+  let gDown = false, gMoved = false, gStartX = 0;
+
+  gridBtn.addEventListener('pointerdown', (e) => {
+    gDown = true;
+    gMoved = false;
+    gStartX = e.clientX;
+    gridBtn.setPointerCapture(e.pointerId);
+  });
+
+  gridBtn.addEventListener('pointermove', (e) => {
+    if (!gDown) return;
+    if (Math.abs(e.clientX - gStartX) > 4) gMoved = true;
+    if (!gMoved) return;
+    const rect = gridBtn.getBoundingClientRect();
+    state.gridOpacity = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+    if (!state.grid) state.grid = true; // sliding implies on
+    reflectGrid();
+  });
+
+  function endGridPointer(e) {
+    if (!gDown) return;
+    gDown = false;
+    if (gridBtn.hasPointerCapture(e.pointerId)) gridBtn.releasePointerCapture(e.pointerId);
+    if (!gMoved) { state.grid = !state.grid; reflectGrid(); } // a tap toggles
+  }
+  gridBtn.addEventListener('pointerup', endGridPointer);
+  gridBtn.addEventListener('pointercancel', (e) => { gDown = false; });
+
+  reflectGrid();
 
   bpmRange.addEventListener('input', (e) => {
     const newBpm = +e.target.value;
@@ -568,6 +608,11 @@
     return 0;
   }
 
+  // grid-line alpha for a rhythm: visibility slider, dimmed if muted
+  function gridAlpha(layer) {
+    return state.gridOpacity * GRID_MAX_ALPHA * (layer.muted ? 0.3 : 1);
+  }
+
   // glow = layered translucent discs; shadowBlur is too slow on mobile
   function drawNode(x, y, layer, k, f, dim) {
     const base = k === 0 ? 4 : 3;
@@ -641,6 +686,22 @@
 
     drawHalo(cx, cy);
 
+    // beat-position grid: radial spokes at each rhythm's beat angles, in its color
+    if (state.grid && state.gridOpacity > 0 && n) {
+      g2d.lineWidth = 1;
+      const rInner = 28;
+      state.layers.forEach((layer) => {
+        g2d.strokeStyle = rgba(layer.color, gridAlpha(layer));
+        for (let k = 0; k < layer.beats; k++) {
+          const a = -Math.PI / 2 + (k / layer.beats) * 2 * Math.PI;
+          g2d.beginPath();
+          g2d.moveTo(cx + rInner * Math.cos(a), cy + rInner * Math.sin(a));
+          g2d.lineTo(cx + geo.rMax * Math.cos(a), cy + geo.rMax * Math.sin(a));
+          g2d.stroke();
+        }
+      });
+    }
+
     state.layers.forEach((layer, i) => {
       const r = orbitRadius(i, n, geo);
       const dim = layer.muted ? 0.3 : 1; // muted orbits recede but keep moving
@@ -689,9 +750,25 @@
     const n = state.layers.length;
 
     if (n) {
-      // cycle boundary ticks: the right edge is the same instant as the left
       const yTop = laneY(0, n) - 16;
       const yBot = laneY(n - 1, n) + 16;
+
+      // beat-position grid: vertical lines at each rhythm's beat positions, in its color
+      if (state.grid && state.gridOpacity > 0) {
+        g2d.lineWidth = 1;
+        state.layers.forEach((layer) => {
+          g2d.strokeStyle = rgba(layer.color, gridAlpha(layer));
+          for (let k = 0; k < layer.beats; k++) {
+            const x = geo.x0 + ((geo.xEnd - geo.x0) * k) / layer.beats;
+            g2d.beginPath();
+            g2d.moveTo(x, yTop);
+            g2d.lineTo(x, yBot);
+            g2d.stroke();
+          }
+        });
+      }
+
+      // cycle boundary ticks: the right edge is the same instant as the left
       g2d.strokeStyle = 'rgba(143,163,191,0.15)';
       g2d.lineWidth = 1;
       for (const x of [geo.x0, geo.xEnd]) {

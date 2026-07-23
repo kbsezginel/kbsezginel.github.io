@@ -30,9 +30,7 @@ categories: pages
         <svg class="star__icon star__icon--play" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8 5.5v13l11-6.5z"/>
         </svg>
-        <svg class="star__icon star__icon--pause" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7.5 5h3.4v14H7.5zM13.1 5h3.4v14h-3.4z"/>
-        </svg>
+        <span class="star__icon--pause star__moon" aria-hidden="true">月</span>
       </button>
     </main>
 
@@ -46,17 +44,21 @@ categories: pages
       </header>
 
       <section class="rack__block">
-        <h2 class="rack__label">Tempo</h2>
         <div class="tempo__readout">
-          <span id="bpmVal" class="tempo__value">90</span>
-          <span class="tempo__unit">bpm</span>
+          <h2 class="rack__label tempo__title">Tempo</h2>
+          <span class="tempo__main">
+            <span id="bpmVal" class="tempo__value">90</span>
+            <span class="tempo__unit">bpm</span>
+          </span>
           <span id="periodVal" class="tempo__period">2.67 s</span>
         </div>
         <input id="bpmRange" type="range" min="30" max="220" step="1" value="90"
                aria-label="Tempo in beats per minute">
-        <dl class="facts">
-          <div class="facts__row"><dt>ratio</dt><dd id="ratioVal">3 : 4</dd></div>
-        </dl>
+        <button id="gridToggle" class="gridtoggle" type="button" role="switch"
+                aria-pressed="false" aria-label="Beat grid visibility (tap to toggle, drag to adjust)">
+          <span class="gridtoggle__base">Beat grid</span>
+          <span class="gridtoggle__lit" aria-hidden="true">Beat grid</span>
+        </button>
       </section>
 
       <section class="rack__block">
