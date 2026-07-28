@@ -1,0 +1,272 @@
+# =============================================================================
+#  Live shows  ->  https://kut.ai/live/
+# =============================================================================
+#
+#  TO ADD A SHOW, run ./add-show from the repo root, or add a block by hand at
+#  the bottom of the `shows:` list. Order does not matter, the page sorts.
+#
+#      - date: 2026-08-14
+#        act: Makamscape
+#        venue: Rhizome, Takoma Park DC
+#
+#  Only `date`, `act` and `venue` are required. Optional fields:
+#
+#        event: Subscape        the night or bill, set above the act name
+#        time: 8:00 PM          shown next to the venue
+#        tickets: https://...   adds a "Tickets" link to the card
+#        kind: dj set           tags the card (show is the default, no tag)
+#        note: Album release    one short line under the venue
+#
+#  A new act needs no setup, it gets a color automatically. Add it to `acts:`
+#  below only if you want to pick the color or link it to its own page.
+#
+#  Venue names link to Google Maps automatically, searched on "Venue, City".
+#  Only add a venue to `venues:` if that search lands in the wrong place.
+#
+# =============================================================================
+
+# Colors: rose, amber, azure, jade, violet, copper
+acts:
+  Orchester Praževica:
+    color: rose
+    url: http://prazevica.com/
+  Makamscape:
+    color: amber
+    url: /music/makamscape/
+  Yeden:
+    color: azure
+    url: /music/yeden/
+  DJ Dolma:
+    color: jade
+    url: /music/dj-dolma/
+  Meshk:
+    color: copper
+    url: /music/meshk/
+  Music for Yoga:
+    color: violet
+    url: /music/yoga/
+  Sound Bath:
+    color: violet
+  Zelzeleh:
+    color: copper
+  DC Saba:
+    color: copper
+  Halfacopter:
+    color: azure
+  Şahin:
+    color: violet
+
+# Optional. Every venue already links to a Google Maps search for
+# "Venue, City" — list one here only to pin an exact place instead.
+venues:
+  Soulage: https://maps.app.goo.gl/9J6q5C3zSNNqSkXN8
+
+shows:
+  - date: 2025-01-05
+    act: Orchester Praževica
+    venue: New Deal Cafe, Greenbelt MD
+
+  - date: 2025-01-26
+    act: Meshk
+    venue: Syriana Cafe, Ellicott City MD
+
+  - date: 2025-02-14
+    act: Orchester Praževica
+    venue: Madam's Organ, Washington DC
+
+  - date: 2025-02-20
+    act: Halfacopter
+    venue: Wine Collective, Baltimore MD
+    time: 6:30 PM
+    note: Middle Eastern Music Night
+
+  - date: 2025-02-23
+    act: Music for Yoga
+    venue: Soulage, Baltimore MD
+    time: 6:00 PM
+    kind: yoga
+    note: "Music, Movement, Mind: Dynamic Flow"
+    tickets: https://momence.com/Christen--Schritter/Music%2C-Movement%2C-Mind-Series%3A-Dynamic-Flow/112357019?skipPreview=true
+
+  - date: 2025-03-05
+    act: Sound Bath
+    venue: ALX Community Atrium, Alexandria VA
+    kind: sound bath
+    tickets: https://www.eventbrite.com/e/sound-bath-with-karen-reisdorf-tickets-1237510510249
+
+  - date: 2025-03-08
+    act: Yeden
+    venue: Bossa, Washington DC
+
+  - date: 2025-03-29
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2025-04-16
+    act: Makamscape
+    venue: Rhizome, Washington DC
+
+  - date: 2025-04-26
+    act: Orchester Praževica
+    venue: Madam's Organ, Washington DC
+
+  - date: 2025-05-24
+    act: Yeden
+    venue: Bossa, Washington DC
+
+  - date: 2025-05-29
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2025-05-30
+    act: Orchester Praževica
+    venue: Madam's Organ, Washington DC
+
+  - date: 2025-05-31
+    act: Makamscape
+    venue: Epicure, Alexandria VA
+
+  - date: 2025-05-31
+    act: Man, Myth and Magick
+    venue: Epicure, Alexandria VA
+
+  - date: 2025-06-07
+    act: Orchester Praževica
+    venue: Hampden Festival, Baltimore MD
+
+  - date: 2025-06-12
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2025-06-16
+    act: Open Mic
+    venue: Epicure, Alexandria VA
+
+  - date: 2025-06-27
+    act: Makamscape
+    venue: Le Mondo, Baltimore MD
+
+  - date: 2025-06-29
+    act: Orchester Praževica
+    venue: Bossa, Washington DC
+
+  - date: 2025-09-12
+    act: Orchester Praževica
+    venue: Madam's Organ, Washington DC
+
+  - date: 2025-09-12
+    act: Orchester Praževica
+    venue: DC Brau, Washington DC
+
+  - date: 2025-09-24
+    act: Live Music + Painting Improvisation
+    venue: Bossa, Washington DC
+
+  - date: 2025-11-11
+    act: Zelzeleh
+    venue: University of Salisbury, Salisbury MD
+    kind: workshop
+
+  - date: 2025-12-04
+    act: DC Saba
+    venue: Epicure, Alexandria VA
+
+  - date: 2025-12-04
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2025-12-08
+    act: Makamscape
+    venue: Rhizome, Washington DC
+
+  - date: 2026-01-08
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-01-11
+    act: Orchester Praževica
+    venue: Secreto de Rosita, Washington DC
+
+  - date: 2026-02-05
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-03-05
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-04-02
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-05-07
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-05-12
+    act: Şahin
+    venue: Holy Frijoles, Baltimore MD
+    kind: band
+
+  - date: 2026-05-14
+    act: Şahin
+    venue: Mobtown Ballroom, Baltimore MD
+    event: Dil Dil Desi
+    kind: band
+
+  - date: 2026-06-04
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-06-18
+    act: Makamscape
+    venue: Songbyrd, Washington DC
+    event: Derya Yıldırım & Grup Şimşek
+
+  - date: 2026-06-30
+    act: Makamscape
+    venue: Rhizome, Washington DC
+    event: Kutay Sezginel + TEIKU
+    kind: solo
+
+  - date: 2026-07-02
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-07-15
+    act: Makamscape
+    venue: Zissimos, Baltimore MD
+    kind: dj set
+
+  - date: 2026-07-19
+    act: Şahin
+    venue: Holy Frijoles, Baltimore MD
+    event: Holy Frijoles 30th Birthday
+    kind: band
+
+  - date: 2026-08-06
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set
+
+  - date: 2026-08-28
+    act: Şahin
+    venue: Current Space, Baltimore MD
+    event: Subscape
+    kind: band
+
+  - date: 2026-09-03
+    act: DJ Dolma
+    venue: Green Zone, Washington DC
+    kind: dj set

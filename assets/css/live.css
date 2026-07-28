@@ -1,0 +1,759 @@
+/* =============================================================================
+   Live calendar  —  /live/
+   A gigging year read as a rhythm score: struck days, quiet days.
+   ========================================================================== */
+
+.live {
+  --ink:    #161a22;
+  --slate:  #1e232c;
+  --raise:  #262c37;
+  --line:   #333b49;
+  --bone:   #e9ecf1;
+  --muted:  #8b94a5;
+  --faint:  #545d6d;
+  --teal:   #00adb5;
+
+  --rose:   #f2668b;
+  --amber:  #e8b341;
+  --azure:  #5ab4e8;
+  --jade:   #4fcfa0;
+  --violet: #a882f5;
+  --copper: #e8874a;
+
+  --act: var(--teal);
+
+  --gap: 1.5rem;
+  --radius: 3px;
+
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--bone);
+  background: var(--ink);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 4vw, 2.5rem) 5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keep minimal-mistakes' base styles out of here. */
+.live ul,
+.live ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.live li {
+  margin: 0;
+  font-size: inherit;
+}
+.live button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.live a {
+  color: inherit;
+  text-decoration: none;
+}
+.live h1,
+.live h2,
+.live h3,
+.live p {
+  margin: 0;
+}
+.live :focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Several containers here set `display`, which would otherwise beat the user
+   agent's `[hidden] { display: none }`. */
+.live [hidden] {
+  display: none !important;
+}
+
+/* --- Masthead -------------------------------------------------------------- */
+
+.live__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem var(--gap);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.live__title {
+  font-family: Marcellus, Georgia, serif;
+  font-size: clamp(2.75rem, 9vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-indent: 0.16em; /* balance the trailing letter-space */
+  color: var(--bone);
+}
+
+.live__sub {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 34ch;
+}
+
+/* --- Act filters ----------------------------------------------------------- */
+
+.live__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-width: 46rem;
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--slate);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.filter::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--act);
+  flex: none;
+  transition: box-shadow 0.15s;
+}
+
+.filter--all::before {
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--faint);
+}
+
+.filter:hover {
+  color: var(--bone);
+  background: var(--raise);
+}
+
+.filter[aria-pressed="true"] {
+  color: var(--bone);
+  background: var(--raise);
+  border-color: color-mix(in srgb, var(--act) 45%, transparent);
+}
+
+.filter[aria-pressed="true"]::before {
+  box-shadow: 0 0 8px var(--act);
+}
+
+.filter--all[aria-pressed="true"] {
+  border-color: var(--line);
+}
+.filter--all[aria-pressed="true"]::before {
+  box-shadow: inset 0 0 0 3px var(--bone);
+}
+
+.filter__n {
+  color: var(--faint);
+  font-size: 0.62rem;
+}
+
+/* --- Year strip: the signature --------------------------------------------- */
+/*  Twelve months of the year as struck and unstruck beats.                     */
+
+.year {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.year__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: none;
+}
+
+.year__arrow {
+  width: 1.4rem;
+  height: 1.4rem;
+  line-height: 1;
+  font-size: 1rem;
+  color: var(--faint);
+  transition: color 0.15s;
+}
+.year__arrow:hover:not(:disabled) {
+  color: var(--bone);
+}
+.year__arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.year__label {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  color: var(--bone);
+  min-width: 3.5ch;
+  text-align: center;
+}
+
+.year__months {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.5rem 0.15rem 0.4rem;
+  border-radius: var(--radius);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.month:hover {
+  background: var(--slate);
+}
+
+.month[aria-current="true"] {
+  background: var(--slate);
+  border-bottom-color: var(--teal);
+}
+
+.month__beats {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  height: 22px;
+  width: 100%;
+}
+
+/* One stroke per show, in the act's color. */
+.month__beat {
+  flex: 0 1 3px;
+  min-width: 1px;
+  border-radius: 1px;
+  background: var(--act);
+  height: 100%;
+  opacity: 0.85;
+}
+
+.month__rest {
+  width: 8px;
+  height: 1px;
+  background: var(--faint);
+  align-self: center;
+  opacity: 0.6;
+}
+
+.month__name {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  transition: color 0.15s;
+}
+
+.month:hover .month__name,
+.month[aria-current="true"] .month__name {
+  color: var(--bone);
+}
+
+/* --- Two-up body ----------------------------------------------------------- */
+
+.live__body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+/* --- Month calendar -------------------------------------------------------- */
+
+.cal {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.cal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.cal__month {
+  font-family: Marcellus, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone);
+  text-align: center;
+}
+
+.cal__arrow {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--faint);
+  border-radius: var(--radius);
+  transition: color 0.15s, background 0.15s;
+}
+.cal__arrow:hover {
+  color: var(--bone);
+  background: var(--slate);
+}
+
+.cal__dows,
+.cal__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+}
+
+.cal__dows {
+  margin-bottom: 0.4rem;
+}
+
+.cal__dow {
+  text-align: center;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+  padding-bottom: 0.4rem;
+}
+
+.day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  aspect-ratio: 1;
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: var(--radius);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.78rem;
+  color: var(--faint);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: default;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.day--pad {
+  visibility: hidden;
+}
+
+.day--has {
+  color: var(--bone);
+  font-weight: 600;
+  background: var(--raise);
+  box-shadow: inset 0 0 0 1px var(--line);
+  cursor: pointer;
+}
+
+.day--has:hover {
+  background: color-mix(in srgb, var(--act) 14%, var(--raise));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--act) 45%, transparent);
+}
+
+.day--today {
+  border-color: color-mix(in srgb, var(--teal) 55%, transparent);
+  color: var(--teal);
+}
+
+.day--selected {
+  background: var(--raise);
+  border-color: color-mix(in srgb, var(--bone) 35%, transparent);
+}
+
+.day__n {
+  line-height: 1;
+}
+
+.day__beats {
+  display: flex;
+  gap: 3px;
+  height: 5px;
+  align-items: center;
+}
+
+.day__beat {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--act);
+  box-shadow: 0 0 7px color-mix(in srgb, var(--act) 70%, transparent);
+}
+
+/* Days filtered out by an act filter fade back to rests. */
+.day--muted {
+  color: var(--faint);
+  font-weight: 400;
+  background: transparent;
+  box-shadow: none;
+}
+.day--muted:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.day--muted .day__beat {
+  opacity: 0.18;
+  box-shadow: none;
+}
+
+/* --- Listings -------------------------------------------------------------- */
+
+.list__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.list__title {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bone);
+}
+
+.list__count {
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.show {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 0 1.1rem;
+  padding: 1rem 1rem 1rem 0.9rem;
+  background: var(--slate);
+  border-radius: var(--radius);
+  border-left: 2px solid var(--act);
+  transition: background 0.15s;
+}
+
+.show:hover {
+  background: var(--raise);
+}
+
+.show--past {
+  border-left-color: color-mix(in srgb, var(--act) 40%, transparent);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.show--past:hover {
+  background: var(--slate);
+}
+
+.show__when {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  padding-right: 1.1rem;
+  border-right: 1px solid var(--line);
+  grid-row: span 2;
+}
+
+.show__mon {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--act);
+}
+
+.show__day {
+  font-family: Marcellus, Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--bone);
+}
+
+.show__dow {
+  font-size: 0.56rem;
+  letter-spacing: 0.11em;
+  color: var(--faint);
+}
+
+.show__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  justify-content: center;
+}
+
+.show__act {
+  font-family: Marcellus, Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  color: var(--bone);
+}
+
+a.show__act:hover {
+  color: var(--act);
+}
+
+.show__kind {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  vertical-align: 0.3em;
+  color: var(--act);
+  border: 1px solid color-mix(in srgb, var(--act) 40%, transparent);
+  border-radius: 2px;
+}
+
+/* The night or bill a show sits inside, set above the act as an eyebrow. */
+.show__event {
+  font-size: 0.6rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+
+.show__where {
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+a.show__venue {
+  color: var(--bone);
+  border-bottom: 1px dotted color-mix(in srgb, var(--muted) 60%, transparent);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+a.show__venue:hover {
+  color: var(--act);
+  border-bottom-color: var(--act);
+}
+
+.show__pin {
+  width: 0.68em;
+  height: 0.68em;
+  margin-left: 0.32em;
+  fill: currentColor;
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+
+a.show__venue:hover .show__pin {
+  opacity: 1;
+}
+
+.show__sep {
+  color: var(--faint);
+  padding: 0 0.4rem;
+}
+
+.show__note {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--faint);
+}
+
+.show__tickets {
+  align-self: flex-start;
+  margin-top: 0.35rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--act);
+  border-bottom: 1px solid color-mix(in srgb, var(--act) 35%, transparent);
+  padding-bottom: 1px;
+  transition: border-color 0.15s;
+}
+.show__tickets:hover {
+  border-bottom-color: var(--act);
+}
+
+/* --- Empty state & past toggle --------------------------------------------- */
+
+.list__empty {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.list__empty p {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.list__empty strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: Marcellus, Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--bone);
+  letter-spacing: 0.02em;
+}
+
+.list__past {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+  transition: color 0.15s;
+}
+
+.list__past::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.list__past:hover {
+  color: var(--bone);
+}
+
+.list__items--past {
+  margin-top: 1rem;
+}
+
+/* --- Motion ---------------------------------------------------------------- */
+
+.show {
+  animation: show-in 0.4s cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+}
+
+@keyframes show-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.show--flash {
+  animation: flash 1.1s ease-out;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  15% {
+    box-shadow: 0 0 0 1px var(--act), 0 0 18px -2px var(--act);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live *,
+  .live *::before,
+  .live *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Responsive ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .live__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* Full width would blow the day cells up to ~120px squares on a tablet. */
+  .cal {
+    position: static;
+    max-width: 25rem;
+  }
+  .cal__grid .day {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .year {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .year__nav {
+    justify-content: flex-start;
+  }
+  .year__months {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 3px;
+  }
+  .live__filters {
+    max-width: none;
+  }
+  .show {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 0 0.85rem;
+    padding: 0.85rem 0.85rem 0.85rem 0.75rem;
+  }
+  .show__when {
+    padding-right: 0.85rem;
+  }
+  .show__day {
+    font-size: 1.5rem;
+  }
+  .show__act {
+    font-size: 1.1rem;
+  }
+}

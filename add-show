@@ -1,0 +1,430 @@
+#!/usr/bin/env python3
+"""Add a show to _data/live.yml.
+
+Interactive:
+    ./add-show
+
+Or all at once:
+    ./add-show --date "aug 14" --act makamscape --venue "Rhizome, Takoma Park DC" --time 8pm
+
+Dates are forgiving: 2026-08-14, aug 14, 14 aug, 8/14, friday, tomorrow. With no
+year, it picks the next time that date comes around.
+"""
+
+import argparse
+import datetime as dt
+import difflib
+import os
+import re
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+LIVE_YML = os.path.join(HERE, "_data", "live.yml")
+
+COLORS = ["rose", "amber", "azure", "jade", "violet", "copper"]
+
+MONTHS = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday",
+            "friday", "saturday", "sunday"]
+
+TTY = sys.stdout.isatty()
+
+
+def paint(text, code):
+    return "\033[%sm%s\033[0m" % (code, text) if TTY else text
+
+
+dim = lambda s: paint(s, "2")
+bold = lambda s: paint(s, "1")
+green = lambda s: paint(s, "32")
+red = lambda s: paint(s, "31")
+cyan = lambda s: paint(s, "36")
+
+
+def die(msg):
+    print(red("  ✗ " + msg))
+    sys.exit(1)
+
+
+# --------------------------------------------------------------------------
+# Reading what's already there
+# --------------------------------------------------------------------------
+
+def read_yml():
+    if not os.path.exists(LIVE_YML):
+        die("no _data/live.yml at %s" % LIVE_YML)
+    with open(LIVE_YML, encoding="utf-8") as fh:
+        return fh.read()
+
+
+TOP_KEY = re.compile(r"^[A-Za-z_][\w-]*:")
+
+
+def split_sections(text):
+    """Return (lines, acts_start, acts_end, shows_start).
+
+    `shows:` has to be the last top-level key so new entries can be appended.
+    Other sections (`venues:`) may sit between `acts:` and `shows:`, so the
+    acts block ends at the next top-level key, not at `shows:`.
+    """
+    lines = text.splitlines()
+    acts_start = shows_start = None
+    for i, line in enumerate(lines):
+        if re.match(r"^acts:\s*$", line):
+            acts_start = i
+        elif re.match(r"^shows:\s*$", line):
+            shows_start = i
+    if shows_start is None:
+        die("_data/live.yml has no top-level `shows:` list")
+    for line in lines[shows_start + 1:]:
+        if TOP_KEY.match(line):
+            die("`shows:` must be the last section in _data/live.yml")
+
+    acts_end = None
+    if acts_start is not None:
+        acts_end = len(lines)
+        for i in range(acts_start + 1, len(lines)):
+            if TOP_KEY.match(lines[i]):
+                acts_end = i
+                break
+    return lines, acts_start, acts_end, shows_start
+
+
+def known_acts(lines, acts_start, acts_end, shows_start):
+    """Acts from the registry plus any act already used by a show."""
+    acts = []
+    if acts_start is not None:
+        for line in lines[acts_start + 1:acts_end]:
+            m = re.match(r"^  ([^\s#][^:]*):\s*$", line)
+            if m:
+                acts.append(m.group(1).strip().strip("'\""))
+    for line in lines[shows_start + 1:]:
+        m = re.match(r"^\s*act:\s*(.+?)\s*$", line)
+        if m:
+            a = m.group(1).strip().strip("'\"")
+            if a not in acts:
+                acts.append(a)
+    return acts
+
+
+def last_venue_for(lines, shows_start, act):
+    """The venue this act played most recently, used as the default."""
+    venue = None
+    cur_act = None
+    for line in lines[shows_start + 1:]:
+        m = re.match(r"^\s*act:\s*(.+?)\s*$", line)
+        if m:
+            cur_act = m.group(1).strip().strip("'\"")
+            continue
+        m = re.match(r"^\s*venue:\s*(.+?)\s*$", line)
+        if m and cur_act == act:
+            venue = m.group(1).strip().strip("'\"")
+    return venue
+
+
+def existing_dates(lines, shows_start):
+    return {
+        m.group(1)
+        for line in lines[shows_start + 1:]
+        for m in [re.match(r"^\s*-?\s*date:\s*(\S+)", line)]
+        if m
+    }
+
+
+# --------------------------------------------------------------------------
+# Parsing input
+# --------------------------------------------------------------------------
+
+def parse_date(raw, today=None):
+    """Turn loose text into a date. Undated years roll forward."""
+    today = today or dt.date.today()
+    s = raw.strip().lower()
+    if not s:
+        return None
+
+    if s == "today":
+        return today
+    if s == "tomorrow":
+        return today + dt.timedelta(days=1)
+
+    for i, name in enumerate(WEEKDAYS):
+        if s in (name, name[:3]):
+            ahead = (i - today.weekday()) % 7 or 7
+            return today + dt.timedelta(days=ahead)
+
+    m = re.fullmatch(r"(\d{4})[-/](\d{1,2})[-/](\d{1,2})", s)
+    if m:
+        return safe_date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+
+    m = re.fullmatch(r"(\d{1,2})[/-](\d{1,2})(?:[/-](\d{2,4}))?", s)
+    if m:
+        month, day = int(m.group(1)), int(m.group(2))
+        if m.group(3):
+            year = int(m.group(3))
+            if year < 100:
+                year += 2000
+            return safe_date(year, month, day)
+        return roll_forward(month, day, today)
+
+    # "aug 14", "august 14", "14 aug", "aug 14 2026"
+    m = re.fullmatch(r"([a-z]{3,9})\.?\s+(\d{1,2})(?:,?\s+(\d{4}))?", s)
+    if not m:
+        m2 = re.fullmatch(r"(\d{1,2})\s+([a-z]{3,9})\.?(?:,?\s+(\d{4}))?", s)
+        if m2:
+            m = None
+            mon_key, day = m2.group(2)[:3], int(m2.group(1))
+            year = int(m2.group(3)) if m2.group(3) else None
+        else:
+            return None
+    else:
+        mon_key, day = m.group(1)[:3], int(m.group(2))
+        year = int(m.group(3)) if m.group(3) else None
+
+    if mon_key not in MONTHS:
+        return None
+    month = MONTHS[mon_key]
+    if year:
+        return safe_date(year, month, day)
+    return roll_forward(month, day, today)
+
+
+def safe_date(y, m, d):
+    try:
+        return dt.date(y, m, d)
+    except ValueError:
+        return None
+
+
+def roll_forward(month, day, today):
+    cand = safe_date(today.year, month, day)
+    if cand and cand >= today:
+        return cand
+    return safe_date(today.year + 1, month, day)
+
+
+def parse_time(raw):
+    """Normalise 9pm / 8:30 pm / 20:00 to '8:30 PM'."""
+    s = (raw or "").strip().lower().replace(".", "")
+    if not s:
+        return None
+    m = re.fullmatch(r"(\d{1,2})(?::(\d{2}))?\s*(am|pm)?", s)
+    if not m:
+        return raw.strip()
+    hour = int(m.group(1))
+    minute = int(m.group(2) or 0)
+    ampm = m.group(3)
+    if ampm:
+        if hour == 12:
+            hour = 0 if ampm == "am" else 12
+        elif ampm == "pm":
+            hour += 12
+    elif hour < 8:
+        hour += 12  # a gig at "7" is not 7 in the morning
+    if hour > 23 or minute > 59:
+        return raw.strip()
+    return dt.time(hour, minute).strftime("%-I:%M %p")
+
+
+def match_act(typed, acts):
+    """Case-insensitive prefix / substring / fuzzy match, else take it as new."""
+    t = typed.strip()
+    if not t:
+        return None, False
+    low = t.lower()
+    for a in acts:
+        if a.lower() == low:
+            return a, False
+    hits = [a for a in acts if a.lower().startswith(low)]
+    if len(hits) == 1:
+        return hits[0], False
+    hits = [a for a in acts if low in a.lower()]
+    if len(hits) == 1:
+        return hits[0], False
+    close = difflib.get_close_matches(t, acts, n=1, cutoff=0.75)
+    if close:
+        return close[0], False
+    return t, True
+
+
+# --------------------------------------------------------------------------
+# Writing
+# --------------------------------------------------------------------------
+
+def yaml_scalar(value):
+    """Quote only when YAML would otherwise misread the value."""
+    s = str(value)
+    if s == "":
+        return "''"
+    risky = (
+        ": " in s
+        or s.endswith(":")
+        or s[0] in "-?:,[]{}#&*!|>'\"%@`"
+        or s.strip() != s
+        or re.fullmatch(r"[\d.:]+", s)
+        or s.lower() in ("yes", "no", "true", "false", "null", "on", "off", "~")
+    )
+    if risky:
+        return '"%s"' % s.replace("\\", "\\\\").replace('"', '\\"')
+    return s
+
+
+def build_block(date, act, venue, time=None, kind=None, note=None, tickets=None,
+                event=None):
+    out = ["", "  - date: %s" % date.isoformat(),
+           "    act: %s" % yaml_scalar(act),
+           "    venue: %s" % yaml_scalar(venue)]
+    if event:
+        out.append("    event: %s" % yaml_scalar(event))
+    if time:
+        out.append('    time: "%s"' % time)
+    if kind:
+        out.append("    kind: %s" % yaml_scalar(kind))
+    if note:
+        out.append("    note: %s" % yaml_scalar(note))
+    if tickets:
+        out.append("    tickets: %s" % tickets)
+    return "\n".join(out) + "\n"
+
+
+def build_act_entry(act, color, url=None):
+    out = ["  %s:" % yaml_scalar(act)]
+    if color:
+        out.append("    color: %s" % color)
+    if url:
+        out.append("    url: %s" % url)
+    return "\n".join(out) + "\n"
+
+
+def insert_act(lines, acts_start, acts_end, entry):
+    """Put a new act at the end of the acts registry."""
+    end = acts_end
+    while end > acts_start + 1 and not lines[end - 1].strip():
+        end -= 1
+    new_lines = lines[:end] + entry.rstrip("\n").split("\n") + lines[end:]
+    return "\n".join(new_lines) + "\n"
+
+
+# --------------------------------------------------------------------------
+# Prompting
+# --------------------------------------------------------------------------
+
+def ask(label, default=None, required=False):
+    suffix = dim(" [%s]" % default) if default else ""
+    while True:
+        try:
+            raw = input("  %s%s %s " % (bold(label.ljust(8)), suffix,
+                                        cyan("▸"))).strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n" + dim("  cancelled"))
+            sys.exit(130)
+        if not raw and default is not None:
+            return default
+        if raw or not required:
+            return raw
+        print(dim("        this one is required"))
+
+
+def main():
+    ap = argparse.ArgumentParser(add_help=True, description="Add a show to _data/live.yml")
+    ap.add_argument("--date")
+    ap.add_argument("--act")
+    ap.add_argument("--venue")
+    ap.add_argument("--time")
+    ap.add_argument("--event", help="the night or bill this show is part of")
+    ap.add_argument("--kind")
+    ap.add_argument("--note")
+    ap.add_argument("--tickets")
+    ap.add_argument("--color", choices=COLORS, help="color for a brand-new act")
+    ap.add_argument("--url", help="page to link a brand-new act to")
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+
+    text = read_yml()
+    lines, acts_start, acts_end, shows_start = split_sections(text)
+    acts = known_acts(lines, acts_start, acts_end, shows_start)
+    batch = bool(args.date and args.act and args.venue)
+
+    if not batch:
+        print()
+        print(bold("  Add a show") + dim("  ·  enter to accept a default, ctrl-c to bail"))
+        print()
+
+    # Date
+    raw_date = args.date
+    date = parse_date(raw_date) if raw_date else None
+    while date is None:
+        if raw_date:
+            print(dim("        didn't recognise that date, try 'aug 14' or 2026-08-14"))
+        raw_date = ask("Date", required=True)
+        date = parse_date(raw_date)
+
+    # Act
+    raw_act = args.act or ask("Act", required=True)
+    act, is_new = match_act(raw_act, acts)
+    if not batch and act.lower() != raw_act.lower():
+        print(dim("        → %s" % act))
+
+    # Venue
+    default_venue = None if is_new else last_venue_for(lines, shows_start, act)
+    venue = args.venue or ask("Venue", default=default_venue, required=True)
+
+    # Optional extras
+    if batch:
+        time = parse_time(args.time) if args.time else None
+        kind, note, tickets, event = args.kind, args.note, args.tickets, args.event
+    else:
+        time = parse_time(ask("Time", default=""))
+        event = ask("Event", default="") or None
+        kind = ask("Kind", default="") or None
+        note = ask("Note", default="") or None
+        tickets = ask("Tickets", default="") or None
+
+    color, url = args.color, args.url
+    if is_new and not batch:
+        print()
+        print(dim("        %s is new. Enter for an automatic color." % act))
+        picked = ask("Color", default="")
+        if picked:
+            if picked.lower() not in COLORS:
+                die("color must be one of: %s" % ", ".join(COLORS))
+            color = picked.lower()
+        url = ask("Act page", default="") or None
+
+    block = build_block(date, act, venue, time, kind, note, tickets, event)
+
+    if date.isoformat() in existing_dates(lines, shows_start):
+        print(dim("        note: there's already a show on %s" % date.isoformat()))
+
+    if args.dry_run:
+        print()
+        print(dim("  would append to _data/live.yml:"))
+        print(block.rstrip("\n"))
+        if is_new and (color or url):
+            print(dim("  and register the act:"))
+            print(build_act_entry(act, color, url).rstrip("\n"))
+        return
+
+    out = text
+    if is_new and (color or url) and acts_start is not None:
+        out = insert_act(lines, acts_start, acts_end,
+                         build_act_entry(act, color, url))
+    if not out.endswith("\n"):
+        out += "\n"
+    out += block
+
+    with open(LIVE_YML, "w", encoding="utf-8") as fh:
+        fh.write(out)
+
+    print()
+    print(green("  ✓ ") + "%s — %s, %s" % (
+        date.strftime("%a %b %-d, %Y"), act, venue) +
+        (dim("  ·  " + time) if time else ""))
+    print(dim("    added to _data/live.yml"))
+    print()
+
+
+if __name__ == "__main__":
+    main()

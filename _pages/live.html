@@ -1,50 +1,100 @@
 ---
 layout: full
-title:  "Live"
+title: "Live"
 permalink: /live/
-date:   2025-05-18
+date: 2026-07-28
 categories: pages
+description: "Upcoming live shows and past dates — Orchester Praževica, Makamscape, Yeden, DJ Dolma and more, around DC and Baltimore."
 ---
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Music Calendar</title>
-        <!-- Add the evo-calendar.css for styling -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.3/evo-calendar/css/evo-calendar.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.3/evo-calendar/css/evo-calendar.midnight-blue.css">
-        <style>
-        div {
-            font-family: sans-serif;
-            font-size: 1em;
-        }
 
-          </style>
-    </head>
-    <body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/live.css?v={{ site.time | date: '%s' }}">
 
-        <div id="calendar"></div>
+<div class="live">
 
-        <!-- Add jQuery library (required) -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-        <script src="../assets/js/evo_calendar.js"></script>
+  <header class="live__head">
+    <div>
+      <h1 class="live__title">Live</h1>
+      <p class="live__sub">Where to catch me playing, around DC and Baltimore.</p>
+    </div>
+    <nav class="live__filters" id="filters" aria-label="Filter by act"></nav>
+  </header>
 
-        <script>
-        // initialize your calendar, once the page's DOM is ready
-        $("#calendar").evoCalendar({
-            theme: 'Midnight Blue',
-            todayHighlight: 'true',
-            sidebarDisplayDefault: false,
-            sidebarToggler:	true,
-            eventDisplayDefault: true,
-            eventListToggler: true
-        });
+  <section class="year" aria-label="Shows by month">
+    <div class="year__nav">
+      <button class="year__arrow" id="yearPrev" type="button" aria-label="Previous year">&lsaquo;</button>
+      <span class="year__label" id="yearLabel"></span>
+      <button class="year__arrow" id="yearNext" type="button" aria-label="Next year">&rsaquo;</button>
+    </div>
+    <ol class="year__months" id="yearMonths"></ol>
+  </section>
 
-        $.getJSON('../assets/js/live_events.json', function(data) {
-            for(var i = 0;i < data.length; i++){
-                $("#calendar")[0].evoCalendar.addCalendarEvent([data[i]]);
-            };
-        });
+  <div class="live__body">
 
-        </script>
-    </body>
-</html>
+    <section class="cal" aria-label="Month calendar">
+      <header class="cal__head">
+        <button class="cal__arrow" id="prevMonth" type="button" aria-label="Previous month">&lsaquo;</button>
+        <h2 class="cal__month" id="calMonth"></h2>
+        <button class="cal__arrow" id="nextMonth" type="button" aria-label="Next month">&rsaquo;</button>
+      </header>
+      <div class="cal__dows" aria-hidden="true">
+        <span class="cal__dow">S</span>
+        <span class="cal__dow">M</span>
+        <span class="cal__dow">T</span>
+        <span class="cal__dow">W</span>
+        <span class="cal__dow">T</span>
+        <span class="cal__dow">F</span>
+        <span class="cal__dow">S</span>
+      </div>
+      <div class="cal__grid" id="calGrid"></div>
+    </section>
+
+    <section class="list" aria-label="Show listings">
+      <header class="list__head">
+        <h2 class="list__title" id="listTitle">Upcoming</h2>
+        <span class="list__count" id="listCount"></span>
+      </header>
+      <ol class="list__items" id="listItems"></ol>
+      <div class="list__empty" id="listEmpty" hidden></div>
+      <button class="list__past" id="pastToggle" type="button" aria-expanded="false" hidden></button>
+      <ol class="list__items list__items--past" id="pastItems" hidden></ol>
+    </section>
+
+  </div>
+</div>
+
+{%- comment -%}
+  Emitted field by field rather than with a bare `jsonify` on the whole file, so
+  that YAML dates (Date objects) and plain strings both come out as YYYY-MM-DD.
+{%- endcomment -%}
+<script>
+window.LIVE = {
+  "acts": {
+    {%- for pair in site.data.live.acts -%}
+    {{ pair[0] | jsonify }}: { "color": {{ pair[1].color | jsonify }}, "url": {{ pair[1].url | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  },
+  "venues": {
+    {%- for pair in site.data.live.venues -%}
+    {{ pair[0] | jsonify }}: {{ pair[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  },
+  "shows": [
+    {%- for s in site.data.live.shows -%}
+    {
+      "date": {{ s.date | date: "%Y-%m-%d" | jsonify }},
+      "act": {{ s.act | jsonify }},
+      "venue": {{ s.venue | jsonify }},
+      "event": {{ s.event | jsonify }},
+      "time": {{ s.time | jsonify }},
+      "tickets": {{ s.tickets | jsonify }},
+      "kind": {{ s.kind | jsonify }},
+      "note": {{ s.note | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+};
+</script>
+<script src="/assets/js/live.js?v={{ site.time | date: '%s' }}"></script>
