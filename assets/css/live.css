@@ -34,18 +34,21 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* Keep minimal-mistakes' base styles out of here. */
-.live ul,
-.live ol {
+/* Keep minimal-mistakes' base styles out of here. Wrapped in :where() so the
+   reset contributes no specificity of its own: it still beats the theme's
+   element selectors, but every component rule below beats it. Without this,
+   `.live button` (0,1,1) silently outranks `.filter` (0,1,0) and eats its
+   font-size and padding. */
+.live :where(ul, ol) {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.live li {
+.live :where(li) {
   margin: 0;
   font-size: inherit;
 }
-.live button {
+.live :where(button) {
   font: inherit;
   color: inherit;
   background: none;
@@ -53,14 +56,11 @@
   padding: 0;
   cursor: pointer;
 }
-.live a {
+.live :where(a) {
   color: inherit;
   text-decoration: none;
 }
-.live h1,
-.live h2,
-.live h3,
-.live p {
+.live :where(h1, h2, h3, p) {
   margin: 0;
 }
 .live :focus-visible {
@@ -80,9 +80,9 @@
 .live__head {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: 1.5rem var(--gap);
+  gap: 1rem var(--gap);
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--line);
 }
@@ -98,30 +98,78 @@
   color: var(--bone);
 }
 
-.live__sub {
-  margin-top: 0.85rem;
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: var(--muted);
-  max-width: 34ch;
+/* --- Act filters ----------------------------------------------------------- */
+/*  Collapsed by default: the page is for finding a date, not for browsing
+    the roster, so the filters stay out of the way until asked for.          */
+
+.live__filterwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  min-width: 0;
 }
 
-/* --- Act filters ----------------------------------------------------------- */
+.filtertoggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.26rem 0.5rem;
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.filtertoggle:hover {
+  color: var(--bone);
+  background: var(--slate);
+}
+
+.filtertoggle[aria-expanded="true"] {
+  color: var(--bone);
+  background: var(--slate);
+}
+
+.filtertoggle__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--act);
+  box-shadow: 0 0 7px var(--act);
+  flex: none;
+}
+
+.filtertoggle__chev {
+  width: 0.75em;
+  height: 0.75em;
+  opacity: 0.6;
+  transition: transform 0.18s ease, opacity 0.15s;
+}
+
+.filtertoggle[aria-expanded="true"] .filtertoggle__chev {
+  transform: rotate(180deg);
+  opacity: 1;
+}
 
 .live__filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  max-width: 46rem;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  max-width: 42rem;
 }
 
 .filter {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.66rem;
-  letter-spacing: 0.09em;
+  gap: 0.35rem;
+  padding: 0.24rem 0.48rem;
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
   background: var(--slate);
@@ -132,8 +180,8 @@
 
 .filter::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--act);
   flex: none;
@@ -169,7 +217,7 @@
 
 .filter__n {
   color: var(--faint);
-  font-size: 0.62rem;
+  font-size: 0.48rem;
 }
 
 /* --- Year strip: the signature --------------------------------------------- */
@@ -739,8 +787,13 @@ a.show__venue:hover .show__pin {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 3px;
   }
+  .live__filterwrap {
+    align-items: flex-start;
+    width: 100%;
+  }
   .live__filters {
     max-width: none;
+    justify-content: flex-start;
   }
   .show {
     grid-template-columns: 3.25rem minmax(0, 1fr);

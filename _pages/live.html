@@ -15,11 +15,19 @@ description: "Upcoming live shows and past dates — Orchester Praževica, Makam
 <div class="live">
 
   <header class="live__head">
-    <div>
-      <h1 class="live__title">Live</h1>
-      <p class="live__sub">Where to catch me playing, around DC and Baltimore.</p>
+    <h1 class="live__title">Live</h1>
+    <div class="live__filterwrap">
+      <button class="filtertoggle" id="filterToggle" type="button"
+              aria-expanded="false" aria-controls="filters">
+        <span class="filtertoggle__dot" id="filterToggleDot" hidden></span>
+        <span id="filterToggleLabel">All</span>
+        <svg class="filtertoggle__chev" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <nav class="live__filters" id="filters" aria-label="Filter by act" hidden></nav>
     </div>
-    <nav class="live__filters" id="filters" aria-label="Filter by act"></nav>
   </header>
 
   <section class="year" aria-label="Shows by month">

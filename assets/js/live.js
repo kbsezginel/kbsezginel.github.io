@@ -104,6 +104,7 @@
     month: anchor.getMonth(),
     act: null,          // null = all acts
     selected: null,     // "YYYY-MM-DD"
+    filtersOpen: false,
     showPast: upcoming.length === 0
   };
 
@@ -115,6 +116,9 @@
 
   var el = {
     filters:   document.getElementById("filters"),
+    fToggle:   document.getElementById("filterToggle"),
+    fLabel:    document.getElementById("filterToggleLabel"),
+    fDot:      document.getElementById("filterToggleDot"),
     yearLabel: document.getElementById("yearLabel"),
     yearPrev:  document.getElementById("yearPrev"),
     yearNext:  document.getElementById("yearNext"),
@@ -208,6 +212,20 @@
       var act = b.dataset.act || null;
       b.setAttribute("aria-pressed", String(state.act === act));
     });
+
+    // Collapsed, the button has to carry the active filter itself, otherwise
+    // a filtered page looks like an empty one.
+    el.fLabel.textContent = state.act || "All";
+    el.fDot.hidden = !state.act;
+    if (state.act) {
+      el.fDot.style.setProperty("--act", "var(--" + colorFor(state.act) + ")");
+    }
+  }
+
+  function toggleFilters(open) {
+    state.filtersOpen = open == null ? !state.filtersOpen : open;
+    el.filters.hidden = !state.filtersOpen;
+    el.fToggle.setAttribute("aria-expanded", String(state.filtersOpen));
   }
 
   /* --- Year strip --------------------------------------------------------- */
@@ -364,12 +382,12 @@
       ? "Nothing booked for " + state.act + "."
       : "No dates on the books.";
     var body = state.act
-      ? "Pick another act above, or look through what's already played."
+      ? ""
       : "Next show goes up here as soon as it's confirmed. " +
         (pastCount ? "Until then, the archive is below." : "");
     var p = make("p");
     p.appendChild(make("strong", null, head));
-    p.appendChild(document.createTextNode(body));
+    if (body) p.appendChild(document.createTextNode(body));
     el.listEmpty.appendChild(p);
   }
 
@@ -482,7 +500,18 @@
     renderList();
   });
 
+  el.fToggle.addEventListener("click", function () { toggleFilters(); });
+
+  // Escape closes the panel without disturbing the chosen act.
+  el.filters.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      toggleFilters(false);
+      el.fToggle.focus();
+    }
+  });
+
   buildFilters();
+  syncFilters();
   renderYear();
   renderCal();
   renderList();
