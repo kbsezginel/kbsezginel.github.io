@@ -1,0 +1,167 @@
+---
+layout: none
+title: "Charts"
+permalink: /charts/
+date: 2026-08-03
+categories: pages
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Charts — kut.ai</title>
+    <meta name="description" content="Chord charts — lyrics with chords, bar charts, transposition and chord shapes.">
+    <meta name="theme-color" content="#070A12">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/charts.css?v={{ site.time | date: '%s' }}">
+  </head>
+  <body>
+
+    <header class="top">
+      <a class="top__home" href="/">&larr; kut.ai</a>
+      <h1 class="top__brand"><a href="#/">Charts</a></h1>
+      <div class="top__search">
+        <input id="searchInput" type="search" placeholder="Search songs or artists…"
+               autocomplete="off" spellcheck="false">
+      </div>
+      <button class="top__add" id="addBtn" type="button">+ add song</button>
+    </header>
+
+    <main>
+
+      <section id="homeView">
+        <p class="home__count" id="homeCount"></p>
+        <ul id="songList"></ul>
+
+        <div class="websearch" id="webSearch" hidden>
+          <p>Nothing in the library for <b id="webQuery"></b> — try the web:</p>
+          <div class="websearch__row">
+            <a class="pill" id="webGoogle" href="#" target="_blank" rel="noopener">Search Google ↗</a>
+            <a class="pill" id="webUG" href="#" target="_blank" rel="noopener">Ultimate Guitar ↗</a>
+            <button class="pill" id="webImport" type="button">Paste &amp; import →</button>
+          </div>
+          <p class="websearch__hint">Open a result, copy the chart text, then paste it here to add it to your library.</p>
+        </div>
+      </section>
+
+      <section id="songView" hidden>
+        <header class="song__head">
+          <h2 id="songTitle"></h2>
+          <p class="song__artist" id="songArtist"></p>
+        </header>
+        <div class="song__meta" id="songMeta"></div>
+
+        <div class="controls">
+          <span class="ctl ctl--trans" title="Transpose (+ / − / 0)">
+            <button id="transDown" type="button" aria-label="Transpose down">♭−</button>
+            <button id="transVal" type="button" title="Reset">0</button>
+            <button id="transUp" type="button" aria-label="Transpose up">♯+</button>
+          </span>
+
+          <span class="ctl" id="viewToggle">
+            <button type="button" data-view="lyrics" class="is-on">lyrics</button>
+            <button type="button" data-view="bars">bars</button>
+            <button type="button" data-view="parts">parts</button>
+          </span>
+
+          <button class="ctl" id="lyricsToggle" type="button" hidden>
+            <span style="padding: 5px 12px;">show lyrics</span>
+          </button>
+
+          <span class="ctl" id="barwCtl" hidden title="Bar width — auto-fit or fixed">
+            <button id="barwDown" type="button" aria-label="Narrower bars">−</button>
+            <button id="barwVal" type="button" title="Reset to auto">auto</button>
+            <button id="barwUp" type="button" aria-label="Wider bars">+</button>
+          </span>
+
+          <button class="ctl" id="videoBtn" type="button" hidden title="Play the track (←/→ seek, space play/pause)">
+            <span style="padding: 5px 12px;">▶ video</span>
+          </button>
+
+          <span class="ctl">
+            <button id="editToggle" type="button" title="Edit: drag chords in lyrics view, click bars in bar view">✎ edit</button>
+            <button id="srcBtn" type="button" title="Edit the raw chart text">source</button>
+          </span>
+
+          <span class="savestat" id="saveStat"></span>
+
+          <span class="controls__spacer"></span>
+
+          <span class="ctl" title="Text size">
+            <button id="fontDown" type="button" aria-label="Smaller text">A−</button>
+            <button id="fontUp" type="button" aria-label="Larger text">A+</button>
+          </span>
+        </div>
+
+        <div class="striphead">
+          <button class="striptoggle" id="stripToggle" type="button" title="Show/hide chord shapes"></button>
+          <span class="ctl" id="stripFoot" hidden>
+            <span class="ctl__label">instrument</span>
+            <select id="instrument" aria-label="Instrument"></select>
+          </span>
+        </div>
+        <div class="chordstrip" id="chordStrip"></div>
+
+        <article class="sheet" id="sheet"></article>
+      </section>
+
+    </main>
+
+    <div class="modal" id="importModal" hidden>
+      <div class="modal__card">
+        <h2>Add a song</h2>
+        <p class="modal__hint">Paste a chart with chords above the lyrics, or inline like [Cm]. It's saved in this browser — use “copy json” on the song row to add it to the site database.</p>
+        <div class="modal__meta">
+          <input id="impTitle" placeholder="Title">
+          <input id="impArtist" placeholder="Artist">
+          <input id="impKey" placeholder="Key (Cm)">
+          <input id="impCapo" placeholder="Capo" type="number" min="0" max="9">
+        </div>
+        <textarea id="impBody" placeholder="Cm            Bb  Fm  Cm&#10;Gel gönlümü, yerden yere…" spellcheck="false"></textarea>
+        <div class="modal__actions">
+          <button class="btn" id="impCancel" type="button">cancel</button>
+          <button class="btn btn--gold" id="impSave" type="button">save song</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="vdock" id="vdock" hidden>
+      <div class="vdock__bar">
+        <button id="vdockToggle" type="button" title="Collapse (audio keeps playing)">▾</button>
+        <span class="vdock__hint">←/→ seek 5s · shift 15s · space play</span>
+        <button id="vdockClose" type="button" title="Close">×</button>
+      </div>
+      <div class="vdock__frame"><div id="ytplayer"></div></div>
+    </div>
+
+    <div class="modal" id="srcModal" hidden>
+      <div class="modal__card">
+        <h2>Source</h2>
+        <p class="modal__hint">Chart: chord line above each lyric line, columns set the timing. Bars: rows of bars split by “|”, several chords per bar allowed, a plain line underneath is that row's lyric, trailing “x2” repeats. Leave bars empty to derive them from the chart.</p>
+        <div class="modal__meta">
+          <input id="srcTitle" placeholder="Title">
+          <input id="srcArtist" placeholder="Artist">
+          <input id="srcKey" placeholder="Key (Cm)">
+          <input id="srcCapo" placeholder="Capo" type="number" min="0" max="9">
+        </div>
+        <label class="modal__label">chart — chords over lyrics</label>
+        <textarea id="srcBody" spellcheck="false"></textarea>
+        <label class="modal__label">bars</label>
+        <textarea id="srcBars" class="modal__bars" spellcheck="false" placeholder="Cm | Cm | Bb Fm | Cm   x2&#10;Gel gönlümü, yerden yere, vurma güzel ne olursun"></textarea>
+        <label class="modal__label">arrangement — parts &amp; play order</label>
+        <textarea id="srcArr" class="modal__bars" spellcheck="false" placeholder="Intro: |: Am | Am | Dm | E :|&#10;Verse: Am E | Am    Dm | E&#10;       Am | Dm | E&#10;order: Intro x2, Verse, Chorus x2"></textarea>
+        <div class="modal__actions">
+          <button class="btn" id="srcCancel" type="button">cancel</button>
+          <button class="btn btn--gold" id="srcSave" type="button">save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/charts-db.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="/assets/js/charts.js?v={{ site.time | date: '%s' }}"></script>
+  </body>
+</html>
