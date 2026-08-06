@@ -673,6 +673,30 @@ function fold(s) {
 
 /* ================= saving ================= */
 
+/* the save endpoint only exists on the local preview server (same origin);
+   on the deployed site every save falls back to browser storage */
+let serverOk = false;
+
+async function apiPost(payload) {
+  try {
+    const res = await fetch('/api/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) { serverOk = true; return true; }
+  } catch { /* no server */ }
+  return false;
+}
+
+async function probeServer() {
+  try {
+    const res = await fetch('/api/ping');
+    if (res.ok) { serverOk = true; return true; }
+  } catch { /* not reachable */ }
+  return false;
+}
+
 let saveTimer = null;
 let statTimer = null;
 
@@ -717,22 +741,77 @@ async function saveSong() {
 
   const idx = (window.CHARTS_DB || []).findIndex(s => s.id === state.song.id);
   if (idx >= 0) window.CHARTS_DB[idx] = state.song;
-  try {
-    const res = await fetch('/api/save', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ songs: window.CHARTS_DB })
-    });
-    if (!res.ok) throw new Error();
+  /* merge-save just this song so a stale page can't clobber other entries */
+  if (await apiPost({ songs: [state.song], merge: true })) {
     const ov = overrides();
     if (ov[state.song.id]) { delete ov[state.song.id]; saveOverrides(ov); }
     status('saved to charts-db.js ✓');
-  } catch {
+  } else {
     const ov = overrides();
     ov[state.song.id] = state.song;
     saveOverrides(ov);
     status('no server — saved in browser ✓');
   }
+}
+
+/* the full charts-db.js content with this browser's edits applied — paste
+   it over the file on GitHub to publish the changes */
+const DB_HEADER = `/* Charts — internal song database.
+   This file is rewritten by the local preview server when songs are edited
+   in the browser, and is meant to stay hand-editable.
+
+   body   "over" format: chord symbols on their own line, column-aligned
+          above the lyric line below. "inline" format: [Cm] markers in the
+          text. Lines like [Verse] that aren't a chord are section labels.
+          A trailing "x2" on a lyric line becomes a repeat badge.
+   bars   optional bar chart: bars split by "|", several chords in one bar
+          split by spaces, "·" = empty bar, "|: ... :|" marks a repeated
+          span, trailing "x2" = repeat. A plain
+          text line right after a row is that row's lyric caption.
+          If missing, bars are derived from the body (one bar per chord). */
+`;
+
+function buildDbFile() {
+  const ov = overrides();
+  const entries = (window.CHARTS_DB || [])
+    .map(s => songEntryJS(ov[s.id] ? { ...s, ...ov[s.id] } : s));
+  return DB_HEADER + '\nwindow.CHARTS_DB = [\n' + entries.join(',\n') + '\n];\n';
+}
+
+/* canonical charts-db.js entry text, for hand-merging from another device */
+function songEntryJS(s) {
+  const ORDER = ['id', 'title', 'artist', 'key', 'capo', 'source', 'video', 'format', 'body', 'bars', 'arrangement'];
+  const keys = ORDER.filter(k => k in s && s[k] !== '' && s[k] != null && !(k !== 'id' && s[k] === 0));
+  for (const k of Object.keys(s).sort()) {
+    if (!ORDER.includes(k) && s[k]) keys.push(k);
+  }
+  const val = (v) => {
+    if (typeof v === 'string' && v.includes('\n')) {
+      let t = v.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+      if (!t.startsWith('\n')) t = '\n' + t;
+      if (!t.endsWith('\n')) t += '\n';
+      return '`' + t + '`';
+    }
+    return JSON.stringify(v);
+  };
+  return '  {\n' + keys.map(k => `    ${k}: ${val(s[k])}`).join(',\n') + '\n  }';
+}
+
+async function mergeOverrides() {
+  const ov = overrides();
+  const merged = [];
+  for (const s of (window.CHARTS_DB || [])) {
+    if (ov[s.id]) merged.push({ ...s, ...ov[s.id] });
+  }
+  if (!merged.length) return;
+  if (await apiPost({ songs: merged, merge: true })) {
+    for (const s of merged) delete ov[s.id];
+    saveOverrides(ov);
+    status(`merged ${merged.length} song${merged.length > 1 ? 's' : ''} into charts-db.js ✓`);
+  } else {
+    status('server unreachable — start serve-charts.py first');
+  }
+  renderHome($('#searchInput').value);
 }
 
 /* ================= rendering: sheet ================= */
@@ -917,10 +996,50 @@ function renderParts(html, preferFlat) {
 
   const partCells = arr.parts.map((p, pi) => {
     const h = hueOf(p.name);
-    const rs = { on: false }; /* |: :| spans may cross rows within a part */
-    const rows = p.rows.map((r, ri) =>
-      `<div class="barline">${barCells(r.bars, preferFlat, null, rs)}${repBadge(r.repeat, 'prow', pi + ':' + ri)}</div>`
-    ).join('');
+
+    /* a |: :| span covering complete rows renders as a bracket beside that
+       row group — its length is simply the rows you enclose */
+    const groups = [];
+    for (let i = 0; i < p.rows.length; i++) {
+      const first = p.rows[i].bars[0];
+      if (!first || first[0] !== '|:') continue;
+      for (let j = i; j < p.rows.length; j++) {
+        const bars = p.rows[j].bars;
+        const last = bars[bars.length - 1];
+        if (last && last[last.length - 1] === ':|') {
+          if (j > i) groups.push({ from: i, to: j });
+          i = j;
+          break;
+        }
+      }
+    }
+    const groupOf = (ri) => groups.find(g => ri >= g.from && ri <= g.to);
+    const stripSigns = (bars) => bars.map(ts => ts.filter(t => t !== '|:' && t !== ':|'));
+
+    const rs = { on: false }; /* remaining |: :| spans still cross rows */
+    const rowHtml = (r, ri, inGroup) => {
+      /* inside a group the closing row's repeat is shown on the bracket;
+         other grouped rows only show a badge when one is actually set */
+      const badge = inGroup
+        ? (ri !== groupOf(ri).to && r.repeat ? repBadge(r.repeat, 'prow', pi + ':' + ri) : '')
+        : repBadge(r.repeat, 'prow', pi + ':' + ri);
+      return `<div class="barline">${barCells(inGroup ? stripSigns(r.bars) : r.bars, preferFlat, null, inGroup ? { on: false } : rs)}${badge}</div>`;
+    };
+
+    let rows = '';
+    for (let ri = 0; ri < p.rows.length; ri++) {
+      const g = groupOf(ri);
+      if (!g) { rows += rowHtml(p.rows[ri], ri, false); continue; }
+      const inner = [];
+      for (let k = g.from; k <= g.to; k++) inner.push(rowHtml(p.rows[k], k, true));
+      const times = p.rows[g.to].repeat;
+      const on = times || !state.edit; /* |: :| implies ×2 even when unlabeled */
+      rows += `<div class="rowgroup"><div class="rowgroup__rows">${inner.join('')}</div>` +
+        `<span class="part__rep${state.edit ? ' part__rep--edit' : ''}${on ? ' part__rep--on' : ''}"` +
+        ` data-rep="prow" data-i="${pi}:${g.to}" title="Repeat these rows${state.edit ? ' — click to cycle' : ''}">` +
+        `<i class="part__repbr"></i><b class="prep">×${times || 2}</b></span></div>`;
+      ri = g.to;
+    }
     const del = state.edit
       ? `<button class="part__del" data-pdel="${pi}" title="Delete this part">×</button>` : '';
     /* whole-part repeat: bracket spanning all rows, badge centered on it */
@@ -1025,22 +1144,46 @@ function renderSong() {
 function renderHome(query) {
   const q = fold(query || '');
   const local = new Set(localSongs().map(s => s.id));
+  const ov = overrides();
   const items = allSongs().filter(s => !q || fold(s.title + ' ' + (s.artist || '')).includes(q));
 
-  const list = items.map(s => `
+  const list = items.map(s => {
+    const edited = !local.has(s.id) && !!ov[s.id];
+    let tools = '';
+    if (local.has(s.id)) {
+      tools = `<span class="songrow__tools">
+        <button class="mini" data-copy="${esc(s.id)}" title="Copy JSON for charts-db.js">copy json</button>
+        <button class="mini mini--x" data-del="${esc(s.id)}" title="Delete">×</button>
+      </span>`;
+    } else if (edited) {
+      tools = `<span class="songrow__tools">
+        <button class="mini" data-centry="${esc(s.id)}" title="Copy this song as a charts-db.js entry">copy entry</button>
+        <button class="mini mini--x" data-drop="${esc(s.id)}" title="Discard the browser edits, back to the published version">discard</button>
+      </span>`;
+    }
+    return `
     <li>
       <a class="songrow" href="#/song/${encodeURIComponent(s.id)}">
         <span class="songrow__names"><b>${esc(s.title)}</b><span>${esc(s.artist || '')}</span></span>
-        <span class="songrow__side">${local.has(s.id) ? '<em class="tag">local</em>' : ''}<span class="keytag">${esc(s.key || '')}</span></span>
+        <span class="songrow__side">${local.has(s.id) ? '<em class="tag">local</em>' : ''}${edited ? '<em class="tag">edited here</em>' : ''}<span class="keytag">${esc(s.key || '')}</span></span>
       </a>
-      ${local.has(s.id) ? `<span class="songrow__tools">
-        <button class="mini" data-copy="${esc(s.id)}" title="Copy JSON for charts-db.js">copy json</button>
-        <button class="mini mini--x" data-del="${esc(s.id)}" title="Delete">×</button>
-      </span>` : ''}
-    </li>`).join('');
+      ${tools}
+    </li>`;
+  }).join('');
 
   $('#songList').innerHTML = list;
   $('#homeCount').textContent = `${items.length} song${items.length === 1 ? '' : 's'}`;
+
+  const pending = (window.CHARTS_DB || []).filter(s => ov[s.id]).length;
+  const bar = $('#mergeBar');
+  bar.hidden = !pending;
+  if (pending) {
+    $('#mergeMsg').textContent =
+      `${pending} song${pending > 1 ? 's differ' : ' differs'} from the published version (edited in this browser)`;
+    $('#mergeBtn').hidden = !serverOk;
+    $('#copyDbBtn').hidden = serverOk;
+    $('#prLink').hidden = serverOk;
+  }
 
   const web = $('#webSearch');
   web.hidden = !(q && items.length === 0);
@@ -1765,10 +1908,12 @@ function init() {
   initBarEditing();
   initPartsReorder();
 
-  /* local song tools */
+  /* local song + browser-edit tools */
   $('#songList').addEventListener('click', (e) => {
     const copy = e.target.closest('[data-copy]');
     const del = e.target.closest('[data-del]');
+    const centry = e.target.closest('[data-centry]');
+    const drop = e.target.closest('[data-drop]');
     if (copy) {
       const song = localSongs().find(s => s.id === copy.dataset.copy);
       if (song) navigator.clipboard.writeText(JSON.stringify(song, null, 2)).then(() => {
@@ -1780,6 +1925,31 @@ function init() {
       saveLocalSongs(localSongs().filter(s => s.id !== del.dataset.del));
       renderHome($('#searchInput').value);
     }
+    if (centry) {
+      const song = allSongs().find(s => s.id === centry.dataset.centry);
+      if (song) navigator.clipboard.writeText(songEntryJS(song)).then(() => {
+        centry.textContent = 'copied ✓';
+        setTimeout(() => { centry.textContent = 'copy entry'; }, 1200);
+      });
+    }
+    if (drop) {
+      if (!confirm('Discard the edits made in this browser and go back to the published version?')) return;
+      const ov = overrides();
+      delete ov[drop.dataset.drop];
+      saveOverrides(ov);
+      renderHome($('#searchInput').value);
+    }
+  });
+
+  $('#mergeBtn').addEventListener('click', mergeOverrides);
+  $('#copyDbBtn').addEventListener('click', () => {
+    navigator.clipboard.writeText(buildDbFile()).then(() => {
+      $('#copyDbBtn').textContent = 'copied ✓ — paste it over the file on GitHub';
+      setTimeout(() => { $('#copyDbBtn').textContent = 'copy updated charts-db.js'; }, 4000);
+    });
+  });
+  probeServer().then(() => {
+    if (!state.song) renderHome($('#searchInput').value);
   });
 
   $('#addBtn').addEventListener('click', () => openImport(''));

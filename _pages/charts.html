@@ -34,6 +34,13 @@ categories: pages
     <main>
 
       <section id="homeView">
+        <div class="mergebar" id="mergeBar" hidden>
+          <span id="mergeMsg"></span>
+          <button class="pill" id="mergeBtn" type="button" hidden>merge into charts-db.js</button>
+          <button class="pill" id="copyDbBtn" type="button" hidden>copy updated charts-db.js</button>
+          <a class="pill" id="prLink" hidden target="_blank" rel="noopener"
+             href="https://github.com/kbsezginel/kbsezginel.github.io/edit/master/assets/js/charts-db.js">open file on GitHub ↗</a>
+        </div>
         <p class="home__count" id="homeCount"></p>
         <ul id="songList"></ul>
 
@@ -65,7 +72,7 @@ categories: pages
           <span class="ctl" id="viewToggle">
             <button type="button" data-view="lyrics" class="is-on">lyrics</button>
             <button type="button" data-view="bars">bars</button>
-            <button type="button" data-view="parts">parts</button>
+            <button type="button" data-view="parts">arrangement</button>
           </span>
 
           <button class="ctl" id="lyricsToggle" type="button" hidden>

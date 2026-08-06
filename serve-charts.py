@@ -54,6 +54,25 @@ def write_db(songs):
     os.replace(tmp, DB)
 
 
+def parse_db():
+    """Parse the canonical charts-db.js back into song dicts."""
+    src = open(DB, encoding="utf-8").read()
+    songs = []
+    for e in re.findall(r"\{\n(.*?)\n  \}", src, re.S):
+        song = {}
+        for m in re.finditer(r'^    (\w+): ("(?:[^"\\]|\\.)*"|`[\s\S]*?`|\d+),?$', e, re.M):
+            k, v = m.group(1), m.group(2)
+            if v.startswith("`"):
+                song[k] = v[1:-1].replace("\\`", "`").replace("\\${", "${").replace("\\\\", "\\")
+            elif v.startswith('"'):
+                song[k] = json.loads(v)
+            else:
+                song[k] = int(v)
+        if song.get("id"):
+            songs.append(song)
+    return songs
+
+
 def build_page():
     with open(os.path.join(REPO, "_pages/charts.html")) as fh:
         page = fh.read()
@@ -65,6 +84,9 @@ def build_page():
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         path = self.path.split("?")[0]
+        if path == "/api/ping":
+            self.reply(200, b'{"ok":true}', "application/json")
+            return
         if path.rstrip("/") in ("", "/charts"):
             self.reply(200, build_page(), "text/html; charset=utf-8")
             return
@@ -86,7 +108,18 @@ class Handler(http.server.BaseHTTPRequestHandler):
             data = json.loads(self.rfile.read(n))
             songs = data["songs"]
             assert isinstance(songs, list) and all("id" in s for s in songs)
-            write_db(songs)
+            if data.get("merge"):
+                current = parse_db()
+                assert current, "could not parse existing charts-db.js"
+                by_id = {s["id"]: i for i, s in enumerate(current)}
+                for s in songs:
+                    if s["id"] in by_id:
+                        current[by_id[s["id"]]] = s
+                    else:
+                        current.append(s)
+                write_db(current)
+            else:
+                write_db(songs)
             self.reply(200, b'{"ok":true}', "application/json")
         except Exception as e:
             self.reply(400, json.dumps({"ok": False, "error": str(e)}).encode(),

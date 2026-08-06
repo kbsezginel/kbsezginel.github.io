@@ -113,6 +113,19 @@ main {
   padding: 28px clamp(16px, 4vw, 40px) 90px;
 }
 
+.mergebar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 2px 0 18px;
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--gold);
+  border: 1px dashed rgba(244, 193, 93, 0.45);
+  border-radius: 12px;
+}
+
 .home__count {
   margin: 4px 2px 14px;
   font-size: 12px;
@@ -441,10 +454,21 @@ button.c:hover { text-shadow: 0 0 14px rgba(244, 193, 93, 0.8); }
 
 .ctl button:disabled { opacity: 0.35; pointer-events: none; }
 
+/* out of the layout flow so appearing/clearing never shifts the page */
 .savestat {
+  position: fixed;
+  left: 16px;
+  bottom: 14px;
+  z-index: 45;
   font-size: 11px;
   color: var(--gold);
-  min-width: 2em;
+  pointer-events: none;
+}
+.savestat:not(:empty) {
+  padding: 5px 12px;
+  background: rgba(12, 17, 32, 0.92);
+  border: 1px solid rgba(244, 193, 93, 0.35);
+  border-radius: 999px;
 }
 
 .keybtn {
@@ -697,6 +721,12 @@ button.c:hover { text-shadow: 0 0 14px rgba(244, 193, 93, 0.8); }
 }
 .part__rep--edit:not(.part__rep--on) .prep { opacity: 0.3; }
 .part__rep--edit:not(.part__rep--on):hover .prep { opacity: 0.8; }
+
+/* |: :| row group: bracket hugs just the enclosed rows */
+.rowgroup { display: flex; align-items: stretch; gap: 12px; margin-bottom: 0.35em; }
+.rowgroup__rows { min-width: 0; }
+.rowgroup__rows .barline { margin-bottom: 0.35em; }
+.rowgroup__rows .barline:last-child { margin-bottom: 0; }
 .part__bars--edit { cursor: text; border-radius: 6px; }
 .part__bars--edit:hover { background: rgba(244, 193, 93, 0.06); }
 .part__bars .cinput { color: var(--ink); }

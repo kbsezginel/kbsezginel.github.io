@@ -596,11 +596,11 @@ order: Intro (C), Verse, Chorus, Intro (C), Verse, Chorus
     body: `
 G G# G G#  G G# G G#
 
-G                                       Fm
+G                         Fm
 Ada sahillerinde bekliyorum
-                                                   Cm
+                   Cm
 Her zaman yollarını gözlüyorum
-                                                   G
+                    G
 Seni senden güzelim istiyorum
  G#   Fm    G#         Fm           G
 Beni şadet şadiye başın için
@@ -617,10 +617,12 @@ Bana mesken olunca topraklar
 Beni yadet  güzelim başın için
 `,
     arrangement: `
-Intro: G | G# | G | G# | G | G# | G | G#
-Verse: G | Fm | Cm | G | G# | Fm | G# | Fm | G
+Intro: G G#   x4
+Verse x2: G
+          G | Fm | % | Cm
+          Cm | G | G# | Fm
 
-order: Intro, Verse, Intro, Verse
+order: Intro, Verse, Instrumental (V), Verse, Instrumental (V), Verse
 `
   },
   {
@@ -672,97 +674,147 @@ G | Am | Dm | Em
 Yollarıma bakıpta,hep boynunu bükmüşsün
 `,
     arrangement: `
-Verse: Em | Am | F | Dm | G | Am | Dm | Em
-Chorus: Em | Am | F | Dm | G | Dm | F | Dm | Em | % | Am | F | Dm | G | Am | F | Dm | Em
+Verse x2: Em | Am | F | Dm
+          G | Am | Dm | Em
+Chorus x3: Em | Am | F | Dm
+           G | Dm | F | Dm Em
 
-order: Verse, Chorus, Verse
+order: Verse, Chorus, Verse, Chorus
 `
   },
   {
     id: "gonul-akkor-boyle-gelmis-boyle-gecer",
     title: "Böyle Gelmiş Böyle Geçer",
     artist: "Gönül Akkor",
-    key: "C#m",
+    key: "Cm",
     source: "https://www.repertuarim.com/akor/deniz-seki-boyle-gelmis-boyle-gecer-akor-3833.html",
     video: "https://www.youtube.com/watch?v=47KsZBVga2Q",
     format: "over",
     body: `
-C#m                                                   F#m
+Cm                                   Fm
 Böyle gelmiş böyle, böyle geçer dünya
-F#m              C#m      G#            C#m
+Fm               Cm       G
 Günlerimiz bitecek bir gün saya saya  x2
 
-C#m                                      F#m
+Cm                             Fm
 Seneler koşuyor  gülüp ağlatıyor
-F#m       C#m    G#               C#m
-Bir yol aynaya ömrümüz geçiyor
-F#m               C#m     G#               C#m
-Bir kez bak aynaya ömrümüz geçiyor
+Fm                Cm      G
+Bir kez bak aynaya ömrümüz geçiyor  x2
 
-C#m     G#   C#m   F#m
+Cm      G    Cm    Fm
 Neşe keder hepsi geçer
-        F#m   C#m   G#          C#m
+        Fm    Cm    G
 Bize kar kalan nedir bu dünyadan  x2
 
-C#m                                                  F#m
+Cm                                Fm
 Daha dün çocuktuk sokaklarda koştuk
-F#m           C#m       G#              C#m
+Fm            Cm        G
 Yarın belki göç var bu dünya olamaz ya  x2
+`,
+    bars: `
+Cm | Fm
+Böyle gelmiş böyle, böyle geçer dünya
+Fm | Cm | G   x2
+Günlerimiz bitecek bir gün saya saya
 
-B bölümü
+Cm | Fm
+Seneler koşuyor  gülüp ağlatıyor
+Fm | Cm | G | Cm
+Bir yol aynaya ömrümüz geçiyor
+Fm | Cm | G   x2
+Bir kez bak aynaya ömrümüz geçiyor
 
-Nakarat
+Cm | G | Cm | Fm
+Neşe keder hepsi geçer
+Fm | Cm | G | Cm   x2
+Bize kar kalan nedir bu dünyadan
+
+Cm | Fm
+Daha dün çocuktuk sokaklarda koştuk
+Fm | Cm | G | Cm   x2
+Yarın belki göç var bu dünya olamaz ya
 `,
     arrangement: `
-Verse: C#m | F#m | % | C#m | G# | C#m
-Chorus: C#m | F#m | % | C#m | G# | C#m | F#m | C#m | G# | C#m
-Bridge: C#m | G# | C#m | F#m | % | C#m | G# | C#m
+Chorus x2: Cm | Cm Fm
+           Fm Cm | G Cm   x2
+Verse: Cm G | Cm Fm
+       Fm Cm | G Cm   x2
 
-order: Verse, Chorus, Bridge, Verse
+order: Chorus, Verse, Chorus, Chorus, Verse, Chorus
 `
   },
   {
     id: "sezen-aksu-keskin-bicak",
     title: "Keskin Bıçak",
     artist: "Sezen Aksu",
-    key: "E",
+    key: "A hicaz",
     source: "https://akorlar.com/sezen-aksu-keskin-bicak",
     video: "https://www.youtube.com/watch?v=kR0EX8XK-8I",
     format: "over",
     body: `
-                   E                       Am
+A                     Dm
 Geldim  yarım kaldım  yarım
-                  E                         Am
+             A              Dm
 Neydi  ne oldu  şu  tez  canım
-              F                                        Dm
+              A#                  Gm
 Ertelendim hayattan  sevdim  yarım
-                                                     E
+                                  A
 Derken  bugün  olmasa  olur yarın
 
-Am              E
+A
 Kendinden kaçak
-                           Am
+A              Dm
 Yarim  keskin  bıçak
-C                          G
+F               C
 Nerde  bende  o yürek
-F                  E         F                    E
+A#       A        A#        A
 Yardan  cayacak, hep  köşe  bucak
 
 Başar Döner
 
-E                            Dm            E
+A               Gm        A
 Ben  bu dünyayı anlayamadım
-E                                Dm               E
+A                      Gm         A
 Niyetlendim de altından kalkamadım
 
 Nakarat
 `,
-    arrangement: `
-Verse: E | Am | E | Am | F | Dm | E
-Chorus: Am | E | Am | C | G | F | E | F | E
-Bridge: E | Dm | E | % | Dm | E
+    bars: `
+A | Dm
+Geldim  yarım kaldım  yarım
+A | Dm
+Neydi  ne oldu  şu  tez  canım
+A# | Gm
+Ertelendim hayattan  sevdim  yarım
+A
+Derken  bugün  olmasa  olur yarın
 
-order: Verse, Chorus, Bridge
+A
+Kendinden kaçak
+A | Dm
+Yarim  keskin  bıçak
+F | C
+Nerde  bende  o yürek
+A# | A | A# | A
+Yardan  cayacak, hep  köşe  bucak
+
+
+A | Gm | A
+Ben  bu dünyayı anlayamadım
+A | Gm | A
+Niyetlendim de altından kalkamadım
+`,
+    arrangement: `
+Verse x2: A | % | Dm | %
+          A | % | Dm | %
+          A# | % | Gm | %
+          Gm | % | A
+Chorus: |: A | % | % | Dm
+        F | C | A# | A :|   x2
+        A# | A
+Bridge: A | % | Gm | A   x2
+
+order: Verse, Chorus, Verse, Chorus, Bridge, Chorus
 `
   },
   {
