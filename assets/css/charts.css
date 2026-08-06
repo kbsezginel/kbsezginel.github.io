@@ -862,7 +862,7 @@ button.c:hover { text-shadow: 0 0 14px rgba(244, 193, 93, 0.8); }
 /* ---------------- print / save as PDF ---------------- */
 
 @media print {
-  body { background: #fff; color: #000; font-size: 11.5px; }
+  body { background: #fff; color: #000; font-size: 12.5px; }
   main { max-width: none; padding: 0; }
 
   .top, .controls, .striphead, .chordstrip, .vdock, .savestat,
@@ -880,11 +880,15 @@ button.c:hover { text-shadow: 0 0 14px rgba(244, 193, 93, 0.8); }
   .bar--rep { background: #f2ede1; }
   .part__repbr, .part__rep--on .part__repbr { border-color: #777; }
 
+  /* keep the per-part hues, darkened for paper */
   .opill, .part__name {
-    color: #000;
-    border-color: #999;
-    background: none;
+    color: hsl(var(--h) 60% 30%);
+    border-color: hsl(var(--h) 45% 45%);
+    background: hsl(var(--h) 55% 45% / 0.08);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
+  .opill--unk { color: #555; border-color: #999; background: none; }
   .order { border-color: #bbb; }
 
   .line, .barline, .part, .rowgroup { break-inside: avoid; }

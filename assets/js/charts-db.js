@@ -449,7 +449,8 @@ Al aşkımı yar ah ver aşkını yar aşk, kışın doğan güneşler gibidir
 Verse x2: Am | % | A | Dm
           Dm | % | Dm E | Am
 Chorus: Am | Dm | E | Am   x4
-Bridge: F | % | % | E | Dm | % | F | E
+Bridge: F | % | % | E
+        Dm | % | F | E
 Pre-Chorus: E   x4
 Intro: Am | Dm   x4
        Am | %
