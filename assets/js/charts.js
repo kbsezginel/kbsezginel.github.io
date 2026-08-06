@@ -1981,6 +1981,11 @@ function init() {
     if (e.key === '0') setSteps(0);
   });
 
+  /* offline support: cache the page, assets and database for later visits */
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/charts-sw.js').catch(() => {});
+  }
+
   window.addEventListener('hashchange', route);
   route();
 }

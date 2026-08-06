@@ -13,6 +13,7 @@ categories: pages
     <title>Charts — kut.ai</title>
     <meta name="description" content="Chord charts — lyrics with chords, bar charts, transposition and chord shapes.">
     <meta name="theme-color" content="#070A12">
+    <link rel="manifest" href="/charts.webmanifest">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,6 +60,12 @@ categories: pages
         <header class="song__head">
           <h2 id="songTitle"></h2>
           <p class="song__artist" id="songArtist"></p>
+
+          <span class="ctl song__viewctl" id="viewToggle">
+            <button type="button" data-view="lyrics" class="is-on">lyrics</button>
+            <button type="button" data-view="bars">bars</button>
+            <button type="button" data-view="parts">arrangement</button>
+          </span>
         </header>
         <div class="song__meta" id="songMeta"></div>
 
@@ -69,14 +76,8 @@ categories: pages
             <button id="transUp" type="button" aria-label="Transpose up">♯+</button>
           </span>
 
-          <span class="ctl" id="viewToggle">
-            <button type="button" data-view="lyrics" class="is-on">lyrics</button>
-            <button type="button" data-view="bars">bars</button>
-            <button type="button" data-view="parts">arrangement</button>
-          </span>
-
-          <button class="ctl" id="lyricsToggle" type="button" hidden>
-            <span style="padding: 5px 12px;">show lyrics</span>
+          <button class="ctl" id="videoBtn" type="button" hidden title="Play the track (←/→ seek, space play/pause)">
+            <span style="padding: 5px 12px;">▶ video</span>
           </button>
 
           <span class="ctl" id="barwCtl" hidden title="Bar width — auto-fit or fixed">
@@ -85,23 +86,21 @@ categories: pages
             <button id="barwUp" type="button" aria-label="Wider bars">+</button>
           </span>
 
-          <button class="ctl" id="videoBtn" type="button" hidden title="Play the track (←/→ seek, space play/pause)">
-            <span style="padding: 5px 12px;">▶ video</span>
-          </button>
+          <span class="ctl" title="Text size">
+            <button id="fontDown" type="button" aria-label="Smaller text">A−</button>
+            <button id="fontUp" type="button" aria-label="Larger text">A+</button>
+          </span>
 
           <span class="ctl">
             <button id="editToggle" type="button" title="Edit: drag chords in lyrics view, click bars in bar view">✎ edit</button>
             <button id="srcBtn" type="button" title="Edit the raw chart text">source</button>
           </span>
 
+          <button class="ctl" id="lyricsToggle" type="button" hidden>
+            <span style="padding: 5px 12px;">show lyrics</span>
+          </button>
+
           <span class="savestat" id="saveStat"></span>
-
-          <span class="controls__spacer"></span>
-
-          <span class="ctl" title="Text size">
-            <button id="fontDown" type="button" aria-label="Smaller text">A−</button>
-            <button id="fontUp" type="button" aria-label="Larger text">A+</button>
-          </span>
         </div>
 
         <div class="striphead">

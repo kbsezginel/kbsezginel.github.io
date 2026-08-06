@@ -205,8 +205,10 @@ Am | F#m7b5 | E
 Yarim İstanbul gel öpeyim gerdanından
 `,
     arrangement: `
-Chorus: Am | % | % | Dm | Dm Am | E Am | E Am E Am
-Verse: Am Bm7b5 | Am Bm7b5 | Dm E | F#m7b5 B7 | Em D | C E7 | Am F#m7b5 | E
+Chorus: Am | % | % | Dm
+        Dm Am | E Am | E | Am E Am
+Verse: Am Bm7b5 | Am Bm7b5 | Dm E | F#m7b5 B7
+       Em D | C E7 | Am F#m7b5 | E
 
 order: Chorus, Verse, Chorus, Verse, Chorus, Verse, Solo, Verse
 `

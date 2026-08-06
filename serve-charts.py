@@ -90,6 +90,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
         if path.rstrip("/") in ("", "/charts"):
             self.reply(200, build_page(), "text/html; charset=utf-8")
             return
+        if path in ("/charts-sw.js", "/charts.webmanifest"):
+            fp = os.path.join(REPO, path.lstrip("/"))
+            if os.path.isfile(fp):
+                ctype = "application/javascript" if path.endswith(".js") else "application/manifest+json"
+                with open(fp, "rb") as fh:
+                    self.reply(200, fh.read(), ctype)
+                return
         if path.startswith("/assets/"):
             fp = os.path.realpath(os.path.join(REPO, path.lstrip("/")))
             if fp.startswith(REPO) and os.path.isfile(fp):

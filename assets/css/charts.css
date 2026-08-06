@@ -240,6 +240,8 @@ main {
 
 .song__artist { margin: 0; font-size: 13px; color: var(--muted); }
 
+.song__viewctl { margin-left: auto; font-size: 12px; }
+
 .song__meta {
   display: flex;
   align-items: center;
@@ -856,6 +858,37 @@ button.c:hover { text-shadow: 0 0 14px rgba(244, 193, 93, 0.8); }
 .btn:hover { color: var(--ink); border-color: var(--line-strong); }
 .btn--gold { color: var(--gold); border-color: rgba(244, 193, 93, 0.5); }
 .btn--gold:hover { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+
+/* ---------------- print / save as PDF ---------------- */
+
+@media print {
+  body { background: #fff; color: #000; font-size: 11.5px; }
+  main { max-width: none; padding: 0; }
+
+  .top, .controls, .striphead, .chordstrip, .vdock, .savestat,
+  .song__viewctl, .modal, .parts__tools, .part__del { display: none !important; }
+
+  .song__head h2, .song__artist, .t, .line--bare, .barcaption,
+  .secname, .order__label, .order__sep { color: #000; }
+
+  .c, .tok--pct { color: #000; font-weight: 700; }
+  .tok, .tok--empty { color: #444; }
+  .rep, .prep { color: #000; border-color: #999; background: none; }
+
+  .bar, .bar--last, .bar--rstart, .bar--rend { border-color: #777 !important; }
+  .bar--rstart::before, .bar--rend::after { background: #777; box-shadow: 0 7px 0 #777; }
+  .bar--rep { background: #f2ede1; }
+  .part__repbr, .part__rep--on .part__repbr { border-color: #777; }
+
+  .opill, .part__name {
+    color: #000;
+    border-color: #999;
+    background: none;
+  }
+  .order { border-color: #bbb; }
+
+  .line, .barline, .part, .rowgroup { break-inside: avoid; }
+}
 
 /* ---------------- small screens ---------------- */
 
