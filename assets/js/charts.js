@@ -310,17 +310,21 @@ function parseArrangement(text) {
   for (const raw of text.replace(/\r/g, '').split('\n')) {
     const line = raw.trim();
     if (!line) continue;
-    const m = /^([^:|]+):\s*(.*)$/.exec(line);
+    const m = /^([^:|]+?)(?:\s+[x×](\d+))?:\s*(.*)$/.exec(line);
     if (m && !/^(order|s[ıi]ra)$/i.test(m[1].trim())) {
-      const [body, rep] = stripRepeat(m[2]);
-      cur = { name: m[1].trim(), rows: [{ bars: splitBarRow(body), repeat: rep }] };
+      const [body, rep] = stripRepeat(m[3]);
+      cur = {
+        name: m[1].trim(),
+        repeat: m[2] ? +m[2] : null, /* whole-part repeat: "Verse x2:" */
+        rows: [{ bars: splitBarRow(body), repeat: rep }]
+      };
       parts.push(cur);
     } else if (!m && cur && isBarRowLike(line)) {
       const [body, rep] = stripRepeat(line);
       cur.rows.push({ bars: splitBarRow(body), repeat: rep });
     } else {
       cur = null;
-      const items = (m ? m[2] : line).split(/,|→|>/).map(s => s.trim()).filter(Boolean);
+      const items = (m ? m[3] : line).split(/,|→|>/).map(s => s.trim()).filter(Boolean);
       for (const it of items) {
         const mm = /^(.*?)(?:\s*[x×](\d+))?$/.exec(it);
         order.push({ name: mm[1].trim(), times: mm[2] ? +mm[2] : 1 });
@@ -334,8 +338,9 @@ function serializeArrangement(arr) {
   const lines = [];
   const rowText = (r) => joinBarRow(r.bars) + (r.repeat ? '   x' + r.repeat : '');
   for (const p of arr.parts) {
-    lines.push(`${p.name}: ${p.rows.length ? rowText(p.rows[0]) : ''}`);
-    const pad = ' '.repeat(p.name.length + 2);
+    const head = p.name + (p.repeat ? ' x' + p.repeat : '') + ': ';
+    lines.push(head + (p.rows.length ? rowText(p.rows[0]) : ''));
+    const pad = ' '.repeat(head.length);
     for (let i = 1; i < p.rows.length; i++) lines.push(pad + rowText(p.rows[i]));
   }
   if (arr.order.length) {
@@ -918,9 +923,16 @@ function renderParts(html, preferFlat) {
     ).join('');
     const del = state.edit
       ? `<button class="part__del" data-pdel="${pi}" title="Delete this part">×</button>` : '';
+    /* whole-part repeat: bracket spanning all rows, badge centered on it */
+    const prep = (p.repeat || state.edit)
+      ? `<span class="part__rep${state.edit ? ' part__rep--edit' : ''}${p.repeat ? ' part__rep--on' : ''}" data-rep="part" data-i="${pi}"
+           title="Whole-part repeat${state.edit ? ' — click to cycle' : ''}">
+           <i class="part__repbr"></i><b class="prep">×${p.repeat || 1}</b></span>`
+      : '';
     return `<div class="part" style="--h:${h}">` +
       `<span class="part__namecell"><button class="part__name${state.edit ? ' part__name--edit' : ''}" data-pname="${pi}">${esc(p.name)}</button>${del}</span>` +
-      `<div class="part__bars${state.edit ? ' part__bars--edit' : ''}" data-pbars="${pi}">${rows}</div></div>`;
+      `<div class="part__bars${state.edit ? ' part__bars--edit' : ''}" data-pbars="${pi}">` +
+      `<div class="part__rows">${rows}</div>${prep}</div></div>`;
   });
   if (partCells.length) html.push(`<div class="partgrid">${partCells.join('')}</div>`);
 
@@ -1264,7 +1276,9 @@ function initBarEditing() {
     const rep = e.target.closest('[data-rep]');
     if (rep) {
       let obj;
-      if (rep.dataset.rep === 'prow') {
+      if (rep.dataset.rep === 'part') {
+        obj = state.arr.parts[+rep.dataset.i];
+      } else if (rep.dataset.rep === 'prow') {
         const [pi, ri] = rep.dataset.i.split(':').map(Number);
         obj = state.arr.parts[pi].rows[ri];
       } else if (rep.dataset.rep === 'row') {

@@ -54,7 +54,7 @@ Am | Em | D | Em   x2
 Kalbim ince bir fidandır, kırma güzel ne olursun
 `,
     arrangement: `
-Verse: |: Em | % | D Am | Em :|
+Verse: |: Em | % | Em D | Am Em :|
        |: Am | Em | D | Em :|
 Chorus: |: Em | D | Am | D Em :|
         |: Am | Em | D | Em :|
@@ -291,11 +291,11 @@ Verse: Bm | % | % | %
        Em | % | G | %
        Em | % | F# | %
 Chorus: Bm | % | Em | %
-        F# | % | Em | %
+        F# | % | Bm | %
         Bm | % | Em | %
         Em | F# | Bm | %
 
-order: Verse, Chorus, Verse, Chorus
+order: Verse, Verse, Chorus, Chorus, Verse, Chorus, Chorus, Outro
 `
   },
   {
@@ -343,12 +343,16 @@ C                  Bm           Em   D    Em
 Yardan ırak yaşanır mı      söyleyin
 `,
     arrangement: `
-Intro: Am | Em | D | Em | Am | Em | D | Em
-Verse: G | % | D | Em | G | D | Em | A | D | G | Em | Am | D | G | Em | C | Bm | Em | D | Em
-Chorus: Am | Em | D | Em | Am | Em | D | Em
-Bridge: G | % | D | Em | G | D | Em | A | D | G | Am | D | G | Em | C | Bm | Em | D | Em
+Intro: Am | Em | D | Em   x4
+Verse: G | G
+       G D | Em   x2
+       Am D | G Em   x2
+       C Bm | Em D Em
+       Am D | G Em
+       C Bm | Em D Em
+Chorus: Am | Em | D | Em   x4
 
-order: Intro, Verse, Chorus, Intro, Bridge
+order: Intro, Verse, Chorus, Intro, Verse, Chorus, Intro
 `
   },
   {
@@ -387,11 +391,12 @@ Ayırmasın tanrim bizi
 budur inan tek dileğim
 `,
     arrangement: `
-Verse: C | % | C# | A#   x2
-       Fm | % | C | % | C# | % | A# | C
-Chorus: Fm | C | C# | A#   x4
+Verse: C | % | C# | A#m   x2
+       Fm | % | C | %
+       C# | % | A#m | C
+Chorus: Fm | C | C# | A#m   x4
 
-order: Verse, Chorus
+order: Intro, Verse, Chorus, Intro, Verse, Chorus, Outro
 `
   },
   {
@@ -403,48 +408,51 @@ order: Verse, Chorus
     video: "https://www.youtube.com/watch?v=HhucJr-9MCk",
     format: "over",
     body: `
-Am                                                      A                       Dm
+Am                                 A           Dm
 Hele bir anla aşkı zamanla kışlar bahara döner gibidir
-                                                                      E                    Am
+                              E                       Am
 Var mı dünyada aşkından başka yandı derken söner gibidir
-                                                                        A                         Dm
+                                      A             Dm
 Her derdime yar ortağım ol da, gökten melekler iner gibidir o zaman
-                                                                               E                    Am
+                                E                  Am
 Kar mi dünyada bin yil yasansa yoklugunda cehennem gibidir
 
-Am                   Dm           E                            Am
+Am                 Dm        E          Am
 Sana yine muhtacım gel benim baştacım yar
-                  Dm                E                               Am
+                  Dm            E          Am
 Bana yine sen lazımsın gel benim sultanım yar
 
-F                        E    Dm                              F            E
+F                E            Dm            F    E
 Ay aman yar sana söylemeliyim içimde tutamam yar
-                                                         E
+                                        E
 Tutamam yar unutamam yar ölüm var dünyada
-                                                             Am
+                                Am
 Tutamam yar unutamam yar  ay ay
 
-Am                   Dm           E                            Am
+Am                   Dm        E            Am
 Yeri göğü deldin yar bana geri geldin mi yar
-                  Dm                E                               Am
+            Dm                 E          Am
 Bana divane diyorlar yok artık uslandım yar
 
-Am                                                      A                       Dm
+Am                                A            Dm
 Hele bir anla aşkı zamanla kışlar bahara döner gibidir
-                                                                      E                    Am
+                                          E                Am
 Var mı dünyada aşkından başka aşk sevdiğim şehirler gibidir
-                                                                                 A                         Dm
+                                                A                                                          Dm
 Her derdime yar ortağım ol da, gökten melekler iner gibidir o zaman
-                                                                               E                    Am
+                                            E                                                       Am
 Al aşkımı yar ah ver aşkını yar aşk, kışın doğan güneşler gibidir
 `,
     arrangement: `
-Verse: |: Am | % | Am A | Dm
-       Dm | % | Dm E | Am :|   x2
-Chorus: Am | Dm | E | Am   x2
+Verse x2: Am | % | A | Dm
+          Dm | % | Dm E | Am
+Chorus: Am | Dm | E | Am   x4
 Bridge: F | % | % | E | Dm | % | F | E
+Pre-Chorus: E   x4
+Intro: Am | Dm   x4
+       Am | %
 
-order: Verse, Chorus, Bridge, Chorus, Verse
+order: Intro, Verse, Chorus, Bridge, Pre-Chorus, Chorus, Intro, Verse, Chorus, Bridge, Pre-Chorus, Chorus
 `
   },
   {
@@ -476,13 +484,13 @@ Geriye kalan ardından, yalnızlık olsa da sana değer
 `,
     arrangement: `
 A: A | % | Gm | A# A   x2
-B: Dm | % | C | F
-   A# | Gm | A# | Gm A
-C: - A A# C
-   Dm C | A# | Dm C | A#
-   C | Am | Gm | A# A
+B x2: Dm | % | C | F
+      A# | Gm | A# | Gm A
+C x2: - A A# C
+      Dm C | A# | Dm C | A#
+      C | Am | Gm | A# A
 
-order: A, B, A, C
+order: A, B, A, C, A, B, A, C
 `
   },
   {
@@ -569,10 +577,12 @@ Gm                A#             A
 Allahim bu nasil sey sarhos olamiyorum
 `,
     arrangement: `
-Verse: Dm | Gm | A | Gm | A# | Dm
-Chorus: Dm | A | Gm | % | A# | A
+Verse x2: Dm | % | Gm | A
+          Gm | % | A# | Dm
+Chorus x2: Dm | % | A | %
+           Gm | % | A# | A
 
-order: Verse, Chorus, Verse, Chorus
+order: Intro (C), Verse, Chorus, Intro (C), Verse, Chorus
 `
   },
   {
@@ -921,11 +931,11 @@ D  E  C#
 Ey(sen) Tanrım garibim, aldandın  x2
 `,
     arrangement: `
-Chorus: F#m | E | D | C#   x2
+Chorus: F#m | E | D | C#   x4
 Verse: F#m C#m | F#m C#m | D | E | C#   x2
 Pre-Chorus: D | % | D C# | C#   x2
 
-order: Chorus, Verse, Pre-Chorus, Chorus, Verse, Pre-Chorus, Chorus
+order: Chorus, Verse, Pre-Chorus, Chorus, Verse, Pre-Chorus, Chorus, Solo, Chorus
 `
   },
   {
@@ -1139,10 +1149,11 @@ Dönüp gitsem de sevgi mahkum elinde
 Gm
 `,
     arrangement: `
-Verse: Gm | D | D7 | Gm | Ebmaj7 | Cm | D | D7
+Verse: Gm | D | D7 | Gm
+       Ebmaj7 | Cm | D | D7
 Chorus: Gm | F | Eb | D7   x4
 
-order: Verse x2, Chorus, Verse, Chorus
+order: Verse x2, Chorus, Verse, Chorus x3
 `
   },
   {
@@ -1172,11 +1183,11 @@ Cm | Eb | F | Dm
 Başkasını istemem, benim gözüm sende
 `,
     arrangement: `
-Intro: Gm | F | Eb | D   x2
-Verse: Dm | % | % | Gm
-       Cm | Eb | (F) | Dm
+Chorus: Gm | F | Eb | D   x4
+Verse x2: Dm | % | % | Gm
+          Cm | Eb | (F) | Dm
 
-order: Intro, Verse
+order: Chorus, Verse, Chorus, Verse, Chorus, Verse, Chorus
 `
   },
   {
@@ -1217,7 +1228,7 @@ Verse: Cm | % | % | % | Cm Fm Cm Fm
 Pre-Chorus: Cm Fm | Bb | Eb Fm
 Chorus: Cm Bb | Eb F   x4
 
-order: Verse, Pre-Chorus, Chorus, Verse, Pre-Chorus, Chorus
+order: Intro, Verse, Pre-Chorus, Chorus, Intro, Verse, Pre-Chorus, Chorus, Solo, Verse, Pre-Chorus, Chorus, Intro, Verse, Pre-Chorus, Chorus
 `
   }
 ];
