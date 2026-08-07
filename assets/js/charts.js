@@ -1186,6 +1186,7 @@ function renderHome(query) {
     let tools = '';
     if (local.has(s.id)) {
       tools = `<span class="songrow__tools">
+        ${serverOk ? `<button class="mini" data-promote="${esc(s.id)}" title="Move this song into charts-db.js">add to db</button>` : ''}
         <button class="mini" data-copy="${esc(s.id)}" title="Copy JSON for charts-db.js">copy json</button>
         <button class="mini mini--x" data-del="${esc(s.id)}" title="Delete">×</button>
       </span>`;
@@ -1849,6 +1850,13 @@ function saveImport() {
 /* ================= events ================= */
 
 function init() {
+  /* self-heal: a browser-local song whose id is already in the database was
+     promoted at some point — the database copy is canonical, drop the local */
+  const dbIds = new Set((window.CHARTS_DB || []).map(s => s.id));
+  const locals = localSongs();
+  const cleaned = locals.filter(s => !dbIds.has(s.id));
+  if (cleaned.length !== locals.length) saveLocalSongs(cleaned);
+
   const instSel = $('#instrument');
   instSel.innerHTML = Object.entries(INSTRUMENTS)
     .map(([k, v]) => `<option value="${k}">${v.label}</option>`).join('');
@@ -1979,6 +1987,23 @@ function init() {
       delete ov[drop.dataset.drop];
       saveOverrides(ov);
       renderHome($('#searchInput').value);
+    }
+    const promote = e.target.closest('[data-promote]');
+    if (promote && !promote.disabled) {
+      const song = localSongs().find(s => s.id === promote.dataset.promote);
+      if (!song) return;
+      promote.disabled = true;
+      promote.textContent = 'adding…';
+      apiPost({ songs: [song], merge: true }).then((ok) => {
+        if (ok) {
+          saveLocalSongs(localSongs().filter(s => s.id !== song.id));
+          if (!window.CHARTS_DB.some(s => s.id === song.id)) window.CHARTS_DB.push(song);
+          status(`“${song.title}” added to charts-db.js ✓`);
+        } else {
+          status('server unreachable — start serve-charts.py first');
+        }
+        renderHome($('#searchInput').value);
+      });
     }
   });
 

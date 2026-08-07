@@ -1285,5 +1285,137 @@ Chorus: Cm Bb | Eb F   x4
 
 order: Intro, Verse, Pre-Chorus, Chorus, Intro, Verse, Pre-Chorus, Chorus, Solo, Verse, Pre-Chorus, Chorus, Intro, Verse, Pre-Chorus, Chorus
 `
+  },
+  {
+    id: "hey-onbesli-anonim",
+    title: "Hey Onbeşli",
+    artist: "Anonim",
+    key: "Cm",
+    format: "over",
+    body: `
+Cm
+Hey onbeşli onbeşli, Tokat yolları taşlı
+A#                              Fm
+Onbeşliler gidiyor, kızların gözü yaşlı
+
+Fm                Cm                    A#    Cm
+Aslan yarim kız senin adın, Hediye      
+Fm                    Cm                 A#    Cm
+Ben dolandım sen de dolan gediye   
+Fm                 Cm           A#    Cm
+Fistan aldım endazesi onyediye         
+
+Cm
+Giderim elinizden, kurtulam dilinizden
+A#                                     Fm
+Yeşilbaş ördek olsam, su içmem gölünüzden
+
+Nakarat
+
+Cm
+Gidiyom gidemiyom, sevdim terkedemiyom
+A#                                     Fm
+Sevdiğim pek gönüllü, gönlünü edemiyom
+`,
+    arrangement: `
+Verse: Cm | %   x2
+       A# | Fm
+Chorus x2: Fm Cm | D# Cm
+           Fm Cm | A# Cm
+
+order: Verse, Chorus, Verse x2
+`
+  },
+  {
+    id: "manastir-turkusu-anonim",
+    title: "Manastır Türküsü",
+    artist: "Anonim",
+    key: "Dm",
+    format: "over",
+    body: `
+Dm          C   Dm        C   Dm              C
+Manastırın , ortasında , var bir havuz
+Dm              C
+Canım havuz
+
+C                             Gm
+Bu yurdun kızları hepsi de yavuz
+Dm          C      Dm
+Biz çalar oynarız
+
+Dm          C   Dm        C   Dm              C
+Manastırın , ortasında , var bir çeşme
+Dm              C
+Canım çeşme
+
+C                             Gm
+Bu yurdun kızları hepsi de seçme
+Dm          C    Dm
+Biz çalar oynarız
+`,
+    arrangement: `
+Verse: Dm G | % | % | % | C G | Dm | C
+       Dm | C
+Chorus: C | Gm
+        Dm | C | Dm
+
+order: Verse, Chorus, Verse, Chorus
+`
+  },
+  {
+    id: "binboganin-kizi-baris-manco",
+    title: "Binboğanın Kızı",
+    artist: "Barış Manço",
+    key: "Dm",
+    format: "over",
+    body: `
+Dm                                  C            Dm
+Baba ocağından çıktım yıllar öncesi 
+Dm                                 C           Dm
+Bir gün kader karşıma çıkardı seni 
+F                   Gm                                   Dm
+Bir göründün bir yok oldun serap misali 
+Gm             Dm                 C           Dm
+Dere tepe demem güzel ararım seni
+
+Dm                                    C             Dm
+Kurda kuşa akıl sordum dediler vazgeç 
+Dm                              C           Dm
+Binboğanın kızıdır o sana ne gerek 
+F                   Gm                                   Dm
+Bir göründün bir yok oldun serap misali 
+Gm             Dm                 C           Dm
+Dere tepe demem güzel ararım seni
+
+Dm                                        C             Dm
+Kozan yaylasından geldim Barış'tır adım 
+Dm                                        C                Dm
+Bugün varsak yarın yoğuz doğrudur sözüm 
+F                   Gm                                 Dm
+Bir gün elbet biter vadem çağırır Tanrım 
+Gm                 Dm          C           Dm
+Artık mahşer gününde ararım seni 
+Gm                 Dm          C           Dm
+Artık mahşer gününde ararım seni 
+Gm                Dm          C             Dm
+İnan mahşer gününde ararım    seni
+Gm                Dm          C             Dm
+İnan mahşer gününde bulurum seni
+`,
+    arrangement: `
+Verse: Dm | C | Dm
+       % | C | Dm
+       F | Gm | Dm
+       Gm | Dm | C | Dm
+Chorus: Dm | C | Dm
+        % | C | Dm
+        F | Gm | Dm
+        Gm | Dm | C | Dm
+        Gm | Dm | C | Dm
+        Gm | Dm | C | Dm
+        Gm | Dm | C | Dm
+
+order: Verse x2, Chorus
+`
   }
 ];
