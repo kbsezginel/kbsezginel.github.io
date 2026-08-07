@@ -284,6 +284,7 @@ main {
 }
 .ctl button:hover { color: var(--ink); }
 .ctl button.is-on { color: var(--gold); background: var(--gold-dim); }
+button.ctl.is-on { color: var(--gold); border-color: rgba(244, 193, 93, 0.5); }
 
 .ctl--trans button { min-width: 34px; text-align: center; }
 #transVal { color: var(--ink); cursor: pointer; }

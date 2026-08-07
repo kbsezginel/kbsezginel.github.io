@@ -640,6 +640,7 @@ const state = {
   instrument: localStorage.getItem('charts:instrument') || 'guitar',
   scale: parseFloat(localStorage.getItem('charts:scale') || '1'),
   barw: parseFloat(localStorage.getItem('charts:barw') || '0'), /* 0 = auto */
+  noteMode: localStorage.getItem('charts:notemode') || 'letters', /* letters | semitones | degrees */
   charW: 8
 };
 
@@ -820,6 +821,36 @@ function displayChord(sym, preferFlat) {
   return transposeChordSym(sym, state.steps, preferFlat);
 }
 
+/* number notation relative to the song key (transpose-invariant):
+   semitones — offset 0-11 from the key root
+   degrees   — scale degrees, major or natural-minor depending on the key */
+const DEG_MAJ = ['1', 'b2', '2', 'b3', '3', '4', 'b5', '5', 'b6', '6', 'b7', '7'];
+const DEG_MIN = ['1', 'b2', '2', '3', '#3', '4', 'b5', '5', '6', '#6', '7', '#7'];
+
+function chordNumberLabel(sym) {
+  const c = parseChord(sym);
+  if (!c) return sym;
+  const key = songKey();
+  const km = /^([A-G][#b]?)(m|min)?/.exec(key);
+  if (!km) return sym;
+  const keyPc = NOTE_INDEX[km[1]];
+  const table = km[2] ? DEG_MIN : DEG_MAJ;
+  const num = (name) => {
+    const off = ((NOTE_INDEX[name] - keyPc) % 12 + 12) % 12;
+    return state.noteMode === 'semitones' ? String(off) : table[off];
+  };
+  let label = num(c.root) + c.qual;
+  if (c.bass) label += '/' + num(c.bass);
+  return label;
+}
+
+/* what a chord button shows; data-ch / shapes always use the letter form */
+function chordLabel(sym, preferFlat) {
+  return state.noteMode === 'letters'
+    ? displayChord(sym, preferFlat)
+    : chordNumberLabel(sym);
+}
+
 function songKey() {
   if (state.song.key) return state.song.key;
   for (const l of state.model) {
@@ -864,7 +895,7 @@ function currentBars() {
 function tokMarkup(t, preferFlat) {
   if (parseChord(t)) {
     const d = displayChord(t, preferFlat);
-    return `<button class="c" data-ch="${esc(d)}">${esc(d)}</button>`;
+    return `<button class="c" data-ch="${esc(d)}">${esc(chordLabel(t, preferFlat))}</button>`;
   }
   return `<span class="tok${t === '%' ? ' tok--pct' : ''}">${esc(t)}</span>`;
 }
@@ -927,7 +958,7 @@ function renderSheet() {
       if (state.edit) {
         const chords = line.chords.map((c, ci) =>
           `<button class="c c--abs${parseChord(c.sym) ? '' : ' c--tok'}" data-li="${li}" data-ci="${ci}"
-             style="left:${(c.col * state.charW).toFixed(1)}px">${esc(displayChord(c.sym, preferFlat))}</button>`
+             style="left:${(c.col * state.charW).toFixed(1)}px">${esc(parseChord(c.sym) ? chordLabel(c.sym, preferFlat) : c.sym)}</button>`
         ).join('');
         const pad = Math.max(...line.chords.map(c => c.col + c.sym.length + 2), 0);
         html.push(`<div class="eline" data-li="${li}"><span class="t" data-li="${li}">${esc(line.text.padEnd(pad, ' ')) || '&nbsp;'}</span>${chords}${rep}</div>`);
@@ -940,7 +971,7 @@ function renderSheet() {
         if (!s.chord) c = hasChords ? '<span class="c c--pad"></span>' : '';
         else if (parseChord(s.chord)) {
           const d = displayChord(s.chord, preferFlat);
-          c = `<button class="c" data-ch="${esc(d)}">${esc(d)}</button>`;
+          c = `<button class="c" data-ch="${esc(d)}">${esc(chordLabel(s.chord, preferFlat))}</button>`;
         } else c = `<span class="c c--tok">${esc(s.chord)}</span>`;
         return `<span class="seg">${c}<span class="t">${esc(s.text)}</span></span>`;
       }).join('');
@@ -1134,6 +1165,9 @@ function renderSong() {
     b.classList.toggle('is-on', b.dataset.view === state.view));
   $('#lyricsToggle').classList.toggle('is-on', state.showLyrics);
   $('#editToggle').classList.toggle('is-on', state.edit);
+  $('#noteModeBtn').firstElementChild.textContent =
+    { letters: 'abc', semitones: '0–11', degrees: '1–7' }[state.noteMode];
+  $('#noteModeBtn').classList.toggle('is-on', state.noteMode !== 'letters');
   $('#transDown').title = state.edit ? 'Re-key the saved chart down a semitone' : 'Transpose view down';
   $('#transUp').title = state.edit ? 'Re-key the saved chart up a semitone' : 'Transpose view up';
   syncVideoToSong();
@@ -1845,6 +1879,13 @@ function init() {
   };
   $('#transDown').addEventListener('click', () => bump(-1));
   $('#transUp').addEventListener('click', () => bump(1));
+
+  $('#noteModeBtn').addEventListener('click', () => {
+    const order = ['letters', 'semitones', 'degrees'];
+    state.noteMode = order[(order.indexOf(state.noteMode) + 1) % order.length];
+    localStorage.setItem('charts:notemode', state.noteMode);
+    if (state.song) renderSong();
+  });
   $('#transVal').addEventListener('click', () => {
     if (!state.song) return;
     keyPrompt($('#transVal'), (v) => {
