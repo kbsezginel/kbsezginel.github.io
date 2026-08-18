@@ -1,0 +1,176 @@
+---
+layout: none
+title: "Kilim"
+permalink: /kilim/
+date: 2026-08-17
+categories: pages
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Kilim — kut.ai</title>
+    <meta name="description" content="Anatolian kilim pattern generator — tessellate traditional motifs, choose natural-dye palettes, export SVG/PNG.">
+    <meta name="theme-color" content="#070A12">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/kilim.css?v={{ site.time | date: '%s' }}">
+  </head>
+  <body>
+
+    <header class="top">
+      <a class="top__home" href="/">&larr; kut.ai</a>
+      <h1 class="top__brand">Kilim</h1>
+      <span class="top__sub">Anatolian motif weaver</span>
+      <div class="top__actions">
+        <button id="btnRandom" class="btn--gold">✦ weave anew</button>
+        <button id="btnSvg">svg</button>
+        <button id="btnPng">png</button>
+        <select id="pngScale" title="PNG pixels per weave cell">
+          <option value="4">4×</option>
+          <option value="8" selected>8×</option>
+          <option value="12">12×</option>
+          <option value="16">16×</option>
+        </select>
+        <button id="btnLink">link</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <aside class="panel">
+
+        <details class="sec" open>
+          <summary>Boyut · Size</summary>
+          <div class="sec__body">
+            <div class="row">
+              <label for="cols">width</label>
+              <input id="cols" type="range" min="40" max="260" value="91">
+              <output id="colsVal">91</output>
+            </div>
+            <div class="row">
+              <label for="rows">height</label>
+              <input id="rows" type="range" min="40" max="380" value="139">
+              <output id="rowsVal">139</output>
+            </div>
+            <div class="chips">
+              <button data-size="60x60">yastık</button>
+              <button data-size="91x139">kilim</button>
+              <button data-size="110x170">büyük</button>
+              <button data-size="56x230">yolluk</button>
+              <button data-size="100x150">seccade</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="sec" open>
+          <summary>Zemin · Field</summary>
+          <div class="sec__body">
+            <div id="fieldPicker"></div>
+            <div class="row">
+              <label>layout</label>
+              <span class="seg">
+                <button data-layout="grid">grid</button>
+                <button data-layout="brick">brick</button>
+              </span>
+            </div>
+            <div class="row" id="mixRow">
+              <label>mix by</label>
+              <span class="seg">
+                <button data-mix="row">rows</button>
+                <button data-mix="column">columns</button>
+                <button data-mix="checker">checker</button>
+              </span>
+            </div>
+            <div class="row">
+              <label for="scaleF">motif ×</label>
+              <input id="scaleF" type="range" min="1" max="5" value="1">
+              <output id="scaleFVal">1</output>
+            </div>
+            <div class="row">
+              <label for="gapX">gap ↔</label>
+              <input id="gapX" type="range" min="0" max="40" value="2">
+              <output id="gapXVal">2</output>
+            </div>
+            <div class="row">
+              <label for="gapY">gap ↕</label>
+              <input id="gapY" type="range" min="0" max="40" value="3">
+              <output id="gapYVal">3</output>
+            </div>
+            <div class="checks">
+              <label><input id="altColors" type="checkbox"> alternate colours</label>
+              <label><input id="mirrorRows" type="checkbox"> mirror rows</label>
+            </div>
+          </div>
+        </details>
+
+        <details class="sec" open>
+          <summary>Bordür · Frame</summary>
+          <div class="sec__body">
+            <div id="bandPicker"></div>
+            <div class="row">
+              <label for="scaleB">motif ×</label>
+              <input id="scaleB" type="range" min="1" max="3" value="1">
+              <output id="scaleBVal">1</output>
+            </div>
+            <div class="row">
+              <label for="bandGap">spacing</label>
+              <input id="bandGap" type="range" min="0" max="6" value="1">
+              <output id="bandGapVal">1</output>
+            </div>
+            <div class="checks">
+              <label><input id="guards" type="checkbox"> guard stripes</label>
+            </div>
+          </div>
+        </details>
+
+        <details class="sec" open>
+          <summary>Yazı · Text</summary>
+          <div class="sec__body">
+            <input id="textIn" type="text" class="tinput" maxlength="60"
+                   placeholder="weave an inscription… ( | = new line )"
+                   autocomplete="off" spellcheck="false">
+            <div class="row">
+              <label for="scaleT">size ×</label>
+              <input id="scaleT" type="range" min="1" max="6" value="2">
+              <output id="scaleTVal">2</output>
+            </div>
+          </div>
+        </details>
+
+        <details class="sec" open>
+          <summary>Renkler · Colours</summary>
+          <div class="sec__body">
+            <div id="palettes"></div>
+            <div id="colorInputs"></div>
+          </div>
+        </details>
+
+        <details class="sec">
+          <summary>Doku · Texture</summary>
+          <div class="sec__body">
+            <div class="row">
+              <label for="abrash">abrash</label>
+              <input id="abrash" type="range" min="0" max="100" value="50">
+              <output id="abrashVal">50%</output>
+            </div>
+            <div class="checks">
+              <label><input id="ridges" type="checkbox"> weft ridges</label>
+            </div>
+          </div>
+        </details>
+
+      </aside>
+
+      <section class="stage" id="stage">
+        <div id="rug"></div>
+        <div class="legend" id="legend"></div>
+      </section>
+    </main>
+
+    <script src="/assets/js/kilim-motifs.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="/assets/js/kilim.js?v={{ site.time | date: '%s' }}"></script>
+  </body>
+</html>
