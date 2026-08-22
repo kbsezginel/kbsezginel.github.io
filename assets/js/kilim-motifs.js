@@ -141,6 +141,22 @@ window.KILIM = (function () {
       ]
     },
     {
+      id: 'nazarlik', name: 'Nazarlık', en: 'Tasselled Amulet',
+      meaning: 'The amulet triangle turned point-down, its charms hanging below.',
+      field: true, border: true,
+      grid: [
+        '11111111111',
+        '.111111111.',
+        '..1122211..',
+        '...11111...',
+        '....111....',
+        '.....1.....',
+        '...........',
+        '111.111.111',
+        '.1...1...1.'
+      ]
+    },
+    {
       id: 'tarak', name: 'Tarak', en: 'Comb',
       meaning: 'The weaver’s comb — marriage, birth, and protection of both.',
       field: true, border: true,
@@ -207,17 +223,20 @@ window.KILIM = (function () {
     {
       id: 'kus', name: 'Kuş', en: 'Bird',
       meaning: 'Happiness, joy and love; the bird is also the soul of the departed on its way.',
-      field: true, facing: true,
+      field: true, border: true, facing: true,
       grid: [
-        '..........11.',
-        '..........211',
-        '..........11.',
-        '..........11.',
-        '........1111.',
-        '11....111111.',
-        '11..11111111.',
-        '..1111111111.',
-        '111111111111.'
+        '..........11..',
+        '.........1211.',
+        '.........11...',
+        '.1.......11...',
+        '.11.....111...',
+        '.111...1111...',
+        '..111.111111..',
+        '...111111111..',
+        '....11111111..',
+        '.....111111...',
+        '......1..1....',
+        '.....11..11...'
       ]
     },
     {
@@ -260,7 +279,7 @@ window.KILIM = (function () {
     {
       id: 'sahin', name: 'Şahin', en: 'Retro Car',
       meaning: 'The falcon of the highway — a modern nomad’s steed, woven with a wink.',
-      field: true, facing: true,
+      field: true, border: true, facing: true,
       grid: [
         '.........111111111...........',
         '........12222122221..........',
@@ -277,7 +296,7 @@ window.KILIM = (function () {
     {
       id: 'sahinon', name: 'Şahin (önden)', en: 'Retro Car · Front',
       meaning: 'The Şahin head-on — twin lamps like eyes, grille like a woven comb.',
-      field: true,
+      field: true, border: true,
       grid: mx([
         '...111111',
         '..1222222',
@@ -418,6 +437,26 @@ window.KILIM = (function () {
       id: 'dogal', name: 'Doğal', note: 'undyed wools — camel, cream, walnut',
       field:  { g: '#d9cbb0', c1: '#4a3a2c', c2: '#a98d63', c3: '#8a8478' },
       border: { g: '#4a3a2c', c1: '#d9cbb0', c2: '#a98d63', c3: '#efe6d2' }
+    },
+    {
+      id: 'kara', name: 'Kara', note: 'black wool, bone & dried blood',
+      field:  { g: '#151210', c1: '#cfc3aa', c2: '#7e241e', c3: '#8a8272' },
+      border: { g: '#0c0a09', c1: '#7e241e', c2: '#cfc3aa', c3: '#544e44' }
+    },
+    {
+      id: 'punk', name: 'Punk', note: 'soot, safety-pin bone, riot pink & acid',
+      field:  { g: '#0e0d0f', c1: '#d8d2c2', c2: '#c92a5e', c3: '#aebd2e' },
+      border: { g: '#1a1518', c1: '#aebd2e', c2: '#c92a5e', c3: '#d8d2c2' }
+    },
+    {
+      id: 'komur', name: 'Kömür', note: 'monochrome — black ink and greys on paper',
+      field:  { g: '#e4e1d9', c1: '#161513', c2: '#6f6d67', c3: '#a9a69e' },
+      border: { g: '#161513', c1: '#e4e1d9', c2: '#8f8d86', c3: '#56544f' }
+    },
+    {
+      id: 'duman', name: 'Duman', note: 'ash greys with a live ember',
+      field:  { g: '#26262a', c1: '#b5b1a6', c2: '#c9662a', c3: '#66625c' },
+      border: { g: '#121214', c1: '#b5b1a6', c2: '#c9662a', c3: '#45423e' }
     }
   ];
 
@@ -477,6 +516,74 @@ window.KILIM = (function () {
   var FONT = {};
   Object.keys(F).forEach(function (k) { FONT[k] = F[k].split('/'); });
 
+  /* İnce — narrow 3-wide letterforms, same 10-row line convention */
+  var FI = {
+    'A': '.1./1.1/1.1/111/1.1/1.1/1.1',
+    'B': '11./1.1/1.1/11./1.1/1.1/11.',
+    'C': '.11/1../1../1../1../1../.11',
+    'D': '11./1.1/1.1/1.1/1.1/1.1/11.',
+    'E': '111/1../1../11./1../1../111',
+    'F': '111/1../1../11./1../1../1..',
+    'G': '.11/1../1../1.1/1.1/1.1/.11',
+    'H': '1.1/1.1/1.1/111/1.1/1.1/1.1',
+    'I': '111/.1./.1./.1./.1./.1./111',
+    'J': '..1/..1/..1/..1/..1/1.1/.1.',
+    'K': '1.1/1.1/11./1../11./1.1/1.1',
+    'L': '1../1../1../1../1../1../111',
+    'M': '1.1/111/111/1.1/1.1/1.1/1.1',
+    'N': '111/1.1/1.1/1.1/1.1/1.1/1.1',
+    'O': '.1./1.1/1.1/1.1/1.1/1.1/.1.',
+    'P': '11./1.1/1.1/11./1../1../1..',
+    'Q': '.1./1.1/1.1/1.1/1.1/.1./..1',
+    'R': '11./1.1/1.1/11./11./1.1/1.1',
+    'S': '.11/1../1../.1./..1/..1/11.',
+    'T': '111/.1./.1./.1./.1./.1./.1.',
+    'U': '1.1/1.1/1.1/1.1/1.1/1.1/111',
+    'V': '1.1/1.1/1.1/1.1/1.1/1.1/.1.',
+    'W': '1.1/1.1/1.1/1.1/111/111/1.1',
+    'X': '1.1/1.1/.1./.1./.1./1.1/1.1',
+    'Y': '1.1/1.1/1.1/.1./.1./.1./.1.',
+    'Z': '111/..1/..1/.1./1../1../111',
+    'Ç': '.../.../.11/1../1../1../1../1../.11/.1.',
+    'Ğ': '111/.../.11/1../1../1.1/1.1/1.1/.11/...',
+    'İ': '.1./.../111/.1./.1./.1./.1./.1./111/...',
+    'Ö': '1.1/.../.1./1.1/1.1/1.1/1.1/1.1/.1./...',
+    'Ş': '.../.../.11/1../1../.1./..1/..1/11./.1.',
+    'Ü': '1.1/.../1.1/1.1/1.1/1.1/1.1/1.1/111/...',
+    '0': '.1./1.1/1.1/1.1/1.1/1.1/.1.',
+    '1': '.1./11./.1./.1./.1./.1./111',
+    '2': '11./..1/..1/.1./1../1../111',
+    '3': '111/..1/.11/..1/..1/..1/11.',
+    '4': '1.1/1.1/1.1/111/..1/..1/..1',
+    '5': '111/1../11./..1/..1/..1/11.',
+    '6': '.11/1../1../11./1.1/1.1/.1.',
+    '7': '111/..1/..1/.1./.1./.1./.1.',
+    '8': '.1./1.1/1.1/.1./1.1/1.1/.1.',
+    '9': '.1./1.1/1.1/.11/..1/..1/11.',
+    ' ': '../../../../../../..',
+    '.': './././././1/1',
+    '-': '.../.../.../111/.../.../...',
+    '!': '1/1/1/1/1/./1',
+    '?': '11./..1/..1/.1./.1./.../.1.',
+    '♥': '.11.11./1111111/1111111/.11111./..111../...1.../.......'
+  };
+  var INCE = {};
+  Object.keys(FI).forEach(function (k) { INCE[k] = FI[k].split('/'); });
+
+  /* Kalın — bold, derived from the block font by widening every stroke */
+  function embolden(rows) {
+    return rows.map(function (r) {
+      var out = '';
+      for (var x = 0; x <= r.length; x++)
+        out += (r[x] === '1' || (x > 0 && r[x - 1] === '1')) ? '1' : '.';
+      return out;
+    });
+  }
+  var KALIN = {};
+  Object.keys(FONT).forEach(function (k) { KALIN[k] = embolden(FONT[k]); });
+
+  var FONTS = { blok: FONT, ince: INCE, kalin: KALIN };
+
   /* ---------- sanity: equal row lengths ---------- */
   MOTIFS.forEach(function (m) {
     var w = m.grid[0].length;
@@ -486,5 +593,5 @@ window.KILIM = (function () {
     m.w = w; m.h = m.grid.length;
   });
 
-  return { MOTIFS: MOTIFS, PALETTES: PALETTES, FONT: FONT };
+  return { MOTIFS: MOTIFS, PALETTES: PALETTES, FONT: FONT, FONTS: FONTS };
 })();

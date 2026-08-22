@@ -24,7 +24,7 @@ categories: pages
     <header class="top">
       <a class="top__home" href="/">&larr; kut.ai</a>
       <h1 class="top__brand">Kilim</h1>
-      <span class="top__sub">Anatolian motif weaver</span>
+      <span class="top__sub">Anatolian kilim designer</span>
       <div class="top__actions">
         <button id="btnRandom" class="btn--gold">✦ weave anew</button>
         <button id="btnSvg">svg</button>
@@ -55,20 +55,23 @@ categories: pages
               <input id="rows" type="range" min="40" max="380" value="139">
               <output id="rowsVal">139</output>
             </div>
-            <div class="chips">
-              <button data-size="60x60">yastık</button>
-              <button data-size="91x139">kilim</button>
-              <button data-size="110x170">büyük</button>
-              <button data-size="56x230">yolluk</button>
-              <button data-size="100x150">seccade</button>
-            </div>
+          </div>
+        </details>
+
+        <details class="sec" open>
+          <summary>Motifler · Motifs</summary>
+          <div class="sec__body">
+            <div id="motifLib"></div>
+            <p class="hint"><b>Z</b> weaves a motif into the field, <b>B</b> runs
+              it as a border band — bright chips mark each motif's traditional
+              role, but anything can go anywhere.</p>
           </div>
         </details>
 
         <details class="sec" open>
           <summary>Zemin · Field</summary>
           <div class="sec__body">
-            <div id="fieldPicker"></div>
+            <div id="fieldSel" class="sellist"></div>
             <div class="row">
               <label>layout</label>
               <span class="seg">
@@ -83,11 +86,6 @@ categories: pages
                 <button data-mix="column">columns</button>
                 <button data-mix="checker">checker</button>
               </span>
-            </div>
-            <div class="row">
-              <label for="scaleF">motif ×</label>
-              <input id="scaleF" type="range" min="1" max="5" value="1">
-              <output id="scaleFVal">1</output>
             </div>
             <div class="row">
               <label for="gapX">gap ↔</label>
@@ -109,12 +107,7 @@ categories: pages
         <details class="sec" open>
           <summary>Bordür · Frame</summary>
           <div class="sec__body">
-            <div id="bandPicker"></div>
-            <div class="row">
-              <label for="scaleB">motif ×</label>
-              <input id="scaleB" type="range" min="1" max="3" value="1">
-              <output id="scaleBVal">1</output>
-            </div>
+            <div id="bandSel" class="sellist"></div>
             <div class="row">
               <label for="bandGap">spacing</label>
               <input id="bandGap" type="range" min="0" max="6" value="1">
@@ -129,14 +122,13 @@ categories: pages
         <details class="sec" open>
           <summary>Yazı · Text</summary>
           <div class="sec__body">
-            <input id="textIn" type="text" class="tinput" maxlength="60"
-                   placeholder="weave an inscription… ( | = new line )"
-                   autocomplete="off" spellcheck="false">
-            <div class="row">
-              <label for="scaleT">size ×</label>
-              <input id="scaleT" type="range" min="1" max="6" value="2">
-              <output id="scaleTVal">2</output>
+            <div id="textSecs"></div>
+            <div class="row" id="textGapRow">
+              <label for="textGap">spacing</label>
+              <input id="textGap" type="range" min="0" max="24" value="2">
+              <output id="textGapVal">2</output>
             </div>
+            <button id="btnAddText">＋ add text</button>
           </div>
         </details>
 
@@ -156,9 +148,37 @@ categories: pages
               <input id="abrash" type="range" min="0" max="100" value="50">
               <output id="abrashVal">50%</output>
             </div>
+            <div class="row">
+              <label for="linocut">linocut</label>
+              <input id="linocut" type="range" min="0" max="100" value="0">
+              <output id="linocutVal">0%</output>
+            </div>
+            <div class="row">
+              <label for="jitter">jitter</label>
+              <input id="jitter" type="range" min="0" max="100" value="0">
+              <output id="jitterVal">0%</output>
+            </div>
+            <div class="row">
+              <label for="rgbShift">rgb shift</label>
+              <input id="rgbShift" type="range" min="0" max="100" value="0">
+              <output id="rgbShiftVal">0%</output>
+            </div>
             <div class="checks">
               <label><input id="ridges" type="checkbox"> weft ridges</label>
             </div>
+          </div>
+        </details>
+
+        <details class="sec">
+          <summary>Atölye · Workshop</summary>
+          <div class="sec__body">
+            <button id="btnNewMotif">＋ draw a motif</button>
+            <div id="customList"></div>
+            <div id="hiddenList"></div>
+            <p class="hint">Draw cell by cell, or load an image and it will be
+              quantized into weave cells. Every saved motif is listed here
+              (✎ edit / × delete) and joins the field &amp; frame pickers per
+              its checkboxes. Hidden built-ins appear dimmed — click to restore.</p>
           </div>
         </details>
 
@@ -166,9 +186,59 @@ categories: pages
 
       <section class="stage" id="stage">
         <div id="rug"></div>
-        <div class="legend" id="legend"></div>
       </section>
     </main>
+
+    <div id="editor" hidden>
+      <div class="editor__panel">
+        <div class="editor__head">
+          <input id="emName" class="tinput tinput--name" placeholder="motif name"
+                 autocomplete="off" spellcheck="false">
+          <label class="emdim">w <input id="emW" type="number" min="4" max="41" value="13"></label>
+          <label class="emdim">h <input id="emH" type="number" min="4" max="41" value="13"></label>
+          <span id="emSlots" class="editor__slots"></span>
+        </div>
+        <div class="emwrap">
+          <div class="emedge emedge--t">
+            <button data-grow="top:1" title="add a row at the top">+</button>
+            <button data-grow="top:-1" title="remove the top row">−</button>
+          </div>
+          <div class="emedge emedge--l">
+            <button data-grow="left:1" title="add a column on the left">+</button>
+            <button data-grow="left:-1" title="remove the left column">−</button>
+          </div>
+          <canvas id="emCanvas"></canvas>
+          <div class="emedge emedge--r">
+            <button data-grow="right:1" title="add a column on the right">+</button>
+            <button data-grow="right:-1" title="remove the right column">−</button>
+          </div>
+          <div class="emedge emedge--b">
+            <button data-grow="bottom:1" title="add a row at the bottom">+</button>
+            <button data-grow="bottom:-1" title="remove the bottom row">−</button>
+          </div>
+        </div>
+        <div id="emConfirm" class="emconfirm" hidden>
+          <p>Overwrite <b id="emConfirmName"></b>? Deleting the override later
+            brings the original back.</p>
+          <div class="emconfirm__btns">
+            <button id="emOw" class="btn--gold">overwrite</button>
+            <button id="emCopy">save as copy</button>
+            <button id="emCancel">cancel</button>
+          </div>
+        </div>
+        <div class="editor__foot">
+          <div class="checks">
+            <label><input id="emField" type="checkbox" checked> field</label>
+            <label><input id="emBorder" type="checkbox" checked> frame</label>
+          </div>
+          <button id="emUpload">image…</button>
+          <button id="emClear">clear</button>
+          <button id="emSave" class="btn--gold">save</button>
+          <button id="emClose">close</button>
+        </div>
+      </div>
+    </div>
+    <input id="fileIn" type="file" accept="image/*" hidden>
 
     <script src="/assets/js/kilim-motifs.js?v={{ site.time | date: '%s' }}"></script>
     <script src="/assets/js/kilim.js?v={{ site.time | date: '%s' }}"></script>
