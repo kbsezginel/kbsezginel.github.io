@@ -1417,5 +1417,69 @@ Chorus: Dm | C | Dm
 
 order: Verse x2, Chorus
 `
+  },
+  {
+    id: "tarkan-simarik",
+    title: "Şımarık",
+    artist: "Tarkan",
+    key: "Am",
+    source: "https://www.repertuarim.com/akor/tarkan-simarik-akor-598.html",
+    video: "https://www.youtube.com/watch?v=cpp69ghR1IM",
+    format: "over",
+    body: `
+Am
+Takmış koluna elin adamını
+Beni orta yerimden çatlatıyor
+Ağzında sakızı şişirip şişirip
+Arsız arsız patlatıyor
+
+Am                 G
+Belki de bu yüzden vuruldum
+F                G
+Sahibin olamadım yar
+Am                      G
+Sığar mı erkekliğe seni şımarık
+F             G
+Değişti mi bu dünya
+
+Am
+Çekmiş kaşına gözüne sürme
+Dudaklar kıpkırmızı kırıtıyor
+Bi de karşıma geçmiş utanması yok
+İnadıma inadıma sırıtıyor
+
+Am                  G
+Biz böyle mi gördük babamızdan
+F              G
+Ele güne rezil olduk
+Am                    G
+Yeni adet gelmiş eski köye  vah
+F       G
+Dostlar mahvolduk
+
+Am               G
+Seni gidi fındık kıran
+                  Am
+Yılanı deliğinden çıkaran
+                 G
+Kaderim püsküllü belam
+           Am
+Yakalarsam
+
+Am
+Ocağına düştüm yavru
+Kucağına düştüm yavru
+Sıcağına düştüm yavru
+El aman
+`,
+    arrangement: `
+Verse: Am | % | % | %
+Chorus: Am | G | F | G
+        Am | G | F | G
+Bridge: Am | G | Am | G | Am
+Outro: Am | % | % | %
+
+order: Verse, Chorus, Verse, Chorus, Bridge, Outro
+`
   }
 ];
