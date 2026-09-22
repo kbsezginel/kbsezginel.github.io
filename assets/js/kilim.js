@@ -1031,7 +1031,22 @@
     });
   }
 
-  function fmtK(v) { return '×' + (+v).toFixed(2).replace(/\.?0+$/, ''); }
+  // paired full-width range slider + editable number box for a scale value
+  function kControl(get, set, min, max) {
+    var rg = document.createElement('input');
+    rg.type = 'range'; rg.min = String(min); rg.max = String(max); rg.step = '0.05';
+    rg.value = get();
+    var num = document.createElement('input');
+    num.type = 'number'; num.className = 'numk';
+    num.min = String(min); num.max = String(max); num.step = '0.05';
+    num.value = get();
+    rg.oninput = function () { num.value = rg.value; set(+rg.value); };
+    num.onchange = function () {
+      var v = Math.min(max, Math.max(min, +num.value || min));
+      num.value = v; rg.value = v; set(v);
+    };
+    return [rg, num];
+  }
   function buildSelList(hostId, key, maxK) {
     var host = $(hostId);
     host.innerHTML = '';
@@ -1046,12 +1061,8 @@
       var nm = document.createElement('span');
       nm.className = 'selrow__nm';
       nm.textContent = m.name;
-      var rg = document.createElement('input');
-      rg.type = 'range'; rg.min = '0.5'; rg.max = String(maxK); rg.step = '0.05';
-      rg.value = e.k;
-      var out = document.createElement('output');
-      out.textContent = fmtK(e.k);
-      rg.oninput = function () { e.k = +rg.value; out.textContent = fmtK(e.k); render(); };
+      var kc = kControl(function () { return e.k; },
+                        function (v) { e.k = v; render(); }, 0.5, maxK);
       var up = document.createElement('button');
       up.className = 'selrow__x selrow__mv';
       up.textContent = '▲';
@@ -1075,8 +1086,14 @@
       del.textContent = '×';
       del.title = 'remove';
       del.onclick = function () { S[key].splice(i, 1); syncUI(); render(); };
-      row.appendChild(th); row.appendChild(nm); row.appendChild(rg);
-      row.appendChild(out); row.appendChild(up); row.appendChild(dn); row.appendChild(del);
+      var hd = document.createElement('div');
+      hd.className = 'selrow__hd';
+      hd.appendChild(th); hd.appendChild(nm);
+      hd.appendChild(up); hd.appendChild(dn); hd.appendChild(del);
+      var sz = document.createElement('div');
+      sz.className = 'selrow__sz';
+      sz.appendChild(kc[0]); sz.appendChild(kc[1]);
+      row.appendChild(hd); row.appendChild(sz);
       host.appendChild(row);
     });
   }
@@ -1107,12 +1124,9 @@
         sel.appendChild(o);
       });
       sel.onchange = function () { sec.font = sel.value; render(); };
-      var rg = document.createElement('input');
-      rg.type = 'range'; rg.min = '0.5'; rg.max = '6'; rg.step = '0.05';
-      rg.value = sec.k || 2;
-      var out = document.createElement('output');
-      out.textContent = fmtK(sec.k || 2);
-      rg.oninput = function () { sec.k = +rg.value; out.textContent = fmtK(sec.k); render(); };
+      if (!sec.k) sec.k = 2;
+      var kc = kControl(function () { return sec.k; },
+                        function (v) { sec.k = v; render(); }, 0.5, 6);
       var cp = document.createElement('input');
       cp.type = 'color'; cp.className = 'cpick';
       cp.value = sec.color || zoneColors().field.c3;
@@ -1121,9 +1135,11 @@
       del.className = 'selrow__x';
       del.textContent = '×'; del.title = 'remove text';
       del.onclick = function () { S.texts.splice(i, 1); syncUI(); render(); };
-      row.appendChild(sel); row.appendChild(rg); row.appendChild(out);
-      row.appendChild(cp); row.appendChild(del);
-      box.appendChild(ta); box.appendChild(row);
+      row.appendChild(sel); row.appendChild(cp); row.appendChild(del);
+      var sz = document.createElement('div');
+      sz.className = 'selrow__sz';
+      sz.appendChild(kc[0]); sz.appendChild(kc[1]);
+      box.appendChild(ta); box.appendChild(row); box.appendChild(sz);
       host.appendChild(box);
     });
   }

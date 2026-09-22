@@ -146,16 +146,23 @@ input[type="range"] { flex: 1; accent-color: var(--gold); min-width: 0; }
 /* selected-motif rows with individual scale sliders */
 .sellist { display: flex; flex-direction: column; gap: 6px; }
 .selrow {
-  display: flex; align-items: center; gap: 8px;
-  background: var(--bg2); border-radius: 8px; padding: 4px 8px 4px 4px;
+  display: flex; flex-direction: column; gap: 4px;
+  background: var(--bg2); border-radius: 8px; padding: 4px 8px 6px 4px;
 }
+.selrow__hd { display: flex; align-items: center; gap: 8px; }
 .selrow__th .thumb__svg { width: 34px; height: 22px; display: block; border-radius: 4px; }
 .selrow__nm {
-  font-size: 10px; color: var(--dim); width: 62px; flex: 0 0 62px;
+  font-size: 10px; color: var(--dim); flex: 1 1 auto; min-width: 0;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.selrow input[type="range"] { flex: 1; min-width: 0; }
-.selrow output { font-size: 10px; color: var(--gold); width: 38px; text-align: right; }
+.selrow__sz { display: flex; align-items: center; gap: 8px; }
+.selrow__sz input[type="range"] { flex: 1; min-width: 0; }
+.numk {
+  flex: 0 0 52px; width: 52px; font: inherit; font-size: 10px;
+  background: var(--bg); color: var(--gold); text-align: right;
+  border: 1px solid var(--line); border-radius: 5px; padding: 2px 4px;
+}
+.numk:focus { border-color: var(--gold); outline: none; }
 .selrow__x {
   padding: 0; width: 20px; height: 20px; line-height: 1;
   font-size: 12px; border-radius: 5px; color: var(--dim); flex: 0 0 20px;
@@ -170,9 +177,7 @@ input[type="range"] { flex: 1; accent-color: var(--gold); min-width: 0; }
 #textSecs { display: flex; flex-direction: column; gap: 10px; }
 .textsec { display: flex; flex-direction: column; gap: 6px; }
 .textsec__row { display: flex; align-items: center; gap: 8px; }
-.textsec__row select { flex: 0 0 auto; padding: 3px 6px; font-size: 11px; }
-.textsec__row input[type="range"] { flex: 1; min-width: 0; }
-.textsec__row output { font-size: 10px; color: var(--gold); width: 38px; text-align: right; }
+.textsec__row select { flex: 1 1 auto; min-width: 0; padding: 3px 6px; font-size: 11px; }
 #bandPicker { max-height: 246px; }
 .thumb {
   position: relative; min-width: 0;
