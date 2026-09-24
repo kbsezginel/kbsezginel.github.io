@@ -1,0 +1,103 @@
+---
+layout: none
+title: "Strings"
+permalink: /strings/
+date: 2026-08-31
+categories: pages
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Strings — kut.ai</title>
+    <meta name="description" content="String tension calculator for Turkish instruments (bağlama, ud, lavta, cümbüş) and guitars — nylon, wound nylon, steel and wound steel strings.">
+    <meta name="theme-color" content="#070A12">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/strings.css?v={{ site.time | date: '%s' }}">
+  </head>
+  <body>
+
+    <header class="top">
+      <a class="top__home" href="/">&larr; kut.ai</a>
+      <h1 class="top__brand" data-i18n="brand">Strings</h1>
+      <span class="top__sub" data-i18n="tagline">string tension calculator</span>
+      <div class="top__actions">
+        <span class="seg" id="unitSeg" title="Units">
+          <button data-units="si">SI</button>
+          <button data-units="imp">in·lb</button>
+        </span>
+        <span class="seg" id="langSeg" title="Language / Dil">
+          <button data-lang="en">EN</button>
+          <button data-lang="tr">TR</button>
+        </span>
+      </div>
+    </header>
+
+    <main class="wrap">
+
+      <section class="head">
+        <div class="pick" id="pick">
+          <button class="pick__btn" id="pickBtn" type="button" aria-expanded="false" aria-controls="pickMenu">
+            <span id="pickName"></span><span class="pick__caret">▾</span>
+          </button>
+        </div>
+        <span class="head__sub" id="instSub"></span>
+        <label class="scale">
+          <span data-i18n="scale">scale length</span>
+          <input id="scaleIn" type="number" min="1" step="any">
+          <span class="unit" id="scaleUnit">cm</span>
+        </label>
+        <button class="reset" id="btnNew" data-i18n="new">＋ new</button>
+        <button class="reset" id="btnReset" hidden data-i18n="reset">reset</button>
+      </section>
+      <div class="drawer" id="pickDrawer">
+        <div class="drawer__in">
+          <div class="pick__menu" id="pickMenu" role="listbox"></div>
+        </div>
+      </div>
+      <p class="note" id="instNote" hidden data-i18n="unverified"></p>
+
+      <section class="editor">
+        <div class="cols">
+          <span></span><span></span>
+          <span data-i18n="col.note">note</span>
+          <span data-i18n="col.type">type</span>
+          <span id="gaugeHead">gauge mm</span>
+          <span id="tensHead">tension N</span>
+          <span></span>
+        </div>
+        <div id="strList"></div>
+        <div class="editor__foot">
+          <button class="add" id="btnAddStr" data-i18n="addString">＋ add string</button>
+          <span class="total" id="total"></span>
+        </div>
+      </section>
+
+      <section class="results">
+        <div class="card">
+          <h3 data-i18n="card.tensions">Tensions</h3>
+          <table class="tens" id="tensTable"></table>
+        </div>
+        <div class="card">
+          <h3 data-i18n="card.chart">String vs tension</h3>
+          <div class="chartwrap" id="chart"></div>
+        </div>
+      </section>
+
+      <details class="how">
+        <summary data-i18n="how.title">How is the tension calculated?</summary>
+        <div class="how__body" id="howBody"></div>
+      </details>
+
+      <p class="source" id="source"></p>
+
+    </main>
+
+    <script src="/assets/js/strings-db.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="/assets/js/strings.js?v={{ site.time | date: '%s' }}"></script>
+  </body>
+</html>
