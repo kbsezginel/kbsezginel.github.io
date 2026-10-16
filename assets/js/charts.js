@@ -1787,7 +1787,20 @@ function openSource() {
   $('#srcBody').value = state.song.body;
   $('#srcBars').value = state.song.bars || serializeBars(deriveBars(state.model));
   $('#srcArr').value = state.song.arrangement || '';
+  state.srcSnap = sourceFields();
   $('#srcModal').hidden = false;
+}
+
+const SRC_FIELDS = ['#srcTitle', '#srcArtist', '#srcKey', '#srcCapo', '#srcBody', '#srcBars', '#srcArr'];
+function sourceFields() {
+  return JSON.stringify(SRC_FIELDS.map(s => $(s).value));
+}
+function sourceDirty() {
+  return !$('#srcModal').hidden && sourceFields() !== state.srcSnap;
+}
+function cancelSource() {
+  if (sourceDirty() && !confirm('Discard your changes to the source?')) return;
+  $('#srcModal').hidden = true;
 }
 
 function saveSource() {
@@ -1818,14 +1831,39 @@ function slug(s) {
   return fold(s).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
+/* the add-song form autosaves to a draft as you type, so closing the modal or
+   the tab never loses work — only "save song" or a confirmed cancel clears it */
+const IMP_FIELDS = ['#impTitle', '#impArtist', '#impKey', '#impCapo', '#impBody'];
+
+function importDraft() {
+  try { return JSON.parse(localStorage.getItem('charts:draft') || 'null'); }
+  catch { return null; }
+}
+function saveImportDraft() {
+  const d = Object.fromEntries(IMP_FIELDS.map(s => [s, $(s).value]));
+  if (Object.values(d).some(v => v.trim())) localStorage.setItem('charts:draft', JSON.stringify(d));
+  else localStorage.removeItem('charts:draft');
+}
+function clearImport() {
+  IMP_FIELDS.forEach(s => { $(s).value = ''; });
+  localStorage.removeItem('charts:draft');
+}
+
 function openImport(prefillTitle) {
+  const d = importDraft();
+  if (d) IMP_FIELDS.forEach(s => { $(s).value = d[s] || ''; });
+  if (prefillTitle && !$('#impTitle').value.trim()) $('#impTitle').value = prefillTitle;
   $('#importModal').hidden = false;
-  if (prefillTitle) $('#impTitle').value = prefillTitle;
-  $('#impTitle').focus();
+  $(d && d['#impBody'] ? '#impBody' : '#impTitle').focus();
 }
 function closeImport() {
   $('#importModal').hidden = true;
-  ['#impTitle', '#impArtist', '#impKey', '#impCapo', '#impBody'].forEach(s => { $(s).value = ''; });
+}
+function cancelImport() {
+  if (IMP_FIELDS.some(s => $(s).value.trim()) &&
+      !confirm('Discard this song? Everything typed in the form will be lost.')) return;
+  clearImport();
+  closeImport();
 }
 
 function saveImport() {
@@ -1843,6 +1881,7 @@ function saveImport() {
   const list = localSongs().filter(s => s.id !== song.id);
   list.push(song);
   saveLocalSongs(list);
+  clearImport();
   closeImport();
   location.hash = '#/song/' + encodeURIComponent(song.id);
 }
@@ -1856,6 +1895,14 @@ function init() {
   const locals = localSongs();
   const cleaned = locals.filter(s => !dbIds.has(s.id));
   if (cleaned.length !== locals.length) saveLocalSongs(cleaned);
+  /* same for edits: once an edit has been published, the override matches the
+     database entry — drop it so the song stops showing "edited here" */
+  const ov = overrides();
+  let staleOv = false;
+  for (const s of (window.CHARTS_DB || [])) {
+    if (ov[s.id] && songEntryJS({ ...s, ...ov[s.id] }) === songEntryJS(s)) { delete ov[s.id]; staleOv = true; }
+  }
+  if (staleOv) saveOverrides(ov);
 
   const instSel = $('#instrument');
   instSel.innerHTML = Object.entries(INSTRUMENTS)
@@ -1930,10 +1977,12 @@ function init() {
   });
 
   $('#srcBtn').addEventListener('click', openSource);
-  $('#srcCancel').addEventListener('click', () => { $('#srcModal').hidden = true; });
+  $('#srcCancel').addEventListener('click', cancelSource);
   $('#srcSave').addEventListener('click', saveSource);
-  $('#srcModal').addEventListener('click', (e) => {
-    if (e.target === $('#srcModal')) $('#srcModal').hidden = true;
+  /* no close-on-backdrop-click: a stray click (or a text selection dragged
+     past the card's edge) used to throw away the whole edit */
+  window.addEventListener('beforeunload', (e) => {
+    if (sourceDirty()) e.preventDefault();
   });
 
   function setBarw(v) {
@@ -2020,11 +2069,9 @@ function init() {
 
   $('#addBtn').addEventListener('click', () => openImport(''));
   $('#webImport').addEventListener('click', () => openImport($('#searchInput').value));
-  $('#impCancel').addEventListener('click', closeImport);
+  $('#impCancel').addEventListener('click', cancelImport);
   $('#impSave').addEventListener('click', saveImport);
-  $('#importModal').addEventListener('click', (e) => {
-    if (e.target === $('#importModal')) closeImport();
-  });
+  $('#importModal').addEventListener('input', saveImportDraft);
 
   $('#videoBtn').addEventListener('click', () => (videoOpen() ? closeVideo() : openVideo()));
   $('#vdockClose').addEventListener('click', closeVideo);
@@ -2036,8 +2083,8 @@ function init() {
   document.addEventListener('keydown', (e) => {
     if (e.target.matches('input, textarea')) return;
     if (e.key === 'Escape') {
-      if (!$('#importModal').hidden) { closeImport(); return; }
-      if (!$('#srcModal').hidden) { $('#srcModal').hidden = true; return; }
+      if (!$('#importModal').hidden) { closeImport(); return; } /* draft is kept */
+      if (!$('#srcModal').hidden) { cancelSource(); return; }
     }
     if (!state.song) return;
     if (videoKeys(e)) return;

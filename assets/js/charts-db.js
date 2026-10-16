@@ -1580,56 +1580,63 @@ order: Intro, Verse, Chorus
     id: "iste-hendek-iste-deve-baris-manco",
     title: "İşte Hendek İşte Deve",
     artist: "Barış Manço",
-    key: "Gm",
+    key: "Dm",
     format: "over",
     body: `
 [Intro]
-Gm  Cm  Gm
+Dm  Gm  Dm
 
 
 [Verse]
-Gm
+Dm
 Kuyu başına vardım, Zeynebim bekler diye
-          Cm           Cm            Gm
+          Gm           Gm            Dm
 Nasıl haberin almışsa, dayı emmi hep orda
-Gm
+Dm
 Dediler ne ararsın, kızı almak mı istersin
-              Cm           Cm         Gm
+              Gm           Gm         Dm
 Sana bir çift sözümüz var, hele buysa niyetin
 
 [Chorus]
-A#          Cm         Cm             Gm
+F           Gm         Gm             Dm
 İşte hendek işte deve, ya atlarsın ya düşersin
-A#           Cm           Cm           Gm
+F            Gm           Gm           Dm
 Baktın olmaz vazgeçersin, zordur almak bizden kızı
-A#          Cm         Cm            Gm
+F           Gm         Gm            Dm
 İşte halep işte arşın, ya aşarsın ya biçersin
-A#           Cm           Cm           Gm
+F            Gm           Gm           Dm
 Baktın olmaz vazgeçersin, zordur almak bizden kızı
 
 [Middle Melody]
-Gm  Cm  Gm
-A#  Cm  Gm  Dm  Gm
+Dm  Gm  Dm
+F   Gm  Dm  Am  Dm
 
 [Verse 2]
-Gm
+Dm
 Söğüdün dalı uzun, Barış'ın gönlü hüzün
-        Cm          Cm            Gm
+        Gm          Gm            Dm
 Elim eline değmedi, varın anlayın gayri
 
 [Chorus]
-A#          Cm         Cm             Gm
+F           Gm         Gm             Dm
 İşte hendek işte deve, ya atlarsın ya düşersin
-A#           Cm           Cm           Gm
+F            Gm           Gm           Dm
 Baktın olmaz vazgeçersin, zordur almak bizden kızı
-A#          Cm         Cm            Gm
+F           Gm         Gm            Dm
 İşte halep işte arşın, ya aşarsın ya biçersin
-A#           Cm           Cm           Gm
+F            Gm           Gm           Dm
 Baktın olmaz vazgeçersin, zordur almak bizden kızı
 
 [Outro Melody]
-Gm  Cm  Gm
-A#  Cm  Gm  Dm  Gm
+Dm  Gm  Dm
+F   Gm  Dm  Am  Dm
+`,
+    arrangement: `
+Intro x2: Dm | % | % | F G
+Verse x2: Dm | % | % | F G
+Chorus x2: F | Gm | F | C Dm
+
+order: Intro, Verse, Chorus, Intro, Verse, Chorus, Solo, Verse, Chorus x2
 `
   },
   {
