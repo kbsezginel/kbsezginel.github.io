@@ -1354,12 +1354,11 @@ Dm          C    Dm
 Biz çalar oynarız
 `,
     arrangement: `
-Verse: Dm G | % | % | % | C G | Dm | C
-       Dm | C
-Chorus: C | Gm
-        Dm | C | Dm
+Verse: Dm G | % | % | %
+Chorus x2: C Gm | Dm F | Bb C | Dm
+Intro x2: C Gm | Dm F | Bb C | Dm
 
-order: Verse, Chorus, Verse, Chorus
+order: Intro, Verse, Chorus, Intro, Verse, Chorus, Intro, Verse, Chorus x2
 `
   },
   {
@@ -1403,19 +1402,12 @@ Gm                Dm          C             Dm
 İnan mahşer gününde bulurum seni
 `,
     arrangement: `
-Verse: Dm | C | Dm
-       % | C | Dm
-       F | Gm | Dm
-       Gm | Dm | C | Dm
-Chorus: Dm | C | Dm
-        % | C | Dm
-        F | Gm | Dm
-        Gm | Dm | C | Dm
-        Gm | Dm | C | Dm
-        Gm | Dm | C | Dm
-        Gm | Dm | C | Dm
+Intro: Dm
+Verse x2: Dm | Dm | C | Dm
+Chorus x2: F | Gm | % | Dm
+           Gm | F | C | Dm
 
-order: Verse x2, Chorus
+order: Intro, Verse, Chorus, Intro, Verse, Chorus, Solo, Verse, Chorus x2
 `
   },
   {
@@ -1480,6 +1472,225 @@ Bridge: Am | G | Am | G | Am
 Outro: Am | % | % | %
 
 order: Verse, Chorus, Verse, Chorus, Bridge, Outro
+`
+  },
+  {
+    id: "hicaz-sirto-sultan-abdulaziz",
+    title: "Hicaz Sirto",
+    artist: "Sultan Abdulaziz",
+    key: "E hicaz",
+    format: "over",
+    body: `
+E E Am Am Dm F E F E
+
+E E Am Am Dm Dm E F E
+
+E E E E A5-
+
+E E E E
+
+Dm Dm Am Am Dm Dm Am Am
+
+E
+`,
+    bars: `
+E | % | Am | % | Dm | F | E | F E
+
+E | E | Am | Am | Dm | Dm | E | F | E
+
+E | E | E | E | A5-
+
+E | E | E | E
+
+Dm | Dm | Am | Am | Dm | Dm | Am | Am
+
+E
+`,
+    arrangement: `
+A x2: E | % | Am | % | Dm | F | E | F E
+B x2: E | % | % | % | A5-
+C x2: Dm | % | Am | %
+D: Dm | % | F | % | Dm | % | E | F E
+
+order: A, B, C, D
+`
+  },
+  {
+    id: "bizim-mahalle-adnan-senses",
+    title: "Bizim Mahalle",
+    artist: "Adnan Şenses",
+    key: "Am",
+    format: "over",
+    body: `
+verse
+Bizim mahalle aşağıki mahalle
+Sizin mahalle yukariki mahalle
+Bizim mahalle goygoycu mahalle
+Sizin mahalle yapıştır mahalle
+Hadi gidelim karakola, merkeze
+Hadi gidelim karakola, merkeze
+Canım istiyor her gece her gece
+Canım istiyor her gece her gece
+chorus
+Usta priva naşti kovala
+Okatukalama naşti priva
+Usta priva naşti kovala
+Okatukalama naşti priva
+verse
+Tavşanı kovaladım tepeden, tepeden
+Akşama içeceğim şişeden, şişeden
+Tavşanı kovaladım tepeden, tepeden
+Akşama içeceğim şişeden, şişeden
+Civciv çıkacak kuş çıkacak
+Dur bakalım bu akşam neler olacak
+Civciv çıkacak kuş çıkacak
+Dur bakalım bu akşam neler olacak
+Annem beni bakkala yolladı
+Annem beni bakkala yolladı
+Bakkal bana elini salladı, salladı
+Bakkal bana elini salladı, salladı
+chorus
+Usta priva naşti kovala
+Okatukalama naşti priva
+Usta priva naşti kovala
+Okatukalama naşti priva
+verse
+Hadi gidelim karakola, merkeze
+Hadi gidelim karakola, merkeze
+Canım istiyor her gece her gece
+Canım istiyor her gece her gece
+chorus
+Usta priva naşti kovala
+Okatukalama naşti priva
+Usta priva naşti kovala
+Okatukalama naşti priva
+Usta priva naşti kovala
+Okatukalama naşti priva
+Usta priva naşti kovala
+Okatukalama naşti priva
+`,
+    arrangement: `
+Verse: A
+Chorus: ·
+
+order: Intro, Verse, Chorus
+`
+  },
+  {
+    id: "iste-hendek-iste-deve-baris-manco",
+    title: "İşte Hendek İşte Deve",
+    artist: "Barış Manço",
+    key: "Gm",
+    format: "over",
+    body: `
+[Intro]
+Gm  Cm  Gm
+
+
+[Verse]
+Gm
+Kuyu başına vardım, Zeynebim bekler diye
+          Cm           Cm            Gm
+Nasıl haberin almışsa, dayı emmi hep orda
+Gm
+Dediler ne ararsın, kızı almak mı istersin
+              Cm           Cm         Gm
+Sana bir çift sözümüz var, hele buysa niyetin
+
+[Chorus]
+A#          Cm         Cm             Gm
+İşte hendek işte deve, ya atlarsın ya düşersin
+A#           Cm           Cm           Gm
+Baktın olmaz vazgeçersin, zordur almak bizden kızı
+A#          Cm         Cm            Gm
+İşte halep işte arşın, ya aşarsın ya biçersin
+A#           Cm           Cm           Gm
+Baktın olmaz vazgeçersin, zordur almak bizden kızı
+
+[Middle Melody]
+Gm  Cm  Gm
+A#  Cm  Gm  Dm  Gm
+
+[Verse 2]
+Gm
+Söğüdün dalı uzun, Barış'ın gönlü hüzün
+        Cm          Cm            Gm
+Elim eline değmedi, varın anlayın gayri
+
+[Chorus]
+A#          Cm         Cm             Gm
+İşte hendek işte deve, ya atlarsın ya düşersin
+A#           Cm           Cm           Gm
+Baktın olmaz vazgeçersin, zordur almak bizden kızı
+A#          Cm         Cm            Gm
+İşte halep işte arşın, ya aşarsın ya biçersin
+A#           Cm           Cm           Gm
+Baktın olmaz vazgeçersin, zordur almak bizden kızı
+
+[Outro Melody]
+Gm  Cm  Gm
+A#  Cm  Gm  Dm  Gm
+`
+  },
+  {
+    id: "pasalimaniotisa-tountas-panagiotis",
+    title: "Pasalimaniotisa",
+    artist: "Tountas Panagiotis",
+    key: "D hicaz",
+    format: "over",
+    body: `
+D
+Vre Pasalimaniótissa,
+tsakhpína zondokhíra
+D
+pos m’ érixe sta khéria sou
+i átimí mou moíra
+
+Gm
+Mou \`khis anápsi mia fotiá
+Eb
+kai dérti sto kefáli
+Gm
+kai mia pliyí pou dhen borí,
+Eb
+na yíni pio megáli
+
+C
+Mésa sta khasiklídhika
+Eb          Gm
+foumáro oloéna
+G          D
+yiatí ékho zondokhíra mou
+Eb              D
+karasevndá me séna
+
+D Eb F# G F# Eb D
+Zondokhíra mou esí me trélanes!…
+
+Ton baglamá mou paízondas
+ton póno mou sou légo
+Vre Pasalimaniótissa
+sou tragoudhó kai légo
+
+Ákou me ti parápono
+to dérti mou fonázo
+afoú yia séna tragoudhó
+kai varianastenázo
+Mésa sta khasiklídhika
+foumáro aloéna
+yiatí ékho zondokhíra mou
+karasevendá me séna
+
+Zondokhíra mou esí me trélanes!..
+`,
+    arrangement: `
+Verse x2: D | % | % | %
+Chorus: Gm | % | Eb | %
+        C | D | Eb | Gm
+        Gm | D | Eb | D
+Bridge: D Eb F# G | F# Eb D
+
+order: Verse, Chorus, Bridge, Verse, Chorus, Bridge
 `
   }
 ];
