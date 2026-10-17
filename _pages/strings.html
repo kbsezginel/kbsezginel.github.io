@@ -73,6 +73,12 @@ categories: pages
         <div id="strList"></div>
         <div class="editor__foot">
           <button class="add" id="btnAddStr" data-i18n="addString">＋ add string</button>
+          <span class="fit">
+            <label for="targetIn" data-i18n="target">target</label>
+            <input id="targetIn" type="number" min="0.1" step="any">
+            <span class="unit" id="targetUnit">N</span>
+            <button class="add" id="btnFit" data-i18n="fit">set gauges</button>
+          </span>
           <span class="total" id="total"></span>
         </div>
       </section>

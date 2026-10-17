@@ -19,6 +19,9 @@
       "col.note": "note",
       "col.type": "type",
       addString: "＋ add string",
+      target: "target",
+      fit: "set gauges",
+      fitTitle: "pick the gauge (nearest .001 in) that brings every string closest to the target tension",
       unverified: "default set — tuning and gauges are a reasonable starting point, edit freely",
       "card.tensions": "Tensions",
       "card.chart": "String vs tension",
@@ -71,6 +74,9 @@ same gauge also quadruples it; longer scale raises it with the square of the len
       "col.note": "nota",
       "col.type": "tür",
       addString: "＋ tel ekle",
+      target: "hedef",
+      fit: "kalınlıkları ayarla",
+      fitTitle: "her tel için hedef gerginliğe en yakın kalınlığı seçer (en yakın .001 inç)",
       unverified: "varsayılan takım — akort ve kalınlıklar makul bir başlangıçtır, dilediğiniz gibi değiştirin",
       "card.tensions": "Gerginlikler",
       "card.chart": "Tel — gerginlik grafiği",
@@ -164,6 +170,19 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
     return mu * Math.pow(2 * L * f, 2);
   }
 
+  /* gauge (mm) that brings a string closest to a target tension, picked
+     from whole thousandths of an inch (.004–.250) — tension isn't strictly
+     monotonic across table seams, so search them all rather than bisect */
+  function fitGauge(s, scaleMM, targetN) {
+    let best = null, bestErr = Infinity;
+    for (let k = 4; k <= 250; k++) {
+      const mm = k * 0.0254;
+      const err = Math.abs(Math.log(tensionN({ ...s, gauge: mm }, scaleMM) / targetN));
+      if (err < bestErr) { bestErr = err; best = mm; }
+    }
+    return best === null ? s.gauge : +best.toFixed(4);
+  }
+
   /* ================= state ================= */
 
   const LS_KEY = "strings:v1";
@@ -172,6 +191,7 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
     lang: null,
     units: "si",           /* si | imp */
     instId: "baglama-kisa",
+    targets: {},           /* instId -> target tension (N) for "set gauges" */
     overrides: {}          /* instId -> {scale, strings} for edited setups */
   };
 
@@ -238,7 +258,8 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
     gaugeStep: () => state.units === "si" ? 0.01 : 0.001,
     tensOut: (n) => state.units === "si" ? fmt(n, 1) : fmt(n / 4.4482216, 1),
     tensSub: (n) => fmt(n / 9.80665, 1) + " kg",
-    tensUnit: () => state.units === "si" ? "N" : "lb"
+    tensUnit: () => state.units === "si" ? "N" : "lb",
+    tensIn:  (v)  => state.units === "si" ? v : v * 4.4482216
   };
 
   const TYPE_COLOR = {
@@ -259,6 +280,8 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
     $("howBody").innerHTML = T().how;
     $("gaugeHead").textContent = `${T().th.gauge} ${U.gaugeUnit()}`;
     $("tensHead").textContent = `${T().th.tension} ${U.tensUnit()}`;
+    $("targetUnit").textContent = U.tensUnit();
+    $("btnFit").title = T().fitTitle;
     document.querySelectorAll("#langSeg button").forEach((b) =>
       b.classList.toggle("seg--on", b.dataset.lang === state.lang));
     document.querySelectorAll("#unitSeg button").forEach((b) =>
@@ -366,7 +389,7 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
         <div class="srow__f">
           <select data-f="note" aria-label="${T().th.note}">${noteOptHtml(s.note)}</select>
           <select data-f="type" aria-label="${T().th.type}">${typeOpts(s.type)}</select>
-          <input data-f="gauge" type="number" min="0.01" step="${U.gaugeStep()}"
+          <input data-f="gauge" type="number" min="${U.gaugeStep()}" step="${U.gaugeStep()}"
                  value="${U.gaugeOut(s.gauge)}" aria-label="${T().th.gauge}">
           <span class="srow__t">${U.tensOut(tens[i])}<small>${U.tensSub(tens[i])}</small></span>
         </div>
@@ -375,6 +398,12 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
     }).join("");
 
     const total = tens.reduce((a, b) => a + (isFinite(b) ? b : 0), 0);
+    /* target defaults to the current mean until the user sets one */
+    const finite = tens.filter(isFinite);
+    const targetN = state.targets[state.instId] ||
+      (finite.length ? finite.reduce((a, b) => a + b, 0) / finite.length : 0);
+    $("targetIn").value = targetN ? (state.units === "si" ? targetN : targetN / 4.4482216).toFixed(1) : "";
+    $("btnFit").disabled = !cur.strings.length;
     $("total").innerHTML =
       `${cur.strings.length} ${T().strings} · ${T().total}<b>${U.tensOut(total)} ${U.tensUnit()}</b>${U.tensSub(total)}`;
   }
@@ -537,6 +566,24 @@ bir oktav tiz akort da dört katlar; tel boyu uzadıkça gerginlik boyun karesiy
       const last = setup.strings[setup.strings.length - 1] ||
         { c: 0, note: "E2", type: "steel", gauge: 0.25 };
       setup.strings.push({ ...last, c: last.c + 1 });
+      renderAll();
+    });
+
+    const readTarget = () => {
+      const v = parseFloat($("targetIn").value);
+      if (v > 0) state.targets[state.instId] = U.tensIn(v);
+      return state.targets[state.instId];
+    };
+    $("targetIn").addEventListener("change", () => { readTarget(); save(); });
+    $("targetIn").addEventListener("keydown", (e) => { if (e.key === "Enter") $("btnFit").click(); });
+
+    $("btnFit").addEventListener("click", () => {
+      const targetN = readTarget();
+      if (!(targetN > 0)) return;
+      const setup = editable();
+      setup.strings.forEach((s) => {
+        if (isFinite(freq(s.note))) s.gauge = fitGauge(s, setup.scale, targetN);
+      });
       renderAll();
     });
 
